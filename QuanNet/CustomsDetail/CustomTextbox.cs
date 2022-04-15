@@ -10,8 +10,12 @@ using System.Windows.Forms;
 
 namespace QuanNet.CustomsDetail
 {
+    [DefaultEvent("_TextChanged")]
     public partial class CustomTextbox : UserControl
     {
+        public event EventHandler _TextChanged;
+        
+        
         //Fields
         private Color borderColor = Color.MediumSlateBlue;
         private int borderSize = 2;
@@ -162,19 +166,17 @@ namespace QuanNet.CustomsDetail
             base.OnLoad(e);
             UpdateControlHeight();
         }
-        [DefaultEvent("_TextChanged")]
-        public partial class RJTextBox : UserControl
+        //Change border color in focus mode
+        private void textBox1_Enter(object sender, EventArgs e)
         {
+            isFocused = true;
+            this.Invalidate();
+        }
 
-            //Default Event
-            public event EventHandler _TextChanged;
-
-            //TextBox-> TextChanged event
-            private void textBox1_TextChanged(object sender, EventArgs e)
-            {
-                if (_TextChanged != null)
-                    _TextChanged.Invoke(sender, e);
-            }
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            isFocused = false;
+            this.Invalidate();
         }
         //TextBox events
         /// <summary>
@@ -199,6 +201,14 @@ namespace QuanNet.CustomsDetail
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             this.OnKeyPress(e);
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+            
+                if (_TextChanged != null)
+                    _TextChanged.Invoke(sender, e);
+            
         }
     }
 }

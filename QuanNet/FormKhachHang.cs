@@ -27,9 +27,10 @@ namespace QuanNet
             dataGridView1.DataSource = dt;
             
         }
-        
-        
-        
 
+        private void customTextbox1__TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
