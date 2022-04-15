@@ -23,7 +23,7 @@ namespace QuanNet
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
-            leftBorderBtn.Size = new Size(7, 70);
+            leftBorderBtn.Size = new Size(7, 110);
             panelMenu.Controls.Add(leftBorderBtn);
             //Form
             this.Text = string.Empty;
@@ -31,9 +31,25 @@ namespace QuanNet
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             //====
-            txtMKQL.Visible = false;
-            txtTKQL.Visible = false;
-            cusBtn1.Visible = false;
+            ShowDB(false);
+            
+        }
+        public void ShowDB(bool a)
+        {
+            if (a)
+            {
+                txtMKQL.Visible = true;
+                txtTKQL.Visible = true;
+                cusBtn1.Visible = true;
+                iconQuanLy.Visible = true;
+            }
+            else
+            {
+                txtMKQL.Visible = false;
+                txtTKQL.Visible = false;
+                cusBtn1.Visible = false;
+                iconQuanLy.Visible = false;
+            }
         }
         //-----------------Code UI Form---------------------------------------------------
         private struct RGBColors
@@ -60,9 +76,9 @@ namespace QuanNet
                 leftBorderBtn.Visible = true;
                 leftBorderBtn.BringToFront();
                 //Current Child Form Icon
-                iconCurrentChildForm.IconChar = currentBtn.IconChar;
-                iconCurrentChildForm.IconColor = color;
-                lblTitle.ForeColor = iconCurrentChildForm.IconColor;
+                iconForm.IconChar = currentBtn.IconChar;
+                iconForm.IconColor = color;
+                lblTitle.ForeColor = iconForm.IconColor;
             }
         }
         private void DisableButton()
@@ -77,26 +93,6 @@ namespace QuanNet
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
         }
-        private void OpenChildForm(Form childForm)
-        {
-            //open only form
-            if (currentChildForm != null)
-            {
-                currentChildForm.Close();
-            }
-            currentChildForm = childForm;
-            //End
-            //-----Custom childform-----------
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            //------Add Form vào panel loading--------
-            panelDesktop.Controls.Add(childForm);
-            panelDesktop.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
-            lblTitle.Text = childForm.Text;
-        }
         private void pictureBoxLogo_Click(object sender, EventArgs e)
         {
             if (currentChildForm != null)
@@ -109,8 +105,8 @@ namespace QuanNet
         {
             DisableButton();
             leftBorderBtn.Visible = false;
-            iconCurrentChildForm.IconChar = IconChar.Home;
-            iconCurrentChildForm.IconColor = Color.MediumPurple;
+            iconForm.IconChar = IconChar.Home;
+            iconForm.IconColor = Color.MediumPurple;
             lblTitle.Text = "Home";
         }
 
@@ -118,27 +114,31 @@ namespace QuanNet
         private void btnLoginQL_Click(object sender, EventArgs e)
         {   
             ActivateButton(sender, RGBColors.color1);
-            txtMKQL.Visible = true;
-            txtTKQL.Visible = true;
-            cusBtn1.Visible = true;
-            //Form1 f=new Form1();
-            //f.Show();
-            //OpenChildForm(new FormKhachHang());
+            ShowDB(true);
+            
         }
 
         private void btnLoginKhach_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
+            ShowDB(false);
+
         }
 
         private void cusBtn1_Click(object sender, EventArgs e)
         {
-            if(txtTKQL.Texts == IDAdmin && txtMKQL.Texts == PasswordAdmin)
+            if (txtTKQL.Texts == IDAdmin && txtMKQL.Texts == PasswordAdmin)
             {
-                Form1 f=new Form1();
+                Form1 f = new Form1();
                 f.Show();
-            }else
-            MessageBox.Show("Tài khoản hoặc mật khẩu không đúng","Thong bao",MessageBoxButtons.OK);
+
+            }
+            else
+            {
+                MessageBox.Show("Tài khoản hoặc mật khẩu không đúng", "Thong bao", MessageBoxButtons.OK);
+            }
+            txtMKQL.Texts = "";
+            txtTKQL.Texts = "";
         }
 
         private void cusBtn1_KeyPress(object sender, KeyPressEventArgs e)
@@ -156,7 +156,10 @@ namespace QuanNet
                 {
                     MessageBox.Show("Tài khoản hoặc mật khẩu không đúng", "Thong bao", MessageBoxButtons.OK);
                 }
+                txtMKQL.Texts = "";
+                txtTKQL.Texts = "";
                 e.Handled = true;
+                
             }
         }
     }

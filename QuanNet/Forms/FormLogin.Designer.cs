@@ -35,9 +35,10 @@
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
+            this.iconForm = new FontAwesome.Sharp.IconPictureBox();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.iconQuanLy = new FontAwesome.Sharp.IconPictureBox();
             this.cusBtn1 = new QuanNet.CustomsDetail.CusBtn();
             this.txtMKQL = new QuanNet.CustomsDetail.CustomTextbox();
             this.txtTKQL = new QuanNet.CustomsDetail.CustomTextbox();
@@ -45,8 +46,9 @@
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.panelTitleBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconForm)).BeginInit();
             this.panelDesktop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconQuanLy)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -124,7 +126,7 @@
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
             this.panelTitleBar.Controls.Add(this.lblTitle);
-            this.panelTitleBar.Controls.Add(this.iconCurrentChildForm);
+            this.panelTitleBar.Controls.Add(this.iconForm);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(258, 0);
             this.panelTitleBar.Name = "panelTitleBar";
@@ -143,18 +145,18 @@
             this.lblTitle.TabIndex = 1;
             this.lblTitle.Text = "LOGIN";
             // 
-            // iconCurrentChildForm
+            // iconForm
             // 
-            this.iconCurrentChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.iconCurrentChildForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.Lock;
-            this.iconCurrentChildForm.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconCurrentChildForm.Location = new System.Drawing.Point(30, 27);
-            this.iconCurrentChildForm.Name = "iconCurrentChildForm";
-            this.iconCurrentChildForm.Size = new System.Drawing.Size(32, 32);
-            this.iconCurrentChildForm.TabIndex = 0;
-            this.iconCurrentChildForm.TabStop = false;
+            this.iconForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.iconForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.iconForm.IconChar = FontAwesome.Sharp.IconChar.Lock;
+            this.iconForm.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.iconForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconForm.Location = new System.Drawing.Point(30, 27);
+            this.iconForm.Name = "iconForm";
+            this.iconForm.Size = new System.Drawing.Size(32, 32);
+            this.iconForm.TabIndex = 0;
+            this.iconForm.TabStop = false;
             // 
             // panelShadow
             // 
@@ -168,6 +170,7 @@
             // panelDesktop
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.panelDesktop.Controls.Add(this.iconQuanLy);
             this.panelDesktop.Controls.Add(this.cusBtn1);
             this.panelDesktop.Controls.Add(this.txtMKQL);
             this.panelDesktop.Controls.Add(this.txtTKQL);
@@ -177,8 +180,24 @@
             this.panelDesktop.Size = new System.Drawing.Size(620, 459);
             this.panelDesktop.TabIndex = 3;
             // 
+            // iconQuanLy
+            // 
+            this.iconQuanLy.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.iconQuanLy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.iconQuanLy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            this.iconQuanLy.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.iconQuanLy.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            this.iconQuanLy.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconQuanLy.IconSize = 146;
+            this.iconQuanLy.Location = new System.Drawing.Point(241, 60);
+            this.iconQuanLy.Name = "iconQuanLy";
+            this.iconQuanLy.Size = new System.Drawing.Size(191, 146);
+            this.iconQuanLy.TabIndex = 3;
+            this.iconQuanLy.TabStop = false;
+            // 
             // cusBtn1
             // 
+            this.cusBtn1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cusBtn1.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.cusBtn1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
             this.cusBtn1.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -187,7 +206,7 @@
             this.cusBtn1.FlatAppearance.BorderSize = 0;
             this.cusBtn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cusBtn1.ForeColor = System.Drawing.Color.White;
-            this.cusBtn1.Location = new System.Drawing.Point(226, 260);
+            this.cusBtn1.Location = new System.Drawing.Point(231, 332);
             this.cusBtn1.Name = "cusBtn1";
             this.cusBtn1.Size = new System.Drawing.Size(171, 62);
             this.cusBtn1.TabIndex = 2;
@@ -199,6 +218,7 @@
             // 
             // txtMKQL
             // 
+            this.txtMKQL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtMKQL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.txtMKQL.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.txtMKQL.BorderFocusColor = System.Drawing.Color.HotPink;
@@ -206,7 +226,7 @@
             this.txtMKQL.BorderSize = 2;
             this.txtMKQL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMKQL.ForeColor = System.Drawing.Color.White;
-            this.txtMKQL.Location = new System.Drawing.Point(197, 167);
+            this.txtMKQL.Location = new System.Drawing.Point(188, 265);
             this.txtMKQL.Margin = new System.Windows.Forms.Padding(4);
             this.txtMKQL.Multiline = false;
             this.txtMKQL.Name = "txtMKQL";
@@ -222,6 +242,7 @@
             // 
             // txtTKQL
             // 
+            this.txtTKQL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTKQL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.txtTKQL.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.txtTKQL.BorderFocusColor = System.Drawing.Color.HotPink;
@@ -229,7 +250,7 @@
             this.txtTKQL.BorderSize = 2;
             this.txtTKQL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTKQL.ForeColor = System.Drawing.Color.White;
-            this.txtTKQL.Location = new System.Drawing.Point(197, 103);
+            this.txtTKQL.Location = new System.Drawing.Point(188, 212);
             this.txtTKQL.Margin = new System.Windows.Forms.Padding(4);
             this.txtTKQL.Multiline = false;
             this.txtTKQL.Name = "txtTKQL";
@@ -261,8 +282,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconForm)).EndInit();
             this.panelDesktop.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.iconQuanLy)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -276,12 +298,13 @@
         private FontAwesome.Sharp.IconButton btnLoginQL;
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Label lblTitle;
-        private FontAwesome.Sharp.IconPictureBox iconCurrentChildForm;
+        private FontAwesome.Sharp.IconPictureBox iconForm;
         private System.Windows.Forms.Panel panelShadow;
         private System.Windows.Forms.Panel panelDesktop;
         private CustomsDetail.CustomTextbox txtTKQL;
         private CustomsDetail.CusBtn cusBtn1;
         private CustomsDetail.CustomTextbox txtMKQL;
+        private FontAwesome.Sharp.IconPictureBox iconQuanLy;
     }
 }
 
