@@ -11,12 +11,15 @@ using System.Windows.Forms;
 
 namespace QuanNet
 {
-    public partial class Form1 : Form
+    public partial class FormLogin : Form
     {
+        //----
+        private string PasswordAdmin = "123";
+        private string IDAdmin = "admin";
         private IconButton currentBtn;
-        private Panel leftBorderBtn;
-        private Form currentChildForm;
-        public Form1()
+    private Panel leftBorderBtn;
+    private Form currentChildForm;
+        public FormLogin()
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
@@ -27,16 +30,16 @@ namespace QuanNet
             this.ControlBox = true;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            //====
+            txtMKQL.Visible = false;
+            txtTKQL.Visible = false;
+            cusBtn1.Visible = false;
         }
-//----------------Code UI giao diện-------------------------------------------------------
+        //-----------------Code UI Form---------------------------------------------------
         private struct RGBColors
         {
             public static Color color1 = Color.FromArgb(172, 126, 241);
             public static Color color2 = Color.FromArgb(249, 118, 176);
-            public static Color color3 = Color.FromArgb(253, 138, 114);
-            public static Color color4 = Color.FromArgb(95, 77, 221);
-            public static Color color5 = Color.FromArgb(249, 88, 155);
-            public static Color color6 = Color.FromArgb(24, 161, 251);
         }
         private void ActivateButton(object senderBtn, Color color)
         {
@@ -74,24 +77,6 @@ namespace QuanNet
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
         }
-        private void pictureBoxLogo_Click(object sender, EventArgs e)
-        {
-            if (currentChildForm != null)
-            {
-                currentChildForm.Close();
-            }
-            Reset();
-        }
-        private void Reset()
-        {
-            DisableButton();
-            leftBorderBtn.Visible = false;
-            iconCurrentChildForm.IconChar = IconChar.Home;
-            iconCurrentChildForm.IconColor = Color.MediumPurple;
-            lblTitle.Text = "Home";
-        }
-//---------------- Kết thúc Code UI giao diện----------------------------------------------       
-        //Add form vào panel
         private void OpenChildForm(Form childForm)
         {
             //open only form
@@ -112,38 +97,67 @@ namespace QuanNet
             childForm.Show();
             lblTitle.Text = childForm.Text;
         }
-        
-
-        private void btnKhachHang_Click(object sender, EventArgs e)
+        private void pictureBoxLogo_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color1);
-            OpenChildForm(new FormKhachHang());
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
+            Reset();
+        }
+        private void Reset()
+        {
+            DisableButton();
+            leftBorderBtn.Visible = false;
+            iconCurrentChildForm.IconChar = IconChar.Home;
+            iconCurrentChildForm.IconColor = Color.MediumPurple;
+            lblTitle.Text = "Home";
         }
 
-        private void btnMayTinh_Click(object sender, EventArgs e)
+        //---------End Code UI------------------------------------------------------------
+        private void btnLoginQL_Click(object sender, EventArgs e)
+        {   
+            ActivateButton(sender, RGBColors.color1);
+            txtMKQL.Visible = true;
+            txtTKQL.Visible = true;
+            cusBtn1.Visible = true;
+            //Form1 f=new Form1();
+            //f.Show();
+            //OpenChildForm(new FormKhachHang());
+        }
+
+        private void btnLoginKhach_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
-            OpenChildForm(new FormMayTinh());
         }
 
-        private void btnOrder_Click(object sender, EventArgs e)
+        private void cusBtn1_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color3);
-            OpenChildForm(new FormOrder());
+            if(txtTKQL.Texts == IDAdmin && txtMKQL.Texts == PasswordAdmin)
+            {
+                Form1 f=new Form1();
+                f.Show();
+            }else
+            MessageBox.Show("Tài khoản hoặc mật khẩu không đúng","Thong bao",MessageBoxButtons.OK);
         }
 
-        private void btnHoaDon_Click(object sender, EventArgs e)
+        private void cusBtn1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            ActivateButton(sender, RGBColors.color4);
-            OpenChildForm(new FormHoaDon());
+            
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+               if (txtTKQL.Texts == IDAdmin && txtMKQL.Texts == PasswordAdmin)
+               {
+                    Form1 f = new Form1();
+                    f.Show();
+                    
+               }
+                else
+                {
+                    MessageBox.Show("Tài khoản hoặc mật khẩu không đúng", "Thong bao", MessageBoxButtons.OK);
+                }
+                e.Handled = true;
+            }
         }
-
-        private void btnThongKe_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color5);
-            OpenChildForm(new FormThongKe());
-        }
-
-
     }
 }
