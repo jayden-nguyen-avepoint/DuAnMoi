@@ -16,5 +16,10 @@ namespace QuanNet
         {
             InitializeComponent();
         }
+
+        private void cusBtn1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

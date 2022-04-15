@@ -51,12 +51,12 @@
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cusBtn3 = new QuanNet.CustomsDetail.CusBtn();
+            this.customTextbox4 = new QuanNet.CustomsDetail.CustomTextbox();
+            this.customTextbox3 = new QuanNet.CustomsDetail.CustomTextbox();
+            this.customTextbox2 = new QuanNet.CustomsDetail.CustomTextbox();
+            this.customTextbox1 = new QuanNet.CustomsDetail.CustomTextbox();
+            this.cusBtn1 = new QuanNet.CustomsDetail.CusBtn();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -78,7 +78,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.panel1.Controls.Add(this.iconButton24);
             this.panel1.Controls.Add(this.iconButton23);
             this.panel1.Controls.Add(this.iconButton22);
@@ -99,15 +99,15 @@
             this.panel1.Controls.Add(this.iconButton3);
             this.panel1.Controls.Add(this.iconButton2);
             this.panel1.Controls.Add(this.iconButton1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(35, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(531, 378);
+            this.panel1.Size = new System.Drawing.Size(478, 378);
             this.panel1.TabIndex = 1;
             // 
             // iconButton24
             // 
             this.iconButton24.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.iconButton24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.iconButton24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.iconButton24.FlatAppearance.BorderSize = 0;
             this.iconButton24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton24.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -125,7 +125,7 @@
             // iconButton23
             // 
             this.iconButton23.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.iconButton23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.iconButton23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.iconButton23.FlatAppearance.BorderSize = 0;
             this.iconButton23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton23.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -143,7 +143,7 @@
             // iconButton22
             // 
             this.iconButton22.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.iconButton22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.iconButton22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.iconButton22.FlatAppearance.BorderSize = 0;
             this.iconButton22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton22.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -161,7 +161,7 @@
             // iconButton21
             // 
             this.iconButton21.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.iconButton21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.iconButton21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.iconButton21.FlatAppearance.BorderSize = 0;
             this.iconButton21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton21.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -179,7 +179,7 @@
             // iconButton20
             // 
             this.iconButton20.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.iconButton20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.iconButton20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.iconButton20.FlatAppearance.BorderSize = 0;
             this.iconButton20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton20.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -197,7 +197,7 @@
             // iconButton19
             // 
             this.iconButton19.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.iconButton19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.iconButton19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.iconButton19.FlatAppearance.BorderSize = 0;
             this.iconButton19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton19.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -215,7 +215,7 @@
             // iconButton9
             // 
             this.iconButton9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.iconButton9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.iconButton9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.iconButton9.FlatAppearance.BorderSize = 0;
             this.iconButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -233,7 +233,7 @@
             // iconButton10
             // 
             this.iconButton10.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.iconButton10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.iconButton10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.iconButton10.FlatAppearance.BorderSize = 0;
             this.iconButton10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -251,7 +251,7 @@
             // iconButton11
             // 
             this.iconButton11.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.iconButton11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.iconButton11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.iconButton11.FlatAppearance.BorderSize = 0;
             this.iconButton11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -269,7 +269,7 @@
             // iconButton12
             // 
             this.iconButton12.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.iconButton12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.iconButton12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.iconButton12.FlatAppearance.BorderSize = 0;
             this.iconButton12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -287,7 +287,7 @@
             // iconButton14
             // 
             this.iconButton14.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.iconButton14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.iconButton14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.iconButton14.FlatAppearance.BorderSize = 0;
             this.iconButton14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -305,7 +305,7 @@
             // iconButton15
             // 
             this.iconButton15.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.iconButton15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.iconButton15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.iconButton15.FlatAppearance.BorderSize = 0;
             this.iconButton15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton15.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -323,7 +323,7 @@
             // iconButton8
             // 
             this.iconButton8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.iconButton8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.iconButton8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.iconButton8.FlatAppearance.BorderSize = 0;
             this.iconButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -341,7 +341,7 @@
             // iconButton7
             // 
             this.iconButton7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.iconButton7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.iconButton7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.iconButton7.FlatAppearance.BorderSize = 0;
             this.iconButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -359,7 +359,7 @@
             // iconButton6
             // 
             this.iconButton6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.iconButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.iconButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.iconButton6.FlatAppearance.BorderSize = 0;
             this.iconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -377,7 +377,7 @@
             // iconButton5
             // 
             this.iconButton5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.iconButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.iconButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.iconButton5.FlatAppearance.BorderSize = 0;
             this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -395,7 +395,7 @@
             // iconButton4
             // 
             this.iconButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.iconButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.iconButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.iconButton4.FlatAppearance.BorderSize = 0;
             this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -413,7 +413,7 @@
             // iconButton3
             // 
             this.iconButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.iconButton3.FlatAppearance.BorderSize = 0;
             this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -431,7 +431,7 @@
             // iconButton2
             // 
             this.iconButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.iconButton2.FlatAppearance.BorderSize = 0;
             this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -449,7 +449,7 @@
             // iconButton1
             // 
             this.iconButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.iconButton1.FlatAppearance.BorderSize = 0;
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -466,123 +466,179 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.panel2.Controls.Add(this.cusBtn3);
+            this.panel2.Controls.Add(this.customTextbox4);
+            this.panel2.Controls.Add(this.customTextbox3);
+            this.panel2.Controls.Add(this.customTextbox2);
+            this.panel2.Controls.Add(this.customTextbox1);
+            this.panel2.Controls.Add(this.cusBtn1);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(567, 12);
+            this.panel2.Location = new System.Drawing.Point(595, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(575, 378);
+            this.panel2.Size = new System.Drawing.Size(521, 378);
             this.panel2.TabIndex = 24;
             // 
-            // button2
+            // cusBtn3
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(314, 284);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 52);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Kết thúc";
-            this.button2.UseVisualStyleBackColor = false;
+            this.cusBtn3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.cusBtn3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.cusBtn3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.cusBtn3.BorderRadius = 20;
+            this.cusBtn3.BorderSize = 3;
+            this.cusBtn3.FlatAppearance.BorderSize = 0;
+            this.cusBtn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cusBtn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cusBtn3.ForeColor = System.Drawing.Color.GhostWhite;
+            this.cusBtn3.Location = new System.Drawing.Point(285, 299);
+            this.cusBtn3.Name = "cusBtn3";
+            this.cusBtn3.Size = new System.Drawing.Size(129, 46);
+            this.cusBtn3.TabIndex = 10;
+            this.cusBtn3.Text = "Kết thúc";
+            this.cusBtn3.TextColor = System.Drawing.Color.GhostWhite;
+            this.cusBtn3.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // customTextbox4
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(171, 284);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 52);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Bắt đầu";
-            this.button1.UseVisualStyleBackColor = false;
+            this.customTextbox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.customTextbox4.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.customTextbox4.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.customTextbox4.BorderSize = 2;
+            this.customTextbox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customTextbox4.ForeColor = System.Drawing.Color.White;
+            this.customTextbox4.Location = new System.Drawing.Point(164, 193);
+            this.customTextbox4.Margin = new System.Windows.Forms.Padding(4);
+            this.customTextbox4.Multiline = false;
+            this.customTextbox4.Name = "customTextbox4";
+            this.customTextbox4.Padding = new System.Windows.Forms.Padding(7);
+            this.customTextbox4.PasswordChar = false;
+            this.customTextbox4.Size = new System.Drawing.Size(250, 35);
+            this.customTextbox4.TabIndex = 9;
+            this.customTextbox4.Texts = "";
+            this.customTextbox4.UnderlinedStyle = true;
             // 
-            // textBox4
+            // customTextbox3
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(171, 196);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(250, 26);
-            this.textBox4.TabIndex = 7;
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.customTextbox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.customTextbox3.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.customTextbox3.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.customTextbox3.BorderSize = 2;
+            this.customTextbox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customTextbox3.ForeColor = System.Drawing.Color.White;
+            this.customTextbox3.Location = new System.Drawing.Point(164, 136);
+            this.customTextbox3.Margin = new System.Windows.Forms.Padding(4);
+            this.customTextbox3.Multiline = false;
+            this.customTextbox3.Name = "customTextbox3";
+            this.customTextbox3.Padding = new System.Windows.Forms.Padding(7);
+            this.customTextbox3.PasswordChar = false;
+            this.customTextbox3.Size = new System.Drawing.Size(250, 35);
+            this.customTextbox3.TabIndex = 8;
+            this.customTextbox3.Texts = "";
+            this.customTextbox3.UnderlinedStyle = true;
             // 
-            // textBox3
+            // customTextbox2
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(171, 142);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(250, 26);
-            this.textBox3.TabIndex = 6;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.customTextbox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.customTextbox2.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.customTextbox2.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.customTextbox2.BorderSize = 2;
+            this.customTextbox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customTextbox2.ForeColor = System.Drawing.Color.White;
+            this.customTextbox2.Location = new System.Drawing.Point(164, 79);
+            this.customTextbox2.Margin = new System.Windows.Forms.Padding(4);
+            this.customTextbox2.Multiline = false;
+            this.customTextbox2.Name = "customTextbox2";
+            this.customTextbox2.Padding = new System.Windows.Forms.Padding(7);
+            this.customTextbox2.PasswordChar = false;
+            this.customTextbox2.Size = new System.Drawing.Size(250, 35);
+            this.customTextbox2.TabIndex = 7;
+            this.customTextbox2.Texts = "";
+            this.customTextbox2.UnderlinedStyle = true;
             // 
-            // textBox2
+            // customTextbox1
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(171, 87);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(250, 26);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.customTextbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.customTextbox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.customTextbox1.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.customTextbox1.BorderSize = 2;
+            this.customTextbox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customTextbox1.ForeColor = System.Drawing.Color.White;
+            this.customTextbox1.Location = new System.Drawing.Point(164, 26);
+            this.customTextbox1.Margin = new System.Windows.Forms.Padding(4);
+            this.customTextbox1.Multiline = false;
+            this.customTextbox1.Name = "customTextbox1";
+            this.customTextbox1.Padding = new System.Windows.Forms.Padding(7);
+            this.customTextbox1.PasswordChar = false;
+            this.customTextbox1.Size = new System.Drawing.Size(250, 35);
+            this.customTextbox1.TabIndex = 6;
+            this.customTextbox1.Texts = "";
+            this.customTextbox1.UnderlinedStyle = true;
             // 
-            // textBox1
+            // cusBtn1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(171, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(250, 26);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cusBtn1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.cusBtn1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.cusBtn1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.cusBtn1.BorderRadius = 20;
+            this.cusBtn1.BorderSize = 3;
+            this.cusBtn1.FlatAppearance.BorderSize = 0;
+            this.cusBtn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cusBtn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cusBtn1.ForeColor = System.Drawing.Color.GhostWhite;
+            this.cusBtn1.Location = new System.Drawing.Point(105, 300);
+            this.cusBtn1.Name = "cusBtn1";
+            this.cusBtn1.Size = new System.Drawing.Size(129, 46);
+            this.cusBtn1.TabIndex = 4;
+            this.cusBtn1.Text = "Bắt đầu";
+            this.cusBtn1.TextColor = System.Drawing.Color.GhostWhite;
+            this.cusBtn1.UseVisualStyleBackColor = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(20, 198);
+            this.label4.Location = new System.Drawing.Point(62, 208);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 20);
+            this.label4.Size = new System.Drawing.Size(77, 20);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Tiền/Giờ";
+            this.label4.Text = "Tiền/Giờ:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(20, 142);
+            this.label3.Location = new System.Drawing.Point(62, 151);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 20);
+            this.label3.Size = new System.Drawing.Size(80, 20);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Cấu hình";
+            this.label3.Text = "Cấu hình:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(20, 87);
+            this.label2.Location = new System.Drawing.Point(62, 94);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(26, 20);
+            this.label2.Size = new System.Drawing.Size(31, 20);
             this.label2.TabIndex = 1;
-            this.label2.Text = "ID";
+            this.label2.Text = "ID:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(20, 34);
+            this.label1.Location = new System.Drawing.Point(62, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 20);
+            this.label1.Size = new System.Drawing.Size(70, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Số máy";
+            this.label1.Text = "Số máy:";
             // 
             // FormMayTinh
             // 
@@ -632,12 +688,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button2;
+        private CustomsDetail.CustomTextbox customTextbox1;
+        private CustomsDetail.CusBtn cusBtn1;
+        private CustomsDetail.CusBtn cusBtn3;
+        private CustomsDetail.CustomTextbox customTextbox4;
+        private CustomsDetail.CustomTextbox customTextbox3;
+        private CustomsDetail.CustomTextbox customTextbox2;
     }
 }
