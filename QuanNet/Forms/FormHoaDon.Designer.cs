@@ -81,11 +81,12 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(33, 57);
+            this.label4.Location = new System.Drawing.Point(56, 57);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 42);
+            this.label4.Size = new System.Drawing.Size(50, 42);
             this.label4.TabIndex = 3;
-            this.label4.Text = "label4";
+            this.label4.Text = "10";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
@@ -101,11 +102,12 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(37, 57);
+            this.label5.Location = new System.Drawing.Point(68, 57);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 42);
+            this.label5.Size = new System.Drawing.Size(36, 42);
             this.label5.TabIndex = 4;
-            this.label5.Text = "label5";
+            this.label5.Text = "5";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -132,11 +134,11 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(39, 57);
+            this.label6.Location = new System.Drawing.Point(17, 57);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(101, 42);
+            this.label6.Size = new System.Drawing.Size(152, 42);
             this.label6.TabIndex = 5;
-            this.label6.Text = "label6";
+            this.label6.Text = "250.000đ";
             // 
             // label3
             // 
