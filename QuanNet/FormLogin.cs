@@ -16,14 +16,16 @@ namespace QuanNet
         //----
         private string PasswordAdmin = "123";
         private string IDAdmin = "admin";
+        private string PasswordKH = "123";
+        private string IDKH = "user";
         private IconButton currentBtn;
     private Panel leftBorderBtn;
-    private Form currentChildForm;
+    private Form thisChildForm;
         public FormLogin()
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
-            leftBorderBtn.Size = new Size(7, 110);
+            leftBorderBtn.Size = new Size(7, 166);
             panelMenu.Controls.Add(leftBorderBtn);
             //Form
             this.Text = string.Empty;
@@ -31,7 +33,7 @@ namespace QuanNet
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             //====
-            ShowDB(false);
+            
             
         }
         public void ShowDB(bool a)
@@ -42,6 +44,7 @@ namespace QuanNet
                 txtTKQL.Visible = true;
                 cusBtn1.Visible = true;
                 iconQuanLy.Visible = true;
+                panelKHmain.Visible = false;
             }
             else
             {
@@ -49,6 +52,7 @@ namespace QuanNet
                 txtTKQL.Visible = false;
                 cusBtn1.Visible = false;
                 iconQuanLy.Visible = false;
+                panelKHmain.Visible = true;
             }
         }
         //-----------------Code UI Form---------------------------------------------------
@@ -95,9 +99,9 @@ namespace QuanNet
         }
         private void pictureBoxLogo_Click(object sender, EventArgs e)
         {
-            if (currentChildForm != null)
+            if (thisChildForm != null)
             {
-                currentChildForm.Close();
+                thisChildForm.Close();
             }
             Reset();
         }
@@ -161,6 +165,22 @@ namespace QuanNet
                 e.Handled = true;
                 
             }
+        }
+
+        private void cusBtnKH_Click(object sender, EventArgs e)
+        {
+            if (txtTKKH.Texts == IDKH && txtMKKH.Texts == PasswordKH )
+            {
+                FormsUser.FormUsers f = new FormsUser.FormUsers();
+                f.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("Tài khoản hoặc mật khẩu không đúng", "Thong bao", MessageBoxButtons.OK);
+            }
+            txtTKKH.Texts = "";
+            txtMKKH.Texts = "";
         }
     }
 }
