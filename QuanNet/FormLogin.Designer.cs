@@ -126,7 +126,7 @@
             // 
             // pictureBoxLogo
             // 
-            this.pictureBoxLogo.Image = global::QuanNet.Properties.Resources.Hoc_Them_removebg_preview__1__removebg_preview;
+            //this.pictureBoxLogo.Image = global::QuanNet.Properties.Resources.Hoc_Them_removebg_preview__1__removebg_preview;
             this.pictureBoxLogo.Location = new System.Drawing.Point(3, 0);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
             this.pictureBoxLogo.Size = new System.Drawing.Size(212, 185);
