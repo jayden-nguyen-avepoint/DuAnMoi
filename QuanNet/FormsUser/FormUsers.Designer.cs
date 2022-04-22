@@ -37,6 +37,7 @@
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.labelTitle = new System.Windows.Forms.Label();
             this.panelDesktopPanel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
@@ -52,7 +53,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 568);
+            this.panelMenu.Size = new System.Drawing.Size(220, 753);
             this.panelMenu.TabIndex = 0;
             // 
             // panel1
@@ -60,7 +61,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 428);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(220, 140);
+            this.panel1.Size = new System.Drawing.Size(220, 325);
             this.panel1.TabIndex = 3;
             // 
             // btnOrder
@@ -127,7 +128,7 @@
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(220, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(840, 80);
+            this.panelTitleBar.Size = new System.Drawing.Size(1172, 80);
             this.panelTitleBar.TabIndex = 1;
             // 
             // labelTitle
@@ -145,17 +146,28 @@
             // 
             // panelDesktopPanel
             // 
-            this.panelDesktopPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktopPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelDesktopPanel.Location = new System.Drawing.Point(220, 80);
             this.panelDesktopPanel.Name = "panelDesktopPanel";
-            this.panelDesktopPanel.Size = new System.Drawing.Size(840, 488);
+            this.panelDesktopPanel.Size = new System.Drawing.Size(941, 673);
             this.panelDesktopPanel.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(1167, 80);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(225, 673);
+            this.panel2.TabIndex = 3;
             // 
             // FormUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1060, 568);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.ClientSize = new System.Drawing.Size(1392, 753);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelDesktopPanel);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
@@ -182,5 +194,6 @@
     private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnOrder;
+        private System.Windows.Forms.Panel panel2;
     }
 }

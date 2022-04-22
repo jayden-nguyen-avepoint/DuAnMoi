@@ -63,6 +63,76 @@ namespace QuanNet.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap banh_mi {
+            get {
+                object obj = ResourceManager.GetObject("banh-mi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap butri {
+            get {
+                object obj = ResourceManager.GetObject("butri", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap chicken_burger {
+            get {
+                object obj = ResourceManager.GetObject("chicken-burger", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Coaa {
+            get {
+                object obj = ResourceManager.GetObject("Coaa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap coca {
+            get {
+                object obj = ResourceManager.GetObject("coca", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Comchien {
+            get {
+                object obj = ResourceManager.GetObject("Comchien", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap HaoHao {
+            get {
+                object obj = ResourceManager.GetObject("HaoHao", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Hoc_Them_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("Hoc_Them-removebg-preview", resourceCulture);
@@ -106,6 +176,26 @@ namespace QuanNet.Properties {
         internal static System.Drawing.Bitmap Hoc_Them_removebg_preview__1_2 {
             get {
                 object obj = ResourceManager.GetObject("Hoc_Them-removebg-preview (1)2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Lavie {
+            get {
+                object obj = ResourceManager.GetObject("Lavie", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap redbull {
+            get {
+                object obj = ResourceManager.GetObject("redbull", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
