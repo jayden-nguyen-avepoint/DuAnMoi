@@ -50,6 +50,7 @@
             this.cusBtn1 = new QuanNet.CustomsDetail.CusBtn();
             this.txtMKQL = new QuanNet.CustomsDetail.CustomTextbox();
             this.txtTKQL = new QuanNet.CustomsDetail.CustomTextbox();
+            this.panelQL = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
@@ -60,6 +61,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconKH)).BeginInit();
             this.panelKH.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconQuanLy)).BeginInit();
+            this.panelQL.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -126,7 +128,6 @@
             // 
             // pictureBoxLogo
             // 
-            //this.pictureBoxLogo.Image = global::QuanNet.Properties.Resources.Hoc_Them_removebg_preview__1__removebg_preview;
             this.pictureBoxLogo.Location = new System.Drawing.Point(3, 0);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
             this.pictureBoxLogo.Size = new System.Drawing.Size(212, 185);
@@ -181,11 +182,8 @@
             // panelDesktop
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.panelDesktop.Controls.Add(this.panelQL);
             this.panelDesktop.Controls.Add(this.panelKHmain);
-            this.panelDesktop.Controls.Add(this.iconQuanLy);
-            this.panelDesktop.Controls.Add(this.cusBtn1);
-            this.panelDesktop.Controls.Add(this.txtMKQL);
-            this.panelDesktop.Controls.Add(this.txtTKQL);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(258, 84);
             this.panelDesktop.Name = "panelDesktop";
@@ -202,7 +200,7 @@
             this.panelKHmain.Controls.Add(this.txtTKKH);
             this.panelKHmain.Controls.Add(this.iconKH);
             this.panelKHmain.Controls.Add(this.panelKH);
-            this.panelKHmain.Location = new System.Drawing.Point(148, 0);
+            this.panelKHmain.Location = new System.Drawing.Point(168, 3);
             this.panelKHmain.Name = "panelKHmain";
             this.panelKHmain.Size = new System.Drawing.Size(289, 456);
             this.panelKHmain.TabIndex = 2;
@@ -336,7 +334,7 @@
             this.iconQuanLy.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
             this.iconQuanLy.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconQuanLy.IconSize = 146;
-            this.iconQuanLy.Location = new System.Drawing.Point(224, 28);
+            this.iconQuanLy.Location = new System.Drawing.Point(73, 41);
             this.iconQuanLy.Name = "iconQuanLy";
             this.iconQuanLy.Size = new System.Drawing.Size(155, 146);
             this.iconQuanLy.TabIndex = 3;
@@ -353,7 +351,7 @@
             this.cusBtn1.FlatAppearance.BorderSize = 0;
             this.cusBtn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cusBtn1.ForeColor = System.Drawing.Color.White;
-            this.cusBtn1.Location = new System.Drawing.Point(208, 358);
+            this.cusBtn1.Location = new System.Drawing.Point(57, 371);
             this.cusBtn1.Name = "cusBtn1";
             this.cusBtn1.Size = new System.Drawing.Size(171, 62);
             this.cusBtn1.TabIndex = 2;
@@ -373,7 +371,7 @@
             this.txtMKQL.BorderSize = 2;
             this.txtMKQL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMKQL.ForeColor = System.Drawing.Color.White;
-            this.txtMKQL.Location = new System.Drawing.Point(171, 255);
+            this.txtMKQL.Location = new System.Drawing.Point(20, 268);
             this.txtMKQL.Margin = new System.Windows.Forms.Padding(4);
             this.txtMKQL.Multiline = false;
             this.txtMKQL.Name = "txtMKQL";
@@ -397,7 +395,7 @@
             this.txtTKQL.BorderSize = 2;
             this.txtTKQL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTKQL.ForeColor = System.Drawing.Color.White;
-            this.txtTKQL.Location = new System.Drawing.Point(171, 196);
+            this.txtTKQL.Location = new System.Drawing.Point(20, 209);
             this.txtTKQL.Margin = new System.Windows.Forms.Padding(4);
             this.txtTKQL.Multiline = false;
             this.txtTKQL.Name = "txtTKQL";
@@ -410,6 +408,20 @@
             this.txtTKQL.Texts = "";
             this.txtTKQL.UnderlinedStyle = true;
             this.txtTKQL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cusBtn1_KeyPress);
+            // 
+            // panelQL
+            // 
+            this.panelQL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelQL.Controls.Add(this.iconQuanLy);
+            this.panelQL.Controls.Add(this.txtTKQL);
+            this.panelQL.Controls.Add(this.txtMKQL);
+            this.panelQL.Controls.Add(this.cusBtn1);
+            this.panelQL.Location = new System.Drawing.Point(168, 6);
+            this.panelQL.Name = "panelQL";
+            this.panelQL.Size = new System.Drawing.Size(289, 456);
+            this.panelQL.TabIndex = 6;
             // 
             // FormLogin
             // 
@@ -436,6 +448,7 @@
             this.panelKH.ResumeLayout(false);
             this.panelKH.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconQuanLy)).EndInit();
+            this.panelQL.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -464,6 +477,7 @@
         private CustomsDetail.CusBtn cusBtnKH;
         private CustomsDetail.CustomTextbox txtMKKH;
         private CustomsDetail.CustomTextbox txtTKKH;
+        private System.Windows.Forms.Panel panelQL;
     }
 }
 

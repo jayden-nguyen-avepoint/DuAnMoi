@@ -40,18 +40,12 @@ namespace QuanNet
         {
             if (a)
             {
-                txtMKQL.Visible = true;
-                txtTKQL.Visible = true;
-                cusBtn1.Visible = true;
-                iconQuanLy.Visible = true;
+                panelQL.Visible = true;
                 panelKHmain.Visible = false;
             }
             else
             {
-                txtMKQL.Visible = false;
-                txtTKQL.Visible = false;
-                cusBtn1.Visible = false;
-                iconQuanLy.Visible = false;
+                panelQL.Visible=false;
                 panelKHmain.Visible = true;
             }
         }

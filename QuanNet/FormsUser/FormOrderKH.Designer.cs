@@ -31,58 +31,58 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label22 = new System.Windows.Forms.Label();
+            this.cusBtn5 = new QuanNet.CustomsDetail.CusBtn();
             this.label14 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label21 = new System.Windows.Forms.Label();
+            this.cusBtn6 = new QuanNet.CustomsDetail.CusBtn();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
+            this.cusBtn4 = new QuanNet.CustomsDetail.CusBtn();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
+            this.cusBtn3 = new QuanNet.CustomsDetail.CusBtn();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
+            this.cusBtn7 = new QuanNet.CustomsDetail.CusBtn();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
+            this.cusBtn2 = new QuanNet.CustomsDetail.CusBtn();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
+            this.cusBtn1 = new QuanNet.CustomsDetail.CusBtn();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.cusBtn8 = new QuanNet.CustomsDetail.CusBtn();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtGia = new QuanNet.CustomsDetail.CustomTextbox();
+            this.txtSL = new QuanNet.CustomsDetail.CustomTextbox();
+            this.txtMon = new QuanNet.CustomsDetail.CustomTextbox();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.btnHuy = new QuanNet.CustomsDetail.CusBtn();
+            this.btnXacnhan = new QuanNet.CustomsDetail.CusBtn();
             this.label13 = new System.Windows.Forms.Label();
+            this.cbbMay = new QuanNet.CustomsDetail.CusCbb();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnHuy = new QuanNet.CustomsDetail.CusBtn();
-            this.btnXacnhan = new QuanNet.CustomsDetail.CusBtn();
-            this.cbbMay = new QuanNet.CustomsDetail.CusCbb();
-            this.cusBtn5 = new QuanNet.CustomsDetail.CusBtn();
-            this.cusBtn6 = new QuanNet.CustomsDetail.CusBtn();
-            this.cusBtn4 = new QuanNet.CustomsDetail.CusBtn();
-            this.cusBtn3 = new QuanNet.CustomsDetail.CusBtn();
-            this.cusBtn7 = new QuanNet.CustomsDetail.CusBtn();
-            this.cusBtn2 = new QuanNet.CustomsDetail.CusBtn();
-            this.cusBtn1 = new QuanNet.CustomsDetail.CusBtn();
-            this.cusBtn8 = new QuanNet.CustomsDetail.CusBtn();
-            this.txtMon = new QuanNet.CustomsDetail.CustomTextbox();
-            this.txtSL = new QuanNet.CustomsDetail.CustomTextbox();
-            this.txtGia = new QuanNet.CustomsDetail.CustomTextbox();
             this.panel1.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -141,11 +141,31 @@
             this.label22.TabIndex = 33;
             this.label22.Text = "đ";
             // 
+            // cusBtn5
+            // 
+            this.cusBtn5.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.cusBtn5.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.cusBtn5.BorderColor = System.Drawing.Color.Gold;
+            this.cusBtn5.BorderRadius = 20;
+            this.cusBtn5.BorderSize = 0;
+            this.cusBtn5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cusBtn5.FlatAppearance.BorderSize = 0;
+            this.cusBtn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cusBtn5.ForeColor = System.Drawing.Color.White;
+            this.cusBtn5.Location = new System.Drawing.Point(15, 149);
+            this.cusBtn5.Name = "cusBtn5";
+            this.cusBtn5.Size = new System.Drawing.Size(129, 44);
+            this.cusBtn5.TabIndex = 31;
+            this.cusBtn5.Text = "NutriBoost";
+            this.cusBtn5.TextColor = System.Drawing.Color.White;
+            this.cusBtn5.UseVisualStyleBackColor = false;
+            this.cusBtn5.Click += new System.EventHandler(this.Chon_Click);
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.ForeColor = System.Drawing.SystemColors.Control;
-            this.label14.Location = new System.Drawing.Point(61, 130);
+            this.label14.Location = new System.Drawing.Point(50, 130);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(45, 16);
             this.label14.TabIndex = 25;
@@ -183,11 +203,31 @@
             this.label21.TabIndex = 32;
             this.label21.Text = "đ";
             // 
+            // cusBtn6
+            // 
+            this.cusBtn6.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.cusBtn6.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.cusBtn6.BorderColor = System.Drawing.Color.Gold;
+            this.cusBtn6.BorderRadius = 20;
+            this.cusBtn6.BorderSize = 0;
+            this.cusBtn6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cusBtn6.FlatAppearance.BorderSize = 0;
+            this.cusBtn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cusBtn6.ForeColor = System.Drawing.Color.White;
+            this.cusBtn6.Location = new System.Drawing.Point(15, 149);
+            this.cusBtn6.Name = "cusBtn6";
+            this.cusBtn6.Size = new System.Drawing.Size(129, 44);
+            this.cusBtn6.TabIndex = 31;
+            this.cusBtn6.Text = "Redbull";
+            this.cusBtn6.TextColor = System.Drawing.Color.White;
+            this.cusBtn6.UseVisualStyleBackColor = false;
+            this.cusBtn6.Click += new System.EventHandler(this.Chon_Click);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(57, 130);
+            this.label6.Location = new System.Drawing.Point(43, 130);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(45, 16);
             this.label6.TabIndex = 25;
@@ -225,11 +265,31 @@
             this.label20.TabIndex = 31;
             this.label20.Text = "đ";
             // 
+            // cusBtn4
+            // 
+            this.cusBtn4.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.cusBtn4.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.cusBtn4.BorderColor = System.Drawing.Color.Gold;
+            this.cusBtn4.BorderRadius = 20;
+            this.cusBtn4.BorderSize = 0;
+            this.cusBtn4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cusBtn4.FlatAppearance.BorderSize = 0;
+            this.cusBtn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cusBtn4.ForeColor = System.Drawing.Color.White;
+            this.cusBtn4.Location = new System.Drawing.Point(15, 149);
+            this.cusBtn4.Name = "cusBtn4";
+            this.cusBtn4.Size = new System.Drawing.Size(129, 44);
+            this.cusBtn4.TabIndex = 30;
+            this.cusBtn4.Text = "Nước lọc";
+            this.cusBtn4.TextColor = System.Drawing.Color.White;
+            this.cusBtn4.UseVisualStyleBackColor = false;
+            this.cusBtn4.Click += new System.EventHandler(this.Chon_Click);
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.SystemColors.Control;
-            this.label7.Location = new System.Drawing.Point(54, 130);
+            this.label7.Location = new System.Drawing.Point(43, 129);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(38, 16);
             this.label7.TabIndex = 25;
@@ -267,11 +327,31 @@
             this.label18.TabIndex = 29;
             this.label18.Text = "đ";
             // 
+            // cusBtn3
+            // 
+            this.cusBtn3.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.cusBtn3.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.cusBtn3.BorderColor = System.Drawing.Color.Gold;
+            this.cusBtn3.BorderRadius = 20;
+            this.cusBtn3.BorderSize = 0;
+            this.cusBtn3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cusBtn3.FlatAppearance.BorderSize = 0;
+            this.cusBtn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cusBtn3.ForeColor = System.Drawing.Color.White;
+            this.cusBtn3.Location = new System.Drawing.Point(13, 160);
+            this.cusBtn3.Name = "cusBtn3";
+            this.cusBtn3.Size = new System.Drawing.Size(129, 44);
+            this.cusBtn3.TabIndex = 28;
+            this.cusBtn3.Text = "Cơm chiên";
+            this.cusBtn3.TextColor = System.Drawing.Color.White;
+            this.cusBtn3.UseVisualStyleBackColor = false;
+            this.cusBtn3.Click += new System.EventHandler(this.Chon_Click);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(54, 135);
+            this.label5.Location = new System.Drawing.Point(43, 135);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 16);
             this.label5.TabIndex = 25;
@@ -309,11 +389,31 @@
             this.label19.TabIndex = 30;
             this.label19.Text = "đ";
             // 
+            // cusBtn7
+            // 
+            this.cusBtn7.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.cusBtn7.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.cusBtn7.BorderColor = System.Drawing.Color.Gold;
+            this.cusBtn7.BorderRadius = 20;
+            this.cusBtn7.BorderSize = 0;
+            this.cusBtn7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cusBtn7.FlatAppearance.BorderSize = 0;
+            this.cusBtn7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cusBtn7.ForeColor = System.Drawing.Color.White;
+            this.cusBtn7.Location = new System.Drawing.Point(15, 149);
+            this.cusBtn7.Name = "cusBtn7";
+            this.cusBtn7.Size = new System.Drawing.Size(129, 44);
+            this.cusBtn7.TabIndex = 29;
+            this.cusBtn7.Text = "Coca";
+            this.cusBtn7.TextColor = System.Drawing.Color.White;
+            this.cusBtn7.UseVisualStyleBackColor = false;
+            this.cusBtn7.Click += new System.EventHandler(this.Chon_Click);
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.SystemColors.Control;
-            this.label8.Location = new System.Drawing.Point(62, 130);
+            this.label8.Location = new System.Drawing.Point(51, 130);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(38, 16);
             this.label8.TabIndex = 25;
@@ -351,11 +451,31 @@
             this.label17.TabIndex = 28;
             this.label17.Text = "đ";
             // 
+            // cusBtn2
+            // 
+            this.cusBtn2.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.cusBtn2.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.cusBtn2.BorderColor = System.Drawing.Color.Gold;
+            this.cusBtn2.BorderRadius = 20;
+            this.cusBtn2.BorderSize = 0;
+            this.cusBtn2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cusBtn2.FlatAppearance.BorderSize = 0;
+            this.cusBtn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cusBtn2.ForeColor = System.Drawing.Color.White;
+            this.cusBtn2.Location = new System.Drawing.Point(15, 155);
+            this.cusBtn2.Name = "cusBtn2";
+            this.cusBtn2.Size = new System.Drawing.Size(129, 44);
+            this.cusBtn2.TabIndex = 27;
+            this.cusBtn2.Text = "Mì tôm";
+            this.cusBtn2.TextColor = System.Drawing.Color.White;
+            this.cusBtn2.UseVisualStyleBackColor = false;
+            this.cusBtn2.Click += new System.EventHandler(this.Chon_Click);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(52, 130);
+            this.label4.Location = new System.Drawing.Point(41, 130);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 16);
             this.label4.TabIndex = 25;
@@ -393,11 +513,32 @@
             this.label16.TabIndex = 27;
             this.label16.Text = "đ";
             // 
+            // cusBtn1
+            // 
+            this.cusBtn1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.cusBtn1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.cusBtn1.BorderColor = System.Drawing.Color.Gold;
+            this.cusBtn1.BorderRadius = 20;
+            this.cusBtn1.BorderSize = 0;
+            this.cusBtn1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cusBtn1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.cusBtn1.FlatAppearance.BorderSize = 0;
+            this.cusBtn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cusBtn1.ForeColor = System.Drawing.Color.White;
+            this.cusBtn1.Location = new System.Drawing.Point(15, 155);
+            this.cusBtn1.Name = "cusBtn1";
+            this.cusBtn1.Size = new System.Drawing.Size(129, 44);
+            this.cusBtn1.TabIndex = 26;
+            this.cusBtn1.Text = "Bánh mì";
+            this.cusBtn1.TextColor = System.Drawing.Color.White;
+            this.cusBtn1.UseVisualStyleBackColor = false;
+            this.cusBtn1.Click += new System.EventHandler(this.Chon_Click);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(52, 130);
+            this.label3.Location = new System.Drawing.Point(44, 130);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 16);
             this.label3.TabIndex = 25;
@@ -439,7 +580,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(52, 130);
+            this.label2.Location = new System.Drawing.Point(42, 130);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 16);
             this.label2.TabIndex = 25;
@@ -454,6 +595,26 @@
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 24;
             this.pictureBox7.TabStop = false;
+            // 
+            // cusBtn8
+            // 
+            this.cusBtn8.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.cusBtn8.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.cusBtn8.BorderColor = System.Drawing.Color.Gold;
+            this.cusBtn8.BorderRadius = 20;
+            this.cusBtn8.BorderSize = 0;
+            this.cusBtn8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cusBtn8.FlatAppearance.BorderSize = 0;
+            this.cusBtn8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cusBtn8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.cusBtn8.Location = new System.Drawing.Point(15, 155);
+            this.cusBtn8.Name = "cusBtn8";
+            this.cusBtn8.Size = new System.Drawing.Size(129, 44);
+            this.cusBtn8.TabIndex = 17;
+            this.cusBtn8.Text = "Burger";
+            this.cusBtn8.TextColor = System.Drawing.SystemColors.ControlLightLight;
+            this.cusBtn8.UseVisualStyleBackColor = true;
+            this.cusBtn8.Click += new System.EventHandler(this.Chon_Click);
             // 
             // label1
             // 
@@ -486,6 +647,72 @@
             this.panel2.Size = new System.Drawing.Size(225, 598);
             this.panel2.TabIndex = 2;
             // 
+            // txtGia
+            // 
+            this.txtGia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
+            this.txtGia.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtGia.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtGia.BorderRadius = 10;
+            this.txtGia.BorderSize = 2;
+            this.txtGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGia.ForeColor = System.Drawing.Color.White;
+            this.txtGia.Location = new System.Drawing.Point(52, 215);
+            this.txtGia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtGia.Multiline = false;
+            this.txtGia.Name = "txtGia";
+            this.txtGia.Padding = new System.Windows.Forms.Padding(7);
+            this.txtGia.PasswordChar = false;
+            this.txtGia.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtGia.PlaceholderText = "";
+            this.txtGia.Size = new System.Drawing.Size(147, 35);
+            this.txtGia.TabIndex = 31;
+            this.txtGia.Texts = "";
+            this.txtGia.UnderlinedStyle = false;
+            // 
+            // txtSL
+            // 
+            this.txtSL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
+            this.txtSL.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtSL.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtSL.BorderRadius = 10;
+            this.txtSL.BorderSize = 2;
+            this.txtSL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSL.ForeColor = System.Drawing.Color.White;
+            this.txtSL.Location = new System.Drawing.Point(52, 144);
+            this.txtSL.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSL.Multiline = false;
+            this.txtSL.Name = "txtSL";
+            this.txtSL.Padding = new System.Windows.Forms.Padding(7);
+            this.txtSL.PasswordChar = false;
+            this.txtSL.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtSL.PlaceholderText = "";
+            this.txtSL.Size = new System.Drawing.Size(147, 35);
+            this.txtSL.TabIndex = 30;
+            this.txtSL.Texts = "";
+            this.txtSL.UnderlinedStyle = false;
+            // 
+            // txtMon
+            // 
+            this.txtMon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
+            this.txtMon.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtMon.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtMon.BorderRadius = 10;
+            this.txtMon.BorderSize = 2;
+            this.txtMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMon.ForeColor = System.Drawing.Color.White;
+            this.txtMon.Location = new System.Drawing.Point(52, 79);
+            this.txtMon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMon.Multiline = false;
+            this.txtMon.Name = "txtMon";
+            this.txtMon.Padding = new System.Windows.Forms.Padding(15, 7, 7, 7);
+            this.txtMon.PasswordChar = false;
+            this.txtMon.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtMon.PlaceholderText = "";
+            this.txtMon.Size = new System.Drawing.Size(147, 35);
+            this.txtMon.TabIndex = 29;
+            this.txtMon.Texts = "";
+            this.txtMon.UnderlinedStyle = false;
+            // 
             // listView1
             // 
             this.listView1.HideSelection = false;
@@ -494,6 +721,45 @@
             this.listView1.Size = new System.Drawing.Size(204, 134);
             this.listView1.TabIndex = 28;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnHuy.BackgroundColor = System.Drawing.Color.OrangeRed;
+            this.btnHuy.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnHuy.BorderRadius = 20;
+            this.btnHuy.BorderSize = 0;
+            this.btnHuy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHuy.FlatAppearance.BorderSize = 0;
+            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHuy.ForeColor = System.Drawing.Color.White;
+            this.btnHuy.Location = new System.Drawing.Point(52, 542);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(129, 44);
+            this.btnHuy.TabIndex = 27;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.TextColor = System.Drawing.Color.White;
+            this.btnHuy.UseVisualStyleBackColor = false;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
+            // btnXacnhan
+            // 
+            this.btnXacnhan.BackColor = System.Drawing.Color.Orange;
+            this.btnXacnhan.BackgroundColor = System.Drawing.Color.Orange;
+            this.btnXacnhan.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnXacnhan.BorderRadius = 20;
+            this.btnXacnhan.BorderSize = 0;
+            this.btnXacnhan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXacnhan.FlatAppearance.BorderSize = 0;
+            this.btnXacnhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXacnhan.ForeColor = System.Drawing.Color.White;
+            this.btnXacnhan.Location = new System.Drawing.Point(52, 481);
+            this.btnXacnhan.Name = "btnXacnhan";
+            this.btnXacnhan.Size = new System.Drawing.Size(129, 44);
+            this.btnXacnhan.TabIndex = 26;
+            this.btnXacnhan.Text = "Xác nhận";
+            this.btnXacnhan.TextColor = System.Drawing.Color.White;
+            this.btnXacnhan.UseVisualStyleBackColor = false;
             // 
             // label13
             // 
@@ -505,6 +771,25 @@
             this.label13.Size = new System.Drawing.Size(45, 20);
             this.label13.TabIndex = 9;
             this.label13.Text = "Máy:";
+            // 
+            // cbbMay
+            // 
+            this.cbbMay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
+            this.cbbMay.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cbbMay.BorderSize = 1;
+            this.cbbMay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbbMay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cbbMay.ForeColor = System.Drawing.Color.White;
+            this.cbbMay.IconColor = System.Drawing.Color.PaleVioletRed;
+            this.cbbMay.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cbbMay.ListTextColor = System.Drawing.Color.White;
+            this.cbbMay.Location = new System.Drawing.Point(57, 280);
+            this.cbbMay.MinimumSize = new System.Drawing.Size(147, 20);
+            this.cbbMay.Name = "cbbMay";
+            this.cbbMay.Padding = new System.Windows.Forms.Padding(1);
+            this.cbbMay.Size = new System.Drawing.Size(147, 30);
+            this.cbbMay.TabIndex = 8;
+            this.cbbMay.Texts = "";
             // 
             // label12
             // 
@@ -550,281 +835,6 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "Order list";
             // 
-            // btnHuy
-            // 
-            this.btnHuy.BackColor = System.Drawing.Color.OrangeRed;
-            this.btnHuy.BackgroundColor = System.Drawing.Color.OrangeRed;
-            this.btnHuy.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnHuy.BorderRadius = 20;
-            this.btnHuy.BorderSize = 0;
-            this.btnHuy.FlatAppearance.BorderSize = 0;
-            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHuy.ForeColor = System.Drawing.Color.White;
-            this.btnHuy.Location = new System.Drawing.Point(52, 542);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(129, 44);
-            this.btnHuy.TabIndex = 27;
-            this.btnHuy.Text = "Hủy";
-            this.btnHuy.TextColor = System.Drawing.Color.White;
-            this.btnHuy.UseVisualStyleBackColor = false;
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
-            // 
-            // btnXacnhan
-            // 
-            this.btnXacnhan.BackColor = System.Drawing.Color.Orange;
-            this.btnXacnhan.BackgroundColor = System.Drawing.Color.Orange;
-            this.btnXacnhan.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnXacnhan.BorderRadius = 20;
-            this.btnXacnhan.BorderSize = 0;
-            this.btnXacnhan.FlatAppearance.BorderSize = 0;
-            this.btnXacnhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXacnhan.ForeColor = System.Drawing.Color.White;
-            this.btnXacnhan.Location = new System.Drawing.Point(52, 481);
-            this.btnXacnhan.Name = "btnXacnhan";
-            this.btnXacnhan.Size = new System.Drawing.Size(129, 44);
-            this.btnXacnhan.TabIndex = 26;
-            this.btnXacnhan.Text = "Xác nhận";
-            this.btnXacnhan.TextColor = System.Drawing.Color.White;
-            this.btnXacnhan.UseVisualStyleBackColor = false;
-            // 
-            // cbbMay
-            // 
-            this.cbbMay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
-            this.cbbMay.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cbbMay.BorderSize = 1;
-            this.cbbMay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cbbMay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cbbMay.ForeColor = System.Drawing.Color.White;
-            this.cbbMay.IconColor = System.Drawing.Color.PaleVioletRed;
-            this.cbbMay.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cbbMay.ListTextColor = System.Drawing.Color.White;
-            this.cbbMay.Location = new System.Drawing.Point(57, 280);
-            this.cbbMay.MinimumSize = new System.Drawing.Size(147, 20);
-            this.cbbMay.Name = "cbbMay";
-            this.cbbMay.Padding = new System.Windows.Forms.Padding(1);
-            this.cbbMay.Size = new System.Drawing.Size(147, 30);
-            this.cbbMay.TabIndex = 8;
-            this.cbbMay.Texts = "";
-            // 
-            // cusBtn5
-            // 
-            this.cusBtn5.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cusBtn5.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.cusBtn5.BorderColor = System.Drawing.Color.Gold;
-            this.cusBtn5.BorderRadius = 20;
-            this.cusBtn5.BorderSize = 0;
-            this.cusBtn5.FlatAppearance.BorderSize = 0;
-            this.cusBtn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cusBtn5.ForeColor = System.Drawing.Color.White;
-            this.cusBtn5.Location = new System.Drawing.Point(15, 149);
-            this.cusBtn5.Name = "cusBtn5";
-            this.cusBtn5.Size = new System.Drawing.Size(129, 44);
-            this.cusBtn5.TabIndex = 31;
-            this.cusBtn5.Text = "NutriBoost";
-            this.cusBtn5.TextColor = System.Drawing.Color.White;
-            this.cusBtn5.UseVisualStyleBackColor = false;
-            this.cusBtn5.Click += new System.EventHandler(this.Chon_Click);
-            // 
-            // cusBtn6
-            // 
-            this.cusBtn6.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cusBtn6.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.cusBtn6.BorderColor = System.Drawing.Color.Gold;
-            this.cusBtn6.BorderRadius = 20;
-            this.cusBtn6.BorderSize = 0;
-            this.cusBtn6.FlatAppearance.BorderSize = 0;
-            this.cusBtn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cusBtn6.ForeColor = System.Drawing.Color.White;
-            this.cusBtn6.Location = new System.Drawing.Point(15, 149);
-            this.cusBtn6.Name = "cusBtn6";
-            this.cusBtn6.Size = new System.Drawing.Size(129, 44);
-            this.cusBtn6.TabIndex = 31;
-            this.cusBtn6.Text = "Redbull";
-            this.cusBtn6.TextColor = System.Drawing.Color.White;
-            this.cusBtn6.UseVisualStyleBackColor = false;
-            this.cusBtn6.Click += new System.EventHandler(this.Chon_Click);
-            // 
-            // cusBtn4
-            // 
-            this.cusBtn4.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cusBtn4.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.cusBtn4.BorderColor = System.Drawing.Color.Gold;
-            this.cusBtn4.BorderRadius = 20;
-            this.cusBtn4.BorderSize = 0;
-            this.cusBtn4.FlatAppearance.BorderSize = 0;
-            this.cusBtn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cusBtn4.ForeColor = System.Drawing.Color.White;
-            this.cusBtn4.Location = new System.Drawing.Point(15, 149);
-            this.cusBtn4.Name = "cusBtn4";
-            this.cusBtn4.Size = new System.Drawing.Size(129, 44);
-            this.cusBtn4.TabIndex = 30;
-            this.cusBtn4.Text = "Nước lọc";
-            this.cusBtn4.TextColor = System.Drawing.Color.White;
-            this.cusBtn4.UseVisualStyleBackColor = false;
-            this.cusBtn4.Click += new System.EventHandler(this.Chon_Click);
-            // 
-            // cusBtn3
-            // 
-            this.cusBtn3.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cusBtn3.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.cusBtn3.BorderColor = System.Drawing.Color.Gold;
-            this.cusBtn3.BorderRadius = 20;
-            this.cusBtn3.BorderSize = 0;
-            this.cusBtn3.FlatAppearance.BorderSize = 0;
-            this.cusBtn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cusBtn3.ForeColor = System.Drawing.Color.White;
-            this.cusBtn3.Location = new System.Drawing.Point(13, 160);
-            this.cusBtn3.Name = "cusBtn3";
-            this.cusBtn3.Size = new System.Drawing.Size(129, 44);
-            this.cusBtn3.TabIndex = 28;
-            this.cusBtn3.Text = "Cơm chiên";
-            this.cusBtn3.TextColor = System.Drawing.Color.White;
-            this.cusBtn3.UseVisualStyleBackColor = false;
-            this.cusBtn3.Click += new System.EventHandler(this.Chon_Click);
-            // 
-            // cusBtn7
-            // 
-            this.cusBtn7.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cusBtn7.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.cusBtn7.BorderColor = System.Drawing.Color.Gold;
-            this.cusBtn7.BorderRadius = 20;
-            this.cusBtn7.BorderSize = 0;
-            this.cusBtn7.FlatAppearance.BorderSize = 0;
-            this.cusBtn7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cusBtn7.ForeColor = System.Drawing.Color.White;
-            this.cusBtn7.Location = new System.Drawing.Point(15, 149);
-            this.cusBtn7.Name = "cusBtn7";
-            this.cusBtn7.Size = new System.Drawing.Size(129, 44);
-            this.cusBtn7.TabIndex = 29;
-            this.cusBtn7.Text = "Coca";
-            this.cusBtn7.TextColor = System.Drawing.Color.White;
-            this.cusBtn7.UseVisualStyleBackColor = false;
-            this.cusBtn7.Click += new System.EventHandler(this.Chon_Click);
-            // 
-            // cusBtn2
-            // 
-            this.cusBtn2.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cusBtn2.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.cusBtn2.BorderColor = System.Drawing.Color.Gold;
-            this.cusBtn2.BorderRadius = 20;
-            this.cusBtn2.BorderSize = 0;
-            this.cusBtn2.FlatAppearance.BorderSize = 0;
-            this.cusBtn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cusBtn2.ForeColor = System.Drawing.Color.White;
-            this.cusBtn2.Location = new System.Drawing.Point(15, 155);
-            this.cusBtn2.Name = "cusBtn2";
-            this.cusBtn2.Size = new System.Drawing.Size(129, 44);
-            this.cusBtn2.TabIndex = 27;
-            this.cusBtn2.Text = "Mì tôm";
-            this.cusBtn2.TextColor = System.Drawing.Color.White;
-            this.cusBtn2.UseVisualStyleBackColor = false;
-            this.cusBtn2.Click += new System.EventHandler(this.Chon_Click);
-            // 
-            // cusBtn1
-            // 
-            this.cusBtn1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cusBtn1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.cusBtn1.BorderColor = System.Drawing.Color.Gold;
-            this.cusBtn1.BorderRadius = 20;
-            this.cusBtn1.BorderSize = 0;
-            this.cusBtn1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cusBtn1.FlatAppearance.BorderSize = 0;
-            this.cusBtn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cusBtn1.ForeColor = System.Drawing.Color.White;
-            this.cusBtn1.Location = new System.Drawing.Point(15, 155);
-            this.cusBtn1.Name = "cusBtn1";
-            this.cusBtn1.Size = new System.Drawing.Size(129, 44);
-            this.cusBtn1.TabIndex = 26;
-            this.cusBtn1.Text = "Bánh mì";
-            this.cusBtn1.TextColor = System.Drawing.Color.White;
-            this.cusBtn1.UseVisualStyleBackColor = false;
-            this.cusBtn1.Click += new System.EventHandler(this.Chon_Click);
-            // 
-            // cusBtn8
-            // 
-            this.cusBtn8.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cusBtn8.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.cusBtn8.BorderColor = System.Drawing.Color.Gold;
-            this.cusBtn8.BorderRadius = 20;
-            this.cusBtn8.BorderSize = 0;
-            this.cusBtn8.FlatAppearance.BorderSize = 0;
-            this.cusBtn8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cusBtn8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.cusBtn8.Location = new System.Drawing.Point(15, 155);
-            this.cusBtn8.Name = "cusBtn8";
-            this.cusBtn8.Size = new System.Drawing.Size(129, 44);
-            this.cusBtn8.TabIndex = 17;
-            this.cusBtn8.Text = "Burger";
-            this.cusBtn8.TextColor = System.Drawing.SystemColors.ControlLightLight;
-            this.cusBtn8.UseVisualStyleBackColor = true;
-            this.cusBtn8.Click += new System.EventHandler(this.Chon_Click);
-            // 
-            // txtMon
-            // 
-            this.txtMon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
-            this.txtMon.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtMon.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtMon.BorderRadius = 10;
-            this.txtMon.BorderSize = 2;
-            this.txtMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMon.ForeColor = System.Drawing.Color.White;
-            this.txtMon.Location = new System.Drawing.Point(52, 79);
-            this.txtMon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtMon.Multiline = false;
-            this.txtMon.Name = "txtMon";
-            this.txtMon.Padding = new System.Windows.Forms.Padding(7);
-            this.txtMon.PasswordChar = false;
-            this.txtMon.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtMon.PlaceholderText = "";
-            this.txtMon.Size = new System.Drawing.Size(147, 35);
-            this.txtMon.TabIndex = 29;
-            this.txtMon.Texts = "";
-            this.txtMon.UnderlinedStyle = false;
-            // 
-            // txtSL
-            // 
-            this.txtSL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
-            this.txtSL.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtSL.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtSL.BorderRadius = 10;
-            this.txtSL.BorderSize = 2;
-            this.txtSL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSL.ForeColor = System.Drawing.Color.White;
-            this.txtSL.Location = new System.Drawing.Point(52, 144);
-            this.txtSL.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtSL.Multiline = false;
-            this.txtSL.Name = "txtSL";
-            this.txtSL.Padding = new System.Windows.Forms.Padding(7);
-            this.txtSL.PasswordChar = false;
-            this.txtSL.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtSL.PlaceholderText = "";
-            this.txtSL.Size = new System.Drawing.Size(147, 35);
-            this.txtSL.TabIndex = 30;
-            this.txtSL.Texts = "";
-            this.txtSL.UnderlinedStyle = false;
-            // 
-            // txtGia
-            // 
-            this.txtGia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
-            this.txtGia.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtGia.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtGia.BorderRadius = 10;
-            this.txtGia.BorderSize = 2;
-            this.txtGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGia.ForeColor = System.Drawing.Color.White;
-            this.txtGia.Location = new System.Drawing.Point(52, 215);
-            this.txtGia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtGia.Multiline = false;
-            this.txtGia.Name = "txtGia";
-            this.txtGia.Padding = new System.Windows.Forms.Padding(7);
-            this.txtGia.PasswordChar = false;
-            this.txtGia.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtGia.PlaceholderText = "";
-            this.txtGia.Size = new System.Drawing.Size(147, 35);
-            this.txtGia.TabIndex = 31;
-            this.txtGia.Texts = "";
-            this.txtGia.UnderlinedStyle = false;
-            // 
             // FormOrderKH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -834,7 +844,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FormOrderKH";
-            this.Text = "924, 627";
+            this.Text = "Order";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel10.ResumeLayout(false);

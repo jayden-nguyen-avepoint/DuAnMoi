@@ -27,5 +27,7 @@ namespace QuanNet.FormsUser
             txtSL.Texts = "";
             txtGia.Texts = "";
         }
+
+
     }
 }

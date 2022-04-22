@@ -17,7 +17,7 @@ namespace QuanNet
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormUsers());
+            Application.Run(new FormLogin());
         }
     }
 }

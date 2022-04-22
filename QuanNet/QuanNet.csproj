@@ -225,5 +225,41 @@
   <ItemGroup>
     <None Include="Resources\Hoc_Them-removebg-preview.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1200x600wa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customLogo-200x200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1200x600wa-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1200px-Cốc_Cốc_logo.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1200x630wa-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red-flag-icon-youtube-logo-icon-design-youtube-play-buttons-arrow-rectangle-symbol-png-clipart-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tải_xuống-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\block-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sinhnhat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hoc_Them-removebg-preview__1_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6133365.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
