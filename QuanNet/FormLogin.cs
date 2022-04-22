@@ -182,5 +182,6 @@ namespace QuanNet
             txtTKKH.Texts = "";
             txtMKKH.Texts = "";
         }
+        //fuck this shit bruh
     }
 }
