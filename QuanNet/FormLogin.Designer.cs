@@ -50,22 +50,6 @@
             this.cusBtn1 = new QuanNet.CustomsDetail.CusBtn();
             this.txtMKQL = new QuanNet.CustomsDetail.CustomTextbox();
             this.txtTKQL = new QuanNet.CustomsDetail.CustomTextbox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.cusBtn2 = new QuanNet.CustomsDetail.CusBtn();
-            this.customTextbox1 = new QuanNet.CustomsDetail.CustomTextbox();
-            this.customTextbox2 = new QuanNet.CustomsDetail.CustomTextbox();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cusCbb1 = new QuanNet.CustomsDetail.CusCbb();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.cusBtn3 = new QuanNet.CustomsDetail.CusBtn();
-            this.customTextbox3 = new QuanNet.CustomsDetail.CustomTextbox();
-            this.customTextbox4 = new QuanNet.CustomsDetail.CustomTextbox();
-            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cusCbb2 = new QuanNet.CustomsDetail.CusCbb();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
@@ -76,12 +60,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconKH)).BeginInit();
             this.panelKH.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconQuanLy)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -203,7 +181,6 @@
             // panelDesktop
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.panelDesktop.Controls.Add(this.panel1);
             this.panelDesktop.Controls.Add(this.panelKHmain);
             this.panelDesktop.Controls.Add(this.iconQuanLy);
             this.panelDesktop.Controls.Add(this.cusBtn1);
@@ -225,7 +202,7 @@
             this.panelKHmain.Controls.Add(this.txtTKKH);
             this.panelKHmain.Controls.Add(this.iconKH);
             this.panelKHmain.Controls.Add(this.panelKH);
-            this.panelKHmain.Location = new System.Drawing.Point(153, 0);
+            this.panelKHmain.Location = new System.Drawing.Point(148, 0);
             this.panelKHmain.Name = "panelKHmain";
             this.panelKHmain.Size = new System.Drawing.Size(289, 456);
             this.panelKHmain.TabIndex = 2;
@@ -434,275 +411,6 @@
             this.txtTKQL.UnderlinedStyle = true;
             this.txtTKQL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cusBtn1_KeyPress);
             // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.cusBtn2);
-            this.panel1.Controls.Add(this.customTextbox1);
-            this.panel1.Controls.Add(this.customTextbox2);
-            this.panel1.Controls.Add(this.iconPictureBox1);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(153, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(289, 456);
-            this.panel1.TabIndex = 2;
-            // 
-            // cusBtn2
-            // 
-            this.cusBtn2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cusBtn2.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cusBtn2.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.cusBtn2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cusBtn2.BorderRadius = 20;
-            this.cusBtn2.BorderSize = 0;
-            this.cusBtn2.FlatAppearance.BorderSize = 0;
-            this.cusBtn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cusBtn2.ForeColor = System.Drawing.Color.White;
-            this.cusBtn2.Location = new System.Drawing.Point(53, 351);
-            this.cusBtn2.Name = "cusBtn2";
-            this.cusBtn2.Size = new System.Drawing.Size(171, 62);
-            this.cusBtn2.TabIndex = 4;
-            this.cusBtn2.Text = "Đăng nhập";
-            this.cusBtn2.TextColor = System.Drawing.Color.White;
-            this.cusBtn2.UseVisualStyleBackColor = false;
-            this.cusBtn2.Click += new System.EventHandler(this.cusBtnKH_Click);
-            // 
-            // customTextbox1
-            // 
-            this.customTextbox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.customTextbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.customTextbox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.customTextbox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.customTextbox1.BorderRadius = 0;
-            this.customTextbox1.BorderSize = 2;
-            this.customTextbox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextbox1.ForeColor = System.Drawing.Color.White;
-            this.customTextbox1.Location = new System.Drawing.Point(14, 236);
-            this.customTextbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.customTextbox1.Multiline = false;
-            this.customTextbox1.Name = "customTextbox1";
-            this.customTextbox1.Padding = new System.Windows.Forms.Padding(7);
-            this.customTextbox1.PasswordChar = true;
-            this.customTextbox1.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.customTextbox1.PlaceholderText = "Mật khẩu...";
-            this.customTextbox1.Size = new System.Drawing.Size(250, 35);
-            this.customTextbox1.TabIndex = 4;
-            this.customTextbox1.Texts = "";
-            this.customTextbox1.UnderlinedStyle = true;
-            // 
-            // customTextbox2
-            // 
-            this.customTextbox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.customTextbox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.customTextbox2.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.customTextbox2.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.customTextbox2.BorderRadius = 0;
-            this.customTextbox2.BorderSize = 2;
-            this.customTextbox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextbox2.ForeColor = System.Drawing.Color.White;
-            this.customTextbox2.Location = new System.Drawing.Point(13, 193);
-            this.customTextbox2.Margin = new System.Windows.Forms.Padding(4);
-            this.customTextbox2.Multiline = false;
-            this.customTextbox2.Name = "customTextbox2";
-            this.customTextbox2.Padding = new System.Windows.Forms.Padding(7);
-            this.customTextbox2.PasswordChar = false;
-            this.customTextbox2.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.customTextbox2.PlaceholderText = "ID...";
-            this.customTextbox2.Size = new System.Drawing.Size(250, 35);
-            this.customTextbox2.TabIndex = 4;
-            this.customTextbox2.Texts = "";
-            this.customTextbox2.UnderlinedStyle = true;
-            // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Tv;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 146;
-            this.iconPictureBox1.ImageLocation = "";
-            this.iconPictureBox1.Location = new System.Drawing.Point(84, 20);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(151, 146);
-            this.iconPictureBox1.TabIndex = 5;
-            this.iconPictureBox1.TabStop = false;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.cusCbb1);
-            this.panel2.Location = new System.Drawing.Point(19, 291);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(250, 57);
-            this.panel2.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Snow;
-            this.label2.Location = new System.Drawing.Point(6, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Mở:";
-            // 
-            // cusCbb1
-            // 
-            this.cusCbb1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.cusCbb1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cusCbb1.BorderSize = 1;
-            this.cusCbb1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cusCbb1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cusCbb1.ForeColor = System.Drawing.Color.White;
-            this.cusCbb1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.cusCbb1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cusCbb1.ListTextColor = System.Drawing.Color.White;
-            this.cusCbb1.Location = new System.Drawing.Point(50, 7);
-            this.cusCbb1.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cusCbb1.Name = "cusCbb1";
-            this.cusCbb1.Padding = new System.Windows.Forms.Padding(1);
-            this.cusCbb1.Size = new System.Drawing.Size(200, 30);
-            this.cusCbb1.TabIndex = 0;
-            this.cusCbb1.Texts = "";
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel3.Controls.Add(this.cusBtn3);
-            this.panel3.Controls.Add(this.customTextbox3);
-            this.panel3.Controls.Add(this.customTextbox4);
-            this.panel3.Controls.Add(this.iconPictureBox2);
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Location = new System.Drawing.Point(3, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(289, 456);
-            this.panel3.TabIndex = 2;
-            // 
-            // cusBtn3
-            // 
-            this.cusBtn3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cusBtn3.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cusBtn3.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.cusBtn3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cusBtn3.BorderRadius = 20;
-            this.cusBtn3.BorderSize = 0;
-            this.cusBtn3.FlatAppearance.BorderSize = 0;
-            this.cusBtn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cusBtn3.ForeColor = System.Drawing.Color.White;
-            this.cusBtn3.Location = new System.Drawing.Point(53, 351);
-            this.cusBtn3.Name = "cusBtn3";
-            this.cusBtn3.Size = new System.Drawing.Size(171, 62);
-            this.cusBtn3.TabIndex = 4;
-            this.cusBtn3.Text = "Đăng nhập";
-            this.cusBtn3.TextColor = System.Drawing.Color.White;
-            this.cusBtn3.UseVisualStyleBackColor = false;
-            this.cusBtn3.Click += new System.EventHandler(this.cusBtnKH_Click);
-            // 
-            // customTextbox3
-            // 
-            this.customTextbox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.customTextbox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.customTextbox3.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.customTextbox3.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.customTextbox3.BorderRadius = 0;
-            this.customTextbox3.BorderSize = 2;
-            this.customTextbox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextbox3.ForeColor = System.Drawing.Color.White;
-            this.customTextbox3.Location = new System.Drawing.Point(14, 236);
-            this.customTextbox3.Margin = new System.Windows.Forms.Padding(4);
-            this.customTextbox3.Multiline = false;
-            this.customTextbox3.Name = "customTextbox3";
-            this.customTextbox3.Padding = new System.Windows.Forms.Padding(7);
-            this.customTextbox3.PasswordChar = true;
-            this.customTextbox3.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.customTextbox3.PlaceholderText = "Mật khẩu...";
-            this.customTextbox3.Size = new System.Drawing.Size(250, 35);
-            this.customTextbox3.TabIndex = 4;
-            this.customTextbox3.Texts = "";
-            this.customTextbox3.UnderlinedStyle = true;
-            // 
-            // customTextbox4
-            // 
-            this.customTextbox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.customTextbox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.customTextbox4.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.customTextbox4.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.customTextbox4.BorderRadius = 0;
-            this.customTextbox4.BorderSize = 2;
-            this.customTextbox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextbox4.ForeColor = System.Drawing.Color.White;
-            this.customTextbox4.Location = new System.Drawing.Point(13, 193);
-            this.customTextbox4.Margin = new System.Windows.Forms.Padding(4);
-            this.customTextbox4.Multiline = false;
-            this.customTextbox4.Name = "customTextbox4";
-            this.customTextbox4.Padding = new System.Windows.Forms.Padding(7);
-            this.customTextbox4.PasswordChar = false;
-            this.customTextbox4.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.customTextbox4.PlaceholderText = "ID...";
-            this.customTextbox4.Size = new System.Drawing.Size(250, 35);
-            this.customTextbox4.TabIndex = 4;
-            this.customTextbox4.Texts = "";
-            this.customTextbox4.UnderlinedStyle = true;
-            // 
-            // iconPictureBox2
-            // 
-            this.iconPictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.iconPictureBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
-            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Tv;
-            this.iconPictureBox2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
-            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox2.IconSize = 146;
-            this.iconPictureBox2.ImageLocation = "";
-            this.iconPictureBox2.Location = new System.Drawing.Point(84, 20);
-            this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(151, 146);
-            this.iconPictureBox2.TabIndex = 5;
-            this.iconPictureBox2.TabStop = false;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.cusCbb2);
-            this.panel4.Location = new System.Drawing.Point(19, 291);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(250, 57);
-            this.panel4.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Snow;
-            this.label3.Location = new System.Drawing.Point(6, 17);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 20);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Mở:";
-            // 
-            // cusCbb2
-            // 
-            this.cusCbb2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.cusCbb2.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cusCbb2.BorderSize = 1;
-            this.cusCbb2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cusCbb2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cusCbb2.ForeColor = System.Drawing.Color.White;
-            this.cusCbb2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.cusCbb2.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cusCbb2.ListTextColor = System.Drawing.Color.White;
-            this.cusCbb2.Location = new System.Drawing.Point(50, 7);
-            this.cusCbb2.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cusCbb2.Name = "cusCbb2";
-            this.cusCbb2.Padding = new System.Windows.Forms.Padding(1);
-            this.cusCbb2.Size = new System.Drawing.Size(200, 30);
-            this.cusCbb2.TabIndex = 0;
-            this.cusCbb2.Texts = "";
-            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -728,14 +436,6 @@
             this.panelKH.ResumeLayout(false);
             this.panelKH.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconQuanLy)).EndInit();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -764,22 +464,6 @@
         private CustomsDetail.CusBtn cusBtnKH;
         private CustomsDetail.CustomTextbox txtMKKH;
         private CustomsDetail.CustomTextbox txtTKKH;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel3;
-        private CustomsDetail.CusBtn cusBtn3;
-        private CustomsDetail.CustomTextbox customTextbox3;
-        private CustomsDetail.CustomTextbox customTextbox4;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label3;
-        private CustomsDetail.CusCbb cusCbb2;
-        private CustomsDetail.CusBtn cusBtn2;
-        private CustomsDetail.CustomTextbox customTextbox1;
-        private CustomsDetail.CustomTextbox customTextbox2;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label2;
-        private CustomsDetail.CusCbb cusCbb1;
     }
 }
 
