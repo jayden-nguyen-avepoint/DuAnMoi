@@ -19,8 +19,8 @@ namespace QuanNet
         private string PasswordKH = "123";
         private string IDKH = "user";
         private IconButton currentBtn;
-    private Panel leftBorderBtn;
-    private Form thisChildForm;
+        private Panel leftBorderBtn;
+        private Form thisChildForm;
         public FormLogin()
         {
             InitializeComponent();
@@ -33,8 +33,8 @@ namespace QuanNet
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             //====
-            
-            
+
+
         }
         public void ShowDB(bool a)
         {
@@ -116,10 +116,10 @@ namespace QuanNet
 
         //---------End Code UI------------------------------------------------------------
         private void btnLoginQL_Click(object sender, EventArgs e)
-        {   
+        {
             ActivateButton(sender, RGBColors.color1);
             ShowDB(true);
-            
+
         }
 
         private void btnLoginKhach_Click(object sender, EventArgs e)
@@ -147,15 +147,15 @@ namespace QuanNet
 
         private void cusBtn1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+
             if (e.KeyChar == (char)Keys.Enter)
             {
-               if (txtTKQL.Texts == IDAdmin && txtMKQL.Texts == PasswordAdmin)
-               {
+                if (txtTKQL.Texts == IDAdmin && txtMKQL.Texts == PasswordAdmin)
+                {
                     Form1 f = new Form1();
                     f.Show();
-                    
-               }
+
+                }
                 else
                 {
                     MessageBox.Show("Tài khoản hoặc mật khẩu không đúng", "Thong bao", MessageBoxButtons.OK);
@@ -163,13 +163,13 @@ namespace QuanNet
                 txtMKQL.Texts = "";
                 txtTKQL.Texts = "";
                 e.Handled = true;
-                
+
             }
         }
 
         private void cusBtnKH_Click(object sender, EventArgs e)
         {
-            if (txtTKKH.Texts == IDKH && txtMKKH.Texts == PasswordKH )
+            if (txtTKKH.Texts == IDKH && txtMKKH.Texts == PasswordKH)
             {
                 FormsUser.FormUsers f = new FormsUser.FormUsers();
                 f.Show();

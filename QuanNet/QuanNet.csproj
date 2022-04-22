@@ -67,6 +67,12 @@
     </Compile>
     <Compile Include="CustomsDetail\theme.cs" />
     <Compile Include="Datatest.cs" />
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormsAdmin\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,12 +96,6 @@
     </Compile>
     <Compile Include="FormsAdmin\FormKhachHang.Designer.cs">
       <DependentUpon>FormKhachHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormLogin.Designer.cs">
-      <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="FormsAdmin\FormMayTinh.cs">
       <SubType>Form</SubType>
@@ -132,6 +132,9 @@
     <EmbeddedResource Include="CustomsDetail\CustomTextbox.resx">
       <DependentUpon>CustomTextbox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormsAdmin\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,9 +146,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormsAdmin\FormKhachHang.resx">
       <DependentUpon>FormKhachHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormLogin.resx">
-      <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsAdmin\FormMayTinh.resx">
       <DependentUpon>FormMayTinh.cs</DependentUpon>
