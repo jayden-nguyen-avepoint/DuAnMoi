@@ -24,6 +24,8 @@ namespace QuanNet
                     new DataColumn { ColumnName = "So Du", DataType = typeof(int) },
                     });
             dt.Rows.Add("102", "NVA", "18T", "20000");
+            dt.Rows.Add("103", "NVB", "18T", "50000");
+            dt.Rows.Add("104", "NVC", "19T", "240000");
             dataGridView1.DataSource = dt;
             
         }

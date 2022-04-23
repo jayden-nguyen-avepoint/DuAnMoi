@@ -31,19 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormApp));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.cusBtn1 = new QuanNet.CustomsDetail.CusBtn();
+            this.txtHĐ = new QuanNet.CustomsDetail.CustomTextbox();
             this.label19 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.CODER = new System.Windows.Forms.Label();
-            this.DG = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.cusBtn11 = new QuanNet.CustomsDetail.CusBtn();
             this.RainbowHat = new QuanNet.CustomsDetail.CusBtn();
             this.cusBtn9 = new QuanNet.CustomsDetail.CusBtn();
@@ -55,8 +46,19 @@
             this.LOL = new QuanNet.CustomsDetail.CusBtn();
             this.AOV = new QuanNet.CustomsDetail.CusBtn();
             this.Chrome = new QuanNet.CustomsDetail.CusBtn();
-            this.cusBtn1 = new QuanNet.CustomsDetail.CusBtn();
-            this.txtHĐ = new QuanNet.CustomsDetail.CustomTextbox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.CODER = new System.Windows.Forms.Label();
+            this.DG = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.customTextbox1 = new QuanNet.CustomsDetail.CustomTextbox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -64,6 +66,8 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.customTextbox1);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.cusBtn1);
             this.panel1.Controls.Add(this.txtHĐ);
@@ -84,12 +88,56 @@
             this.label5.TabIndex = 51;
             this.label5.Text = "BLOCKADS is running, don\'t hack this computer";
             // 
+            // cusBtn1
+            // 
+            this.cusBtn1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.cusBtn1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.cusBtn1.BackgroundImage = global::QuanNet.Properties.Resources.block_removebg_preview;
+            this.cusBtn1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cusBtn1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.cusBtn1.BorderRadius = 20;
+            this.cusBtn1.BorderSize = 0;
+            this.cusBtn1.FlatAppearance.BorderSize = 0;
+            this.cusBtn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cusBtn1.ForeColor = System.Drawing.Color.White;
+            this.cusBtn1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.cusBtn1.Location = new System.Drawing.Point(0, 80);
+            this.cusBtn1.Name = "cusBtn1";
+            this.cusBtn1.Size = new System.Drawing.Size(49, 42);
+            this.cusBtn1.TabIndex = 50;
+            this.cusBtn1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.cusBtn1.TextColor = System.Drawing.Color.White;
+            this.cusBtn1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.cusBtn1.UseVisualStyleBackColor = false;
+            // 
+            // txtHĐ
+            // 
+            this.txtHĐ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.txtHĐ.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtHĐ.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtHĐ.BorderRadius = 15;
+            this.txtHĐ.BorderSize = 2;
+            this.txtHĐ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHĐ.ForeColor = System.Drawing.Color.White;
+            this.txtHĐ.Location = new System.Drawing.Point(756, 81);
+            this.txtHĐ.Margin = new System.Windows.Forms.Padding(4);
+            this.txtHĐ.Multiline = false;
+            this.txtHĐ.Name = "txtHĐ";
+            this.txtHĐ.Padding = new System.Windows.Forms.Padding(7);
+            this.txtHĐ.PasswordChar = false;
+            this.txtHĐ.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtHĐ.PlaceholderText = "";
+            this.txtHĐ.Size = new System.Drawing.Size(170, 35);
+            this.txtHĐ.TabIndex = 37;
+            this.txtHĐ.Texts = "";
+            this.txtHĐ.UnderlinedStyle = false;
+            // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label19.Location = new System.Drawing.Point(582, 70);
+            this.label19.Location = new System.Drawing.Point(651, 87);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(108, 25);
             this.label19.TabIndex = 36;
@@ -126,118 +174,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(932, 489);
             this.panel2.TabIndex = 1;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(591, 140);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 16);
-            this.label7.TabIndex = 33;
-            this.label7.Text = "Bai Cao";
-            // 
-            // CODER
-            // 
-            this.CODER.AutoSize = true;
-            this.CODER.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.CODER.Location = new System.Drawing.Point(773, 286);
-            this.CODER.Name = "CODER";
-            this.CODER.Size = new System.Drawing.Size(44, 16);
-            this.CODER.TabIndex = 29;
-            this.CODER.Text = "Coder";
-            // 
-            // DG
-            // 
-            this.DG.AutoSize = true;
-            this.DG.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.DG.Location = new System.Drawing.Point(603, 286);
-            this.DG.Name = "DG";
-            this.DG.Size = new System.Drawing.Size(27, 16);
-            this.DG.TabIndex = 27;
-            this.DG.Text = "DG";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label18.Location = new System.Drawing.Point(60, 441);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(63, 16);
-            this.label18.TabIndex = 25;
-            this.label18.Text = "Liên Minh";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(409, 286);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(78, 16);
-            this.label10.TabIndex = 17;
-            this.label10.Text = "BLOCKADS";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label11.Location = new System.Drawing.Point(236, 286);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(57, 16);
-            this.label11.TabIndex = 15;
-            this.label11.Text = "Valorant";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label12.Location = new System.Drawing.Point(79, 286);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(34, 16);
-            this.label12.TabIndex = 13;
-            this.label12.Text = "Zalo";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(760, 140);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 16);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Youtube";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(414, 140);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 16);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Cốc Cốc";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(249, 140);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 16);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "AOV";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(60, 140);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Liên Minh";
-            this.label1.Click += new System.EventHandler(this.icon_Click);
-            this.label1.DoubleClick += new System.EventHandler(this.icon_Click);
             // 
             // cusBtn11
             // 
@@ -492,49 +428,150 @@
             this.Chrome.UseVisualStyleBackColor = false;
             this.Chrome.Click += new System.EventHandler(this.icon_Click);
             // 
-            // cusBtn1
+            // label7
             // 
-            this.cusBtn1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.cusBtn1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.cusBtn1.BackgroundImage = global::QuanNet.Properties.Resources.block_removebg_preview;
-            this.cusBtn1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cusBtn1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cusBtn1.BorderRadius = 20;
-            this.cusBtn1.BorderSize = 0;
-            this.cusBtn1.FlatAppearance.BorderSize = 0;
-            this.cusBtn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cusBtn1.ForeColor = System.Drawing.Color.White;
-            this.cusBtn1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.cusBtn1.Location = new System.Drawing.Point(3, 86);
-            this.cusBtn1.Name = "cusBtn1";
-            this.cusBtn1.Size = new System.Drawing.Size(49, 42);
-            this.cusBtn1.TabIndex = 50;
-            this.cusBtn1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.cusBtn1.TextColor = System.Drawing.Color.White;
-            this.cusBtn1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cusBtn1.UseVisualStyleBackColor = false;
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label7.Location = new System.Drawing.Point(591, 140);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(55, 16);
+            this.label7.TabIndex = 33;
+            this.label7.Text = "Bai Cao";
             // 
-            // txtHĐ
+            // CODER
             // 
-            this.txtHĐ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.txtHĐ.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtHĐ.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtHĐ.BorderRadius = 15;
-            this.txtHĐ.BorderSize = 2;
-            this.txtHĐ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHĐ.ForeColor = System.Drawing.Color.White;
-            this.txtHĐ.Location = new System.Drawing.Point(695, 61);
-            this.txtHĐ.Margin = new System.Windows.Forms.Padding(4);
-            this.txtHĐ.Multiline = false;
-            this.txtHĐ.Name = "txtHĐ";
-            this.txtHĐ.Padding = new System.Windows.Forms.Padding(10);
-            this.txtHĐ.PasswordChar = false;
-            this.txtHĐ.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtHĐ.PlaceholderText = "";
-            this.txtHĐ.Size = new System.Drawing.Size(170, 41);
-            this.txtHĐ.TabIndex = 37;
-            this.txtHĐ.Texts = "";
-            this.txtHĐ.UnderlinedStyle = false;
+            this.CODER.AutoSize = true;
+            this.CODER.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.CODER.Location = new System.Drawing.Point(773, 286);
+            this.CODER.Name = "CODER";
+            this.CODER.Size = new System.Drawing.Size(44, 16);
+            this.CODER.TabIndex = 29;
+            this.CODER.Text = "Coder";
+            // 
+            // DG
+            // 
+            this.DG.AutoSize = true;
+            this.DG.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.DG.Location = new System.Drawing.Point(603, 286);
+            this.DG.Name = "DG";
+            this.DG.Size = new System.Drawing.Size(27, 16);
+            this.DG.TabIndex = 27;
+            this.DG.Text = "DG";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label18.Location = new System.Drawing.Point(60, 441);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(63, 16);
+            this.label18.TabIndex = 25;
+            this.label18.Text = "Liên Minh";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label10.Location = new System.Drawing.Point(409, 286);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(78, 16);
+            this.label10.TabIndex = 17;
+            this.label10.Text = "BLOCKADS";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label11.Location = new System.Drawing.Point(236, 286);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(57, 16);
+            this.label11.TabIndex = 15;
+            this.label11.Text = "Valorant";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label12.Location = new System.Drawing.Point(79, 286);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(34, 16);
+            this.label12.TabIndex = 13;
+            this.label12.Text = "Zalo";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.Location = new System.Drawing.Point(760, 140);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 16);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Youtube";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(414, 140);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 16);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Cốc Cốc";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(249, 140);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 16);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "AOV";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(60, 140);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 16);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Liên Minh";
+            this.label1.Click += new System.EventHandler(this.icon_Click);
+            this.label1.DoubleClick += new System.EventHandler(this.icon_Click);
+            // 
+            // customTextbox1
+            // 
+            this.customTextbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.customTextbox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.customTextbox1.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.customTextbox1.BorderRadius = 10;
+            this.customTextbox1.BorderSize = 2;
+            this.customTextbox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customTextbox1.ForeColor = System.Drawing.Color.DimGray;
+            this.customTextbox1.Location = new System.Drawing.Point(756, 37);
+            this.customTextbox1.Margin = new System.Windows.Forms.Padding(4);
+            this.customTextbox1.Multiline = false;
+            this.customTextbox1.Name = "customTextbox1";
+            this.customTextbox1.Padding = new System.Windows.Forms.Padding(7);
+            this.customTextbox1.PasswordChar = false;
+            this.customTextbox1.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.customTextbox1.PlaceholderText = "";
+            this.customTextbox1.Size = new System.Drawing.Size(170, 35);
+            this.customTextbox1.TabIndex = 52;
+            this.customTextbox1.Texts = "";
+            this.customTextbox1.UnderlinedStyle = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(654, 43);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(91, 25);
+            this.label6.TabIndex = 53;
+            this.label6.Text = "Tìm kiếm";
             // 
             // FormApp
             // 
@@ -585,5 +622,7 @@
         private CustomsDetail.CusBtn RainbowHat;
         private System.Windows.Forms.Label label5;
         private CustomsDetail.CusBtn cusBtn1;
+        private System.Windows.Forms.Label label6;
+        private CustomsDetail.CustomTextbox customTextbox1;
     }
 }

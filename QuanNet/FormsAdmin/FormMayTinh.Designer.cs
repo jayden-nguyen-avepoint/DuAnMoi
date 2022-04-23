@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconButton24 = new FontAwesome.Sharp.IconButton();
             this.iconButton23 = new FontAwesome.Sharp.IconButton();
@@ -61,20 +62,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 409);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1130, 201);
-            this.dataGridView1.TabIndex = 0;
             // 
             // panel1
             // 
@@ -506,6 +498,7 @@
             this.customTextbox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.customTextbox4.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.customTextbox4.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.customTextbox4.BorderRadius = 0;
             this.customTextbox4.BorderSize = 2;
             this.customTextbox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customTextbox4.ForeColor = System.Drawing.Color.White;
@@ -515,6 +508,8 @@
             this.customTextbox4.Name = "customTextbox4";
             this.customTextbox4.Padding = new System.Windows.Forms.Padding(7);
             this.customTextbox4.PasswordChar = false;
+            this.customTextbox4.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.customTextbox4.PlaceholderText = "";
             this.customTextbox4.Size = new System.Drawing.Size(250, 35);
             this.customTextbox4.TabIndex = 9;
             this.customTextbox4.Texts = "";
@@ -525,6 +520,7 @@
             this.customTextbox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.customTextbox3.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.customTextbox3.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.customTextbox3.BorderRadius = 0;
             this.customTextbox3.BorderSize = 2;
             this.customTextbox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customTextbox3.ForeColor = System.Drawing.Color.White;
@@ -534,6 +530,8 @@
             this.customTextbox3.Name = "customTextbox3";
             this.customTextbox3.Padding = new System.Windows.Forms.Padding(7);
             this.customTextbox3.PasswordChar = false;
+            this.customTextbox3.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.customTextbox3.PlaceholderText = "";
             this.customTextbox3.Size = new System.Drawing.Size(250, 35);
             this.customTextbox3.TabIndex = 8;
             this.customTextbox3.Texts = "";
@@ -544,6 +542,7 @@
             this.customTextbox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.customTextbox2.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.customTextbox2.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.customTextbox2.BorderRadius = 0;
             this.customTextbox2.BorderSize = 2;
             this.customTextbox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customTextbox2.ForeColor = System.Drawing.Color.White;
@@ -553,6 +552,8 @@
             this.customTextbox2.Name = "customTextbox2";
             this.customTextbox2.Padding = new System.Windows.Forms.Padding(7);
             this.customTextbox2.PasswordChar = false;
+            this.customTextbox2.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.customTextbox2.PlaceholderText = "";
             this.customTextbox2.Size = new System.Drawing.Size(250, 35);
             this.customTextbox2.TabIndex = 7;
             this.customTextbox2.Texts = "";
@@ -563,6 +564,7 @@
             this.customTextbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.customTextbox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.customTextbox1.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.customTextbox1.BorderRadius = 0;
             this.customTextbox1.BorderSize = 2;
             this.customTextbox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customTextbox1.ForeColor = System.Drawing.Color.White;
@@ -572,6 +574,8 @@
             this.customTextbox1.Name = "customTextbox1";
             this.customTextbox1.Padding = new System.Windows.Forms.Padding(7);
             this.customTextbox1.PasswordChar = false;
+            this.customTextbox1.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.customTextbox1.PlaceholderText = "";
             this.customTextbox1.Size = new System.Drawing.Size(250, 35);
             this.customTextbox1.TabIndex = 6;
             this.customTextbox1.Texts = "";
@@ -640,6 +644,43 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Số máy:";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(46)))), ((int)(((byte)(105)))));
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ColumnHeadersHeight = 30;
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dataGridView1.Location = new System.Drawing.Point(37, 401);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 60;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(46)))), ((int)(((byte)(105)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(7);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumSlateBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(1080, 209);
+            this.dataGridView1.TabIndex = 25;
+            // 
             // FormMayTinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -647,22 +688,20 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(1154, 622);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dataGridView1);
             this.Name = "FormMayTinh";
             this.Text = "Máy tính";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton iconButton24;
@@ -695,5 +734,6 @@
         private CustomsDetail.CustomTextbox customTextbox4;
         private CustomsDetail.CustomTextbox customTextbox3;
         private CustomsDetail.CustomTextbox customTextbox2;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
