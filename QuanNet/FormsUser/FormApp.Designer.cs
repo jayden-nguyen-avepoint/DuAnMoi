@@ -57,8 +57,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtFind = new QuanNet.CustomsDetail.CustomTextbox();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -66,8 +64,6 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.txtFind);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.cusBtn1);
             this.panel1.Controls.Add(this.txtHĐ);
@@ -540,39 +536,6 @@
             this.label1.Click += new System.EventHandler(this.icon_Click);
             this.label1.DoubleClick += new System.EventHandler(this.icon_Click);
             // 
-            // txtFind
-            // 
-            this.txtFind.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.txtFind.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtFind.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtFind.BorderRadius = 10;
-            this.txtFind.BorderSize = 2;
-            this.txtFind.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFind.ForeColor = System.Drawing.Color.DimGray;
-            this.txtFind.Location = new System.Drawing.Point(756, 37);
-            this.txtFind.Margin = new System.Windows.Forms.Padding(4);
-            this.txtFind.Multiline = false;
-            this.txtFind.Name = "txtFind";
-            this.txtFind.Padding = new System.Windows.Forms.Padding(7);
-            this.txtFind.PasswordChar = false;
-            this.txtFind.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtFind.PlaceholderText = "";
-            this.txtFind.Size = new System.Drawing.Size(170, 35);
-            this.txtFind.TabIndex = 52;
-            this.txtFind.Texts = "";
-            this.txtFind.UnderlinedStyle = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(654, 43);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 25);
-            this.label6.TabIndex = 53;
-            this.label6.Text = "Tìm kiếm";
-            // 
             // FormApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -622,7 +585,5 @@
         private CustomsDetail.CusBtn RainbowHat;
         private System.Windows.Forms.Label label5;
         private CustomsDetail.CusBtn cusBtn1;
-        private System.Windows.Forms.Label label6;
-        private CustomsDetail.CustomTextbox txtFind;
     }
 }
