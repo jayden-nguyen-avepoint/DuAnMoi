@@ -52,20 +52,20 @@
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cusBtn3 = new QuanNet.CustomsDetail.CusBtn();
+            this.btnEnd = new QuanNet.CustomsDetail.CusBtn();
             this.customTextbox4 = new QuanNet.CustomsDetail.CustomTextbox();
             this.customTextbox3 = new QuanNet.CustomsDetail.CustomTextbox();
             this.customTextbox2 = new QuanNet.CustomsDetail.CustomTextbox();
             this.customTextbox1 = new QuanNet.CustomsDetail.CustomTextbox();
-            this.cusBtn1 = new QuanNet.CustomsDetail.CusBtn();
+            this.btnStart = new QuanNet.CustomsDetail.CusBtn();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvMaytinh = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMaytinh)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -459,12 +459,12 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.panel2.Controls.Add(this.cusBtn3);
+            this.panel2.Controls.Add(this.btnEnd);
             this.panel2.Controls.Add(this.customTextbox4);
             this.panel2.Controls.Add(this.customTextbox3);
             this.panel2.Controls.Add(this.customTextbox2);
             this.panel2.Controls.Add(this.customTextbox1);
-            this.panel2.Controls.Add(this.cusBtn1);
+            this.panel2.Controls.Add(this.btnStart);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
@@ -474,24 +474,24 @@
             this.panel2.Size = new System.Drawing.Size(521, 378);
             this.panel2.TabIndex = 24;
             // 
-            // cusBtn3
+            // btnEnd
             // 
-            this.cusBtn3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.cusBtn3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.cusBtn3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.cusBtn3.BorderRadius = 20;
-            this.cusBtn3.BorderSize = 3;
-            this.cusBtn3.FlatAppearance.BorderSize = 0;
-            this.cusBtn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cusBtn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cusBtn3.ForeColor = System.Drawing.Color.GhostWhite;
-            this.cusBtn3.Location = new System.Drawing.Point(285, 299);
-            this.cusBtn3.Name = "cusBtn3";
-            this.cusBtn3.Size = new System.Drawing.Size(129, 46);
-            this.cusBtn3.TabIndex = 10;
-            this.cusBtn3.Text = "Kết thúc";
-            this.cusBtn3.TextColor = System.Drawing.Color.GhostWhite;
-            this.cusBtn3.UseVisualStyleBackColor = false;
+            this.btnEnd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnEnd.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnEnd.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.btnEnd.BorderRadius = 20;
+            this.btnEnd.BorderSize = 3;
+            this.btnEnd.FlatAppearance.BorderSize = 0;
+            this.btnEnd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnd.ForeColor = System.Drawing.Color.GhostWhite;
+            this.btnEnd.Location = new System.Drawing.Point(285, 299);
+            this.btnEnd.Name = "btnEnd";
+            this.btnEnd.Size = new System.Drawing.Size(129, 46);
+            this.btnEnd.TabIndex = 10;
+            this.btnEnd.Text = "Kết thúc";
+            this.btnEnd.TextColor = System.Drawing.Color.GhostWhite;
+            this.btnEnd.UseVisualStyleBackColor = false;
             // 
             // customTextbox4
             // 
@@ -581,24 +581,24 @@
             this.customTextbox1.Texts = "";
             this.customTextbox1.UnderlinedStyle = true;
             // 
-            // cusBtn1
+            // btnStart
             // 
-            this.cusBtn1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.cusBtn1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.cusBtn1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.cusBtn1.BorderRadius = 20;
-            this.cusBtn1.BorderSize = 3;
-            this.cusBtn1.FlatAppearance.BorderSize = 0;
-            this.cusBtn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cusBtn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cusBtn1.ForeColor = System.Drawing.Color.GhostWhite;
-            this.cusBtn1.Location = new System.Drawing.Point(105, 300);
-            this.cusBtn1.Name = "cusBtn1";
-            this.cusBtn1.Size = new System.Drawing.Size(129, 46);
-            this.cusBtn1.TabIndex = 4;
-            this.cusBtn1.Text = "Bắt đầu";
-            this.cusBtn1.TextColor = System.Drawing.Color.GhostWhite;
-            this.cusBtn1.UseVisualStyleBackColor = false;
+            this.btnStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnStart.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.btnStart.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.btnStart.BorderRadius = 20;
+            this.btnStart.BorderSize = 3;
+            this.btnStart.FlatAppearance.BorderSize = 0;
+            this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStart.ForeColor = System.Drawing.Color.GhostWhite;
+            this.btnStart.Location = new System.Drawing.Point(105, 300);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(129, 46);
+            this.btnStart.TabIndex = 4;
+            this.btnStart.Text = "Bắt đầu";
+            this.btnStart.TextColor = System.Drawing.Color.GhostWhite;
+            this.btnStart.UseVisualStyleBackColor = false;
             // 
             // label4
             // 
@@ -644,15 +644,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Số máy:";
             // 
-            // dataGridView1
+            // dgvMaytinh
             // 
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(46)))), ((int)(((byte)(105)))));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvMaytinh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvMaytinh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvMaytinh.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvMaytinh.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(46)))), ((int)(((byte)(105)))));
+            this.dgvMaytinh.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvMaytinh.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvMaytinh.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Indigo;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -660,14 +660,14 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Indigo;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeight = 30;
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView1.Location = new System.Drawing.Point(37, 401);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 60;
+            this.dgvMaytinh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvMaytinh.ColumnHeadersHeight = 30;
+            this.dgvMaytinh.EnableHeadersVisualStyles = false;
+            this.dgvMaytinh.GridColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvMaytinh.Location = new System.Drawing.Point(37, 401);
+            this.dgvMaytinh.Name = "dgvMaytinh";
+            this.dgvMaytinh.RowHeadersVisible = false;
+            this.dgvMaytinh.RowHeadersWidth = 60;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(46)))), ((int)(((byte)(105)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.5F);
@@ -675,11 +675,11 @@
             dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(7);
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumSlateBlue;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1080, 209);
-            this.dataGridView1.TabIndex = 25;
+            this.dgvMaytinh.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvMaytinh.RowTemplate.Height = 24;
+            this.dgvMaytinh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMaytinh.Size = new System.Drawing.Size(1080, 209);
+            this.dgvMaytinh.TabIndex = 25;
             // 
             // FormMayTinh
             // 
@@ -688,7 +688,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(1154, 622);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvMaytinh);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FormMayTinh";
@@ -696,7 +696,7 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMaytinh)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -729,11 +729,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private CustomsDetail.CustomTextbox customTextbox1;
-        private CustomsDetail.CusBtn cusBtn1;
-        private CustomsDetail.CusBtn cusBtn3;
+        private CustomsDetail.CusBtn btnStart;
+        private CustomsDetail.CusBtn btnEnd;
         private CustomsDetail.CustomTextbox customTextbox4;
         private CustomsDetail.CustomTextbox customTextbox3;
         private CustomsDetail.CustomTextbox customTextbox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvMaytinh;
     }
 }

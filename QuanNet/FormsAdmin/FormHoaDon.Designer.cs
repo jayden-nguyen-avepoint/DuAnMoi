@@ -40,12 +40,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.customTextbox1 = new QuanNet.CustomsDetail.CustomTextbox();
-            this.cusBtn1 = new QuanNet.CustomsDetail.CusBtn();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnInHD = new QuanNet.CustomsDetail.CusBtn();
+            this.dgv = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -166,34 +166,34 @@
             this.customTextbox1.UnderlinedStyle = true;
             this.customTextbox1.UseWaitCursor = true;
             // 
-            // cusBtn1
+            // btnInHD
             // 
-            this.cusBtn1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cusBtn1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.cusBtn1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
-            this.cusBtn1.BorderRadius = 20;
-            this.cusBtn1.BorderSize = 0;
-            this.cusBtn1.FlatAppearance.BorderSize = 0;
-            this.cusBtn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cusBtn1.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cusBtn1.ForeColor = System.Drawing.Color.White;
-            this.cusBtn1.Location = new System.Drawing.Point(970, 577);
-            this.cusBtn1.Name = "cusBtn1";
-            this.cusBtn1.Size = new System.Drawing.Size(150, 44);
-            this.cusBtn1.TabIndex = 1;
-            this.cusBtn1.Text = "In hóa đơn";
-            this.cusBtn1.TextColor = System.Drawing.Color.White;
-            this.cusBtn1.UseVisualStyleBackColor = false;
+            this.btnInHD.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnInHD.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnInHD.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
+            this.btnInHD.BorderRadius = 20;
+            this.btnInHD.BorderSize = 0;
+            this.btnInHD.FlatAppearance.BorderSize = 0;
+            this.btnInHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInHD.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInHD.ForeColor = System.Drawing.Color.White;
+            this.btnInHD.Location = new System.Drawing.Point(970, 577);
+            this.btnInHD.Name = "btnInHD";
+            this.btnInHD.Size = new System.Drawing.Size(150, 44);
+            this.btnInHD.TabIndex = 1;
+            this.btnInHD.Text = "In hóa đơn";
+            this.btnInHD.TextColor = System.Drawing.Color.White;
+            this.btnInHD.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // dgv
             // 
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(46)))), ((int)(((byte)(105)))));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(46)))), ((int)(((byte)(105)))));
+            this.dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Indigo;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -201,14 +201,14 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Indigo;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeight = 30;
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 236);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 60;
+            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv.ColumnHeadersHeight = 30;
+            this.dgv.EnableHeadersVisualStyles = false;
+            this.dgv.GridColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgv.Location = new System.Drawing.Point(12, 236);
+            this.dgv.Name = "dgv";
+            this.dgv.RowHeadersVisible = false;
+            this.dgv.RowHeadersWidth = 60;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(46)))), ((int)(((byte)(105)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.5F);
@@ -216,11 +216,11 @@
             dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(7);
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumSlateBlue;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1130, 335);
-            this.dataGridView1.TabIndex = 17;
+            this.dgv.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv.RowTemplate.Height = 24;
+            this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv.Size = new System.Drawing.Size(1130, 335);
+            this.dgv.TabIndex = 17;
             // 
             // FormHoaDon
             // 
@@ -228,12 +228,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(1154, 622);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv);
             this.Controls.Add(this.customTextbox1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.cusBtn1);
+            this.Controls.Add(this.btnInHD);
             this.Name = "FormHoaDon";
             this.Text = "FormHoaDon";
             this.panel1.ResumeLayout(false);
@@ -242,13 +242,13 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private CustomsDetail.CusBtn cusBtn1;
+        private CustomsDetail.CusBtn btnInHD;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
@@ -259,6 +259,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv;
     }
 }

@@ -32,21 +32,21 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cusBtn2 = new QuanNet.CustomsDetail.CusBtn();
-            this.cusBtn1 = new QuanNet.CustomsDetail.CusBtn();
+            this.btnHuy = new QuanNet.CustomsDetail.CusBtn();
+            this.btnXN = new QuanNet.CustomsDetail.CusBtn();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cusCbb1 = new QuanNet.CustomsDetail.CusCbb();
-            this.customTextbox1 = new QuanNet.CustomsDetail.CustomTextbox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cbbSX = new QuanNet.CustomsDetail.CusCbb();
+            this.txtSearch = new QuanNet.CustomsDetail.CustomTextbox();
+            this.dgvOrder = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dgvOrder);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -56,53 +56,53 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.cusBtn2);
-            this.panel2.Controls.Add(this.cusBtn1);
+            this.panel2.Controls.Add(this.btnHuy);
+            this.panel2.Controls.Add(this.btnXN);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.cusCbb1);
-            this.panel2.Controls.Add(this.customTextbox1);
+            this.panel2.Controls.Add(this.cbbSX);
+            this.panel2.Controls.Add(this.txtSearch);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 476);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1154, 146);
             this.panel2.TabIndex = 1;
             // 
-            // cusBtn2
+            // btnHuy
             // 
-            this.cusBtn2.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cusBtn2.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.cusBtn2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cusBtn2.BorderRadius = 20;
-            this.cusBtn2.BorderSize = 0;
-            this.cusBtn2.FlatAppearance.BorderSize = 0;
-            this.cusBtn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cusBtn2.ForeColor = System.Drawing.Color.White;
-            this.cusBtn2.Location = new System.Drawing.Point(201, 15);
-            this.cusBtn2.Name = "cusBtn2";
-            this.cusBtn2.Size = new System.Drawing.Size(150, 40);
-            this.cusBtn2.TabIndex = 5;
-            this.cusBtn2.Text = "Hủy Order";
-            this.cusBtn2.TextColor = System.Drawing.Color.White;
-            this.cusBtn2.UseVisualStyleBackColor = false;
+            this.btnHuy.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnHuy.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnHuy.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnHuy.BorderRadius = 20;
+            this.btnHuy.BorderSize = 0;
+            this.btnHuy.FlatAppearance.BorderSize = 0;
+            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHuy.ForeColor = System.Drawing.Color.White;
+            this.btnHuy.Location = new System.Drawing.Point(201, 15);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(150, 40);
+            this.btnHuy.TabIndex = 5;
+            this.btnHuy.Text = "Hủy Order";
+            this.btnHuy.TextColor = System.Drawing.Color.White;
+            this.btnHuy.UseVisualStyleBackColor = false;
             // 
-            // cusBtn1
+            // btnXN
             // 
-            this.cusBtn1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cusBtn1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.cusBtn1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cusBtn1.BorderRadius = 20;
-            this.cusBtn1.BorderSize = 0;
-            this.cusBtn1.FlatAppearance.BorderSize = 0;
-            this.cusBtn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cusBtn1.ForeColor = System.Drawing.Color.White;
-            this.cusBtn1.Location = new System.Drawing.Point(22, 15);
-            this.cusBtn1.Name = "cusBtn1";
-            this.cusBtn1.Size = new System.Drawing.Size(150, 40);
-            this.cusBtn1.TabIndex = 4;
-            this.cusBtn1.Text = "Xác nhận";
-            this.cusBtn1.TextColor = System.Drawing.Color.White;
-            this.cusBtn1.UseVisualStyleBackColor = false;
+            this.btnXN.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnXN.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnXN.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnXN.BorderRadius = 20;
+            this.btnXN.BorderSize = 0;
+            this.btnXN.FlatAppearance.BorderSize = 0;
+            this.btnXN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXN.ForeColor = System.Drawing.Color.White;
+            this.btnXN.Location = new System.Drawing.Point(22, 15);
+            this.btnXN.Name = "btnXN";
+            this.btnXN.Size = new System.Drawing.Size(150, 40);
+            this.btnXN.TabIndex = 4;
+            this.btnXN.Text = "Xác nhận";
+            this.btnXN.TextColor = System.Drawing.Color.White;
+            this.btnXN.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -124,56 +124,56 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Tìm kiếm";
             // 
-            // cusCbb1
+            // cbbSX
             // 
-            this.cusCbb1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.cusCbb1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cusCbb1.BorderSize = 1;
-            this.cusCbb1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cusCbb1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cusCbb1.ForeColor = System.Drawing.Color.White;
-            this.cusCbb1.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.cusCbb1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cusCbb1.ListTextColor = System.Drawing.Color.DimGray;
-            this.cusCbb1.Location = new System.Drawing.Point(959, 51);
-            this.cusCbb1.MinimumSize = new System.Drawing.Size(150, 30);
-            this.cusCbb1.Name = "cusCbb1";
-            this.cusCbb1.Padding = new System.Windows.Forms.Padding(1);
-            this.cusCbb1.Size = new System.Drawing.Size(182, 30);
-            this.cusCbb1.TabIndex = 1;
-            this.cusCbb1.Texts = "";
+            this.cbbSX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.cbbSX.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cbbSX.BorderSize = 1;
+            this.cbbSX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbbSX.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cbbSX.ForeColor = System.Drawing.Color.White;
+            this.cbbSX.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cbbSX.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cbbSX.ListTextColor = System.Drawing.Color.DimGray;
+            this.cbbSX.Location = new System.Drawing.Point(959, 51);
+            this.cbbSX.MinimumSize = new System.Drawing.Size(150, 30);
+            this.cbbSX.Name = "cbbSX";
+            this.cbbSX.Padding = new System.Windows.Forms.Padding(1);
+            this.cbbSX.Size = new System.Drawing.Size(182, 30);
+            this.cbbSX.TabIndex = 1;
+            this.cbbSX.Texts = "";
             // 
-            // customTextbox1
+            // txtSearch
             // 
-            this.customTextbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.customTextbox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.customTextbox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.customTextbox1.BorderRadius = 15;
-            this.customTextbox1.BorderSize = 2;
-            this.customTextbox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextbox1.ForeColor = System.Drawing.Color.White;
-            this.customTextbox1.Location = new System.Drawing.Point(955, 9);
-            this.customTextbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.customTextbox1.Multiline = false;
-            this.customTextbox1.Name = "customTextbox1";
-            this.customTextbox1.Padding = new System.Windows.Forms.Padding(7);
-            this.customTextbox1.PasswordChar = false;
-            this.customTextbox1.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.customTextbox1.PlaceholderText = "Search...";
-            this.customTextbox1.Size = new System.Drawing.Size(186, 35);
-            this.customTextbox1.TabIndex = 0;
-            this.customTextbox1.Texts = "";
-            this.customTextbox1.UnderlinedStyle = false;
+            this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txtSearch.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtSearch.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtSearch.BorderRadius = 15;
+            this.txtSearch.BorderSize = 2;
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.ForeColor = System.Drawing.Color.White;
+            this.txtSearch.Location = new System.Drawing.Point(955, 9);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch.Multiline = false;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Padding = new System.Windows.Forms.Padding(7);
+            this.txtSearch.PasswordChar = false;
+            this.txtSearch.PlaceholderColor = System.Drawing.Color.DimGray;
+            this.txtSearch.PlaceholderText = "Search...";
+            this.txtSearch.Size = new System.Drawing.Size(186, 35);
+            this.txtSearch.TabIndex = 0;
+            this.txtSearch.Texts = "";
+            this.txtSearch.UnderlinedStyle = false;
             // 
-            // dataGridView1
+            // dgvOrder
             // 
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(46)))), ((int)(((byte)(105)))));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvOrder.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvOrder.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvOrder.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvOrder.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(46)))), ((int)(((byte)(105)))));
+            this.dgvOrder.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvOrder.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvOrder.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.MediumSlateBlue;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -181,14 +181,14 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MediumSlateBlue;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeight = 30;
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 60;
+            this.dgvOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvOrder.ColumnHeadersHeight = 30;
+            this.dgvOrder.EnableHeadersVisualStyles = false;
+            this.dgvOrder.GridColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvOrder.Location = new System.Drawing.Point(12, 12);
+            this.dgvOrder.Name = "dgvOrder";
+            this.dgvOrder.RowHeadersVisible = false;
+            this.dgvOrder.RowHeadersWidth = 60;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(46)))), ((int)(((byte)(105)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.5F);
@@ -196,11 +196,11 @@
             dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(7);
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumSlateBlue;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1129, 448);
-            this.dataGridView1.TabIndex = 17;
+            this.dgvOrder.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvOrder.RowTemplate.Height = 24;
+            this.dgvOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvOrder.Size = new System.Drawing.Size(1129, 448);
+            this.dgvOrder.TabIndex = 17;
             // 
             // FormOrder
             // 
@@ -214,7 +214,7 @@
             this.Text = "Order";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -223,12 +223,12 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private CustomsDetail.CustomTextbox customTextbox1;
-        private CustomsDetail.CusBtn cusBtn2;
-        private CustomsDetail.CusBtn cusBtn1;
+        private CustomsDetail.CustomTextbox txtSearch;
+        private CustomsDetail.CusBtn btnHuy;
+        private CustomsDetail.CusBtn btnXN;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private CustomsDetail.CusCbb cusCbb1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private CustomsDetail.CusCbb cbbSX;
+        private System.Windows.Forms.DataGridView dgvOrder;
     }
 }

@@ -37,20 +37,20 @@
             this.label6 = new System.Windows.Forms.Label();
             this.customTextbox4 = new QuanNet.CustomsDetail.CustomTextbox();
             this.customTextbox3 = new QuanNet.CustomsDetail.CustomTextbox();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
+            this.btnSearch = new FontAwesome.Sharp.IconButton();
             this.customTextbox2 = new QuanNet.CustomsDetail.CustomTextbox();
             this.customTextbox1 = new QuanNet.CustomsDetail.CustomTextbox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.dgvKH = new System.Windows.Forms.DataGridView();
+            this.btnNap = new FontAwesome.Sharp.IconButton();
+            this.btnDel = new FontAwesome.Sharp.IconButton();
+            this.btnEdit = new FontAwesome.Sharp.IconButton();
+            this.btnThem = new FontAwesome.Sharp.IconButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKH)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -69,14 +69,14 @@
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.customTextbox4);
             this.panel2.Controls.Add(this.customTextbox3);
-            this.panel2.Controls.Add(this.iconButton5);
+            this.panel2.Controls.Add(this.btnSearch);
             this.panel2.Controls.Add(this.customTextbox2);
             this.panel2.Controls.Add(this.customTextbox1);
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Controls.Add(this.iconButton4);
-            this.panel2.Controls.Add(this.iconButton3);
-            this.panel2.Controls.Add(this.iconButton2);
-            this.panel2.Controls.Add(this.iconButton1);
+            this.panel2.Controls.Add(this.dgvKH);
+            this.panel2.Controls.Add(this.btnNap);
+            this.panel2.Controls.Add(this.btnDel);
+            this.panel2.Controls.Add(this.btnEdit);
+            this.panel2.Controls.Add(this.btnThem);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
@@ -186,23 +186,23 @@
             this.customTextbox3.Texts = "";
             this.customTextbox3.UnderlinedStyle = true;
             // 
-            // iconButton5
+            // btnSearch
             // 
-            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton5.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.iconButton5.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.IconSize = 20;
-            this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton5.Location = new System.Drawing.Point(775, 206);
-            this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Size = new System.Drawing.Size(101, 34);
-            this.iconButton5.TabIndex = 15;
-            this.iconButton5.Text = "Tìm kiếm";
-            this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton5.UseVisualStyleBackColor = true;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnSearch.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btnSearch.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSearch.IconSize = 20;
+            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearch.Location = new System.Drawing.Point(775, 206);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(101, 34);
+            this.btnSearch.TabIndex = 15;
+            this.btnSearch.Text = "Tìm kiếm";
+            this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // customTextbox2
             // 
@@ -248,15 +248,15 @@
             this.customTextbox1.Texts = "";
             this.customTextbox1.UnderlinedStyle = true;
             // 
-            // dataGridView1
+            // dgvKH
             // 
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(46)))), ((int)(((byte)(105)))));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvKH.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvKH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvKH.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvKH.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(46)))), ((int)(((byte)(105)))));
+            this.dgvKH.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvKH.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvKH.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.MediumPurple;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -264,14 +264,14 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MediumPurple;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeight = 30;
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 285);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 50;
+            this.dgvKH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvKH.ColumnHeadersHeight = 30;
+            this.dgvKH.EnableHeadersVisualStyles = false;
+            this.dgvKH.GridColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvKH.Location = new System.Drawing.Point(3, 285);
+            this.dgvKH.Name = "dgvKH";
+            this.dgvKH.RowHeadersVisible = false;
+            this.dgvKH.RowHeadersWidth = 50;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(46)))), ((int)(((byte)(105)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.5F);
@@ -279,77 +279,77 @@
             dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(4);
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumSlateBlue;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1080, 298);
-            this.dataGridView1.TabIndex = 16;
+            this.dgvKH.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvKH.RowTemplate.Height = 24;
+            this.dgvKH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvKH.Size = new System.Drawing.Size(1080, 298);
+            this.dgvKH.TabIndex = 16;
             // 
-            // iconButton4
+            // btnNap
             // 
-            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.DollarSign;
-            this.iconButton4.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.IconSize = 35;
-            this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.Location = new System.Drawing.Point(775, 138);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Size = new System.Drawing.Size(101, 35);
-            this.iconButton4.TabIndex = 13;
-            this.iconButton4.Text = "Nạp";
-            this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton4.UseVisualStyleBackColor = true;
+            this.btnNap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.btnNap.IconChar = FontAwesome.Sharp.IconChar.DollarSign;
+            this.btnNap.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.btnNap.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnNap.IconSize = 35;
+            this.btnNap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNap.Location = new System.Drawing.Point(775, 138);
+            this.btnNap.Name = "btnNap";
+            this.btnNap.Size = new System.Drawing.Size(101, 35);
+            this.btnNap.TabIndex = 13;
+            this.btnNap.Text = "Nạp";
+            this.btnNap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnNap.UseVisualStyleBackColor = true;
             // 
-            // iconButton3
+            // btnDel
             // 
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Eraser;
-            this.iconButton3.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(403, 195);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(101, 50);
-            this.iconButton3.TabIndex = 12;
-            this.iconButton3.Text = "Xóa";
-            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton3.UseVisualStyleBackColor = true;
+            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.btnDel.IconChar = FontAwesome.Sharp.IconChar.Eraser;
+            this.btnDel.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.btnDel.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDel.Location = new System.Drawing.Point(403, 195);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(101, 50);
+            this.btnDel.TabIndex = 12;
+            this.btnDel.Text = "Xóa";
+            this.btnDel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDel.UseVisualStyleBackColor = true;
             // 
-            // iconButton2
+            // btnEdit
             // 
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Wrench;
-            this.iconButton2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(263, 194);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(101, 50);
-            this.iconButton2.TabIndex = 11;
-            this.iconButton2.Text = "Sửa";
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton2.UseVisualStyleBackColor = true;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.btnEdit.IconChar = FontAwesome.Sharp.IconChar.Wrench;
+            this.btnEdit.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.btnEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEdit.Location = new System.Drawing.Point(263, 194);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(101, 50);
+            this.btnEdit.TabIndex = 11;
+            this.btnEdit.Text = "Sửa";
+            this.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEdit.UseVisualStyleBackColor = true;
             // 
-            // iconButton1
+            // btnThem
             // 
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(124, 193);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(101, 50);
-            this.iconButton1.TabIndex = 10;
-            this.iconButton1.Text = "Thêm";
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = true;
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.btnThem.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.btnThem.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.btnThem.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThem.Location = new System.Drawing.Point(124, 193);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(101, 50);
+            this.btnThem.TabIndex = 10;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnThem.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -407,7 +407,7 @@
             this.Text = "Khách hàng";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKH)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -421,12 +421,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
-        private FontAwesome.Sharp.IconButton iconButton5;
-        private FontAwesome.Sharp.IconButton iconButton4;
-        private FontAwesome.Sharp.IconButton iconButton3;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private FontAwesome.Sharp.IconButton btnSearch;
+        private FontAwesome.Sharp.IconButton btnNap;
+        private FontAwesome.Sharp.IconButton btnDel;
+        private FontAwesome.Sharp.IconButton btnEdit;
+        private FontAwesome.Sharp.IconButton btnThem;
+        private System.Windows.Forms.DataGridView dgvKH;
         private CustomsDetail.CustomTextbox customTextbox5;
         private CustomsDetail.CustomTextbox customTextbox4;
         private CustomsDetail.CustomTextbox customTextbox3;

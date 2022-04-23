@@ -57,7 +57,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.customTextbox1 = new QuanNet.CustomsDetail.CustomTextbox();
+            this.txtFind = new QuanNet.CustomsDetail.CustomTextbox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -67,7 +67,7 @@
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.customTextbox1);
+            this.panel1.Controls.Add(this.txtFind);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.cusBtn1);
             this.panel1.Controls.Add(this.txtHĐ);
@@ -540,27 +540,27 @@
             this.label1.Click += new System.EventHandler(this.icon_Click);
             this.label1.DoubleClick += new System.EventHandler(this.icon_Click);
             // 
-            // customTextbox1
+            // txtFind
             // 
-            this.customTextbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.customTextbox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.customTextbox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.customTextbox1.BorderRadius = 10;
-            this.customTextbox1.BorderSize = 2;
-            this.customTextbox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextbox1.ForeColor = System.Drawing.Color.DimGray;
-            this.customTextbox1.Location = new System.Drawing.Point(756, 37);
-            this.customTextbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.customTextbox1.Multiline = false;
-            this.customTextbox1.Name = "customTextbox1";
-            this.customTextbox1.Padding = new System.Windows.Forms.Padding(7);
-            this.customTextbox1.PasswordChar = false;
-            this.customTextbox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.customTextbox1.PlaceholderText = "";
-            this.customTextbox1.Size = new System.Drawing.Size(170, 35);
-            this.customTextbox1.TabIndex = 52;
-            this.customTextbox1.Texts = "";
-            this.customTextbox1.UnderlinedStyle = false;
+            this.txtFind.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.txtFind.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtFind.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtFind.BorderRadius = 10;
+            this.txtFind.BorderSize = 2;
+            this.txtFind.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFind.ForeColor = System.Drawing.Color.DimGray;
+            this.txtFind.Location = new System.Drawing.Point(756, 37);
+            this.txtFind.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFind.Multiline = false;
+            this.txtFind.Name = "txtFind";
+            this.txtFind.Padding = new System.Windows.Forms.Padding(7);
+            this.txtFind.PasswordChar = false;
+            this.txtFind.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtFind.PlaceholderText = "";
+            this.txtFind.Size = new System.Drawing.Size(170, 35);
+            this.txtFind.TabIndex = 52;
+            this.txtFind.Texts = "";
+            this.txtFind.UnderlinedStyle = false;
             // 
             // label6
             // 
@@ -623,6 +623,6 @@
         private System.Windows.Forms.Label label5;
         private CustomsDetail.CusBtn cusBtn1;
         private System.Windows.Forms.Label label6;
-        private CustomsDetail.CustomTextbox customTextbox1;
+        private CustomsDetail.CustomTextbox txtFind;
     }
 }
