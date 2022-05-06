@@ -33,13 +33,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="FontAwesome.Sharp, Version=5.15.4.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.5.15.4\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -53,113 +62,158 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomsDetail\CusBtn.cs">
+    <Compile Include="BLL\BllQLy.cs" />
+    <Compile Include="DTO\CbbItemSort.cs" />
+    <Compile Include="DTO\TaiKhoanView.cs" />
+    <Compile Include="Properties\DoAn.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DoAn.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\DoAn.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DoAn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\DoAn.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DoAn.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\HoaDon.cs">
+      <DependentUpon>DoAn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\HoaDonChiTiet.cs">
+      <DependentUpon>DoAn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\KhachHang.cs">
+      <DependentUpon>DoAn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\ListTPham.cs">
+      <DependentUpon>DoAn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\LoaiTPham.cs">
+      <DependentUpon>DoAn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\May.cs">
+      <DependentUpon>DoAn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\sysdiagram.cs">
+      <DependentUpon>DoAn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\TaiKhoan.cs">
+      <DependentUpon>DoAn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\TPham.cs">
+      <DependentUpon>DoAn.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View\CustomsDetail\CusBtn.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CustomsDetail\CusCbb.cs">
+    <Compile Include="View\CustomsDetail\CusCbb.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CustomsDetail\CustomTextbox.cs">
+    <Compile Include="View\CustomsDetail\CustomTextbox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CustomsDetail\CustomTextbox.Designer.cs">
+    <Compile Include="View\CustomsDetail\CustomTextbox.Designer.cs">
       <DependentUpon>CustomTextbox.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomsDetail\theme.cs" />
+    <Compile Include="View\CustomsDetail\theme.cs" />
     <Compile Include="Datatest.cs" />
-    <Compile Include="FormsAdmin\Form1.cs">
+    <Compile Include="View\FormsAdmin\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsAdmin\Form1.Designer.cs">
+    <Compile Include="View\FormsAdmin\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsUser\FormApp.cs">
+    <Compile Include="View\FormsUser\FormApp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsUser\FormApp.Designer.cs">
+    <Compile Include="View\FormsUser\FormApp.Designer.cs">
       <DependentUpon>FormApp.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsAdmin\FormOrder.cs">
+    <Compile Include="View\FormsAdmin\FormOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsAdmin\FormOrder.Designer.cs">
+    <Compile Include="View\FormsAdmin\FormOrder.Designer.cs">
       <DependentUpon>FormOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsAdmin\FormKhachHang.cs">
+    <Compile Include="View\FormsAdmin\FormKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsAdmin\FormKhachHang.Designer.cs">
+    <Compile Include="View\FormsAdmin\FormKhachHang.Designer.cs">
       <DependentUpon>FormKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormLogin.cs">
+    <Compile Include="View\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLogin.Designer.cs">
+    <Compile Include="View\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsAdmin\FormMayTinh.cs">
+    <Compile Include="View\FormsAdmin\FormMayTinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsAdmin\FormMayTinh.Designer.cs">
+    <Compile Include="View\FormsAdmin\FormMayTinh.Designer.cs">
       <DependentUpon>FormMayTinh.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsAdmin\FormHoaDon.cs">
+    <Compile Include="View\FormsAdmin\FormHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsAdmin\FormHoaDon.Designer.cs">
+    <Compile Include="View\FormsAdmin\FormHoaDon.Designer.cs">
       <DependentUpon>FormHoaDon.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsAdmin\FormThongKe.cs">
+    <Compile Include="View\FormsAdmin\FormThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsAdmin\FormThongKe.Designer.cs">
+    <Compile Include="View\FormsAdmin\FormThongKe.Designer.cs">
       <DependentUpon>FormThongKe.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsUser\FormOrderKH.cs">
+    <Compile Include="View\FormsUser\FormOrderKH.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsUser\FormOrderKH.Designer.cs">
+    <Compile Include="View\FormsUser\FormOrderKH.Designer.cs">
       <DependentUpon>FormOrderKH.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsUser\FormUsers.cs">
+    <Compile Include="View\FormsUser\FormUsers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsUser\FormUsers.Designer.cs">
+    <Compile Include="View\FormsUser\FormUsers.Designer.cs">
       <DependentUpon>FormUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CustomsDetail\CustomTextbox.resx">
+    <EmbeddedResource Include="View\CustomsDetail\CustomTextbox.resx">
       <DependentUpon>CustomTextbox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsAdmin\Form1.resx">
+    <EmbeddedResource Include="View\FormsAdmin\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsUser\FormApp.resx">
+    <EmbeddedResource Include="View\FormsUser\FormApp.resx">
       <DependentUpon>FormApp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsAdmin\FormOrder.resx">
+    <EmbeddedResource Include="View\FormsAdmin\FormOrder.resx">
       <DependentUpon>FormOrder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsAdmin\FormKhachHang.resx">
+    <EmbeddedResource Include="View\FormsAdmin\FormKhachHang.resx">
       <DependentUpon>FormKhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormLogin.resx">
+    <EmbeddedResource Include="View\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsAdmin\FormMayTinh.resx">
+    <EmbeddedResource Include="View\FormsAdmin\FormMayTinh.resx">
       <DependentUpon>FormMayTinh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsAdmin\FormHoaDon.resx">
+    <EmbeddedResource Include="View\FormsAdmin\FormHoaDon.resx">
       <DependentUpon>FormHoaDon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsAdmin\FormThongKe.resx">
+    <EmbeddedResource Include="View\FormsAdmin\FormThongKe.resx">
       <DependentUpon>FormThongKe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsUser\FormOrderKH.resx">
+    <EmbeddedResource Include="View\FormsUser\FormOrderKH.resx">
       <DependentUpon>FormOrderKH.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsUser\FormUsers.resx">
+    <EmbeddedResource Include="View\FormsUser\FormUsers.resx">
       <DependentUpon>FormUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -168,6 +222,13 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <EntityDeploy Include="Properties\DoAn.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DoAn.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Properties\DoAn.edmx.diagram">
+      <DependentUpon>DoAn.edmx</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -260,6 +321,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\6133365.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\DoAn.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DoAn.edmx</DependentUpon>
+      <LastGenOutput>DoAn.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Properties\DoAn.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DoAn.edmx</DependentUpon>
+      <LastGenOutput>DoAn.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

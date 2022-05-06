@@ -28,10 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnEdit = new FontAwesome.Sharp.IconButton();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.customTextbox8 = new QuanNet.CustomsDetail.CustomTextbox();
+            this.customTextbox7 = new QuanNet.CustomsDetail.CustomTextbox();
             this.customTextbox6 = new QuanNet.CustomsDetail.CustomTextbox();
             this.customTextbox5 = new QuanNet.CustomsDetail.CustomTextbox();
             this.label6 = new System.Windows.Forms.Label();
@@ -43,7 +48,7 @@
             this.dgvKH = new System.Windows.Forms.DataGridView();
             this.btnNap = new FontAwesome.Sharp.IconButton();
             this.btnDel = new FontAwesome.Sharp.IconButton();
-            this.btnEdit = new FontAwesome.Sharp.IconButton();
+            this.btnDetail = new FontAwesome.Sharp.IconButton();
             this.btnThem = new FontAwesome.Sharp.IconButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -64,6 +69,11 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.panel2.Controls.Add(this.btnEdit);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.customTextbox8);
+            this.panel2.Controls.Add(this.customTextbox7);
             this.panel2.Controls.Add(this.customTextbox6);
             this.panel2.Controls.Add(this.customTextbox5);
             this.panel2.Controls.Add(this.label6);
@@ -75,7 +85,7 @@
             this.panel2.Controls.Add(this.dgvKH);
             this.panel2.Controls.Add(this.btnNap);
             this.panel2.Controls.Add(this.btnDel);
-            this.panel2.Controls.Add(this.btnEdit);
+            this.panel2.Controls.Add(this.btnDetail);
             this.panel2.Controls.Add(this.btnThem);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
@@ -86,6 +96,89 @@
             this.panel2.Size = new System.Drawing.Size(1083, 586);
             this.panel2.TabIndex = 2;
             // 
+            // btnEdit
+            // 
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.btnEdit.IconChar = FontAwesome.Sharp.IconChar.Wrench;
+            this.btnEdit.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.btnEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEdit.Location = new System.Drawing.Point(245, 205);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(101, 50);
+            this.btnEdit.TabIndex = 28;
+            this.btnEdit.Text = "Sửa";
+            this.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(608, 134);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(77, 20);
+            this.label7.TabIndex = 27;
+            this.label7.Text = "Mật khẩu";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(608, 71);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(81, 20);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "Tài khoản";
+            // 
+            // customTextbox8
+            // 
+            this.customTextbox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.customTextbox8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.customTextbox8.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.customTextbox8.BorderRadius = 0;
+            this.customTextbox8.BorderSize = 2;
+            this.customTextbox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customTextbox8.ForeColor = System.Drawing.Color.White;
+            this.customTextbox8.Location = new System.Drawing.Point(695, 119);
+            this.customTextbox8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.customTextbox8.Multiline = false;
+            this.customTextbox8.Name = "customTextbox8";
+            this.customTextbox8.Padding = new System.Windows.Forms.Padding(7);
+            this.customTextbox8.PasswordChar = false;
+            this.customTextbox8.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.customTextbox8.PlaceholderText = "";
+            this.customTextbox8.Size = new System.Drawing.Size(183, 35);
+            this.customTextbox8.TabIndex = 25;
+            this.customTextbox8.Texts = "";
+            this.customTextbox8.UnderlinedStyle = true;
+            // 
+            // customTextbox7
+            // 
+            this.customTextbox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.customTextbox7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.customTextbox7.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.customTextbox7.BorderRadius = 0;
+            this.customTextbox7.BorderSize = 2;
+            this.customTextbox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customTextbox7.ForeColor = System.Drawing.Color.White;
+            this.customTextbox7.Location = new System.Drawing.Point(695, 56);
+            this.customTextbox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.customTextbox7.Multiline = false;
+            this.customTextbox7.Name = "customTextbox7";
+            this.customTextbox7.Padding = new System.Windows.Forms.Padding(7);
+            this.customTextbox7.PasswordChar = false;
+            this.customTextbox7.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.customTextbox7.PlaceholderText = "";
+            this.customTextbox7.Size = new System.Drawing.Size(183, 35);
+            this.customTextbox7.TabIndex = 24;
+            this.customTextbox7.Texts = "";
+            this.customTextbox7.UnderlinedStyle = true;
+            // 
             // customTextbox6
             // 
             this.customTextbox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(52)))), ((int)(((byte)(95)))));
@@ -95,7 +188,7 @@
             this.customTextbox6.BorderSize = 4;
             this.customTextbox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customTextbox6.ForeColor = System.Drawing.Color.White;
-            this.customTextbox6.Location = new System.Drawing.Point(882, 206);
+            this.customTextbox6.Location = new System.Drawing.Point(897, 279);
             this.customTextbox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.customTextbox6.Multiline = false;
             this.customTextbox6.Name = "customTextbox6";
@@ -117,7 +210,7 @@
             this.customTextbox5.BorderSize = 2;
             this.customTextbox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customTextbox5.ForeColor = System.Drawing.Color.White;
-            this.customTextbox5.Location = new System.Drawing.Point(882, 138);
+            this.customTextbox5.Location = new System.Drawing.Point(897, 237);
             this.customTextbox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.customTextbox5.Multiline = false;
             this.customTextbox5.Name = "customTextbox5";
@@ -136,7 +229,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.label6.Location = new System.Drawing.Point(459, 27);
+            this.label6.Location = new System.Drawing.Point(459, 9);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(237, 32);
             this.label6.TabIndex = 14;
@@ -151,7 +244,7 @@
             this.customTextbox4.BorderSize = 2;
             this.customTextbox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customTextbox4.ForeColor = System.Drawing.Color.White;
-            this.customTextbox4.Location = new System.Drawing.Point(79, 143);
+            this.customTextbox4.Location = new System.Drawing.Point(83, 119);
             this.customTextbox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.customTextbox4.Multiline = false;
             this.customTextbox4.Name = "customTextbox4";
@@ -173,7 +266,7 @@
             this.customTextbox3.BorderSize = 2;
             this.customTextbox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customTextbox3.ForeColor = System.Drawing.Color.White;
-            this.customTextbox3.Location = new System.Drawing.Point(403, 80);
+            this.customTextbox3.Location = new System.Drawing.Point(391, 56);
             this.customTextbox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.customTextbox3.Multiline = false;
             this.customTextbox3.Name = "customTextbox3";
@@ -196,13 +289,14 @@
             this.btnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSearch.IconSize = 20;
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(775, 206);
+            this.btnSearch.Location = new System.Drawing.Point(790, 279);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(101, 34);
             this.btnSearch.TabIndex = 15;
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // customTextbox2
             // 
@@ -213,7 +307,7 @@
             this.customTextbox2.BorderSize = 2;
             this.customTextbox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customTextbox2.ForeColor = System.Drawing.Color.White;
-            this.customTextbox2.Location = new System.Drawing.Point(403, 143);
+            this.customTextbox2.Location = new System.Drawing.Point(391, 119);
             this.customTextbox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.customTextbox2.Multiline = false;
             this.customTextbox2.Name = "customTextbox2";
@@ -235,7 +329,7 @@
             this.customTextbox1.BorderSize = 2;
             this.customTextbox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customTextbox1.ForeColor = System.Drawing.Color.White;
-            this.customTextbox1.Location = new System.Drawing.Point(79, 80);
+            this.customTextbox1.Location = new System.Drawing.Point(83, 56);
             this.customTextbox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.customTextbox1.Multiline = false;
             this.customTextbox1.Name = "customTextbox1";
@@ -257,32 +351,32 @@
             this.dgvKH.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvKH.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvKH.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MediumPurple;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MediumPurple;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvKH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.MediumPurple;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MediumPurple;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvKH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvKH.ColumnHeadersHeight = 30;
             this.dgvKH.EnableHeadersVisualStyles = false;
             this.dgvKH.GridColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dgvKH.Location = new System.Drawing.Point(3, 285);
+            this.dgvKH.Location = new System.Drawing.Point(3, 319);
             this.dgvKH.Name = "dgvKH";
             this.dgvKH.RowHeadersVisible = false;
             this.dgvKH.RowHeadersWidth = 50;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(46)))), ((int)(((byte)(105)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(4);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumSlateBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvKH.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(46)))), ((int)(((byte)(105)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.5F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(4);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.MediumSlateBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvKH.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvKH.RowTemplate.Height = 24;
             this.dgvKH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvKH.Size = new System.Drawing.Size(1080, 298);
+            this.dgvKH.Size = new System.Drawing.Size(1080, 264);
             this.dgvKH.TabIndex = 16;
             // 
             // btnNap
@@ -294,13 +388,14 @@
             this.btnNap.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnNap.IconSize = 35;
             this.btnNap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNap.Location = new System.Drawing.Point(775, 138);
+            this.btnNap.Location = new System.Drawing.Point(790, 237);
             this.btnNap.Name = "btnNap";
             this.btnNap.Size = new System.Drawing.Size(101, 35);
             this.btnNap.TabIndex = 13;
             this.btnNap.Text = "Nạp";
             this.btnNap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNap.UseVisualStyleBackColor = true;
+            this.btnNap.Click += new System.EventHandler(this.btnNap_Click);
             // 
             // btnDel
             // 
@@ -310,29 +405,31 @@
             this.btnDel.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
             this.btnDel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDel.Location = new System.Drawing.Point(403, 195);
+            this.btnDel.Location = new System.Drawing.Point(381, 205);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(101, 50);
             this.btnDel.TabIndex = 12;
             this.btnDel.Text = "Xóa";
             this.btnDel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
-            // btnEdit
+            // btnDetail
             // 
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.btnEdit.IconChar = FontAwesome.Sharp.IconChar.Wrench;
-            this.btnEdit.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.btnEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit.Location = new System.Drawing.Point(263, 194);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(101, 50);
-            this.btnEdit.TabIndex = 11;
-            this.btnEdit.Text = "Sửa";
-            this.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnDetail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDetail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.btnDetail.IconChar = FontAwesome.Sharp.IconChar.Wrench;
+            this.btnDetail.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.btnDetail.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDetail.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDetail.Location = new System.Drawing.Point(515, 206);
+            this.btnDetail.Name = "btnDetail";
+            this.btnDetail.Size = new System.Drawing.Size(101, 50);
+            this.btnDetail.TabIndex = 11;
+            this.btnDetail.Text = "Chi tiết";
+            this.btnDetail.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDetail.UseVisualStyleBackColor = true;
+            this.btnDetail.Click += new System.EventHandler(this.btnDetail_Click);
             // 
             // btnThem
             // 
@@ -343,20 +440,21 @@
             this.btnThem.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
             this.btnThem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(124, 193);
+            this.btnThem.Location = new System.Drawing.Point(121, 204);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(101, 50);
             this.btnThem.TabIndex = 10;
             this.btnThem.Text = "Thêm";
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(343, 155);
+            this.label4.Location = new System.Drawing.Point(307, 134);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 20);
             this.label4.TabIndex = 7;
@@ -367,18 +465,18 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(318, 91);
+            this.label3.Location = new System.Drawing.Point(307, 67);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 20);
+            this.label3.Size = new System.Drawing.Size(69, 20);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Contacts:";
+            this.label3.Text = "Liên hệ:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(35, 153);
+            this.label2.Location = new System.Drawing.Point(39, 129);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 20);
             this.label2.TabIndex = 3;
@@ -389,7 +487,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(38, 91);
+            this.label1.Location = new System.Drawing.Point(42, 67);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(31, 20);
             this.label1.TabIndex = 1;
@@ -424,7 +522,7 @@
         private FontAwesome.Sharp.IconButton btnSearch;
         private FontAwesome.Sharp.IconButton btnNap;
         private FontAwesome.Sharp.IconButton btnDel;
-        private FontAwesome.Sharp.IconButton btnEdit;
+        private FontAwesome.Sharp.IconButton btnDetail;
         private FontAwesome.Sharp.IconButton btnThem;
         private System.Windows.Forms.DataGridView dgvKH;
         private CustomsDetail.CustomTextbox customTextbox5;
@@ -433,5 +531,10 @@
         private CustomsDetail.CustomTextbox customTextbox2;
         private CustomsDetail.CustomTextbox customTextbox6;
         private CustomsDetail.CustomTextbox customTextbox1;
+        private System.Windows.Forms.Label label5;
+        private CustomsDetail.CustomTextbox customTextbox8;
+        private CustomsDetail.CustomTextbox customTextbox7;
+        private FontAwesome.Sharp.IconButton btnEdit;
+        private System.Windows.Forms.Label label7;
     }
 }

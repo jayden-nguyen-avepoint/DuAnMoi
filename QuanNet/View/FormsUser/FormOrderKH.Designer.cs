@@ -77,8 +77,6 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.btnHuy = new QuanNet.CustomsDetail.CusBtn();
             this.btnXacnhan = new QuanNet.CustomsDetail.CusBtn();
-            this.label13 = new System.Windows.Forms.Label();
-            this.cbbMay = new QuanNet.CustomsDetail.CusCbb();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -636,8 +634,6 @@
             this.panel2.Controls.Add(this.listView1);
             this.panel2.Controls.Add(this.btnHuy);
             this.panel2.Controls.Add(this.btnXacnhan);
-            this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.cbbMay);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label10);
@@ -761,36 +757,6 @@
             this.btnXacnhan.TextColor = System.Drawing.Color.White;
             this.btnXacnhan.UseVisualStyleBackColor = false;
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.Control;
-            this.label13.Location = new System.Drawing.Point(6, 288);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(45, 20);
-            this.label13.TabIndex = 9;
-            this.label13.Text = "Máy:";
-            // 
-            // cbbMay
-            // 
-            this.cbbMay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
-            this.cbbMay.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cbbMay.BorderSize = 1;
-            this.cbbMay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cbbMay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cbbMay.ForeColor = System.Drawing.Color.White;
-            this.cbbMay.IconColor = System.Drawing.Color.PaleVioletRed;
-            this.cbbMay.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cbbMay.ListTextColor = System.Drawing.Color.White;
-            this.cbbMay.Location = new System.Drawing.Point(57, 280);
-            this.cbbMay.MinimumSize = new System.Drawing.Size(147, 20);
-            this.cbbMay.Name = "cbbMay";
-            this.cbbMay.Padding = new System.Windows.Forms.Padding(1);
-            this.cbbMay.Size = new System.Drawing.Size(147, 30);
-            this.cbbMay.TabIndex = 8;
-            this.cbbMay.Texts = "";
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -912,8 +878,6 @@
         private System.Windows.Forms.ListView listView1;
         private CustomsDetail.CusBtn btnHuy;
         private CustomsDetail.CusBtn btnXacnhan;
-        private System.Windows.Forms.Label label13;
-        private CustomsDetail.CusCbb cbbMay;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
