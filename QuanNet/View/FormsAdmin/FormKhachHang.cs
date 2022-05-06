@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanNet.BLL;
+using QuanNet.DTO;
 
 namespace QuanNet
 {
@@ -49,7 +50,19 @@ namespace QuanNet
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            List<TaiKhoanView> result = new List<TaiKhoanView>();
+            string keyWord = txtSearch.Text.ToLower();
+            int Ma = Convert.ToInt32(txtSearch.Texts);
+            List<TaiKhoanView> data = BllQLy.Instance.GetTKViewByIDKH(Ma);
 
+            foreach (TaiKhoanView s in data)
+            {
+                if (s.ID_TaiKhoan.ToLower().Contains(keyWord) || s.TenKhachHang.ToLower().Contains(keyWord) || s.SoDu.ToString().Contains(keyWord))
+                {
+                    result.Add(s);
+                }
+            }
+            dgvKH.DataSource = result;
         }
 
         private void btnEdit_Click(object sender, EventArgs e)

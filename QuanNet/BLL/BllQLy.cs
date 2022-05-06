@@ -126,5 +126,12 @@ namespace QuanNet.BLL
             db.TaiKhoans.Remove(s);
             db.SaveChanges();
         }
+        //public List<TaiKhoanView> SearchTK(string text)
+        //{
+        //    var result = from p in db.TaiKhoanView
+        //                 where p.IdTK.Contains(text)
+        //                 select p;
+        //    return result.ToList();
+        //}
     }
 }
