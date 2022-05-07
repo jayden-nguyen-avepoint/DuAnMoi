@@ -5,12 +5,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace QuanNet.BLL
 {
     public class BllQLy
     {
-        DoAnEntity db = new DoAnEntity();
+        DoAnPBL db = new DoAnPBL();
         private static BllQLy _Instance;
         public static BllQLy Instance
         {
@@ -28,19 +29,9 @@ namespace QuanNet.BLL
         {
 
         }
-        public List<CBBitemSort> GetCBB()
+        public TaiKhoan GetIDTKCuoi()
         {
-
-            List<CBBitemSort> list = new List<CBBitemSort>();
-            foreach (KhachHang i in db.KhachHangs)
-            {
-                list.Add(new CBBitemSort
-                {
-                    Value = i.IdKH,
-                    Text = i.TenKH
-                });
-            }
-            return list;
+            return db.TaiKhoans.OrderByDescending(shipper => shipper.IdTK).FirstOrDefault();
         }
         public TaiKhoan GetTKByIDTK(string IDTK)
         {
@@ -50,43 +41,32 @@ namespace QuanNet.BLL
             }
             return null;
         }
-        public List<TaiKhoanView> GetTKViewByIDKH(int IDKH)
+        public List<TaiKhoanView> GetTKViewByIDKH(string IDKH)
         {
             List<TaiKhoanView> data = new List<TaiKhoanView>();
-            foreach (TaiKhoan i in GetTKByIDKH(IDKH))
+            foreach (TaiKhoan i in GetTKByIDTKS(IDKH))
             {
-                string TenKH = "";
-                string lienHe = "";
-                foreach (KhachHang j in db.KhachHangs.ToList())
-                {
-                    if (j.IdKH == i.IdKH)
-                    {
-                        TenKH = j.TenKH;
-                        lienHe= j.LienHe;
-                        break;
-                    }
-                }
                 data.Add(new TaiKhoanView
-                {   
-                     ID_TaiKhoan =i.IdTK,
-                     TenKhachHang=TenKH, 
-                     SoDu=i.Sodu,
-                     LienHe=lienHe,
+                {
+                    ID_TaiKhoan = i.IdTK,
+                    TenKhachHang = i.TenKH,
+                    SoDu = i.Sodu,
+                    LienHe = i.LienHe,
                 });
             }
             return data;
 
         }
-        public List<TaiKhoan> GetTKByIDKH(int IDKH)
+        public List<TaiKhoan> GetTKByIDTKS(string IDTK)
         {
             List<TaiKhoan> data = new List<TaiKhoan>();
-            if (IDKH == 0)
+            if (IDTK == "")
             {
                 data = db.TaiKhoans.ToList();
             }
             else
             {
-                data = db.TaiKhoans.Where(p => p.IdKH == IDKH).Select(p => p).ToList();
+                data = db.TaiKhoans.Where(p => p.IdTK == IDTK.ToString()).Select(p => p).ToList();
             }
             return data;
         }
@@ -97,28 +77,34 @@ namespace QuanNet.BLL
                 if (i.IdTK == IDTK) return true;
             }
             return false;
+            //true-update.....false-add
         }
-        public void GUI()
+        public void Add(TaiKhoan s)
         {
-
-        }
-        public void Execute(TaiKhoan s)
-        {
-            if (!CheckAddUpdate(s.IdTK))
+            if (s != null)
             {
-                db.TaiKhoans.Add(s);
-                db.SaveChanges();
-                
+                if (!CheckAddUpdate(s.IdTK))
+                {
+                    db.TaiKhoans.Add(s);
+                    db.SaveChanges();
+                }
+                else MessageBox.Show("Trùng ID, vui lòng nhập lại hoặc sửa chữa", "Thông báo !", MessageBoxButton.OK);
             }
-            else
+        }  
+        public void Edit(TaiKhoan s)
+        {
+            if (CheckAddUpdate(s.IdTK))
             {
                 TaiKhoan upd = db.TaiKhoans.Find(s.IdTK);
                 upd.TenDN = s.TenDN;
+                upd.IdTK = s.IdTK;
                 upd.MatKhau = s.MatKhau;
+                upd.LienHe = s.LienHe;
                 upd.Sodu = s.Sodu;
-                upd.IdKH = s.IdKH;
+                upd.TenKH = s.TenKH;
                 db.SaveChanges();
-            }
+            }else
+            MessageBox.Show("Ko trùng ID, vui lòng nhập lại hoặc thêm mới", "Thông báo !", MessageBoxButton.OK);
         }
         public void DeleteKH(string IDTK)
         {
@@ -126,12 +112,9 @@ namespace QuanNet.BLL
             db.TaiKhoans.Remove(s);
             db.SaveChanges();
         }
-        //public List<TaiKhoanView> SearchTK(string text)
-        //{
-        //    var result = from p in db.TaiKhoanView
-        //                 where p.IdTK.Contains(text)
-        //                 select p;
-        //    return result.ToList();
-        //}
+        public dynamic SearchKH(string keyWord)
+        {
+            return db.TaiKhoans.Where(p => p.IdTK.Contains(keyWord) || p.LienHe.Contains(keyWord) || p.TenKH.Contains(keyWord)).Select(p => new {ID_TaiKhoan= p.IdTK , TenKhachHang=p.TenKH, p.Sodu, p.LienHe }).ToList();
+        }
     }
 }

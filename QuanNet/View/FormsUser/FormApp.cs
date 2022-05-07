@@ -19,7 +19,7 @@ namespace QuanNet.FormsUser
 
         private void icon_Click(object sender, EventArgs e)
         {
-            txtHĐ.Texts = ((Button)sender).Name;
+            txtHĐ.Text = ((Button)sender).Name;
         }
 
 

@@ -4,14 +4,14 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DoAnPBL.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="QuanLyCyberGameModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="HoaDon">
           <Key>
             <PropertyRef Name="IdHoaDon" />
           </Key>
           <Property Name="IdHoaDon" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="NgayXuatHD" Type="date" Nullable="false" />
-          <Property Name="IdTK" Type="nchar" MaxLength="10" />
+          <Property Name="IdTK" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="IdChiTiet" Type="nchar" MaxLength="10" Nullable="false" />
         </EntityType>
         <EntityType Name="HoaDonChiTiet">
@@ -19,16 +19,8 @@
             <PropertyRef Name="IdChiTiet" />
           </Key>
           <Property Name="IdChiTiet" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="IdOrderList" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="TongTien" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="KhachHang">
-          <Key>
-            <PropertyRef Name="IdKH" />
-          </Key>
-          <Property Name="IdKH" Type="int" Nullable="false" />
-          <Property Name="TenKH" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="LienHe" Type="nvarchar" MaxLength="20" />
+          <Property Name="IdMay" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="TongTien" Type="int" />
         </EntityType>
         <EntityType Name="ListTPham">
           <Key>
@@ -38,7 +30,7 @@
           <Property Name="IdTP" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="SoluongTP" Type="int" Nullable="false" />
           <Property Name="ThanhTien" Type="int" Nullable="false" />
-          <Property Name="IdMay" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="IdChiTiet" Type="nchar" MaxLength="10" Nullable="false" />
         </EntityType>
         <EntityType Name="LoaiTPham">
           <Key>
@@ -76,7 +68,8 @@
           <Property Name="TenDN" Type="nchar" MaxLength="200" Nullable="false" />
           <Property Name="MatKhau" Type="nchar" MaxLength="200" Nullable="false" />
           <Property Name="Sodu" Type="int" Nullable="false" />
-          <Property Name="IdKH" Type="int" Nullable="false" />
+          <Property Name="TenKH" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="LienHe" Type="nchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="TPham">
           <Key>
@@ -91,6 +84,20 @@
           <End Role="HoaDonChiTiet" Type="Self.HoaDonChiTiet" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
+          <End Role="ListTPham" Type="Self.ListTPham" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HoaDonChiTiet">
+              <PropertyRef Name="IdChiTiet" />
+            </Principal>
+            <Dependent Role="ListTPham">
+              <PropertyRef Name="IdChiTiet" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IdChiTiet1">
+          <End Role="HoaDonChiTiet" Type="Self.HoaDonChiTiet" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HoaDonChiTiet">
@@ -98,20 +105,6 @@
             </Principal>
             <Dependent Role="HoaDon">
               <PropertyRef Name="IdChiTiet" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_IdKH">
-          <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="KhachHang">
-              <PropertyRef Name="IdKH" />
-            </Principal>
-            <Dependent Role="TaiKhoan">
-              <PropertyRef Name="IdKH" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -133,27 +126,13 @@
           <End Role="May" Type="Self.May" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="ListTPham" Type="Self.ListTPham" Multiplicity="*" />
+          <End Role="HoaDonChiTiet" Type="Self.HoaDonChiTiet" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="May">
               <PropertyRef Name="IdMay" />
             </Principal>
-            <Dependent Role="ListTPham">
-              <PropertyRef Name="IdMay" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_IdOrderList">
-          <End Role="ListTPham" Type="Self.ListTPham" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="HoaDonChiTiet" Type="Self.HoaDonChiTiet" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ListTPham">
-              <PropertyRef Name="IdOrderList" />
-            </Principal>
             <Dependent Role="HoaDonChiTiet">
-              <PropertyRef Name="IdOrderList" />
+              <PropertyRef Name="IdMay" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -167,18 +146,6 @@
               <PropertyRef Name="IdTK" />
             </Principal>
             <Dependent Role="May">
-              <PropertyRef Name="IdTK" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_IdTK1">
-          <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="0..1" />
-          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TaiKhoan">
-              <PropertyRef Name="IdTK" />
-            </Principal>
-            <Dependent Role="HoaDon">
               <PropertyRef Name="IdTK" />
             </Dependent>
           </ReferentialConstraint>
@@ -197,10 +164,21 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DoAnPBLStoreContainer">
+        <Association Name="FK_TK">
+          <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="1" />
+          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaiKhoan">
+              <PropertyRef Name="IdTK" />
+            </Principal>
+            <Dependent Role="HoaDon">
+              <PropertyRef Name="IdTK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="QuanLyCyberGameModelStoreContainer">
           <EntitySet Name="HoaDon" EntityType="Self.HoaDon" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HoaDonChiTiet" EntityType="Self.HoaDonChiTiet" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="KhachHang" EntityType="Self.KhachHang" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ListTPham" EntityType="Self.ListTPham" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LoaiTPham" EntityType="Self.LoaiTPham" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="May" EntityType="Self.May" Schema="dbo" store:Type="Tables" />
@@ -209,11 +187,11 @@
           <EntitySet Name="TPham" EntityType="Self.TPham" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_IdChiTiet" Association="Self.FK_IdChiTiet">
             <End Role="HoaDonChiTiet" EntitySet="HoaDonChiTiet" />
-            <End Role="HoaDon" EntitySet="HoaDon" />
+            <End Role="ListTPham" EntitySet="ListTPham" />
           </AssociationSet>
-          <AssociationSet Name="FK_IdKH" Association="Self.FK_IdKH">
-            <End Role="KhachHang" EntitySet="KhachHang" />
-            <End Role="TaiKhoan" EntitySet="TaiKhoan" />
+          <AssociationSet Name="FK_IdChiTiet1" Association="Self.FK_IdChiTiet1">
+            <End Role="HoaDonChiTiet" EntitySet="HoaDonChiTiet" />
+            <End Role="HoaDon" EntitySet="HoaDon" />
           </AssociationSet>
           <AssociationSet Name="FK_IdLoaiTP" Association="Self.FK_IdLoaiTP">
             <End Role="LoaiTPham" EntitySet="LoaiTPham" />
@@ -221,59 +199,47 @@
           </AssociationSet>
           <AssociationSet Name="FK_IdMay" Association="Self.FK_IdMay">
             <End Role="May" EntitySet="May" />
-            <End Role="ListTPham" EntitySet="ListTPham" />
-          </AssociationSet>
-          <AssociationSet Name="FK_IdOrderList" Association="Self.FK_IdOrderList">
-            <End Role="ListTPham" EntitySet="ListTPham" />
             <End Role="HoaDonChiTiet" EntitySet="HoaDonChiTiet" />
           </AssociationSet>
           <AssociationSet Name="FK_IdTK" Association="Self.FK_IdTK">
             <End Role="TaiKhoan" EntitySet="TaiKhoan" />
             <End Role="May" EntitySet="May" />
           </AssociationSet>
-          <AssociationSet Name="FK_IdTK1" Association="Self.FK_IdTK1">
-            <End Role="TaiKhoan" EntitySet="TaiKhoan" />
-            <End Role="HoaDon" EntitySet="HoaDon" />
-          </AssociationSet>
           <AssociationSet Name="FK_IdTP" Association="Self.FK_IdTP">
             <End Role="TPham" EntitySet="TPham" />
             <End Role="ListTPham" EntitySet="ListTPham" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TK" Association="Self.FK_TK">
+            <End Role="TaiKhoan" EntitySet="TaiKhoan" />
+            <End Role="HoaDon" EntitySet="HoaDon" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="DoAnPBL" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="QuanLyCyberGameModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="HoaDon">
           <Key>
             <PropertyRef Name="IdHoaDon" />
           </Key>
           <Property Name="IdHoaDon" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="NgayXuatHD" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="IdTK" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="IdTK" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="IdChiTiet" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="HoaDonChiTiet" Relationship="Self.FK_IdChiTiet" FromRole="HoaDon" ToRole="HoaDonChiTiet" />
-          <NavigationProperty Name="TaiKhoan" Relationship="Self.FK_IdTK1" FromRole="HoaDon" ToRole="TaiKhoan" />
+          <NavigationProperty Name="HoaDonChiTiet" Relationship="Self.FK_IdChiTiet1" FromRole="HoaDon" ToRole="HoaDonChiTiet" />
+          <NavigationProperty Name="TaiKhoan" Relationship="Self.FK_TK" FromRole="HoaDon" ToRole="TaiKhoan" />
         </EntityType>
         <EntityType Name="HoaDonChiTiet">
           <Key>
             <PropertyRef Name="IdChiTiet" />
           </Key>
           <Property Name="IdChiTiet" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="IdOrderList" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="TongTien" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="HoaDons" Relationship="Self.FK_IdChiTiet" FromRole="HoaDonChiTiet" ToRole="HoaDon" />
-          <NavigationProperty Name="ListTPham" Relationship="Self.FK_IdOrderList" FromRole="HoaDonChiTiet" ToRole="ListTPham" />
-        </EntityType>
-        <EntityType Name="KhachHang">
-          <Key>
-            <PropertyRef Name="IdKH" />
-          </Key>
-          <Property Name="IdKH" Type="Int32" Nullable="false" />
-          <Property Name="TenKH" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="LienHe" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="TaiKhoans" Relationship="Self.FK_IdKH" FromRole="KhachHang" ToRole="TaiKhoan" />
+          <Property Name="IdMay" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="TongTien" Type="Int32" />
+          <NavigationProperty Name="HoaDons" Relationship="Self.FK_IdChiTiet1" FromRole="HoaDonChiTiet" ToRole="HoaDon" />
+          <NavigationProperty Name="ListTPhams" Relationship="Self.FK_IdChiTiet" FromRole="HoaDonChiTiet" ToRole="ListTPham" />
+          <NavigationProperty Name="May" Relationship="Self.FK_IdMay" FromRole="HoaDonChiTiet" ToRole="May" />
         </EntityType>
         <EntityType Name="ListTPham">
           <Key>
@@ -283,9 +249,8 @@
           <Property Name="IdTP" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="SoluongTP" Type="Int32" Nullable="false" />
           <Property Name="ThanhTien" Type="Int32" Nullable="false" />
-          <Property Name="IdMay" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="HoaDonChiTiets" Relationship="Self.FK_IdOrderList" FromRole="ListTPham" ToRole="HoaDonChiTiet" />
-          <NavigationProperty Name="May" Relationship="Self.FK_IdMay" FromRole="ListTPham" ToRole="May" />
+          <Property Name="IdChiTiet" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="HoaDonChiTiet" Relationship="Self.FK_IdChiTiet" FromRole="ListTPham" ToRole="HoaDonChiTiet" />
           <NavigationProperty Name="TPham" Relationship="Self.FK_IdTP" FromRole="ListTPham" ToRole="TPham" />
         </EntityType>
         <EntityType Name="LoaiTPham">
@@ -306,7 +271,7 @@
           <Property Name="HoatDong" Type="Boolean" Nullable="false" />
           <Property Name="IdTK" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="TienGio" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="ListTPhams" Relationship="Self.FK_IdMay" FromRole="May" ToRole="ListTPham" />
+          <NavigationProperty Name="HoaDonChiTiets" Relationship="Self.FK_IdMay" FromRole="May" ToRole="HoaDonChiTiet" />
           <NavigationProperty Name="TaiKhoan" Relationship="Self.FK_IdTK" FromRole="May" ToRole="TaiKhoan" />
         </EntityType>
         <EntityType Name="sysdiagram">
@@ -327,9 +292,9 @@
           <Property Name="TenDN" Type="String" MaxLength="200" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="MatKhau" Type="String" MaxLength="200" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Sodu" Type="Int32" Nullable="false" />
-          <Property Name="IdKH" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="HoaDons" Relationship="Self.FK_IdTK1" FromRole="TaiKhoan" ToRole="HoaDon" />
-          <NavigationProperty Name="KhachHang" Relationship="Self.FK_IdKH" FromRole="TaiKhoan" ToRole="KhachHang" />
+          <Property Name="TenKH" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LienHe" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="HoaDons" Relationship="Self.FK_TK" FromRole="TaiKhoan" ToRole="HoaDon" />
           <NavigationProperty Name="Mays" Relationship="Self.FK_IdTK" FromRole="TaiKhoan" ToRole="May" />
         </EntityType>
         <EntityType Name="TPham">
@@ -343,7 +308,7 @@
           <NavigationProperty Name="ListTPhams" Relationship="Self.FK_IdTP" FromRole="TPham" ToRole="ListTPham" />
           <NavigationProperty Name="LoaiTPham" Relationship="Self.FK_IdLoaiTP" FromRole="TPham" ToRole="LoaiTPham" />
         </EntityType>
-        <Association Name="FK_IdChiTiet">
+        <Association Name="FK_IdChiTiet1">
           <End Role="HoaDonChiTiet" Type="Self.HoaDonChiTiet" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
@@ -357,8 +322,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_IdTK1">
-          <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="0..1" />
+        <Association Name="FK_TK">
+          <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="1" />
           <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TaiKhoan">
@@ -369,31 +334,17 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_IdOrderList">
-          <End Role="ListTPham" Type="Self.ListTPham" Multiplicity="1">
+        <Association Name="FK_IdChiTiet">
+          <End Role="HoaDonChiTiet" Type="Self.HoaDonChiTiet" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="HoaDonChiTiet" Type="Self.HoaDonChiTiet" Multiplicity="*" />
+          <End Role="ListTPham" Type="Self.ListTPham" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="ListTPham">
-              <PropertyRef Name="IdOrderList" />
+            <Principal Role="HoaDonChiTiet">
+              <PropertyRef Name="IdChiTiet" />
             </Principal>
-            <Dependent Role="HoaDonChiTiet">
-              <PropertyRef Name="IdOrderList" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_IdKH">
-          <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="KhachHang">
-              <PropertyRef Name="IdKH" />
-            </Principal>
-            <Dependent Role="TaiKhoan">
-              <PropertyRef Name="IdKH" />
+            <Dependent Role="ListTPham">
+              <PropertyRef Name="IdChiTiet" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -401,12 +352,12 @@
           <End Role="May" Type="Self.May" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="ListTPham" Type="Self.ListTPham" Multiplicity="*" />
+          <End Role="HoaDonChiTiet" Type="Self.HoaDonChiTiet" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="May">
               <PropertyRef Name="IdMay" />
             </Principal>
-            <Dependent Role="ListTPham">
+            <Dependent Role="HoaDonChiTiet">
               <PropertyRef Name="IdMay" />
             </Dependent>
           </ReferentialConstraint>
@@ -453,35 +404,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DoAnEntity" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="DoAnPBL" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="HoaDons" EntityType="Self.HoaDon" />
           <EntitySet Name="HoaDonChiTiets" EntityType="Self.HoaDonChiTiet" />
-          <EntitySet Name="KhachHangs" EntityType="Self.KhachHang" />
           <EntitySet Name="ListTPhams" EntityType="Self.ListTPham" />
           <EntitySet Name="LoaiTPhams" EntityType="Self.LoaiTPham" />
           <EntitySet Name="Mays" EntityType="Self.May" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="TaiKhoans" EntityType="Self.TaiKhoan" />
           <EntitySet Name="TPhams" EntityType="Self.TPham" />
+          <AssociationSet Name="FK_IdChiTiet1" Association="Self.FK_IdChiTiet1">
+            <End Role="HoaDonChiTiet" EntitySet="HoaDonChiTiets" />
+            <End Role="HoaDon" EntitySet="HoaDons" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TK" Association="Self.FK_TK">
+            <End Role="TaiKhoan" EntitySet="TaiKhoans" />
+            <End Role="HoaDon" EntitySet="HoaDons" />
+          </AssociationSet>
           <AssociationSet Name="FK_IdChiTiet" Association="Self.FK_IdChiTiet">
             <End Role="HoaDonChiTiet" EntitySet="HoaDonChiTiets" />
-            <End Role="HoaDon" EntitySet="HoaDons" />
-          </AssociationSet>
-          <AssociationSet Name="FK_IdTK1" Association="Self.FK_IdTK1">
-            <End Role="TaiKhoan" EntitySet="TaiKhoans" />
-            <End Role="HoaDon" EntitySet="HoaDons" />
-          </AssociationSet>
-          <AssociationSet Name="FK_IdOrderList" Association="Self.FK_IdOrderList">
             <End Role="ListTPham" EntitySet="ListTPhams" />
-            <End Role="HoaDonChiTiet" EntitySet="HoaDonChiTiets" />
-          </AssociationSet>
-          <AssociationSet Name="FK_IdKH" Association="Self.FK_IdKH">
-            <End Role="KhachHang" EntitySet="KhachHangs" />
-            <End Role="TaiKhoan" EntitySet="TaiKhoans" />
           </AssociationSet>
           <AssociationSet Name="FK_IdMay" Association="Self.FK_IdMay">
             <End Role="May" EntitySet="Mays" />
-            <End Role="ListTPham" EntitySet="ListTPhams" />
+            <End Role="HoaDonChiTiet" EntitySet="HoaDonChiTiets" />
           </AssociationSet>
           <AssociationSet Name="FK_IdTP" Association="Self.FK_IdTP">
             <End Role="TPham" EntitySet="TPhams" />
@@ -501,9 +447,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DoAnPBLStoreContainer" CdmEntityContainer="DoAnEntity">
+        <EntityContainerMapping StorageEntityContainer="QuanLyCyberGameModelStoreContainer" CdmEntityContainer="DoAnPBL">
           <EntitySetMapping Name="HoaDons">
-            <EntityTypeMapping TypeName="DoAnPBL.HoaDon">
+            <EntityTypeMapping TypeName="QuanLyCyberGameModel.HoaDon">
               <MappingFragment StoreEntitySet="HoaDon">
                 <ScalarProperty Name="IdHoaDon" ColumnName="IdHoaDon" />
                 <ScalarProperty Name="NgayXuatHD" ColumnName="NgayXuatHD" />
@@ -513,36 +459,27 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="HoaDonChiTiets">
-            <EntityTypeMapping TypeName="DoAnPBL.HoaDonChiTiet">
+            <EntityTypeMapping TypeName="QuanLyCyberGameModel.HoaDonChiTiet">
               <MappingFragment StoreEntitySet="HoaDonChiTiet">
                 <ScalarProperty Name="IdChiTiet" ColumnName="IdChiTiet" />
-                <ScalarProperty Name="IdOrderList" ColumnName="IdOrderList" />
+                <ScalarProperty Name="IdMay" ColumnName="IdMay" />
                 <ScalarProperty Name="TongTien" ColumnName="TongTien" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="KhachHangs">
-            <EntityTypeMapping TypeName="DoAnPBL.KhachHang">
-              <MappingFragment StoreEntitySet="KhachHang">
-                <ScalarProperty Name="IdKH" ColumnName="IdKH" />
-                <ScalarProperty Name="TenKH" ColumnName="TenKH" />
-                <ScalarProperty Name="LienHe" ColumnName="LienHe" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="ListTPhams">
-            <EntityTypeMapping TypeName="DoAnPBL.ListTPham">
+            <EntityTypeMapping TypeName="QuanLyCyberGameModel.ListTPham">
               <MappingFragment StoreEntitySet="ListTPham">
                 <ScalarProperty Name="IdOrderList" ColumnName="IdOrderList" />
                 <ScalarProperty Name="IdTP" ColumnName="IdTP" />
                 <ScalarProperty Name="SoluongTP" ColumnName="SoluongTP" />
                 <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
-                <ScalarProperty Name="IdMay" ColumnName="IdMay" />
+                <ScalarProperty Name="IdChiTiet" ColumnName="IdChiTiet" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LoaiTPhams">
-            <EntityTypeMapping TypeName="DoAnPBL.LoaiTPham">
+            <EntityTypeMapping TypeName="QuanLyCyberGameModel.LoaiTPham">
               <MappingFragment StoreEntitySet="LoaiTPham">
                 <ScalarProperty Name="IdLoaiTP" ColumnName="IdLoaiTP" />
                 <ScalarProperty Name="TenLoaiTP" ColumnName="TenLoaiTP" />
@@ -550,7 +487,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Mays">
-            <EntityTypeMapping TypeName="DoAnPBL.May">
+            <EntityTypeMapping TypeName="QuanLyCyberGameModel.May">
               <MappingFragment StoreEntitySet="May">
                 <ScalarProperty Name="IdMay" ColumnName="IdMay" />
                 <ScalarProperty Name="CauHinh" ColumnName="CauHinh" />
@@ -562,7 +499,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="DoAnPBL.sysdiagram">
+            <EntityTypeMapping TypeName="QuanLyCyberGameModel.sysdiagram">
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -573,18 +510,19 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TaiKhoans">
-            <EntityTypeMapping TypeName="DoAnPBL.TaiKhoan">
+            <EntityTypeMapping TypeName="QuanLyCyberGameModel.TaiKhoan">
               <MappingFragment StoreEntitySet="TaiKhoan">
                 <ScalarProperty Name="IdTK" ColumnName="IdTK" />
                 <ScalarProperty Name="TenDN" ColumnName="TenDN" />
                 <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
                 <ScalarProperty Name="Sodu" ColumnName="Sodu" />
-                <ScalarProperty Name="IdKH" ColumnName="IdKH" />
+                <ScalarProperty Name="TenKH" ColumnName="TenKH" />
+                <ScalarProperty Name="LienHe" ColumnName="LienHe" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TPhams">
-            <EntityTypeMapping TypeName="DoAnPBL.TPham">
+            <EntityTypeMapping TypeName="QuanLyCyberGameModel.TPham">
               <MappingFragment StoreEntitySet="TPham">
                 <ScalarProperty Name="IdTP" ColumnName="IdTP" />
                 <ScalarProperty Name="TenTP" ColumnName="TenTP" />

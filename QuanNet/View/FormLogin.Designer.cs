@@ -245,7 +245,7 @@
             this.txtMKKH.PlaceholderText = "Mật khẩu...";
             this.txtMKKH.Size = new System.Drawing.Size(250, 35);
             this.txtMKKH.TabIndex = 4;
-            this.txtMKKH.Texts = "";
+            this.txtMKKH.Text = "";
             this.txtMKKH.UnderlinedStyle = true;
             // 
             // txtTKKH
@@ -268,7 +268,7 @@
             this.txtTKKH.PlaceholderText = "ID...";
             this.txtTKKH.Size = new System.Drawing.Size(250, 35);
             this.txtTKKH.TabIndex = 4;
-            this.txtTKKH.Texts = "";
+            this.txtTKKH.Text = "";
             this.txtTKKH.UnderlinedStyle = true;
             // 
             // iconKH
@@ -323,7 +323,7 @@
             this.cbbMay.Padding = new System.Windows.Forms.Padding(1);
             this.cbbMay.Size = new System.Drawing.Size(200, 30);
             this.cbbMay.TabIndex = 0;
-            this.cbbMay.Texts = "";
+            this.cbbMay.Text = "";
             // 
             // iconQuanLy
             // 
@@ -381,7 +381,7 @@
             this.txtMKQL.PlaceholderText = "Mật khẩu...";
             this.txtMKQL.Size = new System.Drawing.Size(250, 35);
             this.txtMKQL.TabIndex = 1;
-            this.txtMKQL.Texts = "";
+            this.txtMKQL.Text = "";
             this.txtMKQL.UnderlinedStyle = true;
             this.txtMKQL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cusBtn1_KeyPress);
             // 
@@ -405,7 +405,7 @@
             this.txtTKQL.PlaceholderText = "ID...";
             this.txtTKQL.Size = new System.Drawing.Size(250, 35);
             this.txtTKQL.TabIndex = 0;
-            this.txtTKQL.Texts = "";
+            this.txtTKQL.Text = "";
             this.txtTKQL.UnderlinedStyle = true;
             this.txtTKQL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cusBtn1_KeyPress);
             // 

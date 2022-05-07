@@ -162,7 +162,7 @@
             this.customTextbox1.PlaceholderText = "   Search...";
             this.customTextbox1.Size = new System.Drawing.Size(185, 35);
             this.customTextbox1.TabIndex = 6;
-            this.customTextbox1.Texts = "";
+            this.customTextbox1.Text = "";
             this.customTextbox1.UnderlinedStyle = true;
             this.customTextbox1.UseWaitCursor = true;
             // 

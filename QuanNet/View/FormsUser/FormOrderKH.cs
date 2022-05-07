@@ -18,14 +18,14 @@ namespace QuanNet.FormsUser
         }
         private void Chon_Click(object sender, EventArgs e)
         {
-            txtMon.Texts = ((Button)sender).Text;
+            txtMon.Text = ((Button)sender).Text;
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            txtMon.Texts = "";
-            txtSL.Texts = "";
-            txtGia.Texts = "";
+            txtMon.Text = "";
+            txtSL.Text = "";
+            txtGia.Text = "";
         }
 
 

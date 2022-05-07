@@ -662,7 +662,7 @@
             this.txtGia.PlaceholderText = "";
             this.txtGia.Size = new System.Drawing.Size(147, 35);
             this.txtGia.TabIndex = 31;
-            this.txtGia.Texts = "";
+            this.txtGia.Text = "";
             this.txtGia.UnderlinedStyle = false;
             // 
             // txtSL
@@ -684,7 +684,7 @@
             this.txtSL.PlaceholderText = "";
             this.txtSL.Size = new System.Drawing.Size(147, 35);
             this.txtSL.TabIndex = 30;
-            this.txtSL.Texts = "";
+            this.txtSL.Text = "";
             this.txtSL.UnderlinedStyle = false;
             // 
             // txtMon
@@ -706,7 +706,7 @@
             this.txtMon.PlaceholderText = "";
             this.txtMon.Size = new System.Drawing.Size(147, 35);
             this.txtMon.TabIndex = 29;
-            this.txtMon.Texts = "";
+            this.txtMon.Text = "";
             this.txtMon.UnderlinedStyle = false;
             // 
             // listView1

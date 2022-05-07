@@ -125,7 +125,7 @@
             this.txtHĐ.PlaceholderText = "";
             this.txtHĐ.Size = new System.Drawing.Size(170, 35);
             this.txtHĐ.TabIndex = 37;
-            this.txtHĐ.Texts = "";
+            this.txtHĐ.Text = "";
             this.txtHĐ.UnderlinedStyle = false;
             // 
             // label19

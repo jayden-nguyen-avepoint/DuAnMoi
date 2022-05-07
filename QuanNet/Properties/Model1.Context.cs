@@ -13,10 +13,10 @@ namespace QuanNet.Properties
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DoAnEntity : DbContext
+    public partial class DoAnPBL : DbContext
     {
-        public DoAnEntity()
-            : base("name=DoAnEntity")
+        public DoAnPBL()
+            : base("name=DoAnPBL")
         {
         }
     
@@ -27,7 +27,6 @@ namespace QuanNet.Properties
     
         public virtual DbSet<HoaDon> HoaDons { get; set; }
         public virtual DbSet<HoaDonChiTiet> HoaDonChiTiets { get; set; }
-        public virtual DbSet<KhachHang> KhachHangs { get; set; }
         public virtual DbSet<ListTPham> ListTPhams { get; set; }
         public virtual DbSet<LoaiTPham> LoaiTPhams { get; set; }
         public virtual DbSet<May> Mays { get; set; }

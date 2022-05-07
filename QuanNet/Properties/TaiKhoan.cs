@@ -25,11 +25,11 @@ namespace QuanNet.Properties
         public string TenDN { get; set; }
         public string MatKhau { get; set; }
         public int Sodu { get; set; }
-        public int IdKH { get; set; }
+        public string TenKH { get; set; }
+        public string LienHe { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDon> HoaDons { get; set; }
-        public virtual KhachHang KhachHang { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<May> Mays { get; set; }
     }
