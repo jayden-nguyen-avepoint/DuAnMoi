@@ -512,7 +512,7 @@
             this.customTextbox4.PlaceholderText = "";
             this.customTextbox4.Size = new System.Drawing.Size(250, 35);
             this.customTextbox4.TabIndex = 9;
-            this.customTextbox4.Texts = "";
+            this.customTextbox4.Text = "";
             this.customTextbox4.UnderlinedStyle = true;
             // 
             // customTextbox3
@@ -534,7 +534,7 @@
             this.customTextbox3.PlaceholderText = "";
             this.customTextbox3.Size = new System.Drawing.Size(250, 35);
             this.customTextbox3.TabIndex = 8;
-            this.customTextbox3.Texts = "";
+            this.customTextbox3.Text = "";
             this.customTextbox3.UnderlinedStyle = true;
             // 
             // customTextbox2
@@ -556,7 +556,7 @@
             this.customTextbox2.PlaceholderText = "";
             this.customTextbox2.Size = new System.Drawing.Size(250, 35);
             this.customTextbox2.TabIndex = 7;
-            this.customTextbox2.Texts = "";
+            this.customTextbox2.Text = "";
             this.customTextbox2.UnderlinedStyle = true;
             // 
             // customTextbox1
@@ -578,7 +578,7 @@
             this.customTextbox1.PlaceholderText = "";
             this.customTextbox1.Size = new System.Drawing.Size(250, 35);
             this.customTextbox1.TabIndex = 6;
-            this.customTextbox1.Texts = "";
+            this.customTextbox1.Text = "";
             this.customTextbox1.UnderlinedStyle = true;
             // 
             // btnStart

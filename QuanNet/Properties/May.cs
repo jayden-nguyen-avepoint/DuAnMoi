@@ -17,7 +17,7 @@ namespace QuanNet.Properties
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public May()
         {
-            this.ListTPhams = new HashSet<ListTPham>();
+            this.HoaDonChiTiets = new HashSet<HoaDonChiTiet>();
         }
     
         public string IdMay { get; set; }
@@ -28,7 +28,7 @@ namespace QuanNet.Properties
         public int TienGio { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ListTPham> ListTPhams { get; set; }
+        public virtual ICollection<HoaDonChiTiet> HoaDonChiTiets { get; set; }
         public virtual TaiKhoan TaiKhoan { get; set; }
     }
 }

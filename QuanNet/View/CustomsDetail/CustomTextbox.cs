@@ -190,7 +190,7 @@ namespace QuanNet.CustomsDetail
             }
         }
         [Category("RJ Code Advance")]
-        public string Texts
+        public string Text
         {
             get
             {

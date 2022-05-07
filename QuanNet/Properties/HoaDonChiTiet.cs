@@ -18,14 +18,17 @@ namespace QuanNet.Properties
         public HoaDonChiTiet()
         {
             this.HoaDons = new HashSet<HoaDon>();
+            this.ListTPhams = new HashSet<ListTPham>();
         }
     
         public string IdChiTiet { get; set; }
-        public string IdOrderList { get; set; }
-        public int TongTien { get; set; }
+        public string IdMay { get; set; }
+        public Nullable<int> TongTien { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDon> HoaDons { get; set; }
-        public virtual ListTPham ListTPham { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ListTPham> ListTPhams { get; set; }
+        public virtual May May { get; set; }
     }
 }

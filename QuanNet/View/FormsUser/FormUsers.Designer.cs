@@ -197,7 +197,7 @@
             this.txtMay.PlaceholderText = "";
             this.txtMay.Size = new System.Drawing.Size(136, 35);
             this.txtMay.TabIndex = 0;
-            this.txtMay.Texts = "";
+            this.txtMay.Text = "";
             this.txtMay.UnderlinedStyle = false;
             // 
             // txtTG
@@ -219,7 +219,7 @@
             this.txtTG.PlaceholderText = "";
             this.txtTG.Size = new System.Drawing.Size(136, 35);
             this.txtTG.TabIndex = 1;
-            this.txtTG.Texts = "";
+            this.txtTG.Text = "";
             this.txtTG.UnderlinedStyle = false;
             // 
             // txtGia
@@ -241,7 +241,7 @@
             this.txtGia.PlaceholderText = "";
             this.txtGia.Size = new System.Drawing.Size(136, 35);
             this.txtGia.TabIndex = 2;
-            this.txtGia.Texts = "";
+            this.txtGia.Text = "";
             this.txtGia.UnderlinedStyle = false;
             // 
             // txtOrder
@@ -263,7 +263,7 @@
             this.txtOrder.PlaceholderText = "";
             this.txtOrder.Size = new System.Drawing.Size(136, 35);
             this.txtOrder.TabIndex = 3;
-            this.txtOrder.Texts = "";
+            this.txtOrder.Text = "";
             this.txtOrder.UnderlinedStyle = false;
             // 
             // label6
@@ -358,7 +358,7 @@
             this.txtTongTien.PlaceholderText = "";
             this.txtTongTien.Size = new System.Drawing.Size(136, 35);
             this.txtTongTien.TabIndex = 58;
-            this.txtTongTien.Texts = "";
+            this.txtTongTien.Text = "";
             this.txtTongTien.UnderlinedStyle = false;
             // 
             // label7
@@ -391,7 +391,7 @@
             this.txtSodu.PlaceholderText = "";
             this.txtSodu.Size = new System.Drawing.Size(136, 35);
             this.txtSodu.TabIndex = 60;
-            this.txtSodu.Texts = "";
+            this.txtSodu.Text = "";
             this.txtSodu.UnderlinedStyle = false;
             // 
             // pictureBox1

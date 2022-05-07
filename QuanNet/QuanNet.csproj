@@ -65,47 +65,44 @@
     <Compile Include="BLL\BllQLy.cs" />
     <Compile Include="DTO\CbbItemSort.cs" />
     <Compile Include="DTO\TaiKhoanView.cs" />
-    <Compile Include="Properties\DoAn.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DoAn.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\DoAn.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DoAn.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\DoAn.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DoAn.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\HoaDon.cs">
-      <DependentUpon>DoAn.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\HoaDonChiTiet.cs">
-      <DependentUpon>DoAn.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\KhachHang.cs">
-      <DependentUpon>DoAn.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\ListTPham.cs">
-      <DependentUpon>DoAn.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\LoaiTPham.cs">
-      <DependentUpon>DoAn.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\May.cs">
-      <DependentUpon>DoAn.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\sysdiagram.cs">
-      <DependentUpon>DoAn.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\TaiKhoan.cs">
-      <DependentUpon>DoAn.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\TPham.cs">
-      <DependentUpon>DoAn.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="View\CustomsDetail\CusBtn.cs">
       <SubType>Component</SubType>
@@ -222,12 +219,12 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
-    <EntityDeploy Include="Properties\DoAn.edmx">
+    <EntityDeploy Include="Properties\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DoAn.Designer.cs</LastGenOutput>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Properties\DoAn.edmx.diagram">
-      <DependentUpon>DoAn.edmx</DependentUpon>
+    <None Include="Properties\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -326,15 +323,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Properties\DoAn.Context.tt">
+    <Content Include="Properties\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DoAn.edmx</DependentUpon>
-      <LastGenOutput>DoAn.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Properties\DoAn.tt">
+    <Content Include="Properties\Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DoAn.edmx</DependentUpon>
-      <LastGenOutput>DoAn.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -141,7 +141,7 @@
             this.cbbSX.Padding = new System.Windows.Forms.Padding(1);
             this.cbbSX.Size = new System.Drawing.Size(182, 30);
             this.cbbSX.TabIndex = 1;
-            this.cbbSX.Texts = "";
+            this.cbbSX.Text = "";
             // 
             // txtSearch
             // 
@@ -162,7 +162,7 @@
             this.txtSearch.PlaceholderText = "Search...";
             this.txtSearch.Size = new System.Drawing.Size(186, 35);
             this.txtSearch.TabIndex = 0;
-            this.txtSearch.Texts = "";
+            this.txtSearch.Text = "";
             this.txtSearch.UnderlinedStyle = false;
             // 
             // dgvOrder

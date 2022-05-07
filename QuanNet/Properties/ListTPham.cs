@@ -14,21 +14,13 @@ namespace QuanNet.Properties
     
     public partial class ListTPham
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public ListTPham()
-        {
-            this.HoaDonChiTiets = new HashSet<HoaDonChiTiet>();
-        }
-    
         public string IdOrderList { get; set; }
         public string IdTP { get; set; }
         public int SoluongTP { get; set; }
         public int ThanhTien { get; set; }
-        public string IdMay { get; set; }
+        public string IdChiTiet { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HoaDonChiTiet> HoaDonChiTiets { get; set; }
-        public virtual May May { get; set; }
+        public virtual HoaDonChiTiet HoaDonChiTiet { get; set; }
         public virtual TPham TPham { get; set; }
     }
 }

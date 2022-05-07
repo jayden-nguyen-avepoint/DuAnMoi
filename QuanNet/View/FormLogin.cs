@@ -125,7 +125,7 @@ namespace QuanNet
 
         private void cusBtn1_Click(object sender, EventArgs e)
         {
-            if (txtTKQL.Texts == IDAdmin && txtMKQL.Texts == PasswordAdmin)
+            if (txtTKQL.Text == IDAdmin && txtMKQL.Text == PasswordAdmin)
             {
                 Form1 f = new Form1();
                 f.Show();
@@ -135,8 +135,8 @@ namespace QuanNet
             {
                 MessageBox.Show("Tài khoản hoặc mật khẩu không đúng", "Thong bao", MessageBoxButtons.OK);
             }
-            txtMKQL.Texts = "";
-            txtTKQL.Texts = "";
+            txtMKQL.Text = "";
+            txtTKQL.Text = "";
         }
 
         private void cusBtn1_KeyPress(object sender, KeyPressEventArgs e)
@@ -144,7 +144,7 @@ namespace QuanNet
             
             if (e.KeyChar == (char)Keys.Enter)
             {
-               if (txtTKQL.Texts == IDAdmin && txtMKQL.Texts == PasswordAdmin)
+               if (txtTKQL.Text == IDAdmin && txtMKQL.Text == PasswordAdmin)
                {
                     Form1 f = new Form1();
                     f.Show();
@@ -154,8 +154,8 @@ namespace QuanNet
                 {
                     MessageBox.Show("Tài khoản hoặc mật khẩu không đúng", "Thong bao", MessageBoxButtons.OK);
                 }
-                txtMKQL.Texts = "";
-                txtTKQL.Texts = "";
+                txtMKQL.Text = "";
+                txtTKQL.Text = "";
                 e.Handled = true;
                 
             }
@@ -163,7 +163,7 @@ namespace QuanNet
 
         private void cusBtnKH_Click(object sender, EventArgs e)
         {
-            if (txtTKKH.Texts == IDKH && txtMKKH.Texts == PasswordKH )
+            if (txtTKKH.Text == IDKH && txtMKKH.Text == PasswordKH )
             {
                 FormsUser.FormUsers f = new FormsUser.FormUsers();
                 f.Show();
@@ -173,8 +173,8 @@ namespace QuanNet
             {
                 MessageBox.Show("Tài khoản hoặc mật khẩu không đúng", "Thong bao", MessageBoxButtons.OK);
             }
-            txtTKKH.Texts = "";
-            txtMKKH.Texts = "";
+            txtTKKH.Text = "";
+            txtMKKH.Text = "";
         }
         //fuck this shit bruh
     }
