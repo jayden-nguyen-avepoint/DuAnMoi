@@ -13,10 +13,10 @@ namespace QuanNet.Properties
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DoAnPBL : DbContext
+    public partial class DoAnQLNet : DbContext
     {
-        public DoAnPBL()
-            : base("name=DoAnPBL")
+        public DoAnQLNet()
+            : base("name=DoAnQLNet")
         {
         }
     

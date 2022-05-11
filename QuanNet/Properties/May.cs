@@ -23,7 +23,7 @@ namespace QuanNet.Properties
         public string IdMay { get; set; }
         public string CauHinh { get; set; }
         public bool TrangThai { get; set; }
-        public bool HoatDong { get; set; }
+        public string HoatDong { get; set; }
         public string IdTK { get; set; }
         public int TienGio { get; set; }
     
