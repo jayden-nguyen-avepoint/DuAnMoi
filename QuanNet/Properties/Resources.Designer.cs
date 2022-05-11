@@ -63,9 +63,9 @@ namespace QuanNet.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Hoc_Them_removebg_preview {
+        internal static System.Drawing.Bitmap _1200px_Cốc_Cốc_logo_svg {
             get {
-                object obj = ResourceManager.GetObject("Hoc_Them-removebg-preview", resourceCulture);
+                object obj = ResourceManager.GetObject("1200px-Cốc_Cốc_logo.svg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,139 @@ namespace QuanNet.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Hoc_Them_removebg_preview__1_ {
+        internal static System.Drawing.Bitmap _1200x600wa {
             get {
-                object obj = ResourceManager.GetObject("Hoc_Them-removebg-preview (1)", resourceCulture);
+                object obj = ResourceManager.GetObject("1200x600wa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1200x600wa_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("1200x600wa-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1200x630wa_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("1200x630wa-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _6133365 {
+            get {
+                object obj = ResourceManager.GetObject("6133365", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap banh_mi {
+            get {
+                object obj = ResourceManager.GetObject("banh-mi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap block_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("block-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap butri {
+            get {
+                object obj = ResourceManager.GetObject("butri", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap chicken_burger {
+            get {
+                object obj = ResourceManager.GetObject("chicken-burger", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Coaa {
+            get {
+                object obj = ResourceManager.GetObject("Coaa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap coca {
+            get {
+                object obj = ResourceManager.GetObject("coca", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Comchien {
+            get {
+                object obj = ResourceManager.GetObject("Comchien", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap customLogo_200x200 {
+            get {
+                object obj = ResourceManager.GetObject("customLogo-200x200", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap HaoHao {
+            get {
+                object obj = ResourceManager.GetObject("HaoHao", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hoc_Them_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("Hoc_Them-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +223,9 @@ namespace QuanNet.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Hoc_Them_removebg_preview__1_1 {
+        internal static System.Drawing.Bitmap images {
             get {
-                object obj = ResourceManager.GetObject("Hoc_Them-removebg-preview (1)1", resourceCulture);
+                object obj = ResourceManager.GetObject("images", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +233,50 @@ namespace QuanNet.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Hoc_Them_removebg_preview__1_2 {
+        internal static System.Drawing.Bitmap Lavie {
             get {
-                object obj = ResourceManager.GetObject("Hoc_Them-removebg-preview (1)2", resourceCulture);
+                object obj = ResourceManager.GetObject("Lavie", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap red_flag_icon_youtube_logo_icon_design_youtube_play_buttons_arrow_rectangle_symbol_png_clipart_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("red-flag-icon-youtube-logo-icon-design-youtube-play-buttons-arrow-rectangle-symbo" +
+                        "l-png-clipart-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap redbull {
+            get {
+                object obj = ResourceManager.GetObject("redbull", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sinhnhat {
+            get {
+                object obj = ResourceManager.GetObject("sinhnhat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tải_xuống_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("tải_xuống-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
