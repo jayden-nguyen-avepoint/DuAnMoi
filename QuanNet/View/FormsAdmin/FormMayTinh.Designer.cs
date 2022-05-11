@@ -104,7 +104,7 @@
             this.iconButton24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton24.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.iconButton24.IconChar = FontAwesome.Sharp.IconChar.Desktop;
-            this.iconButton24.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.iconButton24.IconColor = System.Drawing.Color.Chartreuse;
             this.iconButton24.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton24.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.iconButton24.Location = new System.Drawing.Point(294, 9);
@@ -123,7 +123,7 @@
             this.iconButton23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton23.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.iconButton23.IconChar = FontAwesome.Sharp.IconChar.Desktop;
-            this.iconButton23.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.iconButton23.IconColor = System.Drawing.Color.Chartreuse;
             this.iconButton23.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton23.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.iconButton23.Location = new System.Drawing.Point(384, 98);
@@ -142,7 +142,7 @@
             this.iconButton22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton22.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.iconButton22.IconChar = FontAwesome.Sharp.IconChar.Desktop;
-            this.iconButton22.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.iconButton22.IconColor = System.Drawing.Color.Chartreuse;
             this.iconButton22.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton22.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.iconButton22.Location = new System.Drawing.Point(294, 98);
@@ -161,7 +161,7 @@
             this.iconButton21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton21.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.iconButton21.IconChar = FontAwesome.Sharp.IconChar.Desktop;
-            this.iconButton21.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.iconButton21.IconColor = System.Drawing.Color.Chartreuse;
             this.iconButton21.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton21.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.iconButton21.Location = new System.Drawing.Point(203, 9);
@@ -180,7 +180,7 @@
             this.iconButton20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton20.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.iconButton20.IconChar = FontAwesome.Sharp.IconChar.Desktop;
-            this.iconButton20.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.iconButton20.IconColor = System.Drawing.Color.Chartreuse;
             this.iconButton20.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton20.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.iconButton20.Location = new System.Drawing.Point(32, 301);
@@ -199,7 +199,7 @@
             this.iconButton19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton19.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.iconButton19.IconChar = FontAwesome.Sharp.IconChar.Desktop;
-            this.iconButton19.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.iconButton19.IconColor = System.Drawing.Color.Chartreuse;
             this.iconButton19.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton19.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.iconButton19.Location = new System.Drawing.Point(118, 301);
@@ -218,7 +218,7 @@
             this.iconButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.iconButton9.IconChar = FontAwesome.Sharp.IconChar.Desktop;
-            this.iconButton9.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.iconButton9.IconColor = System.Drawing.Color.Chartreuse;
             this.iconButton9.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton9.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.iconButton9.Location = new System.Drawing.Point(118, 198);
@@ -237,7 +237,7 @@
             this.iconButton10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.iconButton10.IconChar = FontAwesome.Sharp.IconChar.Desktop;
-            this.iconButton10.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.iconButton10.IconColor = System.Drawing.Color.Chartreuse;
             this.iconButton10.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton10.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.iconButton10.Location = new System.Drawing.Point(384, 9);
@@ -256,7 +256,7 @@
             this.iconButton11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.iconButton11.IconChar = FontAwesome.Sharp.IconChar.Desktop;
-            this.iconButton11.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.iconButton11.IconColor = System.Drawing.Color.Chartreuse;
             this.iconButton11.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton11.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.iconButton11.Location = new System.Drawing.Point(203, 301);
@@ -275,7 +275,7 @@
             this.iconButton12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.iconButton12.IconChar = FontAwesome.Sharp.IconChar.Desktop;
-            this.iconButton12.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.iconButton12.IconColor = System.Drawing.Color.Chartreuse;
             this.iconButton12.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton12.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.iconButton12.Location = new System.Drawing.Point(32, 198);
@@ -294,7 +294,7 @@
             this.iconButton14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.iconButton14.IconChar = FontAwesome.Sharp.IconChar.Desktop;
-            this.iconButton14.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.iconButton14.IconColor = System.Drawing.Color.Chartreuse;
             this.iconButton14.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton14.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.iconButton14.Location = new System.Drawing.Point(32, 98);
@@ -313,7 +313,7 @@
             this.iconButton15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton15.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.iconButton15.IconChar = FontAwesome.Sharp.IconChar.Desktop;
-            this.iconButton15.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.iconButton15.IconColor = System.Drawing.Color.Chartreuse;
             this.iconButton15.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton15.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.iconButton15.Location = new System.Drawing.Point(384, 198);
@@ -332,7 +332,7 @@
             this.iconButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.iconButton8.IconChar = FontAwesome.Sharp.IconChar.Desktop;
-            this.iconButton8.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.iconButton8.IconColor = System.Drawing.Color.Chartreuse;
             this.iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton8.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.iconButton8.Location = new System.Drawing.Point(118, 98);
@@ -351,7 +351,7 @@
             this.iconButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.iconButton7.IconChar = FontAwesome.Sharp.IconChar.Desktop;
-            this.iconButton7.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.iconButton7.IconColor = System.Drawing.Color.Chartreuse;
             this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton7.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.iconButton7.Location = new System.Drawing.Point(203, 98);
@@ -370,7 +370,7 @@
             this.iconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.Desktop;
-            this.iconButton6.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.iconButton6.IconColor = System.Drawing.Color.Chartreuse;
             this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton6.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.iconButton6.Location = new System.Drawing.Point(203, 198);
@@ -389,7 +389,7 @@
             this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.Desktop;
-            this.iconButton5.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.iconButton5.IconColor = System.Drawing.Color.Chartreuse;
             this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.iconButton5.Location = new System.Drawing.Point(294, 198);
@@ -408,7 +408,7 @@
             this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.Desktop;
-            this.iconButton4.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.iconButton4.IconColor = System.Drawing.Color.Chartreuse;
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.iconButton4.Location = new System.Drawing.Point(294, 301);
@@ -427,7 +427,7 @@
             this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Desktop;
-            this.iconButton3.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.iconButton3.IconColor = System.Drawing.Color.Chartreuse;
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.iconButton3.Location = new System.Drawing.Point(32, 9);
@@ -446,7 +446,7 @@
             this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Desktop;
-            this.iconButton2.IconColor = System.Drawing.Color.LightCoral;
+            this.iconButton2.IconColor = System.Drawing.Color.Chartreuse;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.iconButton2.Location = new System.Drawing.Point(384, 301);
@@ -465,7 +465,7 @@
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Desktop;
-            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.iconButton1.IconColor = System.Drawing.Color.Chartreuse;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.iconButton1.Location = new System.Drawing.Point(118, 9);

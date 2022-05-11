@@ -113,5 +113,12 @@ namespace QuanNet.BLL
         {
             return db.TaiKhoans.Where(p => p.IdTK.Contains(keyWord) || p.LienHe.Contains(keyWord) || p.TenKH.Contains(keyWord)).Select(p => new {ID_TaiKhoan= p.IdTK , TenKhachHang=p.TenKH, p.Sodu, p.LienHe }).ToList();
         }
+        //===========================================================
+        //=================Máy Tính==================================
+        public May GetMayByIDMay(string IDMay)
+        {
+            return db.Mays.Find(IDMay);
+            //return ve 1 record duy nhat
+        }
     }
 }

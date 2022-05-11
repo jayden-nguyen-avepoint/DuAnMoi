@@ -1,4 +1,5 @@
-﻿using QuanNet.BLL;
+﻿using FontAwesome.Sharp;
+using QuanNet.BLL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,26 +14,23 @@ namespace QuanNet
 {
     public partial class FormMayTinh : Form
     {
+        private IconButton currentBtn;
         public FormMayTinh()
         {
             InitializeComponent();
             txtMay.Enabled = false;
         }
 
-        public void GUI(string ID)
+        public void GUI(string IDMay)
         {
-            if (BllQLy.Instance.CheckAddUpdate(ID))
-            {
-                txtIDTK.Enabled = false;
-                txtIDTK.Text = (BllQLy.Instance.GetTKByIDTK(ID)).IdTK.ToString();
-                //txtLienHe.Text = (BllQLy.Instance.GetTKByIDTK(ID)).LienHe;
-                //txtTenKH.Text = (BllQLy.Instance.GetTKByIDTK(ID)).TenKH.ToString();
-                //txtTK.Text = (BllQLy.Instance.GetTKByIDTK(ID)).TenDN.ToString();
-                //txtTK.Enabled = false;
-                //txtMK.Text = (BllQLy.Instance.GetTKByIDTK(ID)).MatKhau.ToString();
-                //txtSoDu.Text = (BllQLy.Instance.GetTKByIDTK(ID)).Sodu.ToString();
-                //txtSoDu.Enabled = false;
-            }
+
+            txtIDTK.Enabled = false;
+            //txtIDTK.Text = (BllQLy.Instance.GetTKByIDTK(ID)).IdTK.ToString();
+            txtMay.Text =BllQLy.Instance.GetMayByIDMay(IDMay).IdMay ;
+            txtCauHinh.Text = BllQLy.Instance.GetMayByIDMay(IDMay).CauHinh;
+            txtTien.Text = BllQLy.Instance.GetMayByIDMay(IDMay).TienGio.ToString();
+              
+
 
         }
 
@@ -44,6 +42,12 @@ namespace QuanNet
                  maMay = "M0" + ((Button)sender).Text;
             }else maMay ="M"+ ((Button)sender).Text;
             txtMay.Text = maMay;
+            GUI(maMay);
+            if (BllQLy.Instance.GetMayByIDMay(maMay).TrangThai)
+            {
+                ((IconButton)sender).IconColor = Color.Red;
+            }
+            else ((IconButton)sender).IconColor = Color.Chartreuse;
         }
     }
 }
