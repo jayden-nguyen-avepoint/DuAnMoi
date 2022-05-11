@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="QuanLyCyberGameModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="DoAnPBL.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="HoaDon">
           <Key>
             <PropertyRef Name="IdHoaDon" />
@@ -44,9 +44,9 @@
             <PropertyRef Name="IdMay" />
           </Key>
           <Property Name="IdMay" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="CauHinh" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="CauHinh" Type="nvarchar" MaxLength="30" Nullable="false" />
           <Property Name="TrangThai" Type="bit" Nullable="false" />
-          <Property Name="HoatDong" Type="bit" Nullable="false" />
+          <Property Name="HoatDong" Type="nvarchar" MaxLength="30" />
           <Property Name="IdTK" Type="nchar" MaxLength="10" />
           <Property Name="TienGio" Type="int" Nullable="false" />
         </EntityType>
@@ -176,7 +176,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="QuanLyCyberGameModelStoreContainer">
+        <EntityContainer Name="DoAnPBLStoreContainer">
           <EntitySet Name="HoaDon" EntityType="Self.HoaDon" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HoaDonChiTiet" EntityType="Self.HoaDonChiTiet" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ListTPham" EntityType="Self.ListTPham" Schema="dbo" store:Type="Tables" />
@@ -218,7 +218,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="QuanLyCyberGameModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="DoAnPBL" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="HoaDon">
           <Key>
             <PropertyRef Name="IdHoaDon" />
@@ -266,9 +266,9 @@
             <PropertyRef Name="IdMay" />
           </Key>
           <Property Name="IdMay" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="CauHinh" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CauHinh" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="TrangThai" Type="Boolean" Nullable="false" />
-          <Property Name="HoatDong" Type="Boolean" Nullable="false" />
+          <Property Name="HoatDong" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="IdTK" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="TienGio" Type="Int32" Nullable="false" />
           <NavigationProperty Name="HoaDonChiTiets" Relationship="Self.FK_IdMay" FromRole="May" ToRole="HoaDonChiTiet" />
@@ -404,7 +404,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DoAnPBL" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="DoAnQLNet" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="HoaDons" EntityType="Self.HoaDon" />
           <EntitySet Name="HoaDonChiTiets" EntityType="Self.HoaDonChiTiet" />
           <EntitySet Name="ListTPhams" EntityType="Self.ListTPham" />
@@ -447,9 +447,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="QuanLyCyberGameModelStoreContainer" CdmEntityContainer="DoAnPBL">
+        <EntityContainerMapping StorageEntityContainer="DoAnPBLStoreContainer" CdmEntityContainer="DoAnQLNet">
           <EntitySetMapping Name="HoaDons">
-            <EntityTypeMapping TypeName="QuanLyCyberGameModel.HoaDon">
+            <EntityTypeMapping TypeName="DoAnPBL.HoaDon">
               <MappingFragment StoreEntitySet="HoaDon">
                 <ScalarProperty Name="IdHoaDon" ColumnName="IdHoaDon" />
                 <ScalarProperty Name="NgayXuatHD" ColumnName="NgayXuatHD" />
@@ -459,7 +459,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="HoaDonChiTiets">
-            <EntityTypeMapping TypeName="QuanLyCyberGameModel.HoaDonChiTiet">
+            <EntityTypeMapping TypeName="DoAnPBL.HoaDonChiTiet">
               <MappingFragment StoreEntitySet="HoaDonChiTiet">
                 <ScalarProperty Name="IdChiTiet" ColumnName="IdChiTiet" />
                 <ScalarProperty Name="IdMay" ColumnName="IdMay" />
@@ -468,7 +468,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ListTPhams">
-            <EntityTypeMapping TypeName="QuanLyCyberGameModel.ListTPham">
+            <EntityTypeMapping TypeName="DoAnPBL.ListTPham">
               <MappingFragment StoreEntitySet="ListTPham">
                 <ScalarProperty Name="IdOrderList" ColumnName="IdOrderList" />
                 <ScalarProperty Name="IdTP" ColumnName="IdTP" />
@@ -479,7 +479,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LoaiTPhams">
-            <EntityTypeMapping TypeName="QuanLyCyberGameModel.LoaiTPham">
+            <EntityTypeMapping TypeName="DoAnPBL.LoaiTPham">
               <MappingFragment StoreEntitySet="LoaiTPham">
                 <ScalarProperty Name="IdLoaiTP" ColumnName="IdLoaiTP" />
                 <ScalarProperty Name="TenLoaiTP" ColumnName="TenLoaiTP" />
@@ -487,7 +487,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Mays">
-            <EntityTypeMapping TypeName="QuanLyCyberGameModel.May">
+            <EntityTypeMapping TypeName="DoAnPBL.May">
               <MappingFragment StoreEntitySet="May">
                 <ScalarProperty Name="IdMay" ColumnName="IdMay" />
                 <ScalarProperty Name="CauHinh" ColumnName="CauHinh" />
@@ -499,7 +499,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="QuanLyCyberGameModel.sysdiagram">
+            <EntityTypeMapping TypeName="DoAnPBL.sysdiagram">
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -510,7 +510,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TaiKhoans">
-            <EntityTypeMapping TypeName="QuanLyCyberGameModel.TaiKhoan">
+            <EntityTypeMapping TypeName="DoAnPBL.TaiKhoan">
               <MappingFragment StoreEntitySet="TaiKhoan">
                 <ScalarProperty Name="IdTK" ColumnName="IdTK" />
                 <ScalarProperty Name="TenDN" ColumnName="TenDN" />
@@ -522,7 +522,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TPhams">
-            <EntityTypeMapping TypeName="QuanLyCyberGameModel.TPham">
+            <EntityTypeMapping TypeName="DoAnPBL.TPham">
               <MappingFragment StoreEntitySet="TPham">
                 <ScalarProperty Name="IdTP" ColumnName="IdTP" />
                 <ScalarProperty Name="TenTP" ColumnName="TenTP" />

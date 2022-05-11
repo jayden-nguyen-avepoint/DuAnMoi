@@ -11,7 +11,7 @@ namespace QuanNet.BLL
 {
     public class BllQLy
     {
-        DoAnPBL db = new DoAnPBL();
+        DoAnQLNet db = new DoAnQLNet();
         private static BllQLy _Instance;
         public static BllQLy Instance
         {

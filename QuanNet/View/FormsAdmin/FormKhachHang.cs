@@ -181,14 +181,19 @@ namespace QuanNet
         }
         public string MaKHtutang()
         {
-            string ma = (BllQLy.Instance.GetIDTKCuoi()).IdTK.ToString();
+            string ma = "";
+            if (BllQLy.Instance.GetIDTKCuoi() != null)
+            {
+                 ma = (BllQLy.Instance.GetIDTKCuoi()).IdTK.ToString();
+            }
+            else ma = "KH000";
             string s = ma.Substring(2, ma.Length - 2);
             int i = int.Parse(s);
             i++;
             if (i < 10) return "KH00" + Convert.ToString(i);
             else
             if (i < 100) return "KH0" + Convert.ToString(i);
-            else return "KH" + Convert.ToString(i);       
+            else return "KH" + Convert.ToString(i);
          }
     }
 }
