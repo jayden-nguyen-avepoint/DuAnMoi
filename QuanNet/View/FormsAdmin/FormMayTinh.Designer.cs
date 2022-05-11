@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconButton24 = new FontAwesome.Sharp.IconButton();
             this.iconButton23 = new FontAwesome.Sharp.IconButton();
@@ -113,6 +113,7 @@
             this.iconButton24.TabIndex = 23;
             this.iconButton24.Text = "4";
             this.iconButton24.UseVisualStyleBackColor = false;
+            this.iconButton24.Click += new System.EventHandler(this.Button_Click);
             // 
             // iconButton23
             // 
@@ -131,6 +132,7 @@
             this.iconButton23.TabIndex = 22;
             this.iconButton23.Text = "10";
             this.iconButton23.UseVisualStyleBackColor = false;
+            this.iconButton23.Click += new System.EventHandler(this.Button_Click);
             // 
             // iconButton22
             // 
@@ -149,6 +151,7 @@
             this.iconButton22.TabIndex = 21;
             this.iconButton22.Text = "9";
             this.iconButton22.UseVisualStyleBackColor = false;
+            this.iconButton22.Click += new System.EventHandler(this.Button_Click);
             // 
             // iconButton21
             // 
@@ -167,6 +170,7 @@
             this.iconButton21.TabIndex = 20;
             this.iconButton21.Text = "3";
             this.iconButton21.UseVisualStyleBackColor = false;
+            this.iconButton21.Click += new System.EventHandler(this.Button_Click);
             // 
             // iconButton20
             // 
@@ -185,6 +189,7 @@
             this.iconButton20.TabIndex = 19;
             this.iconButton20.Text = "16";
             this.iconButton20.UseVisualStyleBackColor = false;
+            this.iconButton20.Click += new System.EventHandler(this.Button_Click);
             // 
             // iconButton19
             // 
@@ -203,6 +208,7 @@
             this.iconButton19.TabIndex = 18;
             this.iconButton19.Text = "17";
             this.iconButton19.UseVisualStyleBackColor = false;
+            this.iconButton19.Click += new System.EventHandler(this.Button_Click);
             // 
             // iconButton9
             // 
@@ -221,6 +227,7 @@
             this.iconButton9.TabIndex = 14;
             this.iconButton9.Text = "12";
             this.iconButton9.UseVisualStyleBackColor = false;
+            this.iconButton9.Click += new System.EventHandler(this.Button_Click);
             // 
             // iconButton10
             // 
@@ -239,6 +246,7 @@
             this.iconButton10.TabIndex = 13;
             this.iconButton10.Text = "5";
             this.iconButton10.UseVisualStyleBackColor = false;
+            this.iconButton10.Click += new System.EventHandler(this.Button_Click);
             // 
             // iconButton11
             // 
@@ -257,6 +265,7 @@
             this.iconButton11.TabIndex = 12;
             this.iconButton11.Text = "18";
             this.iconButton11.UseVisualStyleBackColor = false;
+            this.iconButton11.Click += new System.EventHandler(this.Button_Click);
             // 
             // iconButton12
             // 
@@ -275,6 +284,7 @@
             this.iconButton12.TabIndex = 11;
             this.iconButton12.Text = "11";
             this.iconButton12.UseVisualStyleBackColor = false;
+            this.iconButton12.Click += new System.EventHandler(this.Button_Click);
             // 
             // iconButton14
             // 
@@ -293,6 +303,7 @@
             this.iconButton14.TabIndex = 9;
             this.iconButton14.Text = "6";
             this.iconButton14.UseVisualStyleBackColor = false;
+            this.iconButton14.Click += new System.EventHandler(this.Button_Click);
             // 
             // iconButton15
             // 
@@ -311,6 +322,7 @@
             this.iconButton15.TabIndex = 8;
             this.iconButton15.Text = "15";
             this.iconButton15.UseVisualStyleBackColor = false;
+            this.iconButton15.Click += new System.EventHandler(this.Button_Click);
             // 
             // iconButton8
             // 
@@ -329,6 +341,7 @@
             this.iconButton8.TabIndex = 7;
             this.iconButton8.Text = "7";
             this.iconButton8.UseVisualStyleBackColor = false;
+            this.iconButton8.Click += new System.EventHandler(this.Button_Click);
             // 
             // iconButton7
             // 
@@ -347,6 +360,7 @@
             this.iconButton7.TabIndex = 6;
             this.iconButton7.Text = "8";
             this.iconButton7.UseVisualStyleBackColor = false;
+            this.iconButton7.Click += new System.EventHandler(this.Button_Click);
             // 
             // iconButton6
             // 
@@ -365,6 +379,7 @@
             this.iconButton6.TabIndex = 5;
             this.iconButton6.Text = "13";
             this.iconButton6.UseVisualStyleBackColor = false;
+            this.iconButton6.Click += new System.EventHandler(this.Button_Click);
             // 
             // iconButton5
             // 
@@ -383,6 +398,7 @@
             this.iconButton5.TabIndex = 4;
             this.iconButton5.Text = "14";
             this.iconButton5.UseVisualStyleBackColor = false;
+            this.iconButton5.Click += new System.EventHandler(this.Button_Click);
             // 
             // iconButton4
             // 
@@ -401,6 +417,7 @@
             this.iconButton4.TabIndex = 3;
             this.iconButton4.Text = "19";
             this.iconButton4.UseVisualStyleBackColor = false;
+            this.iconButton4.Click += new System.EventHandler(this.Button_Click);
             // 
             // iconButton3
             // 
@@ -419,6 +436,7 @@
             this.iconButton3.TabIndex = 2;
             this.iconButton3.Text = "1";
             this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.Button_Click);
             // 
             // iconButton2
             // 
@@ -437,6 +455,7 @@
             this.iconButton2.TabIndex = 1;
             this.iconButton2.Text = "20";
             this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconButton2.Click += new System.EventHandler(this.Button_Click);
             // 
             // iconButton1
             // 
@@ -455,6 +474,7 @@
             this.iconButton1.TabIndex = 0;
             this.iconButton1.Text = "2";
             this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.Button_Click);
             // 
             // panel2
             // 
@@ -649,14 +669,14 @@
             this.dgvMaytinh.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvMaytinh.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvMaytinh.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMaytinh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMaytinh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMaytinh.ColumnHeadersHeight = 30;
             this.dgvMaytinh.EnableHeadersVisualStyles = false;
             this.dgvMaytinh.GridColor = System.Drawing.SystemColors.ControlLightLight;
@@ -664,14 +684,14 @@
             this.dgvMaytinh.Name = "dgvMaytinh";
             this.dgvMaytinh.RowHeadersVisible = false;
             this.dgvMaytinh.RowHeadersWidth = 60;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(46)))), ((int)(((byte)(105)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.5F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(7);
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.MediumSlateBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvMaytinh.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(46)))), ((int)(((byte)(105)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(7);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumSlateBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvMaytinh.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvMaytinh.RowTemplate.Height = 24;
             this.dgvMaytinh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMaytinh.Size = new System.Drawing.Size(1080, 209);

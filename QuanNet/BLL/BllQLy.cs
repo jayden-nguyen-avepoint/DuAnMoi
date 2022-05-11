@@ -35,11 +35,8 @@ namespace QuanNet.BLL
         }
         public TaiKhoan GetTKByIDTK(string IDTK)
         {
-            foreach (TaiKhoan i in db.TaiKhoans)
-            {
-                if (i.IdTK == IDTK) return i;
-            }
-            return null;
+            return db.TaiKhoans.Find(IDTK);
+            //return ve 1 record duy nhat
         }
         public List<TaiKhoanView> GetTKViewByIDKH(string IDKH)
         {

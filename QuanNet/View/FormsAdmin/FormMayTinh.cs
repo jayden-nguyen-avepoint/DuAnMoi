@@ -16,6 +16,7 @@ namespace QuanNet
         public FormMayTinh()
         {
             InitializeComponent();
+            txtMay.Enabled = false;
         }
 
         public void GUI(string ID)
@@ -33,6 +34,16 @@ namespace QuanNet
                 //txtSoDu.Enabled = false;
             }
 
+        }
+
+        private void Button_Click(object sender, EventArgs e)
+        {
+            string maMay = "";
+            if (((Button)sender).Text.Length ==1) 
+            {
+                 maMay = "M0" + ((Button)sender).Text;
+            }else maMay ="M"+ ((Button)sender).Text;
+            txtMay.Text = maMay;
         }
     }
 }
