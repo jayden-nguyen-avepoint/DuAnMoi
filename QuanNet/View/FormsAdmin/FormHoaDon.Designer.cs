@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -39,13 +39,13 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.customTextbox1 = new QuanNet.CustomsDetail.CustomTextbox();
+            this.txtSearch = new QuanNet.CustomsDetail.CustomTextbox();
             this.btnInHD = new QuanNet.CustomsDetail.CusBtn();
-            this.dgv = new System.Windows.Forms.DataGridView();
+            this.dgvHoaDon = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -143,28 +143,28 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Tổng tiền:";
             // 
-            // customTextbox1
+            // txtSearch
             // 
-            this.customTextbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(52)))), ((int)(((byte)(95)))));
-            this.customTextbox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.customTextbox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
-            this.customTextbox1.BorderRadius = 5;
-            this.customTextbox1.BorderSize = 2;
-            this.customTextbox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customTextbox1.ForeColor = System.Drawing.Color.White;
-            this.customTextbox1.Location = new System.Drawing.Point(935, 50);
-            this.customTextbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.customTextbox1.Multiline = true;
-            this.customTextbox1.Name = "customTextbox1";
-            this.customTextbox1.Padding = new System.Windows.Forms.Padding(7);
-            this.customTextbox1.PasswordChar = false;
-            this.customTextbox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.customTextbox1.PlaceholderText = "   Search...";
-            this.customTextbox1.Size = new System.Drawing.Size(185, 35);
-            this.customTextbox1.TabIndex = 6;
-            this.customTextbox1.Text = "";
-            this.customTextbox1.UnderlinedStyle = true;
-            this.customTextbox1.UseWaitCursor = true;
+            this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(52)))), ((int)(((byte)(95)))));
+            this.txtSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.txtSearch.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(138)))), ((int)(((byte)(114)))));
+            this.txtSearch.BorderRadius = 5;
+            this.txtSearch.BorderSize = 2;
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.ForeColor = System.Drawing.Color.White;
+            this.txtSearch.Location = new System.Drawing.Point(957, 576);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch.Multiline = true;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Padding = new System.Windows.Forms.Padding(7);
+            this.txtSearch.PasswordChar = false;
+            this.txtSearch.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtSearch.PlaceholderText = "   Search...";
+            this.txtSearch.Size = new System.Drawing.Size(185, 35);
+            this.txtSearch.TabIndex = 6;
+            this.txtSearch.UnderlinedStyle = true;
+            this.txtSearch.UseWaitCursor = true;
+            this.txtSearch._TextChanged += new System.EventHandler(this.txtSearch__TextChanged);
             // 
             // btnInHD
             // 
@@ -177,50 +177,51 @@
             this.btnInHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInHD.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInHD.ForeColor = System.Drawing.Color.White;
-            this.btnInHD.Location = new System.Drawing.Point(970, 577);
+            this.btnInHD.Location = new System.Drawing.Point(12, 572);
             this.btnInHD.Name = "btnInHD";
             this.btnInHD.Size = new System.Drawing.Size(150, 44);
             this.btnInHD.TabIndex = 1;
             this.btnInHD.Text = "In hóa đơn";
             this.btnInHD.TextColor = System.Drawing.Color.White;
             this.btnInHD.UseVisualStyleBackColor = false;
+            this.btnInHD.Click += new System.EventHandler(this.btnInHD_Click);
             // 
-            // dgv
+            // dgvHoaDon
             // 
-            this.dgv.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(69)))), ((int)(((byte)(112)))));
-            this.dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv.ColumnHeadersHeight = 30;
-            this.dgv.EnableHeadersVisualStyles = false;
-            this.dgv.GridColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dgv.Location = new System.Drawing.Point(12, 236);
-            this.dgv.Name = "dgv";
-            this.dgv.RowHeadersVisible = false;
-            this.dgv.RowHeadersWidth = 60;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(46)))), ((int)(((byte)(105)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(7);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumSlateBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.dgv.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv.RowTemplate.Height = 24;
-            this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv.Size = new System.Drawing.Size(1130, 335);
-            this.dgv.TabIndex = 17;
+            this.dgvHoaDon.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvHoaDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvHoaDon.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvHoaDon.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(69)))), ((int)(((byte)(112)))));
+            this.dgvHoaDon.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvHoaDon.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvHoaDon.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHoaDon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvHoaDon.ColumnHeadersHeight = 30;
+            this.dgvHoaDon.EnableHeadersVisualStyles = false;
+            this.dgvHoaDon.GridColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvHoaDon.Location = new System.Drawing.Point(12, 236);
+            this.dgvHoaDon.Name = "dgvHoaDon";
+            this.dgvHoaDon.RowHeadersVisible = false;
+            this.dgvHoaDon.RowHeadersWidth = 60;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(46)))), ((int)(((byte)(105)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(7);
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MediumSlateBlue;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvHoaDon.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvHoaDon.RowTemplate.Height = 24;
+            this.dgvHoaDon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvHoaDon.Size = new System.Drawing.Size(1130, 296);
+            this.dgvHoaDon.TabIndex = 17;
             // 
             // FormHoaDon
             // 
@@ -228,8 +229,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(1154, 622);
-            this.Controls.Add(this.dgv);
-            this.Controls.Add(this.customTextbox1);
+            this.Controls.Add(this.dgvHoaDon);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -242,7 +243,7 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -255,10 +256,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
-        private CustomsDetail.CustomTextbox customTextbox1;
+        private CustomsDetail.CustomTextbox txtSearch;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dgv;
+        private System.Windows.Forms.DataGridView dgvHoaDon;
     }
 }

@@ -32,11 +32,20 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.btnEdit = new FontAwesome.Sharp.IconButton();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtMK = new QuanNet.CustomsDetail.CustomTextbox();
+            this.txtTK = new QuanNet.CustomsDetail.CustomTextbox();
+            this.txtSearch = new QuanNet.CustomsDetail.CustomTextbox();
+            this.txtNap = new QuanNet.CustomsDetail.CustomTextbox();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtTenKH = new QuanNet.CustomsDetail.CustomTextbox();
+            this.txtLienHe = new QuanNet.CustomsDetail.CustomTextbox();
             this.btnSearch = new FontAwesome.Sharp.IconButton();
+            this.txtSoDu = new QuanNet.CustomsDetail.CustomTextbox();
+            this.txtIDTK = new QuanNet.CustomsDetail.CustomTextbox();
             this.dgvKH = new System.Windows.Forms.DataGridView();
             this.btnNap = new FontAwesome.Sharp.IconButton();
             this.btnDel = new FontAwesome.Sharp.IconButton();
@@ -45,15 +54,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.txtMK = new QuanNet.CustomsDetail.CustomTextbox();
-            this.txtTK = new QuanNet.CustomsDetail.CustomTextbox();
-            this.txtSearch = new QuanNet.CustomsDetail.CustomTextbox();
-            this.txtNap = new QuanNet.CustomsDetail.CustomTextbox();
-            this.txtTenKH = new QuanNet.CustomsDetail.CustomTextbox();
-            this.txtLienHe = new QuanNet.CustomsDetail.CustomTextbox();
-            this.txtSoDu = new QuanNet.CustomsDetail.CustomTextbox();
-            this.txtIDTK = new QuanNet.CustomsDetail.CustomTextbox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKH)).BeginInit();
             this.SuspendLayout();
@@ -96,6 +96,23 @@
             this.panel2.Size = new System.Drawing.Size(1083, 586);
             this.panel2.TabIndex = 2;
             // 
+            // iconButton1
+            // 
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Eraser;
+            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.Location = new System.Drawing.Point(465, 252);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(110, 50);
+            this.iconButton1.TabIndex = 29;
+            this.iconButton1.Text = "Reload";
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.FormKhachHang_Load);
+            // 
             // btnEdit
             // 
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -135,6 +152,92 @@
             this.label5.TabIndex = 26;
             this.label5.Text = "Tài khoản";
             // 
+            // txtMK
+            // 
+            this.txtMK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txtMK.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.txtMK.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtMK.BorderRadius = 0;
+            this.txtMK.BorderSize = 2;
+            this.txtMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMK.ForeColor = System.Drawing.Color.White;
+            this.txtMK.Location = new System.Drawing.Point(391, 184);
+            this.txtMK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMK.Multiline = false;
+            this.txtMK.Name = "txtMK";
+            this.txtMK.Padding = new System.Windows.Forms.Padding(7);
+            this.txtMK.PasswordChar = false;
+            this.txtMK.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtMK.PlaceholderText = "";
+            this.txtMK.Size = new System.Drawing.Size(183, 39);
+            this.txtMK.TabIndex = 25;
+            this.txtMK.UnderlinedStyle = true;
+            // 
+            // txtTK
+            // 
+            this.txtTK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txtTK.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.txtTK.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtTK.BorderRadius = 0;
+            this.txtTK.BorderSize = 2;
+            this.txtTK.Enabled = false;
+            this.txtTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTK.ForeColor = System.Drawing.Color.White;
+            this.txtTK.Location = new System.Drawing.Point(92, 184);
+            this.txtTK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTK.Multiline = false;
+            this.txtTK.Name = "txtTK";
+            this.txtTK.Padding = new System.Windows.Forms.Padding(7);
+            this.txtTK.PasswordChar = false;
+            this.txtTK.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtTK.PlaceholderText = "";
+            this.txtTK.Size = new System.Drawing.Size(183, 39);
+            this.txtTK.TabIndex = 24;
+            this.txtTK.UnderlinedStyle = true;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(52)))), ((int)(((byte)(95)))));
+            this.txtSearch.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtSearch.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtSearch.BorderRadius = 8;
+            this.txtSearch.BorderSize = 4;
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.ForeColor = System.Drawing.Color.White;
+            this.txtSearch.Location = new System.Drawing.Point(897, 252);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSearch.Multiline = false;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Padding = new System.Windows.Forms.Padding(7);
+            this.txtSearch.PasswordChar = false;
+            this.txtSearch.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtSearch.PlaceholderText = "...";
+            this.txtSearch.Size = new System.Drawing.Size(183, 35);
+            this.txtSearch.TabIndex = 22;
+            this.txtSearch.UnderlinedStyle = true;
+            this.txtSearch._TextChanged += new System.EventHandler(this.txtSearch__TextChanged);
+            // 
+            // txtNap
+            // 
+            this.txtNap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txtNap.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.txtNap.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtNap.BorderRadius = 0;
+            this.txtNap.BorderSize = 2;
+            this.txtNap.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNap.ForeColor = System.Drawing.Color.White;
+            this.txtNap.Location = new System.Drawing.Point(900, 191);
+            this.txtNap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNap.Multiline = false;
+            this.txtNap.Name = "txtNap";
+            this.txtNap.Padding = new System.Windows.Forms.Padding(7);
+            this.txtNap.PasswordChar = false;
+            this.txtNap.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtNap.PlaceholderText = "0đ";
+            this.txtNap.Size = new System.Drawing.Size(183, 39);
+            this.txtNap.TabIndex = 21;
+            this.txtNap.UnderlinedStyle = true;
+            // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -146,6 +249,48 @@
             this.label6.Size = new System.Drawing.Size(237, 32);
             this.label6.TabIndex = 14;
             this.label6.Text = "NET HOC THEM";
+            // 
+            // txtTenKH
+            // 
+            this.txtTenKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txtTenKH.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.txtTenKH.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtTenKH.BorderRadius = 0;
+            this.txtTenKH.BorderSize = 2;
+            this.txtTenKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenKH.ForeColor = System.Drawing.Color.White;
+            this.txtTenKH.Location = new System.Drawing.Point(391, 56);
+            this.txtTenKH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTenKH.Multiline = false;
+            this.txtTenKH.Name = "txtTenKH";
+            this.txtTenKH.Padding = new System.Windows.Forms.Padding(7);
+            this.txtTenKH.PasswordChar = false;
+            this.txtTenKH.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtTenKH.PlaceholderText = "";
+            this.txtTenKH.Size = new System.Drawing.Size(183, 39);
+            this.txtTenKH.TabIndex = 20;
+            this.txtTenKH.UnderlinedStyle = true;
+            // 
+            // txtLienHe
+            // 
+            this.txtLienHe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txtLienHe.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.txtLienHe.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtLienHe.BorderRadius = 0;
+            this.txtLienHe.BorderSize = 2;
+            this.txtLienHe.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLienHe.ForeColor = System.Drawing.Color.White;
+            this.txtLienHe.Location = new System.Drawing.Point(391, 120);
+            this.txtLienHe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtLienHe.Multiline = false;
+            this.txtLienHe.Name = "txtLienHe";
+            this.txtLienHe.Padding = new System.Windows.Forms.Padding(7);
+            this.txtLienHe.PasswordChar = false;
+            this.txtLienHe.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtLienHe.PlaceholderText = "";
+            this.txtLienHe.Size = new System.Drawing.Size(183, 39);
+            this.txtLienHe.TabIndex = 19;
+            this.txtLienHe.UnderlinedStyle = true;
             // 
             // btnSearch
             // 
@@ -165,6 +310,50 @@
             this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // txtSoDu
+            // 
+            this.txtSoDu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txtSoDu.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.txtSoDu.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtSoDu.BorderRadius = 0;
+            this.txtSoDu.BorderSize = 2;
+            this.txtSoDu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoDu.ForeColor = System.Drawing.Color.White;
+            this.txtSoDu.Location = new System.Drawing.Point(92, 120);
+            this.txtSoDu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSoDu.Multiline = false;
+            this.txtSoDu.Name = "txtSoDu";
+            this.txtSoDu.Padding = new System.Windows.Forms.Padding(7);
+            this.txtSoDu.PasswordChar = false;
+            this.txtSoDu.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtSoDu.PlaceholderText = "";
+            this.txtSoDu.Size = new System.Drawing.Size(183, 39);
+            this.txtSoDu.TabIndex = 18;
+            this.txtSoDu.UnderlinedStyle = true;
+            // 
+            // txtIDTK
+            // 
+            this.txtIDTK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txtIDTK.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.txtIDTK.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtIDTK.BorderRadius = 0;
+            this.txtIDTK.BorderSize = 2;
+            this.txtIDTK.Enabled = false;
+            this.txtIDTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDTK.ForeColor = System.Drawing.Color.White;
+            this.txtIDTK.Location = new System.Drawing.Point(92, 56);
+            this.txtIDTK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtIDTK.Multiline = false;
+            this.txtIDTK.Name = "txtIDTK";
+            this.txtIDTK.Padding = new System.Windows.Forms.Padding(7);
+            this.txtIDTK.PasswordChar = false;
+            this.txtIDTK.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtIDTK.PlaceholderText = "";
+            this.txtIDTK.Size = new System.Drawing.Size(183, 39);
+            this.txtIDTK.TabIndex = 17;
+            this.txtIDTK.UnderlinedStyle = true;
+            this.txtIDTK._TextChanged += new System.EventHandler(this.txtIDTK__TextChanged);
             // 
             // dgvKH
             // 
@@ -300,192 +489,6 @@
             this.label1.Size = new System.Drawing.Size(31, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "ID:";
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Eraser;
-            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(465, 252);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(110, 50);
-            this.iconButton1.TabIndex = 29;
-            this.iconButton1.Text = "Reload";
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = true;
-            this.iconButton1.Click += new System.EventHandler(this.FormKhachHang_Load);
-            // 
-            // txtMK
-            // 
-            this.txtMK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.txtMK.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.txtMK.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtMK.BorderRadius = 0;
-            this.txtMK.BorderSize = 2;
-            this.txtMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMK.ForeColor = System.Drawing.Color.White;
-            this.txtMK.Location = new System.Drawing.Point(391, 184);
-            this.txtMK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtMK.Multiline = false;
-            this.txtMK.Name = "txtMK";
-            this.txtMK.Padding = new System.Windows.Forms.Padding(7);
-            this.txtMK.PasswordChar = false;
-            this.txtMK.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtMK.PlaceholderText = "";
-            this.txtMK.Size = new System.Drawing.Size(183, 39);
-            this.txtMK.TabIndex = 25;
-            this.txtMK.UnderlinedStyle = true;
-            // 
-            // txtTK
-            // 
-            this.txtTK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.txtTK.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.txtTK.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtTK.BorderRadius = 0;
-            this.txtTK.BorderSize = 2;
-            this.txtTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTK.ForeColor = System.Drawing.Color.White;
-            this.txtTK.Location = new System.Drawing.Point(92, 184);
-            this.txtTK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtTK.Multiline = false;
-            this.txtTK.Name = "txtTK";
-            this.txtTK.Padding = new System.Windows.Forms.Padding(7);
-            this.txtTK.PasswordChar = false;
-            this.txtTK.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtTK.PlaceholderText = "";
-            this.txtTK.Size = new System.Drawing.Size(183, 39);
-            this.txtTK.TabIndex = 24;
-            this.txtTK.UnderlinedStyle = true;
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(52)))), ((int)(((byte)(95)))));
-            this.txtSearch.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtSearch.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtSearch.BorderRadius = 8;
-            this.txtSearch.BorderSize = 4;
-            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.ForeColor = System.Drawing.Color.White;
-            this.txtSearch.Location = new System.Drawing.Point(897, 252);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtSearch.Multiline = false;
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Padding = new System.Windows.Forms.Padding(7);
-            this.txtSearch.PasswordChar = false;
-            this.txtSearch.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtSearch.PlaceholderText = "...";
-            this.txtSearch.Size = new System.Drawing.Size(183, 35);
-            this.txtSearch.TabIndex = 22;
-            this.txtSearch.UnderlinedStyle = true;
-            // 
-            // txtNap
-            // 
-            this.txtNap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.txtNap.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.txtNap.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtNap.BorderRadius = 0;
-            this.txtNap.BorderSize = 2;
-            this.txtNap.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNap.ForeColor = System.Drawing.Color.White;
-            this.txtNap.Location = new System.Drawing.Point(900, 191);
-            this.txtNap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtNap.Multiline = false;
-            this.txtNap.Name = "txtNap";
-            this.txtNap.Padding = new System.Windows.Forms.Padding(7);
-            this.txtNap.PasswordChar = false;
-            this.txtNap.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtNap.PlaceholderText = "0đ";
-            this.txtNap.Size = new System.Drawing.Size(183, 39);
-            this.txtNap.TabIndex = 21;
-            this.txtNap.UnderlinedStyle = true;
-            // 
-            // txtTenKH
-            // 
-            this.txtTenKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.txtTenKH.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.txtTenKH.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtTenKH.BorderRadius = 0;
-            this.txtTenKH.BorderSize = 2;
-            this.txtTenKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenKH.ForeColor = System.Drawing.Color.White;
-            this.txtTenKH.Location = new System.Drawing.Point(391, 56);
-            this.txtTenKH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtTenKH.Multiline = false;
-            this.txtTenKH.Name = "txtTenKH";
-            this.txtTenKH.Padding = new System.Windows.Forms.Padding(7);
-            this.txtTenKH.PasswordChar = false;
-            this.txtTenKH.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtTenKH.PlaceholderText = "";
-            this.txtTenKH.Size = new System.Drawing.Size(183, 39);
-            this.txtTenKH.TabIndex = 20;
-            this.txtTenKH.UnderlinedStyle = true;
-            // 
-            // txtLienHe
-            // 
-            this.txtLienHe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.txtLienHe.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.txtLienHe.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtLienHe.BorderRadius = 0;
-            this.txtLienHe.BorderSize = 2;
-            this.txtLienHe.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLienHe.ForeColor = System.Drawing.Color.White;
-            this.txtLienHe.Location = new System.Drawing.Point(391, 120);
-            this.txtLienHe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtLienHe.Multiline = false;
-            this.txtLienHe.Name = "txtLienHe";
-            this.txtLienHe.Padding = new System.Windows.Forms.Padding(7);
-            this.txtLienHe.PasswordChar = false;
-            this.txtLienHe.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtLienHe.PlaceholderText = "";
-            this.txtLienHe.Size = new System.Drawing.Size(183, 39);
-            this.txtLienHe.TabIndex = 19;
-            this.txtLienHe.UnderlinedStyle = true;
-            // 
-            // txtSoDu
-            // 
-            this.txtSoDu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.txtSoDu.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.txtSoDu.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtSoDu.BorderRadius = 0;
-            this.txtSoDu.BorderSize = 2;
-            this.txtSoDu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoDu.ForeColor = System.Drawing.Color.White;
-            this.txtSoDu.Location = new System.Drawing.Point(92, 120);
-            this.txtSoDu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtSoDu.Multiline = false;
-            this.txtSoDu.Name = "txtSoDu";
-            this.txtSoDu.Padding = new System.Windows.Forms.Padding(7);
-            this.txtSoDu.PasswordChar = false;
-            this.txtSoDu.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtSoDu.PlaceholderText = "";
-            this.txtSoDu.Size = new System.Drawing.Size(183, 39);
-            this.txtSoDu.TabIndex = 18;
-            this.txtSoDu.UnderlinedStyle = true;
-            // 
-            // txtIDTK
-            // 
-            this.txtIDTK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.txtIDTK.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.txtIDTK.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtIDTK.BorderRadius = 0;
-            this.txtIDTK.BorderSize = 2;
-            this.txtIDTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDTK.ForeColor = System.Drawing.Color.White;
-            this.txtIDTK.Location = new System.Drawing.Point(92, 56);
-            this.txtIDTK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtIDTK.Multiline = false;
-            this.txtIDTK.Name = "txtIDTK";
-            this.txtIDTK.Padding = new System.Windows.Forms.Padding(7);
-            this.txtIDTK.PasswordChar = false;
-            this.txtIDTK.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtIDTK.PlaceholderText = "";
-            this.txtIDTK.Size = new System.Drawing.Size(183, 39);
-            this.txtIDTK.TabIndex = 17;
-            this.txtIDTK.UnderlinedStyle = true;
-            this.txtIDTK._TextChanged += new System.EventHandler(this.txtIDTK__TextChanged);
             // 
             // FormKhachHang
             // 

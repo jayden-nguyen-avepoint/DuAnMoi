@@ -1,4 +1,6 @@
-﻿using QuanNet.CustomsDetail;
+﻿using QuanNet.BLL;
+using QuanNet.CustomsDetail;
+using QuanNet.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,15 +19,22 @@ namespace QuanNet.FormsUser
         private Random random;
         private int tempIndex;
         private Form activeForm;
-        public FormUsers()
+
+        public string ID_May { get; set; }
+        public string IDKhachHang { get; set; }
+
+        public FormUsers(string M, string K)
         {
+            ID_May = M;
+            IDKhachHang = K;
             InitializeComponent();
             random = new Random();
-            //btnCloseChildForm.Visible = false;
-            this.Text = string.Empty;
-            //this.ControlBox = true;
+            //this.Text = string.Empty;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            GUI(ID_May,IDKhachHang);
+            BllMayTinh.Instance.addTKinMay(ID_May, IDKhachHang,"");
         }
+        //=============UI CODE=============
         private Color SelectThemeColor()
         {
             int index = random.Next(theme.ColorList.Count);
@@ -51,9 +60,6 @@ namespace QuanNet.FormsUser
                     currentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     panelTitleBar.BackColor = color;
                     panelLogo.BackColor = theme.ChangeColorBrightness(color, -0.3);
-                    //theme.PrimaryColor = color;
-                    //ThemeColor.SecondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3);
-                    //btnCloseChildForm.Visible = true;
                 }
             }
         }
@@ -84,16 +90,35 @@ namespace QuanNet.FormsUser
             childForm.Show();
             labelTitle.Text = childForm.Text;
         }
-
+        //================================
+        public void GUI(string ID_May,string IdKhach)
+        {
+            txtMay.Text = ID_May.ToString();
+            foreach(May i in BllMayTinh.Instance.GetListMayByID(ID_May))
+            {
+                txtGia.Text = i.TienGio.ToString();
+                
+                foreach (TaiKhoan tk in BllKhachHang.Instance.GetListTKByIDTK(i.IdTK))
+                {
+                    txtSodu.Text = tk.Sodu.ToString();
+                }
+            }
+        }
         private void btnApp_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormsUser.FormApp(), sender);
+            OpenChildForm(new FormsUser.FormApp(ID_May, IDKhachHang), sender);
         }
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormsUser.FormOrderKH(), sender);
+            OpenChildForm(new FormsUser.FormOrderKH(ID_May, IDKhachHang), sender);
 
+        }
+
+        private void btnThanhToan_Click(object sender, EventArgs e)
+        {
+            BllMayTinh.Instance.addTKinMay(ID_May,null,null);
+            this.Hide();
         }
     }
 }

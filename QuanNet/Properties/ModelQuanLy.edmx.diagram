@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d8e8d2a3c6c64a7a834dde5bb574fcf8" Name="Diagram1" ZoomLevel="64">
+        <EntityTypeShape EntityType="QuanLyCyberGameModel.HoaDon" Width="1.5" PointX="4.125" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyCyberGameModel.HoaDonChiTiet" Width="1.5" PointX="4.25" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyCyberGameModel.ListTPham" Width="1.5" PointX="4.25" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyCyberGameModel.LoaiTPham" Width="1.5" PointX="0.5" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyCyberGameModel.May" Width="1.5" PointX="6.875" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyCyberGameModel.TaiKhoan" Width="1.5" PointX="6.875" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyCyberGameModel.TPham" Width="1.5" PointX="2.375" PointY="8.375" IsExpanded="true" />
+        <AssociationConnector Association="QuanLyCyberGameModel.FK_IdChiTiet1" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyCyberGameModel.FK_TK" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyCyberGameModel.FK_IdChiTiet" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyCyberGameModel.FK_IdMay" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyCyberGameModel.FK_IdTP" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyCyberGameModel.FK_IdLoaiTP" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyCyberGameModel.FK_IdTK" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

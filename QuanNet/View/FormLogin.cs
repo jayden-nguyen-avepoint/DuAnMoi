@@ -1,4 +1,6 @@
 ﻿using FontAwesome.Sharp;
+using QuanNet.BLL;
+using QuanNet.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,11 +18,11 @@ namespace QuanNet
         //----
         private string PasswordAdmin = "123";
         private string IDAdmin = "admin";
-        private string PasswordKH = "123";
-        private string IDKH = "user";
+        private string PasswordKH ;
+        private string IDKH ;
         private IconButton currentBtn;
-    private Panel leftBorderBtn;
-    private Form thisChildForm;
+        private Panel leftBorderBtn;
+        private Form thisChildForm;
         public FormLogin()
         {
             InitializeComponent();
@@ -32,9 +34,8 @@ namespace QuanNet
             this.ControlBox = true;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-            //====
-            
-            
+            //====  
+            cbbMay.Items.AddRange(BllMayTinh.Instance.GetCBB().ToArray());
         }
         public void ShowDB(bool a)
         {
@@ -162,20 +163,27 @@ namespace QuanNet
         }
 
         private void cusBtnKH_Click(object sender, EventArgs e)
-        {
-            if (txtTKKH.Text == IDKH && txtMKKH.Text == PasswordKH )
+        {   
+            foreach(TaiKhoan i in BllKhachHang.Instance.GetListTKByIDTK(BllKhachHang.Instance.GetIDTKByUSERNAME(txtTKKH.Text.ToString())))
             {
-                FormsUser.FormUsers f = new FormsUser.FormUsers();
-                f.Show();
-
-            }
-            else
-            {
-                MessageBox.Show("Tài khoản hoặc mật khẩu không đúng", "Thong bao", MessageBoxButtons.OK);
-            }
+                if(txtTKKH.Text.ToString()== i.TenDN &&  txtMKKH.Text.ToString()==i.MatKhau )
+                {
+                    string tk = BllKhachHang.Instance.GetIDTKByUSERNAME(txtTKKH.Text.ToString());
+                    string may = cbbMay.SelectedItem.ToString();
+                    BllMayTinh.Instance.addTKinMay(may, tk, "");
+                    FormsUser.FormUsers f = new FormsUser.FormUsers(may, tk);
+                    f.Show();
+                }    
+                else
+                {
+                    MessageBox.Show("Tài khoản hoặc mật khẩu không đúng", "Thong bao", MessageBoxButtons.OK);
+                }
+            }    
             txtTKKH.Text = "";
             txtMKKH.Text = "";
+            cbbMay.SelectedIndex = -1;       
         }
+
         //fuck this shit bruh
     }
 }

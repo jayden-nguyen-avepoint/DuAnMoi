@@ -33,29 +33,30 @@
             this.btnOrder = new System.Windows.Forms.Button();
             this.btnApp = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.labelTitle = new System.Windows.Forms.Label();
             this.panelDesktopPanel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtMay = new QuanNet.CustomsDetail.CustomTextbox();
-            this.txtTG = new QuanNet.CustomsDetail.CustomTextbox();
-            this.txtGia = new QuanNet.CustomsDetail.CustomTextbox();
-            this.txtOrder = new QuanNet.CustomsDetail.CustomTextbox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnThanhToan = new QuanNet.CustomsDetail.CusBtn();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtTongTien = new QuanNet.CustomsDetail.CustomTextbox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtSodu = new QuanNet.CustomsDetail.CustomTextbox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtTongTien = new QuanNet.CustomsDetail.CustomTextbox();
+            this.btnThanhToan = new QuanNet.CustomsDetail.CusBtn();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtOrder = new QuanNet.CustomsDetail.CustomTextbox();
+            this.txtGia = new QuanNet.CustomsDetail.CustomTextbox();
+            this.txtTG = new QuanNet.CustomsDetail.CustomTextbox();
+            this.txtMay = new QuanNet.CustomsDetail.CustomTextbox();
             this.panelMenu.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelTitleBar.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -73,6 +74,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnThanhToan);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 428);
             this.panel1.Name = "panel1";
@@ -125,6 +127,16 @@
             this.panelLogo.Size = new System.Drawing.Size(220, 160);
             this.panelLogo.TabIndex = 1;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::QuanNet.Properties.Resources.Hoc_Them_removebg_preview;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(220, 148);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
@@ -163,7 +175,6 @@
             this.panel2.Controls.Add(this.txtSodu);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.txtTongTien);
-            this.panel2.Controls.Add(this.btnThanhToan);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
@@ -177,189 +188,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(225, 673);
             this.panel2.TabIndex = 3;
-            // 
-            // txtMay
-            // 
-            this.txtMay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.txtMay.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtMay.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtMay.BorderRadius = 15;
-            this.txtMay.BorderSize = 2;
-            this.txtMay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMay.ForeColor = System.Drawing.Color.DimGray;
-            this.txtMay.Location = new System.Drawing.Point(74, 78);
-            this.txtMay.Margin = new System.Windows.Forms.Padding(4);
-            this.txtMay.Multiline = false;
-            this.txtMay.Name = "txtMay";
-            this.txtMay.Padding = new System.Windows.Forms.Padding(7);
-            this.txtMay.PasswordChar = false;
-            this.txtMay.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtMay.PlaceholderText = "";
-            this.txtMay.Size = new System.Drawing.Size(136, 35);
-            this.txtMay.TabIndex = 0;
-            this.txtMay.Text = "";
-            this.txtMay.UnderlinedStyle = false;
-            // 
-            // txtTG
-            // 
-            this.txtTG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.txtTG.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtTG.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtTG.BorderRadius = 15;
-            this.txtTG.BorderSize = 2;
-            this.txtTG.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTG.ForeColor = System.Drawing.Color.DimGray;
-            this.txtTG.Location = new System.Drawing.Point(74, 127);
-            this.txtTG.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTG.Multiline = false;
-            this.txtTG.Name = "txtTG";
-            this.txtTG.Padding = new System.Windows.Forms.Padding(7);
-            this.txtTG.PasswordChar = false;
-            this.txtTG.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtTG.PlaceholderText = "";
-            this.txtTG.Size = new System.Drawing.Size(136, 35);
-            this.txtTG.TabIndex = 1;
-            this.txtTG.Text = "";
-            this.txtTG.UnderlinedStyle = false;
-            // 
-            // txtGia
-            // 
-            this.txtGia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.txtGia.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtGia.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtGia.BorderRadius = 15;
-            this.txtGia.BorderSize = 2;
-            this.txtGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGia.ForeColor = System.Drawing.Color.DimGray;
-            this.txtGia.Location = new System.Drawing.Point(75, 175);
-            this.txtGia.Margin = new System.Windows.Forms.Padding(4);
-            this.txtGia.Multiline = false;
-            this.txtGia.Name = "txtGia";
-            this.txtGia.Padding = new System.Windows.Forms.Padding(7);
-            this.txtGia.PasswordChar = false;
-            this.txtGia.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtGia.PlaceholderText = "";
-            this.txtGia.Size = new System.Drawing.Size(136, 35);
-            this.txtGia.TabIndex = 2;
-            this.txtGia.Text = "";
-            this.txtGia.UnderlinedStyle = false;
-            // 
-            // txtOrder
-            // 
-            this.txtOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.txtOrder.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtOrder.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtOrder.BorderRadius = 15;
-            this.txtOrder.BorderSize = 2;
-            this.txtOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOrder.ForeColor = System.Drawing.Color.DimGray;
-            this.txtOrder.Location = new System.Drawing.Point(75, 224);
-            this.txtOrder.Margin = new System.Windows.Forms.Padding(4);
-            this.txtOrder.Multiline = false;
-            this.txtOrder.Name = "txtOrder";
-            this.txtOrder.Padding = new System.Windows.Forms.Padding(7);
-            this.txtOrder.PasswordChar = false;
-            this.txtOrder.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtOrder.PlaceholderText = "";
-            this.txtOrder.Size = new System.Drawing.Size(136, 35);
-            this.txtOrder.TabIndex = 3;
-            this.txtOrder.Text = "";
-            this.txtOrder.UnderlinedStyle = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(0, 88);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 18);
-            this.label6.TabIndex = 54;
-            this.label6.Text = "Số máy";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(2, 134);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 18);
-            this.label2.TabIndex = 55;
-            this.label2.Text = "Thời gian";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(4, 187);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 18);
-            this.label3.TabIndex = 56;
-            this.label3.Text = "Giá giờ";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(4, 287);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 18);
-            this.label4.TabIndex = 57;
-            this.label4.Text = "Tổng tiền";
-            // 
-            // btnThanhToan
-            // 
-            this.btnThanhToan.BackColor = System.Drawing.Color.MediumOrchid;
-            this.btnThanhToan.BackgroundColor = System.Drawing.Color.MediumOrchid;
-            this.btnThanhToan.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnThanhToan.BorderRadius = 20;
-            this.btnThanhToan.BorderSize = 0;
-            this.btnThanhToan.FlatAppearance.BorderSize = 0;
-            this.btnThanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThanhToan.ForeColor = System.Drawing.Color.White;
-            this.btnThanhToan.Location = new System.Drawing.Point(43, 530);
-            this.btnThanhToan.Name = "btnThanhToan";
-            this.btnThanhToan.Size = new System.Drawing.Size(138, 47);
-            this.btnThanhToan.TabIndex = 0;
-            this.btnThanhToan.Text = "Thanh toán";
-            this.btnThanhToan.TextColor = System.Drawing.Color.White;
-            this.btnThanhToan.UseVisualStyleBackColor = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(2, 239);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 18);
-            this.label5.TabIndex = 59;
-            this.label5.Text = "Bill order\r\n";
-            // 
-            // txtTongTien
-            // 
-            this.txtTongTien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.txtTongTien.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtTongTien.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtTongTien.BorderRadius = 15;
-            this.txtTongTien.BorderSize = 2;
-            this.txtTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTongTien.ForeColor = System.Drawing.Color.DimGray;
-            this.txtTongTien.Location = new System.Drawing.Point(75, 277);
-            this.txtTongTien.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTongTien.Multiline = false;
-            this.txtTongTien.Name = "txtTongTien";
-            this.txtTongTien.Padding = new System.Windows.Forms.Padding(7);
-            this.txtTongTien.PasswordChar = false;
-            this.txtTongTien.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtTongTien.PlaceholderText = "";
-            this.txtTongTien.Size = new System.Drawing.Size(136, 35);
-            this.txtTongTien.TabIndex = 58;
-            this.txtTongTien.Text = "";
-            this.txtTongTien.UnderlinedStyle = false;
             // 
             // label7
             // 
@@ -391,18 +219,186 @@
             this.txtSodu.PlaceholderText = "";
             this.txtSodu.Size = new System.Drawing.Size(136, 35);
             this.txtSodu.TabIndex = 60;
-            this.txtSodu.Text = "";
             this.txtSodu.UnderlinedStyle = false;
             // 
-            // pictureBox1
+            // label5
             // 
-            this.pictureBox1.Image = global::QuanNet.Properties.Resources.Hoc_Them_removebg_preview;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(220, 148);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.Location = new System.Drawing.Point(2, 239);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(66, 18);
+            this.label5.TabIndex = 59;
+            this.label5.Text = "Bill order\r\n";
+            // 
+            // txtTongTien
+            // 
+            this.txtTongTien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.txtTongTien.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtTongTien.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtTongTien.BorderRadius = 15;
+            this.txtTongTien.BorderSize = 2;
+            this.txtTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTongTien.ForeColor = System.Drawing.Color.DimGray;
+            this.txtTongTien.Location = new System.Drawing.Point(75, 277);
+            this.txtTongTien.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTongTien.Multiline = false;
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.Padding = new System.Windows.Forms.Padding(7);
+            this.txtTongTien.PasswordChar = false;
+            this.txtTongTien.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtTongTien.PlaceholderText = "";
+            this.txtTongTien.Size = new System.Drawing.Size(136, 35);
+            this.txtTongTien.TabIndex = 58;
+            this.txtTongTien.UnderlinedStyle = false;
+            // 
+            // btnThanhToan
+            // 
+            this.btnThanhToan.BackColor = System.Drawing.Color.MediumOrchid;
+            this.btnThanhToan.BackgroundColor = System.Drawing.Color.MediumOrchid;
+            this.btnThanhToan.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnThanhToan.BorderRadius = 20;
+            this.btnThanhToan.BorderSize = 0;
+            this.btnThanhToan.FlatAppearance.BorderSize = 0;
+            this.btnThanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThanhToan.ForeColor = System.Drawing.Color.White;
+            this.btnThanhToan.Location = new System.Drawing.Point(27, 266);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(138, 47);
+            this.btnThanhToan.TabIndex = 0;
+            this.btnThanhToan.Text = "Thanh toán";
+            this.btnThanhToan.TextColor = System.Drawing.Color.White;
+            this.btnThanhToan.UseVisualStyleBackColor = false;
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.Location = new System.Drawing.Point(4, 287);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(69, 18);
+            this.label4.TabIndex = 57;
+            this.label4.Text = "Tổng tiền";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(4, 187);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(55, 18);
+            this.label3.TabIndex = 56;
+            this.label3.Text = "Giá giờ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(2, 134);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 18);
+            this.label2.TabIndex = 55;
+            this.label2.Text = "Thời gian";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(0, 88);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(59, 18);
+            this.label6.TabIndex = 54;
+            this.label6.Text = "Số máy";
+            // 
+            // txtOrder
+            // 
+            this.txtOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.txtOrder.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtOrder.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtOrder.BorderRadius = 15;
+            this.txtOrder.BorderSize = 2;
+            this.txtOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOrder.ForeColor = System.Drawing.Color.DimGray;
+            this.txtOrder.Location = new System.Drawing.Point(75, 224);
+            this.txtOrder.Margin = new System.Windows.Forms.Padding(4);
+            this.txtOrder.Multiline = false;
+            this.txtOrder.Name = "txtOrder";
+            this.txtOrder.Padding = new System.Windows.Forms.Padding(7);
+            this.txtOrder.PasswordChar = false;
+            this.txtOrder.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtOrder.PlaceholderText = "";
+            this.txtOrder.Size = new System.Drawing.Size(136, 35);
+            this.txtOrder.TabIndex = 3;
+            this.txtOrder.UnderlinedStyle = false;
+            // 
+            // txtGia
+            // 
+            this.txtGia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.txtGia.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtGia.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtGia.BorderRadius = 15;
+            this.txtGia.BorderSize = 2;
+            this.txtGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGia.ForeColor = System.Drawing.Color.DimGray;
+            this.txtGia.Location = new System.Drawing.Point(75, 175);
+            this.txtGia.Margin = new System.Windows.Forms.Padding(4);
+            this.txtGia.Multiline = false;
+            this.txtGia.Name = "txtGia";
+            this.txtGia.Padding = new System.Windows.Forms.Padding(7);
+            this.txtGia.PasswordChar = false;
+            this.txtGia.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtGia.PlaceholderText = "";
+            this.txtGia.Size = new System.Drawing.Size(136, 35);
+            this.txtGia.TabIndex = 2;
+            this.txtGia.UnderlinedStyle = false;
+            // 
+            // txtTG
+            // 
+            this.txtTG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.txtTG.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtTG.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtTG.BorderRadius = 15;
+            this.txtTG.BorderSize = 2;
+            this.txtTG.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTG.ForeColor = System.Drawing.Color.DimGray;
+            this.txtTG.Location = new System.Drawing.Point(74, 127);
+            this.txtTG.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTG.Multiline = false;
+            this.txtTG.Name = "txtTG";
+            this.txtTG.Padding = new System.Windows.Forms.Padding(7);
+            this.txtTG.PasswordChar = false;
+            this.txtTG.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtTG.PlaceholderText = "";
+            this.txtTG.Size = new System.Drawing.Size(136, 35);
+            this.txtTG.TabIndex = 1;
+            this.txtTG.UnderlinedStyle = false;
+            // 
+            // txtMay
+            // 
+            this.txtMay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.txtMay.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtMay.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtMay.BorderRadius = 15;
+            this.txtMay.BorderSize = 2;
+            this.txtMay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMay.ForeColor = System.Drawing.Color.DimGray;
+            this.txtMay.Location = new System.Drawing.Point(74, 78);
+            this.txtMay.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMay.Multiline = false;
+            this.txtMay.Name = "txtMay";
+            this.txtMay.Padding = new System.Windows.Forms.Padding(7);
+            this.txtMay.PasswordChar = false;
+            this.txtMay.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtMay.PlaceholderText = "";
+            this.txtMay.Size = new System.Drawing.Size(136, 35);
+            this.txtMay.TabIndex = 0;
+            this.txtMay.UnderlinedStyle = false;
             // 
             // FormUsers
             // 
@@ -418,12 +414,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quan Ly ";
             this.panelMenu.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
     }

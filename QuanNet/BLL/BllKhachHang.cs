@@ -9,44 +9,38 @@ using System.Windows;
 
 namespace QuanNet.BLL
 {
-    public class BllQLy
+    public class BllKhachHang
     {
-        DoAnQLNet db = new DoAnQLNet();
-        private static BllQLy _Instance;
-        public static BllQLy Instance
+        DoAnQLCyber db = new DoAnQLCyber();
+        private static BllKhachHang _Instance;
+        public static BllKhachHang Instance
         {
             get
             {
                 if (_Instance == null)
                 {
-                    _Instance = new BllQLy();
+                    _Instance = new BllKhachHang();
                 };
                 return _Instance;
             }
             private set { }
         }
-        private BllQLy()
+        private BllKhachHang()
         {
 
         }
-        public TaiKhoan GetIDTKCuoi()
-        {
-            return db.TaiKhoans.OrderByDescending(shipper => shipper.IdTK).FirstOrDefault();
-        }
         public TaiKhoan GetTKByIDTK(string IDTK)
         {
-            foreach (TaiKhoan i in db.TaiKhoans)
-            {
-                if (i.IdTK == IDTK) return i;
-            }
-            return null;
+            return db.TaiKhoans.Find(IDTK);
+            //return ve 1 record duy nhat
         }
-        public List<TaiKhoanView> GetTKViewByIDKH(string IDKH)
+        public List<TaiKhoanView> GetTKViewByIDKH(string IDKH,string keyWord)
         {
             List<TaiKhoanView> data = new List<TaiKhoanView>();
-            foreach (TaiKhoan i in GetTKByIDTKS(IDKH))
+            foreach (TaiKhoan i in GetListTKByIDTK(IDKH))
             {
-                data.Add(new TaiKhoanView
+                if (i.IdTK.Contains(keyWord) || i.LienHe.Contains(keyWord)|| i.TenKH.Contains(keyWord))
+                    data.Add(new TaiKhoanView
                 {
                     ID_TaiKhoan = i.IdTK,
                     TenKhachHang = i.TenKH,
@@ -57,7 +51,7 @@ namespace QuanNet.BLL
             return data;
 
         }
-        public List<TaiKhoan> GetTKByIDTKS(string IDTK)
+        public List<TaiKhoan> GetListTKByIDTK(string IDTK)
         {
             List<TaiKhoan> data = new List<TaiKhoan>();
             if (IDTK == "")
@@ -69,6 +63,17 @@ namespace QuanNet.BLL
                 data = db.TaiKhoans.Where(p => p.IdTK == IDTK.ToString()).Select(p => p).ToList();
             }
             return data;
+        }
+        public string GetIDTKByUSERNAME(string TenDN)
+        {
+            string ID = "";
+            List<TaiKhoan> data = new List<TaiKhoan>();
+            data = db.TaiKhoans.Where(p => p.TenDN == TenDN.ToString()).Select(p => p).ToList();
+            foreach(TaiKhoan t in data)
+            {
+                ID = t.IdTK;
+            }
+            return ID;
         }
         public bool CheckAddUpdate(string IDTK)
         {
@@ -111,10 +116,6 @@ namespace QuanNet.BLL
             TaiKhoan s = db.TaiKhoans.Find(IDTK);
             db.TaiKhoans.Remove(s);
             db.SaveChanges();
-        }
-        public dynamic SearchKH(string keyWord)
-        {
-            return db.TaiKhoans.Where(p => p.IdTK.Contains(keyWord) || p.LienHe.Contains(keyWord) || p.TenKH.Contains(keyWord)).Select(p => new {ID_TaiKhoan= p.IdTK , TenKhachHang=p.TenKH, p.Sodu, p.LienHe }).ToList();
         }
     }
 }
