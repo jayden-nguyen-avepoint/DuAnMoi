@@ -215,6 +215,7 @@
             this.txtSearch.Size = new System.Drawing.Size(183, 35);
             this.txtSearch.TabIndex = 22;
             this.txtSearch.UnderlinedStyle = true;
+            this.txtSearch._TextChanged += new System.EventHandler(this.txtSearch__TextChanged);
             // 
             // txtNap
             // 

@@ -33,5 +33,16 @@ namespace QuanNet.Properties {
                 return ((string)(this["Test3ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-I16OQOFN\\SQLEXPRESS01;Initial Catalog=QuanLyCyberGame;Integrat" +
+            "ed Security=True")]
+        public string QuanLyCyberGameConnectionString {
+            get {
+                return ((string)(this["QuanLyCyberGameConnectionString"]));
+            }
+        }
     }
 }

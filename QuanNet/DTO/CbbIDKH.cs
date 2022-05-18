@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QuanNet
 {
-    public class CBBitemSort
+    public class CbbIDKH
     {
         public string Value { get; set; }
         public string Text { get; set; }

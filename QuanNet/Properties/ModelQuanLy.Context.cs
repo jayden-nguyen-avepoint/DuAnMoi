@@ -13,10 +13,10 @@ namespace QuanNet.Properties
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DoAnQLNet : DbContext
+    public partial class DoAnQLCyber : DbContext
     {
-        public DoAnQLNet()
-            : base("name=DoAnQLNet")
+        public DoAnQLCyber()
+            : base("name=DoAnQLCyber")
         {
         }
     
@@ -30,7 +30,6 @@ namespace QuanNet.Properties
         public virtual DbSet<ListTPham> ListTPhams { get; set; }
         public virtual DbSet<LoaiTPham> LoaiTPhams { get; set; }
         public virtual DbSet<May> Mays { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
         public virtual DbSet<TPham> TPhams { get; set; }
     }
