@@ -52,17 +52,18 @@
             this.M20 = new FontAwesome.Sharp.IconButton();
             this.M02 = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dgvMaytinh = new System.Windows.Forms.DataGridView();
+            this.customTextbox1 = new QuanNet.CustomsDetail.CustomTextbox();
             this.btnEnd = new QuanNet.CustomsDetail.CusBtn();
             this.txtTien = new QuanNet.CustomsDetail.CustomTextbox();
             this.txtCauHinh = new QuanNet.CustomsDetail.CustomTextbox();
             this.txtIDTK = new QuanNet.CustomsDetail.CustomTextbox();
             this.txtMay = new QuanNet.CustomsDetail.CustomTextbox();
             this.btnStart = new QuanNet.CustomsDetail.CusBtn();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dgvMaytinh = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaytinh)).BeginInit();
@@ -479,6 +480,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.panel2.Controls.Add(this.customTextbox1);
             this.panel2.Controls.Add(this.btnEnd);
             this.panel2.Controls.Add(this.txtTien);
             this.panel2.Controls.Add(this.txtCauHinh);
@@ -494,86 +496,26 @@
             this.panel2.Size = new System.Drawing.Size(521, 378);
             this.panel2.TabIndex = 24;
             // 
-            // label4
+            // customTextbox1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(62, 208);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 20);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Tiền/Giờ:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(62, 151);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Cấu hình:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(18, 94);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "ID Khách hàng:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(62, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Số máy:";
-            // 
-            // dgvMaytinh
-            // 
-            this.dgvMaytinh.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgvMaytinh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvMaytinh.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvMaytinh.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(46)))), ((int)(((byte)(105)))));
-            this.dgvMaytinh.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvMaytinh.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvMaytinh.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMaytinh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvMaytinh.ColumnHeadersHeight = 30;
-            this.dgvMaytinh.EnableHeadersVisualStyles = false;
-            this.dgvMaytinh.GridColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dgvMaytinh.Location = new System.Drawing.Point(37, 401);
-            this.dgvMaytinh.Name = "dgvMaytinh";
-            this.dgvMaytinh.RowHeadersVisible = false;
-            this.dgvMaytinh.RowHeadersWidth = 60;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(46)))), ((int)(((byte)(105)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.5F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(7);
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.MediumSlateBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvMaytinh.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvMaytinh.RowTemplate.Height = 24;
-            this.dgvMaytinh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMaytinh.Size = new System.Drawing.Size(1080, 209);
-            this.dgvMaytinh.TabIndex = 25;
+            this.customTextbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.customTextbox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.customTextbox1.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.customTextbox1.BorderRadius = 0;
+            this.customTextbox1.BorderSize = 2;
+            this.customTextbox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customTextbox1.ForeColor = System.Drawing.Color.White;
+            this.customTextbox1.Location = new System.Drawing.Point(164, 257);
+            this.customTextbox1.Margin = new System.Windows.Forms.Padding(4);
+            this.customTextbox1.Multiline = false;
+            this.customTextbox1.Name = "customTextbox1";
+            this.customTextbox1.Padding = new System.Windows.Forms.Padding(7);
+            this.customTextbox1.PasswordChar = false;
+            this.customTextbox1.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.customTextbox1.PlaceholderText = "";
+            this.customTextbox1.Size = new System.Drawing.Size(250, 35);
+            this.customTextbox1.TabIndex = 11;
+            this.customTextbox1.UnderlinedStyle = true;
             // 
             // btnEnd
             // 
@@ -593,6 +535,7 @@
             this.btnEnd.Text = "Kết thúc";
             this.btnEnd.TextColor = System.Drawing.Color.GhostWhite;
             this.btnEnd.UseVisualStyleBackColor = false;
+            this.btnEnd.Click += new System.EventHandler(this.btnEnd_Click);
             // 
             // txtTien
             // 
@@ -696,6 +639,88 @@
             this.btnStart.Text = "Bắt đầu";
             this.btnStart.TextColor = System.Drawing.Color.GhostWhite;
             this.btnStart.UseVisualStyleBackColor = false;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(62, 208);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(77, 20);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Tiền/Giờ:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(62, 151);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(80, 20);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Cấu hình:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(18, 94);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(124, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "ID Khách hàng:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(62, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Số máy:";
+            // 
+            // dgvMaytinh
+            // 
+            this.dgvMaytinh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvMaytinh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvMaytinh.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvMaytinh.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(46)))), ((int)(((byte)(105)))));
+            this.dgvMaytinh.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvMaytinh.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvMaytinh.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMaytinh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvMaytinh.ColumnHeadersHeight = 30;
+            this.dgvMaytinh.EnableHeadersVisualStyles = false;
+            this.dgvMaytinh.GridColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvMaytinh.Location = new System.Drawing.Point(37, 401);
+            this.dgvMaytinh.Name = "dgvMaytinh";
+            this.dgvMaytinh.RowHeadersVisible = false;
+            this.dgvMaytinh.RowHeadersWidth = 60;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(46)))), ((int)(((byte)(105)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.5F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(7);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.MediumSlateBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvMaytinh.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvMaytinh.RowTemplate.Height = 24;
+            this.dgvMaytinh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMaytinh.Size = new System.Drawing.Size(1080, 209);
+            this.dgvMaytinh.TabIndex = 25;
             // 
             // FormMayTinh
             // 
@@ -738,7 +763,6 @@
         private FontAwesome.Sharp.IconButton M14;
         private FontAwesome.Sharp.IconButton M19;
         private FontAwesome.Sharp.IconButton M01;
-        private FontAwesome.Sharp.IconButton M20;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -751,5 +775,7 @@
         private CustomsDetail.CustomTextbox txtCauHinh;
         private CustomsDetail.CustomTextbox txtIDTK;
         private System.Windows.Forms.DataGridView dgvMaytinh;
+        private CustomsDetail.CustomTextbox customTextbox1;
+        private FontAwesome.Sharp.IconButton M20;
     }
 }

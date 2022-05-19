@@ -33,6 +33,8 @@ namespace QuanNet.FormsUser
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             GUI(ID_May,IDKhachHang);
             BllMayTinh.Instance.addTKinMay(ID_May, IDKhachHang,"");
+            txtMay.Enabled = false;
+            txtSodu.Enabled=false;
         }
         //=============UI CODE=============
         private Color SelectThemeColor()
@@ -118,7 +120,7 @@ namespace QuanNet.FormsUser
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
             BllMayTinh.Instance.addTKinMay(ID_May,null,null);
-            this.Hide();
+            this.Dispose();
         }
     }
 }

@@ -18,8 +18,6 @@ namespace QuanNet
         //----
         private string PasswordAdmin = "123";
         private string IDAdmin = "admin";
-        private string PasswordKH ;
-        private string IDKH ;
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form thisChildForm;

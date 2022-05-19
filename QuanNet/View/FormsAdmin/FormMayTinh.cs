@@ -36,27 +36,21 @@ namespace QuanNet
             txtTien.Text = BllMayTinh.Instance.GetMayByIDMay(IDMay).TienGio.ToString();
             txtTien.Enabled=false;
         }
-
         private void Button_Click(object sender, EventArgs e)
         {
             string maMay = ((Button)sender).Name;
             txtMay.Text = maMay;
             GUI(maMay);
-            if (BllMayTinh.Instance.GetMayByIDMay(maMay).TrangThai)
-            {
-                ((IconButton)sender).IconColor = Color.Red;
-            }
-            else ((IconButton)sender).IconColor = Color.Chartreuse;
-            //foreach (May i in BllMayTinh.Instance.GetListMayByID(""))
-            //{
-            //    if (Convert.ToBoolean(i.TrangThai))
-            //    {
-            //        ((IconButton)sender).IconColor = Color.Red;
-            //    }
-            //    else ((IconButton)sender).IconColor = Color.Blue;
-            //}
         }
 
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            dgvMaytinh.DataSource = BllMayTinh.Instance.GetListMayByID(txtMay.Text);
+        }
 
+        private void btnEnd_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
