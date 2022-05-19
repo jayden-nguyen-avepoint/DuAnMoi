@@ -118,7 +118,7 @@ namespace QuanNet.FormsUser
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
             BllMayTinh.Instance.addTKinMay(ID_May,null,null);
-            this.Hide();
+            this.Dispose();
         }
     }
 }
