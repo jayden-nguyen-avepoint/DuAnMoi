@@ -66,45 +66,17 @@
     <Compile Include="BLL\BllMayTinh.cs" />
     <Compile Include="BLL\BllKhachHang.cs" />
     <Compile Include="BLL\BllMon.cs" />
+    <Compile Include="LinQ\DoAnQLCyber.cs" />
     <Compile Include="DTO\CbbIDKH.cs" />
     <Compile Include="DTO\HoaDonView.cs" />
     <Compile Include="DTO\TaiKhoanView.cs" />
-    <Compile Include="Properties\HoaDon.cs">
-      <DependentUpon>ModelQuanLy.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\HoaDonChiTiet.cs">
-      <DependentUpon>ModelQuanLy.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\ListTPham.cs">
-      <DependentUpon>ModelQuanLy.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\LoaiTPham.cs">
-      <DependentUpon>ModelQuanLy.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\May.cs">
-      <DependentUpon>ModelQuanLy.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\ModelQuanLy.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelQuanLy.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\ModelQuanLy.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelQuanLy.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\ModelQuanLy.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelQuanLy.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\TaiKhoan.cs">
-      <DependentUpon>ModelQuanLy.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\TPham.cs">
-      <DependentUpon>ModelQuanLy.tt</DependentUpon>
-    </Compile>
+    <Compile Include="LinQ\HoaDon.cs" />
+    <Compile Include="LinQ\HoaDonChiTiet.cs" />
+    <Compile Include="LinQ\ListTPham.cs" />
+    <Compile Include="LinQ\LoaiTPham.cs" />
+    <Compile Include="LinQ\May.cs" />
+    <Compile Include="LinQ\TaiKhoan.cs" />
+    <Compile Include="LinQ\TPham.cs" />
     <Compile Include="View\CustomsDetail\CusBtn.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -219,13 +191,6 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
-    <EntityDeploy Include="Properties\ModelQuanLy.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelQuanLy.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Properties\ModelQuanLy.edmx.diagram">
-      <DependentUpon>ModelQuanLy.edmx</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -321,18 +286,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Properties\ModelQuanLy.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelQuanLy.edmx</DependentUpon>
-      <LastGenOutput>ModelQuanLy.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Properties\ModelQuanLy.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelQuanLy.edmx</DependentUpon>
-      <LastGenOutput>ModelQuanLy.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
