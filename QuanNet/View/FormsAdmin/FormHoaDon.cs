@@ -20,8 +20,6 @@ namespace QuanNet
         }
         public void ShowListHD(string i,string Key="")
         {
-            //dgvHoaDon.DataSource = BllHoaDon.Instance.GetListHDByID(i);
-            //dgvHoaDon.DataSource = BllHoaDon.Instance.ShowListViewHD(i);
             dgvHoaDon.DataSource = BllHoaDon.Instance.GetHDViewByIDHD(i,Key);
         }
         private void btnInHD_Click(object sender, EventArgs e)

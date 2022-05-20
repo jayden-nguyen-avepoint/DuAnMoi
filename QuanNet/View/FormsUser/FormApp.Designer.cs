@@ -35,9 +35,9 @@
             this.txtHĐ = new QuanNet.CustomsDetail.CustomTextbox();
             this.label19 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cusBtn11 = new QuanNet.CustomsDetail.CusBtn();
+            this.CoderTool = new QuanNet.CustomsDetail.CusBtn();
             this.RainbowHat = new QuanNet.CustomsDetail.CusBtn();
-            this.cusBtn9 = new QuanNet.CustomsDetail.CusBtn();
+            this.Dota2 = new QuanNet.CustomsDetail.CusBtn();
             this.BlockADS = new QuanNet.CustomsDetail.CusBtn();
             this.Valorant = new QuanNet.CustomsDetail.CusBtn();
             this.Zalo = new QuanNet.CustomsDetail.CusBtn();
@@ -125,7 +125,6 @@
             this.txtHĐ.PlaceholderText = "";
             this.txtHĐ.Size = new System.Drawing.Size(170, 35);
             this.txtHĐ.TabIndex = 37;
-            this.txtHĐ.Text = "";
             this.txtHĐ.UnderlinedStyle = false;
             // 
             // label19
@@ -143,9 +142,9 @@
             // 
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.cusBtn11);
+            this.panel2.Controls.Add(this.CoderTool);
             this.panel2.Controls.Add(this.RainbowHat);
-            this.panel2.Controls.Add(this.cusBtn9);
+            this.panel2.Controls.Add(this.Dota2);
             this.panel2.Controls.Add(this.BlockADS);
             this.panel2.Controls.Add(this.Valorant);
             this.panel2.Controls.Add(this.Zalo);
@@ -171,28 +170,28 @@
             this.panel2.Size = new System.Drawing.Size(932, 489);
             this.panel2.TabIndex = 1;
             // 
-            // cusBtn11
+            // CoderTool
             // 
-            this.cusBtn11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
-            this.cusBtn11.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
-            this.cusBtn11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cusBtn11.BackgroundImage")));
-            this.cusBtn11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cusBtn11.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cusBtn11.BorderRadius = 20;
-            this.cusBtn11.BorderSize = 0;
-            this.cusBtn11.FlatAppearance.BorderSize = 0;
-            this.cusBtn11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cusBtn11.ForeColor = System.Drawing.Color.White;
-            this.cusBtn11.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.cusBtn11.Location = new System.Drawing.Point(738, 183);
-            this.cusBtn11.Name = "cusBtn11";
-            this.cusBtn11.Size = new System.Drawing.Size(100, 100);
-            this.cusBtn11.TabIndex = 49;
-            this.cusBtn11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.cusBtn11.TextColor = System.Drawing.Color.White;
-            this.cusBtn11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cusBtn11.UseVisualStyleBackColor = false;
-            this.cusBtn11.Click += new System.EventHandler(this.icon_Click);
+            this.CoderTool.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
+            this.CoderTool.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
+            this.CoderTool.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CoderTool.BackgroundImage")));
+            this.CoderTool.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.CoderTool.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.CoderTool.BorderRadius = 20;
+            this.CoderTool.BorderSize = 0;
+            this.CoderTool.FlatAppearance.BorderSize = 0;
+            this.CoderTool.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CoderTool.ForeColor = System.Drawing.Color.White;
+            this.CoderTool.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.CoderTool.Location = new System.Drawing.Point(738, 183);
+            this.CoderTool.Name = "CoderTool";
+            this.CoderTool.Size = new System.Drawing.Size(100, 100);
+            this.CoderTool.TabIndex = 49;
+            this.CoderTool.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.CoderTool.TextColor = System.Drawing.Color.White;
+            this.CoderTool.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.CoderTool.UseVisualStyleBackColor = false;
+            this.CoderTool.Click += new System.EventHandler(this.icon_Click);
             // 
             // RainbowHat
             // 
@@ -217,28 +216,28 @@
             this.RainbowHat.UseVisualStyleBackColor = false;
             this.RainbowHat.Click += new System.EventHandler(this.icon_Click);
             // 
-            // cusBtn9
+            // Dota2
             // 
-            this.cusBtn9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
-            this.cusBtn9.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
-            this.cusBtn9.BackgroundImage = global::QuanNet.Properties.Resources.customLogo_200x200;
-            this.cusBtn9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cusBtn9.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cusBtn9.BorderRadius = 20;
-            this.cusBtn9.BorderSize = 0;
-            this.cusBtn9.FlatAppearance.BorderSize = 0;
-            this.cusBtn9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cusBtn9.ForeColor = System.Drawing.Color.White;
-            this.cusBtn9.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.cusBtn9.Location = new System.Drawing.Point(46, 338);
-            this.cusBtn9.Name = "cusBtn9";
-            this.cusBtn9.Size = new System.Drawing.Size(100, 100);
-            this.cusBtn9.TabIndex = 47;
-            this.cusBtn9.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.cusBtn9.TextColor = System.Drawing.Color.White;
-            this.cusBtn9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cusBtn9.UseVisualStyleBackColor = false;
-            this.cusBtn9.Click += new System.EventHandler(this.icon_Click);
+            this.Dota2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
+            this.Dota2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
+            this.Dota2.BackgroundImage = global::QuanNet.Properties.Resources.customLogo_200x200;
+            this.Dota2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Dota2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.Dota2.BorderRadius = 20;
+            this.Dota2.BorderSize = 0;
+            this.Dota2.FlatAppearance.BorderSize = 0;
+            this.Dota2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Dota2.ForeColor = System.Drawing.Color.White;
+            this.Dota2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Dota2.Location = new System.Drawing.Point(46, 338);
+            this.Dota2.Name = "Dota2";
+            this.Dota2.Size = new System.Drawing.Size(100, 100);
+            this.Dota2.TabIndex = 47;
+            this.Dota2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Dota2.TextColor = System.Drawing.Color.White;
+            this.Dota2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Dota2.UseVisualStyleBackColor = false;
+            this.Dota2.Click += new System.EventHandler(this.icon_Click);
             // 
             // BlockADS
             // 
@@ -573,7 +572,7 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label7;
         private CustomsDetail.CusBtn Chrome;
-        private CustomsDetail.CusBtn cusBtn9;
+        private CustomsDetail.CusBtn Dota2;
         private CustomsDetail.CusBtn BlockADS;
         private CustomsDetail.CusBtn Valorant;
         private CustomsDetail.CusBtn Zalo;
@@ -581,7 +580,7 @@
         private CustomsDetail.CusBtn TienLen;
         private CustomsDetail.CusBtn LOL;
         private CustomsDetail.CusBtn AOV;
-        private CustomsDetail.CusBtn cusBtn11;
+        private CustomsDetail.CusBtn CoderTool;
         private CustomsDetail.CusBtn RainbowHat;
         private System.Windows.Forms.Label label5;
         private CustomsDetail.CusBtn cusBtn1;

@@ -66,6 +66,7 @@
     <Compile Include="BLL\BllMayTinh.cs" />
     <Compile Include="BLL\BllKhachHang.cs" />
     <Compile Include="BLL\BllMon.cs" />
+    <Compile Include="DTO\MayTinhView.cs" />
     <Compile Include="LinQ\DoAnQLCyber.cs" />
     <Compile Include="DTO\CbbIDKH.cs" />
     <Compile Include="DTO\HoaDonView.cs" />

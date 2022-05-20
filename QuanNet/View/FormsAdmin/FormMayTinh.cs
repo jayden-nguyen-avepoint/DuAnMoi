@@ -15,7 +15,9 @@ namespace QuanNet
 {
     public partial class FormMayTinh : Form
     {
-        public IconButton currentBtn;
+        public delegate void Mydel(string TongTienChoi);
+        public Mydel d { get; set; }
+        public string time { get; set; }
         public FormMayTinh()
         {
             InitializeComponent();
@@ -42,15 +44,68 @@ namespace QuanNet
             txtMay.Text = maMay;
             GUI(maMay);
         }
-
+        public string NgayGioBD()
+        {
+            string s = Convert.ToString(DateTime.Now);
+            return time=s;
+        }
         private void btnStart_Click(object sender, EventArgs e)
         {
-            dgvMaytinh.DataSource = BllMayTinh.Instance.GetListMayByID(txtMay.Text);
+            if (txtIDTK.Text != "Trống")
+            {
+                dgvMaytinh.DataSource = BllMayTinh.Instance.GetMtView(txtMay.Text, "", "");
+                NgayGioBD();
+            }
+            else
+            {
+                MessageBox.Show("Chưa có ai sd máy này","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnEnd_Click(object sender, EventArgs e)
         {
+            if (txtIDTK.Text != "Trống")
+            {
+                DateTime aDateTime = DateTime.Now;
+                TimeSpan interval = aDateTime.Subtract(Convert.ToDateTime(time));
+                int tienGio = BllMayTinh.Instance.GetMayByIDMay(txtMay.Text).TienGio;
+                int TongTienChoi = tienGio * interval.Hours + tienGio * interval.Minutes / 60 + tienGio * interval.Seconds / 3600;
+                if (TongTienChoi <= 2000)
+                {
+                    TongTienChoi = 2000;
+                }
+                else
+                {
+                    string TT = Convert.ToString(TongTienChoi);
+                    if (Convert.ToInt32(TT.Substring(TT.Length - 3, 3)) > 1)
+                    {
+                        TongTienChoi = (Convert.ToInt32(TT.Substring(0, TT.Length - 3)) + 1) * 1000;
+                    }
+                    else TongTienChoi.ToString();
+                }
+                dgvMaytinh.DataSource = BllMayTinh.Instance.GetMtView(txtMay.Text, interval.ToString(), TongTienChoi.ToString());
+                foreach (TaiKhoan i in BllKhachHang.Instance.GetListTKByIDTK(txtIDTK.Text))
+                {
+                    TaiKhoan tk = new TaiKhoan()
+                    {
+                        IdTK = txtIDTK.Text,
+                        LienHe = i.LienHe,
+                        TenKH = i.TenKH,
+                        TenDN = i.TenDN,
+                        MatKhau = i.MatKhau,
+                        Sodu = Convert.ToInt32(i.Sodu - TongTienChoi),
+                    };
+                    BllKhachHang.Instance.Edit(tk);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Chưa có ai sd máy này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+            }
         }
     }
 }
+            //Console.WriteLine("Hours: " + interval.Hours);
+            //Console.WriteLine("Minute: " + interval.Minutes);
+            //Console.WriteLine("Seconds: " + interval.Seconds); 

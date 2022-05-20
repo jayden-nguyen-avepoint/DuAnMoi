@@ -25,9 +25,10 @@ namespace QuanNet.FormsUser
 
         public FormUsers(string M, string K)
         {
+            InitializeComponent();
+            //this.FormBorderStyle = FormBorderStyle.None;
             ID_May = M;
             IDKhachHang = K;
-            InitializeComponent();
             random = new Random();
             //this.Text = string.Empty;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;

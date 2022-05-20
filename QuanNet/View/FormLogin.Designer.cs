@@ -32,12 +32,12 @@
             this.btnLoginKhach = new FontAwesome.Sharp.IconButton();
             this.btnLoginQL = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.panelQL = new System.Windows.Forms.Panel();
+            this.iconQuanLy = new FontAwesome.Sharp.IconPictureBox();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.iconForm = new FontAwesome.Sharp.IconPictureBox();
-            this.panelQL = new System.Windows.Forms.Panel();
-            this.iconQuanLy = new FontAwesome.Sharp.IconPictureBox();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.panelKHmain = new System.Windows.Forms.Panel();
@@ -53,11 +53,11 @@
             this.cbbMay = new QuanNet.CustomsDetail.CusCbb();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
+            this.panelQL.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconQuanLy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconForm)).BeginInit();
-            this.panelQL.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconQuanLy)).BeginInit();
             this.panelDesktop.SuspendLayout();
             this.panelKHmain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconKH)).BeginInit();
@@ -119,13 +119,41 @@
             // panelLogo
             // 
             this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.panelLogo.Controls.Add(this.panelQL);
             this.panelLogo.Controls.Add(this.pictureBoxLogo);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(258, 210);
             this.panelLogo.TabIndex = 0;
+            // 
+            // panelQL
+            // 
+            this.panelQL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelQL.Controls.Add(this.iconQuanLy);
+            this.panelQL.Controls.Add(this.txtTKQL);
+            this.panelQL.Controls.Add(this.txtMKQL);
+            this.panelQL.Controls.Add(this.cusBtn1);
+            this.panelQL.Location = new System.Drawing.Point(165, 2);
+            this.panelQL.Name = "panelQL";
+            this.panelQL.Size = new System.Drawing.Size(289, 456);
+            this.panelQL.TabIndex = 6;
+            // 
+            // iconQuanLy
+            // 
+            this.iconQuanLy.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.iconQuanLy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.iconQuanLy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            this.iconQuanLy.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.iconQuanLy.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            this.iconQuanLy.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconQuanLy.IconSize = 146;
+            this.iconQuanLy.Location = new System.Drawing.Point(73, 41);
+            this.iconQuanLy.Name = "iconQuanLy";
+            this.iconQuanLy.Size = new System.Drawing.Size(155, 146);
+            this.iconQuanLy.TabIndex = 3;
+            this.iconQuanLy.TabStop = false;
             // 
             // pictureBoxLogo
             // 
@@ -171,35 +199,6 @@
             this.iconForm.TabIndex = 0;
             this.iconForm.TabStop = false;
             // 
-            // panelQL
-            // 
-            this.panelQL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelQL.Controls.Add(this.iconQuanLy);
-            this.panelQL.Controls.Add(this.txtTKQL);
-            this.panelQL.Controls.Add(this.txtMKQL);
-            this.panelQL.Controls.Add(this.cusBtn1);
-            this.panelQL.Location = new System.Drawing.Point(156, 75);
-            this.panelQL.Name = "panelQL";
-            this.panelQL.Size = new System.Drawing.Size(289, 456);
-            this.panelQL.TabIndex = 6;
-            // 
-            // iconQuanLy
-            // 
-            this.iconQuanLy.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconQuanLy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.iconQuanLy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
-            this.iconQuanLy.IconChar = FontAwesome.Sharp.IconChar.User;
-            this.iconQuanLy.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
-            this.iconQuanLy.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconQuanLy.IconSize = 146;
-            this.iconQuanLy.Location = new System.Drawing.Point(73, 41);
-            this.iconQuanLy.Name = "iconQuanLy";
-            this.iconQuanLy.Size = new System.Drawing.Size(155, 146);
-            this.iconQuanLy.TabIndex = 3;
-            this.iconQuanLy.TabStop = false;
-            // 
             // panelShadow
             // 
             this.panelShadow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
@@ -212,6 +211,7 @@
             // panelDesktop
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.panelDesktop.Controls.Add(this.panelQL);
             this.panelDesktop.Controls.Add(this.panelKHmain);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(258, 84);
@@ -434,12 +434,12 @@
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cusBtn1_KeyPress);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
+            this.panelQL.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.iconQuanLy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconForm)).EndInit();
-            this.panelQL.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.iconQuanLy)).EndInit();
             this.panelDesktop.ResumeLayout(false);
             this.panelKHmain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconKH)).EndInit();

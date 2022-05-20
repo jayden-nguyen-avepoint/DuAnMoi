@@ -15,6 +15,7 @@ namespace QuanNet.FormsUser
     public partial class FormOrderKH : Form
     {
         public string ID_May { get; set; }
+        public string IDTP { get; set; }
         public FormOrderKH(string ID_May,string IDKhachHang)
         {
             InitializeComponent();

@@ -143,13 +143,20 @@ namespace QuanNet
             
             if (e.KeyChar == (char)Keys.Enter)
             {
-               if (txtTKQL.Text == IDAdmin && txtMKQL.Text == PasswordAdmin)
-               {
-                    Form1 f = new Form1();
-                    f.Show();
-                    
-               }
-                else
+                try
+                {
+                    if (txtTKQL.Text == IDAdmin && txtMKQL.Text == PasswordAdmin)
+                    {
+                        Form1 f = new Form1();
+                        f.Show();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Tài khoản hoặc mật khẩu không đúng", "Thong bao", MessageBoxButtons.OK);
+                    }
+                }
+                catch
                 {
                     MessageBox.Show("Tài khoản hoặc mật khẩu không đúng", "Thong bao", MessageBoxButtons.OK);
                 }
@@ -162,15 +169,22 @@ namespace QuanNet
 
         private void cusBtnKH_Click(object sender, EventArgs e)
         {   
+            string tk = BllKhachHang.Instance.GetIDTKByUSERNAME(txtTKKH.Text.ToString());
             foreach(TaiKhoan i in BllKhachHang.Instance.GetListTKByIDTK(BllKhachHang.Instance.GetIDTKByUSERNAME(txtTKKH.Text.ToString())))
             {
-                if(txtTKKH.Text.ToString()== i.TenDN &&  txtMKKH.Text.ToString()==i.MatKhau )
+                if (txtTKKH.Text.ToString()== i.TenDN &&  txtMKKH.Text.ToString()==i.MatKhau )
                 {
-                    string tk = BllKhachHang.Instance.GetIDTKByUSERNAME(txtTKKH.Text.ToString());
-                    string may = cbbMay.SelectedItem.ToString();
-                    BllMayTinh.Instance.addTKinMay(may, tk, "");
-                    FormsUser.FormUsers f = new FormsUser.FormUsers(may, tk);
-                    f.Show();
+                        if (cbbMay.SelectedIndex!=-1)
+                        {
+                            string may = cbbMay.SelectedItem.ToString();
+                            BllMayTinh.Instance.addTKinMay(may, tk, "");
+                            FormsUser.FormUsers f = new FormsUser.FormUsers(may, tk);
+                            f.Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Vui lòng chọn máy ", "Thong bao", MessageBoxButtons.OK);
+                        }
                 }    
                 else
                 {
@@ -181,7 +195,5 @@ namespace QuanNet
             txtMKKH.Text = "";
             cbbMay.SelectedIndex = -1;       
         }
-
-        //fuck this shit bruh
     }
 }
