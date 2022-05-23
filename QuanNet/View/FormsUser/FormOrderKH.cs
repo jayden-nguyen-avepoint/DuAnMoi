@@ -15,11 +15,19 @@ namespace QuanNet.FormsUser
     public partial class FormOrderKH : Form
     {
         public string ID_May { get; set; }
+        public string IDKhachHang { get; set; }
         public string IDTP = "TP01";
-        public FormOrderKH(string ID_May, string IDKhachHang)
+        
+        public FormOrderKH(string ID_May1, string IDKhachHang1)
         {
             InitializeComponent();
+            ID_May = ID_May1;
+            IDKhachHang = IDKhachHang1;
+           
         }
+       
+
+
         public void GUI(string ID)
         {
             txtMon.Text = BllMon.Instance.GetTphamByID(ID).TenTP;
@@ -49,26 +57,36 @@ namespace QuanNet.FormsUser
         private void btnThem_Click(object sender, EventArgs e)
         {
             
-                ListTPham orderkh = new ListTPham()
-                {
-                    IdOrderList = "Order" + Convert.ToString(BllOrderKH.Instance.LastId() + 1),
-                    IdTP = BllOrderKH.Instance.GetIDTP(txtMon.Text),
-                    SoluongTP = Convert.ToInt32(txtSL.Text),
-                    ThanhTien = Convert.ToInt32(txtSL.Text )* Convert.ToInt32(txtGia.Text),
-                    IdChiTiet = "CT01",
-                };
-                BllOrderKH.Instance.addOrder1(orderkh);
-                MessageBox.Show("Thành công !");
-                txtMon.Text = "";
-                txtSL.Text = "";
-                txtGia.Text = "";
-                ShowListHD();
+
+            ListTPham orderkh = new ListTPham()
+            {
+                //FormLogin lel = new FormLogin();
+                //Leave.
+                //IdOrderList = "Order" + Convert.ToString(BllOrderKH.Instance.LastId() + 1),
+                IdOrderList = "Order" +IDKhachHang,
+                IdTP = BllOrderKH.Instance.GetIDTP(txtMon.Text),
+                SoluongTP = Convert.ToInt32(txtSL.Text),
+                ThanhTien = Convert.ToInt32(txtSL.Text) * Convert.ToInt32(txtGia.Text),
+                IdChiTiet = Convert.ToString(BllHDCT.Instance.GetIDCT(ID_May)),
+            };
+            BllOrderKH.Instance.addOrder1(orderkh);           
+            MessageBox.Show("Thành công !");
+            txtMon.Text = "";
+            txtSL.Text = "";
+            txtGia.Text = "";
+            ShowListHD();
         }
+      
         public void ShowListHD()
         {
-           
-            dgvList.DataSource = BllOrderKH.Instance.GetListTPViewByID("","");
+
+            dgvList.DataSource = BllOrderKH.Instance.GetListTPViewByID("", "");
         }
+       
+
+
+
+
 
 
     }

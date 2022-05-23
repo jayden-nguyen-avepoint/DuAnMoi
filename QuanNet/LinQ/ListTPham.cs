@@ -10,7 +10,7 @@ namespace QuanNet
     public partial class ListTPham
     {
         [Key]
-        [StringLength(10)]
+        [StringLength(20)]
         public string IdOrderList { get; set; }
 
         [Required]

@@ -70,6 +70,7 @@ namespace QuanNet.BLL
                 db.HoaDons.Remove(s);
                 db.SaveChanges();
             }
+       
         
     }
 }

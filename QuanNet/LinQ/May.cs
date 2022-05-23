@@ -16,7 +16,7 @@ namespace QuanNet
         }
 
         [Key]
-        [StringLength(10)]
+        [StringLength(5)]
         public string IdMay { get; set; }
 
         [Required]

@@ -24,6 +24,7 @@ namespace QuanNet
         public FormLogin()
         {
             InitializeComponent();
+            
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 166);
             panelMenu.Controls.Add(leftBorderBtn);
@@ -168,9 +169,18 @@ namespace QuanNet
                 {
                     string tk = BllKhachHang.Instance.GetIDTKByUSERNAME(txtTKKH.Text.ToString());
                     string may = cbbMay.SelectedItem.ToString();
-                    BllMayTinh.Instance.addTKinMay(may, tk, "");
+                    
                     FormsUser.FormUsers f = new FormsUser.FormUsers(may, tk);
                     f.Show();
+                    HoaDonChiTiet a = new HoaDonChiTiet()
+                    {
+                        IdChiTiet = "HDCT"+ Convert.ToString(Convert.ToInt32(BllHDCT.Instance.LastId())+1) ,
+                        IdMay = may
+
+                    };
+                    BllHDCT.Instance.adddl(a);
+
+
                 }    
                 else
                 {
@@ -181,6 +191,8 @@ namespace QuanNet
             txtMKKH.Text = "";
             cbbMay.SelectedIndex = -1;       
         }
+       
+     
 
         //fuck this shit bruh
     }

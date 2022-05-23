@@ -96,7 +96,9 @@ namespace QuanNet.FormsUser
         public void GUI(string ID_May,string IdKhach)
         {
             txtMay.Text = ID_May.ToString();
-            foreach(May i in BllMayTinh.Instance.GetListMayByID(ID_May))
+            txtTG1.Text = DateTime.Now.ToLongTimeString();
+            //txtTG.Text = DateTime.Now.ToLongTimeString();
+            foreach (May i in BllMayTinh.Instance.GetListMayByID(ID_May))
             {
                 txtGia.Text = i.TienGio.ToString();
                 
@@ -121,6 +123,31 @@ namespace QuanNet.FormsUser
         {
             BllMayTinh.Instance.addTKinMay(ID_May,null,null);
             this.Dispose();
+        }
+
+        private void FormUsers_Load(object sender, EventArgs e)
+        {
+            timer1.Enabled = true;
+            timer2.Enabled = true;
+            timer1.Start();
+            txtTG.Text = DateTime.Now.ToLongTimeString() ;
+            txtTG2.Text = Convert.ToString(Convert.ToDateTime(txtTG.Text) - Convert.ToDateTime(txtTG1.Text));
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            txtTG.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void txtTG1__TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            txtTG2.Text = Convert.ToString(Convert.ToDateTime(txtTG.Text) - Convert.ToDateTime(txtTG1.Text));
         }
     }
 }

@@ -32,13 +32,13 @@
             this.btnLoginKhach = new FontAwesome.Sharp.IconButton();
             this.btnLoginQL = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            this.panelTitleBar = new System.Windows.Forms.Panel();
             this.panelQL = new System.Windows.Forms.Panel();
             this.iconQuanLy = new FontAwesome.Sharp.IconPictureBox();
             this.txtTKQL = new QuanNet.CustomsDetail.CustomTextbox();
             this.txtMKQL = new QuanNet.CustomsDetail.CustomTextbox();
             this.cusBtn1 = new QuanNet.CustomsDetail.CusBtn();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.panelTitleBar = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.iconForm = new FontAwesome.Sharp.IconPictureBox();
             this.panelShadow = new System.Windows.Forms.Panel();
@@ -53,10 +53,10 @@
             this.cbbMay = new QuanNet.CustomsDetail.CusCbb();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
-            this.panelTitleBar.SuspendLayout();
             this.panelQL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconQuanLy)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
+            this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconForm)).BeginInit();
             this.panelDesktop.SuspendLayout();
             this.panelKHmain.SuspendLayout();
@@ -125,25 +125,6 @@
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(258, 210);
             this.panelLogo.TabIndex = 0;
-            // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.Location = new System.Drawing.Point(3, 0);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(212, 185);
-            this.pictureBoxLogo.TabIndex = 0;
-            this.pictureBoxLogo.TabStop = false;
-            // 
-            // panelTitleBar
-            // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
-            this.panelTitleBar.Controls.Add(this.lblTitle);
-            this.panelTitleBar.Controls.Add(this.iconForm);
-            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(258, 0);
-            this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(620, 75);
-            this.panelTitleBar.TabIndex = 1;
             // 
             // panelQL
             // 
@@ -240,6 +221,25 @@
             this.cusBtn1.UseVisualStyleBackColor = false;
             this.cusBtn1.Click += new System.EventHandler(this.cusBtn1_Click);
             this.cusBtn1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cusBtn1_KeyPress);
+            // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.Location = new System.Drawing.Point(3, 0);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(212, 185);
+            this.pictureBoxLogo.TabIndex = 0;
+            this.pictureBoxLogo.TabStop = false;
+            // 
+            // panelTitleBar
+            // 
+            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.panelTitleBar.Controls.Add(this.lblTitle);
+            this.panelTitleBar.Controls.Add(this.iconForm);
+            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitleBar.Location = new System.Drawing.Point(258, 0);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(620, 75);
+            this.panelTitleBar.TabIndex = 1;
             // 
             // lblTitle
             // 
@@ -434,11 +434,11 @@
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cusBtn1_KeyPress);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
+            this.panelQL.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.iconQuanLy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
-            this.panelQL.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.iconQuanLy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconForm)).EndInit();
             this.panelDesktop.ResumeLayout(false);
             this.panelKHmain.ResumeLayout(false);

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Validation;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,25 +31,34 @@ namespace QuanNet.BLL
       
         public void addOrder1(ListTPham list)
         {
-            db.ListTPhams.Add(list);
-            db.SaveChanges();
+            //db.ListTPhams.Add(list);
+            //db.SaveChanges();
+            try
+            {
+                db.ListTPhams.Add(list);
+                db.SaveChanges();
+            }
+            catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)
+            {
+                Exception raise = dbEx;
+                foreach (var validationErrors in dbEx.EntityValidationErrors)
+                {
+                    foreach (var validationError in validationErrors.ValidationErrors)
+                    {
+                        string message = string.Format("{0}:{1}",
+                            validationErrors.Entry.Entity.ToString(),
+                            validationError.ErrorMessage);
+                        // raise a new exception nesting  
+                        // the current instance as InnerException  
+                        raise = new InvalidOperationException(message, raise);
+                    }
+                }
+                throw raise;
+            }
         }
         public string GetIDTP(string tenmon)
         {
             return db.TPhams.Where(p => p.TenTP == tenmon).First().IdTP;
-        }
-        public int LastId()
-        {
-            int ma = 0;
-
-            if (db.ListTPhams.FirstOrDefault() != null)
-            {
-                return Convert.ToInt32(db.ListTPhams.OrderByDescending(p => p.IdOrderList).FirstOrDefault().IdOrderList.Substring(5));
-            }
-            else
-            {
-                return (ma);
-            }
         }
         public List<ListTPham> GetListTPByID()
         {
@@ -56,10 +66,7 @@ namespace QuanNet.BLL
             data = db.ListTPhams.ToList();               
             return data;
         }
-        //public List<TPham> GetTPham()
-        //{
-        //    return db.TPhams.Find()
-        //}    
+    
         public List<OrderKH> GetListTPViewByID(string IDKH, string keyWord)
         {
             List<OrderKH> data = new List<OrderKH>();
@@ -76,11 +83,6 @@ namespace QuanNet.BLL
                 if (i.IdOrderList.Contains(keyWord))
                     data.Add(new OrderKH
                     {
-                        //ID_TaiKhoan = i.IdTK,
-                        //TenKhachHang = i.TenKH,
-                        //SoDu = i.Sodu,
-                        //LienHe = i.LienHe,
-                        //IdOrderList = i.IdOrderList,
                         Mon=tenmon,
                         SL = i.SoluongTP,
                         Tong = i.ThanhTien,
@@ -91,6 +93,14 @@ namespace QuanNet.BLL
             return data;
 
         }
+        //public string GetIdChitiet(string idmay)
+        //{
+        //    return;
+        //}
+
+
+
+
 
     }
 }

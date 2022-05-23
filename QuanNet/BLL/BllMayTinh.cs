@@ -85,5 +85,6 @@ namespace QuanNet.BLL
             else up.HoatDong = null;
             db.SaveChanges();
         }
+        
     }
 }

@@ -62,11 +62,13 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\BllHDCT.cs" />
     <Compile Include="BLL\BllHoaDon.cs" />
     <Compile Include="BLL\BllMayTinh.cs" />
     <Compile Include="BLL\BllKhachHang.cs" />
     <Compile Include="BLL\BllMon.cs" />
     <Compile Include="BLL\BllOrderKH.cs" />
+    <Compile Include="DTO\HoaDonChiTiet.cs" />
     <Compile Include="DTO\OrderKH.cs" />
     <Compile Include="LinQ\DoAnQLCyber.cs" />
     <Compile Include="DTO\CbbIDKH.cs" />

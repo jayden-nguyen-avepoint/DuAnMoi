@@ -28,8 +28,10 @@
     /// </summary>
     private void InitializeComponent()
     {
+            this.components = new System.ComponentModel.Container();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnThanhToan = new QuanNet.CustomsDetail.CusBtn();
             this.btnOrder = new System.Windows.Forms.Button();
             this.btnApp = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
@@ -42,7 +44,6 @@
             this.txtSodu = new QuanNet.CustomsDetail.CustomTextbox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtTongTien = new QuanNet.CustomsDetail.CustomTextbox();
-            this.btnThanhToan = new QuanNet.CustomsDetail.CusBtn();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -51,6 +52,10 @@
             this.txtGia = new QuanNet.CustomsDetail.CustomTextbox();
             this.txtTG = new QuanNet.CustomsDetail.CustomTextbox();
             this.txtMay = new QuanNet.CustomsDetail.CustomTextbox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.txtTG1 = new QuanNet.CustomsDetail.CustomTextbox();
+            this.txtTG2 = new QuanNet.CustomsDetail.CustomTextbox();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelLogo.SuspendLayout();
@@ -80,6 +85,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(220, 325);
             this.panel1.TabIndex = 3;
+            // 
+            // btnThanhToan
+            // 
+            this.btnThanhToan.BackColor = System.Drawing.Color.MediumOrchid;
+            this.btnThanhToan.BackgroundColor = System.Drawing.Color.MediumOrchid;
+            this.btnThanhToan.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnThanhToan.BorderRadius = 20;
+            this.btnThanhToan.BorderSize = 0;
+            this.btnThanhToan.FlatAppearance.BorderSize = 0;
+            this.btnThanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThanhToan.ForeColor = System.Drawing.Color.White;
+            this.btnThanhToan.Location = new System.Drawing.Point(27, 266);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(138, 47);
+            this.btnThanhToan.TabIndex = 0;
+            this.btnThanhToan.Text = "Thanh toán";
+            this.btnThanhToan.TextColor = System.Drawing.Color.White;
+            this.btnThanhToan.UseVisualStyleBackColor = false;
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // btnOrder
             // 
@@ -171,6 +195,8 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.txtTG2);
+            this.panel2.Controls.Add(this.txtTG1);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.txtSodu);
             this.panel2.Controls.Add(this.label5);
@@ -252,25 +278,6 @@
             this.txtTongTien.Size = new System.Drawing.Size(136, 35);
             this.txtTongTien.TabIndex = 58;
             this.txtTongTien.UnderlinedStyle = false;
-            // 
-            // btnThanhToan
-            // 
-            this.btnThanhToan.BackColor = System.Drawing.Color.MediumOrchid;
-            this.btnThanhToan.BackgroundColor = System.Drawing.Color.MediumOrchid;
-            this.btnThanhToan.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnThanhToan.BorderRadius = 20;
-            this.btnThanhToan.BorderSize = 0;
-            this.btnThanhToan.FlatAppearance.BorderSize = 0;
-            this.btnThanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThanhToan.ForeColor = System.Drawing.Color.White;
-            this.btnThanhToan.Location = new System.Drawing.Point(27, 266);
-            this.btnThanhToan.Name = "btnThanhToan";
-            this.btnThanhToan.Size = new System.Drawing.Size(138, 47);
-            this.btnThanhToan.TabIndex = 0;
-            this.btnThanhToan.Text = "Thanh toán";
-            this.btnThanhToan.TextColor = System.Drawing.Color.White;
-            this.btnThanhToan.UseVisualStyleBackColor = false;
-            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // label4
             // 
@@ -378,6 +385,7 @@
             this.txtTG.Size = new System.Drawing.Size(136, 35);
             this.txtTG.TabIndex = 1;
             this.txtTG.UnderlinedStyle = false;
+            this.txtTG.Load += new System.EventHandler(this.FormUsers_Load);
             // 
             // txtMay
             // 
@@ -400,6 +408,60 @@
             this.txtMay.TabIndex = 0;
             this.txtMay.UnderlinedStyle = false;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // txtTG1
+            // 
+            this.txtTG1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.txtTG1.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtTG1.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtTG1.BorderRadius = 15;
+            this.txtTG1.BorderSize = 2;
+            this.txtTG1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTG1.ForeColor = System.Drawing.Color.DimGray;
+            this.txtTG1.Location = new System.Drawing.Point(74, 0);
+            this.txtTG1.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTG1.Multiline = false;
+            this.txtTG1.Name = "txtTG1";
+            this.txtTG1.Padding = new System.Windows.Forms.Padding(7);
+            this.txtTG1.PasswordChar = false;
+            this.txtTG1.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtTG1.PlaceholderText = "";
+            this.txtTG1.Size = new System.Drawing.Size(136, 35);
+            this.txtTG1.TabIndex = 62;
+            this.txtTG1.UnderlinedStyle = false;
+            this.txtTG1._TextChanged += new System.EventHandler(this.txtTG1__TextChanged);
+            // 
+            // txtTG2
+            // 
+            this.txtTG2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.txtTG2.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtTG2.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtTG2.BorderRadius = 15;
+            this.txtTG2.BorderSize = 2;
+            this.txtTG2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTG2.ForeColor = System.Drawing.Color.DimGray;
+            this.txtTG2.Location = new System.Drawing.Point(74, 43);
+            this.txtTG2.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTG2.Multiline = false;
+            this.txtTG2.Name = "txtTG2";
+            this.txtTG2.Padding = new System.Windows.Forms.Padding(7);
+            this.txtTG2.PasswordChar = false;
+            this.txtTG2.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtTG2.PlaceholderText = "";
+            this.txtTG2.Size = new System.Drawing.Size(136, 35);
+            this.txtTG2.TabIndex = 63;
+            this.txtTG2.UnderlinedStyle = false;
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 1000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // FormUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -413,6 +475,7 @@
             this.Name = "FormUsers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quan Ly ";
+            this.Load += new System.EventHandler(this.FormUsers_Load);
             this.panelMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
@@ -450,5 +513,9 @@
         private CustomsDetail.CustomTextbox txtTongTien;
         private CustomsDetail.CusBtn btnThanhToan;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Timer timer1;
+        private CustomsDetail.CustomTextbox txtTG2;
+        private CustomsDetail.CustomTextbox txtTG1;
+        private System.Windows.Forms.Timer timer2;
     }
 }
