@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -25,16 +26,15 @@ namespace QuanNet.FormsUser
 
         public FormUsers(string M, string K)
         {
+            InitializeComponent();
             ID_May = M;
             IDKhachHang = K;
-            InitializeComponent();
             random = new Random();
-            //this.Text = string.Empty;
-            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             GUI(ID_May,IDKhachHang);
             BllMayTinh.Instance.addTKinMay(ID_May, IDKhachHang,"");
             txtMay.Enabled = false;
             txtSodu.Enabled=false;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
         //=============UI CODE=============
         private Color SelectThemeColor()
@@ -121,6 +121,8 @@ namespace QuanNet.FormsUser
         {
             BllMayTinh.Instance.addTKinMay(ID_May,null,null);
             this.Dispose();
+
         }
+
     }
 }

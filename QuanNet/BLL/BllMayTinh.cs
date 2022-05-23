@@ -1,4 +1,5 @@
-﻿using QuanNet.Properties;
+﻿using QuanNet.DTO;
+using QuanNet.Properties;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -59,16 +60,37 @@ namespace QuanNet.BLL
             }
             return data;
         }
-        //public bool CheckUser(string user)
-        //{
-        //    foreach (TaiKhoan i in db.TaiKhoans)
-        //    {
-        //        if (i.TenDN == user) return true;
-        //    }
-        //    return false;
-        //    //true-update.....false-add
-        //}
+        public List<MayTinhView> GetMtView(string ID,string soGio, string Tien)
+        {
+            List<MayTinhView> data = new List<MayTinhView>();
+            foreach (May i in GetListMayByID(ID))
+            {
+                if (i.IdMay == ID)
+                {
+                    int sodu = 0;
+                    
+                    foreach (TaiKhoan j in db.TaiKhoans.ToList())
+                    {
+                        if (i.IdTK == j.IdTK)
+                        {
+                            sodu = j.Sodu;
+                        }
 
+                    }
+                    data.Add(new MayTinhView
+                    {
+                        SoMay = ID,
+                        TienGio=i.TienGio.ToString(),
+                        MaKhach = i.IdTK,
+                        SoDu=sodu.ToString(),
+                        HoatDong=i.HoatDong,
+                        SoGioChoi= soGio,
+                        Tong=Tien
+                    });
+                }
+            }
+            return data;
+        }    
         public void addTKinMay(string IdMay, string IdKhach,string HoatDong)
         {   
             May up = db.Mays.Find(IdMay);

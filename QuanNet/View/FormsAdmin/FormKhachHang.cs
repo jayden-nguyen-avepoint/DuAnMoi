@@ -15,11 +15,9 @@ namespace QuanNet
 {
     public partial class FormKhachHang : Form
     {   
-        
         public FormKhachHang()
         {
-            InitializeComponent();
-            
+            InitializeComponent(); 
             txtIDTK.Text = MaKHtutang();
             txtIDTK.Enabled = false;
             txtTK.Enabled = false;
@@ -128,20 +126,21 @@ namespace QuanNet
                 ShowList("");
                 dgvKH.ClearSelection();
         }
-
         private void btnNap_Click(object sender, EventArgs e)
         {
             if (dgvKH.SelectedRows.Count == 1)
-            {   
+            {
+                
                 int moneyAdd = Convert.ToInt32(txtNap.Text);
                 if (moneyAdd > 0)
-                {
+                { 
                     int Sodu = Convert.ToInt32(txtSoDu.Text);
                     Sodu += moneyAdd;
                     txtSoDu.Text = Sodu.ToString();
                     txtNap.Text = "";
                 }
                 else MessageBox.Show("Số lượng nạp không đúng", "Thông báo", MessageBoxButtons.OK);
+
                 NewTK();
             }
 

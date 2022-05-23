@@ -28,58 +28,60 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label22 = new System.Windows.Forms.Label();
-            this.TP08 = new QuanNet.CustomsDetail.CusBtn();
             this.label14 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label21 = new System.Windows.Forms.Label();
-            this.TP07 = new QuanNet.CustomsDetail.CusBtn();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
-            this.TP06 = new QuanNet.CustomsDetail.CusBtn();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
-            this.TP04 = new QuanNet.CustomsDetail.CusBtn();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
-            this.TP05 = new QuanNet.CustomsDetail.CusBtn();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
-            this.TP03 = new QuanNet.CustomsDetail.CusBtn();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
-            this.TP02 = new QuanNet.CustomsDetail.CusBtn();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.TP01 = new QuanNet.CustomsDetail.CusBtn();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.txtGia = new QuanNet.CustomsDetail.CustomTextbox();
             this.txtSL = new QuanNet.CustomsDetail.CustomTextbox();
             this.txtMon = new QuanNet.CustomsDetail.CustomTextbox();
             this.btnHuy = new QuanNet.CustomsDetail.CusBtn();
             this.btnThem = new QuanNet.CustomsDetail.CusBtn();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.TP08 = new QuanNet.CustomsDetail.CusBtn();
+            this.TP07 = new QuanNet.CustomsDetail.CusBtn();
+            this.TP06 = new QuanNet.CustomsDetail.CusBtn();
+            this.TP04 = new QuanNet.CustomsDetail.CusBtn();
+            this.TP05 = new QuanNet.CustomsDetail.CusBtn();
+            this.TP03 = new QuanNet.CustomsDetail.CusBtn();
+            this.TP02 = new QuanNet.CustomsDetail.CusBtn();
+            this.TP01 = new QuanNet.CustomsDetail.CusBtn();
             this.dgvList = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -140,26 +142,6 @@
             this.label22.TabIndex = 33;
             this.label22.Text = "đ";
             // 
-            // TP08
-            // 
-            this.TP08.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.TP08.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.TP08.BorderColor = System.Drawing.Color.Gold;
-            this.TP08.BorderRadius = 20;
-            this.TP08.BorderSize = 0;
-            this.TP08.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TP08.FlatAppearance.BorderSize = 0;
-            this.TP08.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TP08.ForeColor = System.Drawing.Color.White;
-            this.TP08.Location = new System.Drawing.Point(15, 149);
-            this.TP08.Name = "TP08";
-            this.TP08.Size = new System.Drawing.Size(129, 44);
-            this.TP08.TabIndex = 31;
-            this.TP08.Text = "NutriBoost";
-            this.TP08.TextColor = System.Drawing.Color.White;
-            this.TP08.UseVisualStyleBackColor = false;
-            this.TP08.Click += new System.EventHandler(this.Chon_Click);
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -201,26 +183,6 @@
             this.label21.Size = new System.Drawing.Size(15, 16);
             this.label21.TabIndex = 32;
             this.label21.Text = "đ";
-            // 
-            // TP07
-            // 
-            this.TP07.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.TP07.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.TP07.BorderColor = System.Drawing.Color.Gold;
-            this.TP07.BorderRadius = 20;
-            this.TP07.BorderSize = 0;
-            this.TP07.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TP07.FlatAppearance.BorderSize = 0;
-            this.TP07.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TP07.ForeColor = System.Drawing.Color.White;
-            this.TP07.Location = new System.Drawing.Point(15, 149);
-            this.TP07.Name = "TP07";
-            this.TP07.Size = new System.Drawing.Size(129, 44);
-            this.TP07.TabIndex = 31;
-            this.TP07.Text = "Redbull";
-            this.TP07.TextColor = System.Drawing.Color.White;
-            this.TP07.UseVisualStyleBackColor = false;
-            this.TP07.Click += new System.EventHandler(this.Chon_Click);
             // 
             // label6
             // 
@@ -264,26 +226,6 @@
             this.label20.TabIndex = 31;
             this.label20.Text = "đ";
             // 
-            // TP06
-            // 
-            this.TP06.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.TP06.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.TP06.BorderColor = System.Drawing.Color.Gold;
-            this.TP06.BorderRadius = 20;
-            this.TP06.BorderSize = 0;
-            this.TP06.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TP06.FlatAppearance.BorderSize = 0;
-            this.TP06.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TP06.ForeColor = System.Drawing.Color.White;
-            this.TP06.Location = new System.Drawing.Point(15, 149);
-            this.TP06.Name = "TP06";
-            this.TP06.Size = new System.Drawing.Size(129, 44);
-            this.TP06.TabIndex = 30;
-            this.TP06.Text = "Nước lọc";
-            this.TP06.TextColor = System.Drawing.Color.White;
-            this.TP06.UseVisualStyleBackColor = false;
-            this.TP06.Click += new System.EventHandler(this.Chon_Click);
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -325,26 +267,6 @@
             this.label18.Size = new System.Drawing.Size(15, 16);
             this.label18.TabIndex = 29;
             this.label18.Text = "đ";
-            // 
-            // TP04
-            // 
-            this.TP04.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.TP04.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.TP04.BorderColor = System.Drawing.Color.Gold;
-            this.TP04.BorderRadius = 20;
-            this.TP04.BorderSize = 0;
-            this.TP04.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TP04.FlatAppearance.BorderSize = 0;
-            this.TP04.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TP04.ForeColor = System.Drawing.Color.White;
-            this.TP04.Location = new System.Drawing.Point(13, 160);
-            this.TP04.Name = "TP04";
-            this.TP04.Size = new System.Drawing.Size(129, 44);
-            this.TP04.TabIndex = 28;
-            this.TP04.Text = "Cơm chiên";
-            this.TP04.TextColor = System.Drawing.Color.White;
-            this.TP04.UseVisualStyleBackColor = false;
-            this.TP04.Click += new System.EventHandler(this.Chon_Click);
             // 
             // label5
             // 
@@ -388,26 +310,6 @@
             this.label19.TabIndex = 30;
             this.label19.Text = "đ";
             // 
-            // TP05
-            // 
-            this.TP05.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.TP05.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.TP05.BorderColor = System.Drawing.Color.Gold;
-            this.TP05.BorderRadius = 20;
-            this.TP05.BorderSize = 0;
-            this.TP05.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TP05.FlatAppearance.BorderSize = 0;
-            this.TP05.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TP05.ForeColor = System.Drawing.Color.White;
-            this.TP05.Location = new System.Drawing.Point(15, 149);
-            this.TP05.Name = "TP05";
-            this.TP05.Size = new System.Drawing.Size(129, 44);
-            this.TP05.TabIndex = 29;
-            this.TP05.Text = "Coca";
-            this.TP05.TextColor = System.Drawing.Color.White;
-            this.TP05.UseVisualStyleBackColor = false;
-            this.TP05.Click += new System.EventHandler(this.Chon_Click);
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -450,26 +352,6 @@
             this.label17.TabIndex = 28;
             this.label17.Text = "đ";
             // 
-            // TP03
-            // 
-            this.TP03.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.TP03.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.TP03.BorderColor = System.Drawing.Color.Gold;
-            this.TP03.BorderRadius = 20;
-            this.TP03.BorderSize = 0;
-            this.TP03.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TP03.FlatAppearance.BorderSize = 0;
-            this.TP03.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TP03.ForeColor = System.Drawing.Color.White;
-            this.TP03.Location = new System.Drawing.Point(15, 155);
-            this.TP03.Name = "TP03";
-            this.TP03.Size = new System.Drawing.Size(129, 44);
-            this.TP03.TabIndex = 27;
-            this.TP03.Text = "Mì tôm";
-            this.TP03.TextColor = System.Drawing.Color.White;
-            this.TP03.UseVisualStyleBackColor = false;
-            this.TP03.Click += new System.EventHandler(this.Chon_Click);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -511,27 +393,6 @@
             this.label16.Size = new System.Drawing.Size(15, 16);
             this.label16.TabIndex = 27;
             this.label16.Text = "đ";
-            // 
-            // TP02
-            // 
-            this.TP02.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.TP02.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.TP02.BorderColor = System.Drawing.Color.Gold;
-            this.TP02.BorderRadius = 20;
-            this.TP02.BorderSize = 0;
-            this.TP02.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TP02.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.TP02.FlatAppearance.BorderSize = 0;
-            this.TP02.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TP02.ForeColor = System.Drawing.Color.White;
-            this.TP02.Location = new System.Drawing.Point(15, 155);
-            this.TP02.Name = "TP02";
-            this.TP02.Size = new System.Drawing.Size(129, 44);
-            this.TP02.TabIndex = 26;
-            this.TP02.Text = "Bánh mì";
-            this.TP02.TextColor = System.Drawing.Color.White;
-            this.TP02.UseVisualStyleBackColor = false;
-            this.TP02.Click += new System.EventHandler(this.Chon_Click);
             // 
             // label3
             // 
@@ -595,26 +456,6 @@
             this.pictureBox7.TabIndex = 24;
             this.pictureBox7.TabStop = false;
             // 
-            // TP01
-            // 
-            this.TP01.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.TP01.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.TP01.BorderColor = System.Drawing.Color.Gold;
-            this.TP01.BorderRadius = 20;
-            this.TP01.BorderSize = 0;
-            this.TP01.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TP01.FlatAppearance.BorderSize = 0;
-            this.TP01.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TP01.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.TP01.Location = new System.Drawing.Point(15, 155);
-            this.TP01.Name = "TP01";
-            this.TP01.Size = new System.Drawing.Size(129, 44);
-            this.TP01.TabIndex = 17;
-            this.TP01.Text = "Burger";
-            this.TP01.TextColor = System.Drawing.SystemColors.ControlLightLight;
-            this.TP01.UseVisualStyleBackColor = true;
-            this.TP01.Click += new System.EventHandler(this.Chon_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -643,6 +484,50 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(225, 598);
             this.panel2.TabIndex = 2;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.Control;
+            this.label12.Location = new System.Drawing.Point(5, 230);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(40, 20);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "Giá:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.Control;
+            this.label11.Location = new System.Drawing.Point(5, 159);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(35, 20);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "SL:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.Control;
+            this.label10.Location = new System.Drawing.Point(0, 87);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(46, 20);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Món:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe Script", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.PaleVioletRed;
+            this.label9.Location = new System.Drawing.Point(29, 18);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(159, 42);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Order list";
             // 
             // txtGia
             // 
@@ -747,58 +632,202 @@
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // label12
+            // TP08
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.Control;
-            this.label12.Location = new System.Drawing.Point(5, 230);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(40, 20);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "Giá:";
+            this.TP08.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.TP08.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.TP08.BorderColor = System.Drawing.Color.Gold;
+            this.TP08.BorderRadius = 20;
+            this.TP08.BorderSize = 0;
+            this.TP08.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TP08.FlatAppearance.BorderSize = 0;
+            this.TP08.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TP08.ForeColor = System.Drawing.Color.White;
+            this.TP08.Location = new System.Drawing.Point(15, 149);
+            this.TP08.Name = "TP08";
+            this.TP08.Size = new System.Drawing.Size(129, 44);
+            this.TP08.TabIndex = 31;
+            this.TP08.Text = "NutriBoost";
+            this.TP08.TextColor = System.Drawing.Color.White;
+            this.TP08.UseVisualStyleBackColor = false;
+            this.TP08.Click += new System.EventHandler(this.Chon_Click);
             // 
-            // label11
+            // TP07
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.Control;
-            this.label11.Location = new System.Drawing.Point(5, 159);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(35, 20);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "SL:";
+            this.TP07.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.TP07.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.TP07.BorderColor = System.Drawing.Color.Gold;
+            this.TP07.BorderRadius = 20;
+            this.TP07.BorderSize = 0;
+            this.TP07.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TP07.FlatAppearance.BorderSize = 0;
+            this.TP07.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TP07.ForeColor = System.Drawing.Color.White;
+            this.TP07.Location = new System.Drawing.Point(15, 149);
+            this.TP07.Name = "TP07";
+            this.TP07.Size = new System.Drawing.Size(129, 44);
+            this.TP07.TabIndex = 31;
+            this.TP07.Text = "Redbull";
+            this.TP07.TextColor = System.Drawing.Color.White;
+            this.TP07.UseVisualStyleBackColor = false;
+            this.TP07.Click += new System.EventHandler(this.Chon_Click);
             // 
-            // label10
+            // TP06
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.Control;
-            this.label10.Location = new System.Drawing.Point(0, 87);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(46, 20);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "Món:";
+            this.TP06.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.TP06.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.TP06.BorderColor = System.Drawing.Color.Gold;
+            this.TP06.BorderRadius = 20;
+            this.TP06.BorderSize = 0;
+            this.TP06.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TP06.FlatAppearance.BorderSize = 0;
+            this.TP06.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TP06.ForeColor = System.Drawing.Color.White;
+            this.TP06.Location = new System.Drawing.Point(15, 149);
+            this.TP06.Name = "TP06";
+            this.TP06.Size = new System.Drawing.Size(129, 44);
+            this.TP06.TabIndex = 30;
+            this.TP06.Text = "Nước lọc";
+            this.TP06.TextColor = System.Drawing.Color.White;
+            this.TP06.UseVisualStyleBackColor = false;
+            this.TP06.Click += new System.EventHandler(this.Chon_Click);
             // 
-            // label9
+            // TP04
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe Script", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.PaleVioletRed;
-            this.label9.Location = new System.Drawing.Point(29, 18);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(159, 42);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Order list";
+            this.TP04.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.TP04.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.TP04.BorderColor = System.Drawing.Color.Gold;
+            this.TP04.BorderRadius = 20;
+            this.TP04.BorderSize = 0;
+            this.TP04.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TP04.FlatAppearance.BorderSize = 0;
+            this.TP04.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TP04.ForeColor = System.Drawing.Color.White;
+            this.TP04.Location = new System.Drawing.Point(13, 160);
+            this.TP04.Name = "TP04";
+            this.TP04.Size = new System.Drawing.Size(129, 44);
+            this.TP04.TabIndex = 28;
+            this.TP04.Text = "Cơm chiên";
+            this.TP04.TextColor = System.Drawing.Color.White;
+            this.TP04.UseVisualStyleBackColor = false;
+            this.TP04.Click += new System.EventHandler(this.Chon_Click);
+            // 
+            // TP05
+            // 
+            this.TP05.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.TP05.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.TP05.BorderColor = System.Drawing.Color.Gold;
+            this.TP05.BorderRadius = 20;
+            this.TP05.BorderSize = 0;
+            this.TP05.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TP05.FlatAppearance.BorderSize = 0;
+            this.TP05.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TP05.ForeColor = System.Drawing.Color.White;
+            this.TP05.Location = new System.Drawing.Point(15, 149);
+            this.TP05.Name = "TP05";
+            this.TP05.Size = new System.Drawing.Size(129, 44);
+            this.TP05.TabIndex = 29;
+            this.TP05.Text = "Coca";
+            this.TP05.TextColor = System.Drawing.Color.White;
+            this.TP05.UseVisualStyleBackColor = false;
+            this.TP05.Click += new System.EventHandler(this.Chon_Click);
+            // 
+            // TP03
+            // 
+            this.TP03.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.TP03.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.TP03.BorderColor = System.Drawing.Color.Gold;
+            this.TP03.BorderRadius = 20;
+            this.TP03.BorderSize = 0;
+            this.TP03.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TP03.FlatAppearance.BorderSize = 0;
+            this.TP03.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TP03.ForeColor = System.Drawing.Color.White;
+            this.TP03.Location = new System.Drawing.Point(15, 155);
+            this.TP03.Name = "TP03";
+            this.TP03.Size = new System.Drawing.Size(129, 44);
+            this.TP03.TabIndex = 27;
+            this.TP03.Text = "Mì tôm";
+            this.TP03.TextColor = System.Drawing.Color.White;
+            this.TP03.UseVisualStyleBackColor = false;
+            this.TP03.Click += new System.EventHandler(this.Chon_Click);
+            // 
+            // TP02
+            // 
+            this.TP02.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.TP02.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.TP02.BorderColor = System.Drawing.Color.Gold;
+            this.TP02.BorderRadius = 20;
+            this.TP02.BorderSize = 0;
+            this.TP02.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TP02.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.TP02.FlatAppearance.BorderSize = 0;
+            this.TP02.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TP02.ForeColor = System.Drawing.Color.White;
+            this.TP02.Location = new System.Drawing.Point(15, 155);
+            this.TP02.Name = "TP02";
+            this.TP02.Size = new System.Drawing.Size(129, 44);
+            this.TP02.TabIndex = 26;
+            this.TP02.Text = "Bánh mì";
+            this.TP02.TextColor = System.Drawing.Color.White;
+            this.TP02.UseVisualStyleBackColor = false;
+            this.TP02.Click += new System.EventHandler(this.Chon_Click);
+            // 
+            // TP01
+            // 
+            this.TP01.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.TP01.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.TP01.BorderColor = System.Drawing.Color.Gold;
+            this.TP01.BorderRadius = 20;
+            this.TP01.BorderSize = 0;
+            this.TP01.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TP01.FlatAppearance.BorderSize = 0;
+            this.TP01.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TP01.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.TP01.Location = new System.Drawing.Point(15, 155);
+            this.TP01.Name = "TP01";
+            this.TP01.Size = new System.Drawing.Size(129, 44);
+            this.TP01.TabIndex = 17;
+            this.TP01.Text = "Burger";
+            this.TP01.TextColor = System.Drawing.SystemColors.ControlLightLight;
+            this.TP01.UseVisualStyleBackColor = true;
+            this.TP01.Click += new System.EventHandler(this.Chon_Click);
             // 
             // dgvList
             // 
-            this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvList.Location = new System.Drawing.Point(4, 282);
+            this.dgvList.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvList.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(46)))), ((int)(((byte)(105)))));
+            this.dgvList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvList.ColumnHeadersHeight = 30;
+            this.dgvList.EnableHeadersVisualStyles = false;
+            this.dgvList.GridColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvList.Location = new System.Drawing.Point(4, 257);
             this.dgvList.Name = "dgvList";
-            this.dgvList.RowHeadersWidth = 51;
+            this.dgvList.RowHeadersVisible = false;
+            this.dgvList.RowHeadersWidth = 60;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(46)))), ((int)(((byte)(105)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(7);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumSlateBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvList.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvList.RowTemplate.Height = 24;
-            this.dgvList.Size = new System.Drawing.Size(216, 193);
+            this.dgvList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvList.Size = new System.Drawing.Size(216, 218);
             this.dgvList.TabIndex = 32;
             // 
             // FormOrderKH

@@ -106,7 +106,7 @@
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton1.Location = new System.Drawing.Point(465, 252);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(110, 50);
+            this.iconButton1.Size = new System.Drawing.Size(120, 50);
             this.iconButton1.TabIndex = 29;
             this.iconButton1.Text = "Reload";
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
