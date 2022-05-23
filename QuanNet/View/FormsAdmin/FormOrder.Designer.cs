@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvOrder = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -37,7 +37,7 @@
             this.btnXN = new QuanNet.CustomsDetail.CusBtn();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbbSX = new QuanNet.CustomsDetail.CusCbb();
+            this.cbbHDCT = new QuanNet.CustomsDetail.CusCbb();
             this.txtSearch = new QuanNet.CustomsDetail.CustomTextbox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).BeginInit();
@@ -62,14 +62,14 @@
             this.dgvOrder.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvOrder.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvOrder.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MediumSlateBlue;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.MediumSlateBlue;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MediumSlateBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvOrder.ColumnHeadersHeight = 30;
             this.dgvOrder.EnableHeadersVisualStyles = false;
             this.dgvOrder.GridColor = System.Drawing.SystemColors.ControlLightLight;
@@ -77,14 +77,14 @@
             this.dgvOrder.Name = "dgvOrder";
             this.dgvOrder.RowHeadersVisible = false;
             this.dgvOrder.RowHeadersWidth = 60;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(46)))), ((int)(((byte)(105)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(7);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumSlateBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvOrder.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(46)))), ((int)(((byte)(105)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.5F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(7);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.MediumSlateBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvOrder.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvOrder.RowTemplate.Height = 24;
             this.dgvOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvOrder.Size = new System.Drawing.Size(1129, 448);
@@ -97,7 +97,7 @@
             this.panel2.Controls.Add(this.btnXN);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.cbbSX);
+            this.panel2.Controls.Add(this.cbbHDCT);
             this.panel2.Controls.Add(this.txtSearch);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 476);
@@ -161,24 +161,25 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Tìm kiếm";
             // 
-            // cbbSX
+            // cbbHDCT
             // 
-            this.cbbSX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.cbbSX.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cbbSX.BorderSize = 1;
-            this.cbbSX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cbbSX.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cbbSX.ForeColor = System.Drawing.Color.White;
-            this.cbbSX.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.cbbSX.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cbbSX.ListTextColor = System.Drawing.Color.DimGray;
-            this.cbbSX.Location = new System.Drawing.Point(959, 51);
-            this.cbbSX.MinimumSize = new System.Drawing.Size(150, 30);
-            this.cbbSX.Name = "cbbSX";
-            this.cbbSX.Padding = new System.Windows.Forms.Padding(1);
-            this.cbbSX.Size = new System.Drawing.Size(182, 30);
-            this.cbbSX.TabIndex = 1;
-            this.cbbSX.Texts = "";
+            this.cbbHDCT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.cbbHDCT.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cbbHDCT.BorderSize = 1;
+            this.cbbHDCT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbbHDCT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cbbHDCT.ForeColor = System.Drawing.Color.White;
+            this.cbbHDCT.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cbbHDCT.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cbbHDCT.ListTextColor = System.Drawing.Color.DimGray;
+            this.cbbHDCT.Location = new System.Drawing.Point(959, 51);
+            this.cbbHDCT.MinimumSize = new System.Drawing.Size(150, 30);
+            this.cbbHDCT.Name = "cbbHDCT";
+            this.cbbHDCT.Padding = new System.Windows.Forms.Padding(1);
+            this.cbbHDCT.Size = new System.Drawing.Size(182, 30);
+            this.cbbHDCT.TabIndex = 1;
+            this.cbbHDCT.Texts = "";
+            this.cbbHDCT.OnSelectedIndexChanged += new System.EventHandler(this.cbbHDCT_OnSelectedIndexChanged);
             // 
             // txtSearch
             // 
@@ -227,7 +228,7 @@
         private CustomsDetail.CusBtn btnXN;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private CustomsDetail.CusCbb cbbSX;
+        private CustomsDetail.CusCbb cbbHDCT;
         private System.Windows.Forms.DataGridView dgvOrder;
     }
 }

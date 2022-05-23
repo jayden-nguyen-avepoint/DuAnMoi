@@ -103,6 +103,16 @@ namespace QuanNet.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _280142235_736713977454064_1553403823599132356_n_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("280142235_736713977454064_1553403823599132356_n-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _6133365 {
             get {
                 object obj = ResourceManager.GetObject("6133365", resourceCulture);

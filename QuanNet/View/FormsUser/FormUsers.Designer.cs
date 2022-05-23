@@ -30,6 +30,7 @@
     {
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnThanhToan = new QuanNet.CustomsDetail.CusBtn();
             this.btnOrder = new System.Windows.Forms.Button();
             this.btnApp = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
@@ -42,7 +43,6 @@
             this.txtSodu = new QuanNet.CustomsDetail.CustomTextbox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtTongTien = new QuanNet.CustomsDetail.CustomTextbox();
-            this.btnThanhToan = new QuanNet.CustomsDetail.CusBtn();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -80,6 +80,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(220, 325);
             this.panel1.TabIndex = 3;
+            // 
+            // btnThanhToan
+            // 
+            this.btnThanhToan.BackColor = System.Drawing.Color.MediumOrchid;
+            this.btnThanhToan.BackgroundColor = System.Drawing.Color.MediumOrchid;
+            this.btnThanhToan.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnThanhToan.BorderRadius = 20;
+            this.btnThanhToan.BorderSize = 0;
+            this.btnThanhToan.FlatAppearance.BorderSize = 0;
+            this.btnThanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThanhToan.ForeColor = System.Drawing.Color.White;
+            this.btnThanhToan.Location = new System.Drawing.Point(27, 266);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(138, 47);
+            this.btnThanhToan.TabIndex = 0;
+            this.btnThanhToan.Text = "Đăng xuất";
+            this.btnThanhToan.TextColor = System.Drawing.Color.White;
+            this.btnThanhToan.UseVisualStyleBackColor = false;
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // btnOrder
             // 
@@ -253,25 +272,6 @@
             this.txtTongTien.TabIndex = 58;
             this.txtTongTien.UnderlinedStyle = false;
             // 
-            // btnThanhToan
-            // 
-            this.btnThanhToan.BackColor = System.Drawing.Color.MediumOrchid;
-            this.btnThanhToan.BackgroundColor = System.Drawing.Color.MediumOrchid;
-            this.btnThanhToan.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnThanhToan.BorderRadius = 20;
-            this.btnThanhToan.BorderSize = 0;
-            this.btnThanhToan.FlatAppearance.BorderSize = 0;
-            this.btnThanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThanhToan.ForeColor = System.Drawing.Color.White;
-            this.btnThanhToan.Location = new System.Drawing.Point(27, 266);
-            this.btnThanhToan.Name = "btnThanhToan";
-            this.btnThanhToan.Size = new System.Drawing.Size(138, 47);
-            this.btnThanhToan.TabIndex = 0;
-            this.btnThanhToan.Text = "Thanh toán";
-            this.btnThanhToan.TextColor = System.Drawing.Color.White;
-            this.btnThanhToan.UseVisualStyleBackColor = false;
-            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -413,6 +413,7 @@
             this.Name = "FormUsers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quan Ly ";
+            //this.Load += new System.EventHandler(this.FormUsers_Load);
             this.panelMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);

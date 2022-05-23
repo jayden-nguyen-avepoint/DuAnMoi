@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanNet.Properties;
+using QuanNet.CustomsDetail;
 
 namespace QuanNet
 {
@@ -37,6 +38,7 @@ namespace QuanNet
             txtCauHinh.Enabled=false;
             txtTien.Text = BllMayTinh.Instance.GetMayByIDMay(IDMay).TienGio.ToString();
             txtTien.Enabled=false;
+            txtHD.Text = BllMayTinh.Instance.GetMayByIDMay(IDMay).HoatDong;
         }
         private void Button_Click(object sender, EventArgs e)
         {
@@ -53,13 +55,14 @@ namespace QuanNet
         {
             if (txtIDTK.Text != "Trống")
             {
-                dgvMaytinh.DataSource = BllMayTinh.Instance.GetMtView(txtMay.Text, "", "");
+                BllMayTinh.Instance.GetMtView(txtMay.Text, "", "");
                 NgayGioBD();
             }
             else
             {
                 MessageBox.Show("Chưa có ai sd máy này","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+           
         }
 
         private void btnEnd_Click(object sender, EventArgs e)
@@ -83,7 +86,7 @@ namespace QuanNet
                     }
                     else TongTienChoi.ToString();
                 }
-                dgvMaytinh.DataSource = BllMayTinh.Instance.GetMtView(txtMay.Text, interval.ToString(), TongTienChoi.ToString());
+                BllMayTinh.Instance.GetMtView(txtMay.Text, interval.ToString(), TongTienChoi.ToString());
                 foreach (TaiKhoan i in BllKhachHang.Instance.GetListTKByIDTK(txtIDTK.Text))
                 {
                     TaiKhoan tk = new TaiKhoan()
@@ -103,6 +106,26 @@ namespace QuanNet
                 MessageBox.Show("Chưa có ai sd máy này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+        }
+
+        private void FormMayTinh_Load(object sender, EventArgs e)
+        {
+            foreach (var item in panel1.Controls)
+            {
+                if (item is IconButton)
+                {  
+                        if(BllMayTinh.Instance.GetMayByIDMay(((IconButton)item).Name).TrangThai==true)
+                        {
+                            ((IconButton)item).IconColor= Color.Red;
+                        }
+                    
+                }
+            }
+        }
+
+        private void btnreload_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanNet.BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,17 @@ namespace QuanNet
         public FormOrder()
         {
             InitializeComponent();
+            cbbHDCT.Items.Add("None");
+            cbbHDCT.Items.AddRange(BllOrderKH.Instance.GetCBB().ToArray());
+        }
+        public void Show(string CT)
+        {
+            dgvOrder.DataSource= BllOrderKH.Instance.GetListTPViewByIDCT(CT);
+        }
+
+        private void cbbHDCT_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            Show(cbbHDCT.SelectedItem.ToString());
         }
     }
 }
