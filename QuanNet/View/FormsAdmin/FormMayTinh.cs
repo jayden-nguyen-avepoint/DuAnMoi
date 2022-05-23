@@ -122,11 +122,6 @@ namespace QuanNet
                 }
             }
         }
-
-        private void btnreload_Click(object sender, EventArgs e)
-        {
-           
-        }
     }
 }
             //Console.WriteLine("Hours: " + interval.Hours);
