@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanNet.Properties;
 using QuanNet.CustomsDetail;
+using QuanNet.LinQ;
 
 namespace QuanNet
 {

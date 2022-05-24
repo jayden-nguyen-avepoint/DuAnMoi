@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using QuanNet.DTO;
+using QuanNet.LinQ;
 
 namespace QuanNet.BLL
 {

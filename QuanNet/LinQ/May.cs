@@ -1,4 +1,4 @@
-namespace QuanNet
+namespace QuanNet.LinQ
 {
     using System;
     using System.Collections.Generic;
@@ -16,19 +16,17 @@ namespace QuanNet
         }
 
         [Key]
-        [StringLength(10)]
+        [StringLength(20)]
         public string IdMay { get; set; }
 
         [Required]
-        [StringLength(30)]
         public string CauHinh { get; set; }
 
         public bool TrangThai { get; set; }
 
-        [StringLength(30)]
         public string HoatDong { get; set; }
 
-        [StringLength(10)]
+        [StringLength(20)]
         public string IdTK { get; set; }
 
         public int TienGio { get; set; }

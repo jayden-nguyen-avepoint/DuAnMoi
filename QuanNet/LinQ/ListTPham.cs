@@ -1,4 +1,4 @@
-namespace QuanNet
+namespace QuanNet.LinQ
 {
     using System;
     using System.Collections.Generic;
@@ -10,11 +10,11 @@ namespace QuanNet
     public partial class ListTPham
     {
         [Key]
-        [StringLength(10)]
+        [StringLength(20)]
         public string IdOrderList { get; set; }
 
         [Required]
-        [StringLength(10)]
+        [StringLength(20)]
         public string IdTP { get; set; }
 
         public int SoluongTP { get; set; }
@@ -22,7 +22,7 @@ namespace QuanNet
         public int ThanhTien { get; set; }
 
         [Required]
-        [StringLength(10)]
+        [StringLength(20)]
         public string IdChiTiet { get; set; }
 
         public virtual HoaDonChiTiet HoaDonChiTiet { get; set; }
