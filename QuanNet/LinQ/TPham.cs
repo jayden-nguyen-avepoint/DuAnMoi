@@ -1,4 +1,4 @@
-namespace QuanNet
+namespace QuanNet.LinQ
 {
     using System;
     using System.Collections.Generic;
@@ -16,17 +16,16 @@ namespace QuanNet
         }
 
         [Key]
-        [StringLength(10)]
+        [StringLength(20)]
         public string IdTP { get; set; }
 
         [Required]
-        [StringLength(100)]
         public string TenTP { get; set; }
 
         public int Gia { get; set; }
 
         [Required]
-        [StringLength(10)]
+        [StringLength(20)]
         public string IdLoaiTP { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

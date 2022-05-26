@@ -49,6 +49,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -69,7 +70,6 @@
     <Compile Include="BLL\BllOrderKH.cs" />
     <Compile Include="DTO\MayTinhView.cs" />
     <Compile Include="DTO\OrderKHView.cs" />
-    <Compile Include="LinQ\DoAnQLCyber.cs" />
     <Compile Include="DTO\CbbIDKH.cs" />
     <Compile Include="DTO\HoaDonView.cs" />
     <Compile Include="DTO\TaiKhoanView.cs" />
@@ -78,8 +78,14 @@
     <Compile Include="LinQ\ListTPham.cs" />
     <Compile Include="LinQ\LoaiTPham.cs" />
     <Compile Include="LinQ\May.cs" />
+    <Compile Include="LinQ\DoAnQLCyber.cs" />
     <Compile Include="LinQ\TaiKhoan.cs" />
     <Compile Include="LinQ\TPham.cs" />
+    <Compile Include="QuanLyCyberDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyCyberDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="View\CustomsDetail\CusBtn.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -213,6 +219,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="QuanLyCyberDataSet.xsc">
+      <DependentUpon>QuanLyCyberDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyCyberDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyCyberDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyCyberDataSet.xss">
+      <DependentUpon>QuanLyCyberDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Resources\Hoc_Them-removebg-preview %281%291.png" />
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,4 @@
-namespace QuanNet
+namespace QuanNet.LinQ
 {
     using System;
     using System.Collections.Generic;
@@ -10,18 +10,18 @@ namespace QuanNet
     public partial class HoaDon
     {
         [Key]
-        [StringLength(10)]
+        [StringLength(20)]
         public string IdHoaDon { get; set; }
 
         [Column(TypeName = "date")]
         public DateTime NgayXuatHD { get; set; }
 
         [Required]
-        [StringLength(10)]
+        [StringLength(20)]
         public string IdTK { get; set; }
 
         [Required]
-        [StringLength(10)]
+        [StringLength(20)]
         public string IdChiTiet { get; set; }
 
         public virtual HoaDonChiTiet HoaDonChiTiet { get; set; }

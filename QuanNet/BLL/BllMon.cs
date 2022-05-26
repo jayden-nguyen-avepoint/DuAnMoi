@@ -1,4 +1,5 @@
-﻿using QuanNet.Properties;
+﻿using QuanNet.LinQ;
+using QuanNet.Properties;
 using System;
 using System.Collections.Generic;
 using System.Linq;

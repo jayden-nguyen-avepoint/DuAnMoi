@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using QuanNet.DTO;
+using QuanNet.LinQ;
 
 namespace QuanNet.BLL
 {
@@ -49,7 +50,7 @@ namespace QuanNet.BLL
                 }
                 return id;
         }
-        public List<ListTPham> GetListTPByIDTP(string IDTP)
+        public List<ListTPham> GetTPByIDTP(string IDTP)
         {
             List<ListTPham> data = new List<ListTPham>();
             if (IDTP == "")
@@ -58,7 +59,7 @@ namespace QuanNet.BLL
             }
             else
             {
-                data = db.ListTPhams.Where(p => p.IdTP == IDTP.ToString()).Select(p => p).ToList();
+                data = db.ListTPhams.Where(p => p.IdTP == IDTP).Select(p => p).ToList();
             }
             return data;
         }
@@ -71,7 +72,7 @@ namespace QuanNet.BLL
             }
             else
             {
-                data = db.ListTPhams.Where(p => p.IdChiTiet == IDCT.ToString()).Select(p => p).ToList();
+                data = db.ListTPhams.Where(p => p.IdChiTiet == IDCT).Select(p => p).ToList();
             }
             return data;
         }

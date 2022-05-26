@@ -1,5 +1,6 @@
 ﻿using QuanNet.BLL;
 using QuanNet.CustomsDetail;
+using QuanNet.LinQ;
 using QuanNet.Properties;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,7 @@ namespace QuanNet.FormsUser
 
         public string ID_May { get; set; }
         public string IDKhachHang { get; set; }
+        public string time { get; set; }
 
         public FormUsers(string M, string K)
         {
@@ -35,7 +37,10 @@ namespace QuanNet.FormsUser
             txtMay.Enabled = false;
             txtSodu.Enabled=false;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-        }
+            timer1.Start();
+            this.FormBorderStyle = FormBorderStyle.None;
+        
+    }
         //=============UI CODE=============
         private Color SelectThemeColor()
         {
@@ -106,6 +111,27 @@ namespace QuanNet.FormsUser
                 }
             }
         }
+        public int TinhTgChoi(DateTime time)
+        {
+            DateTime aDateTime = DateTime.Now;
+            TimeSpan interval = aDateTime.Subtract(time);
+            int tienGio = BllMayTinh.Instance.GetMayByIDMay(ID_May).TienGio;
+            int TongTienChoi = tienGio * interval.Hours + tienGio * interval.Minutes / 60 + tienGio * interval.Seconds / 3600;
+            if (TongTienChoi <= 2000)
+            {
+                TongTienChoi = 2000;
+            }
+            else
+            {
+                string TT = Convert.ToString(TongTienChoi);
+                if (Convert.ToInt32(TT.Substring(TT.Length - 3, 3)) > 1)
+                {
+                    TongTienChoi = (Convert.ToInt32(TT.Substring(0, TT.Length - 3)) + 1) * 1000;
+                }
+                else return TongTienChoi;
+            }
+            return TongTienChoi;
+        }
         private void btnApp_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormsUser.FormApp(ID_May, IDKhachHang), sender);
@@ -119,10 +145,20 @@ namespace QuanNet.FormsUser
 
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
+            timer1.Stop();
+            MessageBox.Show(TinhTgChoi(Convert.ToDateTime(time)).ToString());
             BllMayTinh.Instance.addTKinMay(ID_May,null,null);
             this.Dispose();
-
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            txtTG.Text= (Convert.ToDateTime(DateTime.Now.ToLongTimeString())-Convert.ToDateTime(time)).ToString();
+
+        }
+        private void FormUsers_Load(object sender, EventArgs e)
+        {
+            time= DateTime.Now.ToString();
+        }
     }
 }

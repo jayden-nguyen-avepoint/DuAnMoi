@@ -1,4 +1,5 @@
 ﻿using QuanNet.BLL;
+using QuanNet.LinQ;
 using QuanNet.Properties;
 using System;
 using System.Collections.Generic;
@@ -48,7 +49,7 @@ namespace QuanNet.FormsUser
         {
             string ma = "";
             List<int> l = new List<int>();
-            foreach (ListTPham tk in BllOrderKH.Instance.GetListTPByIDTP(""))
+            foreach (ListTPham tk in BllOrderKH.Instance.GetListTPByIDCT(""))
             {
                 l.Add(Convert.ToInt32(tk.IdOrderList.Remove(0, 5)));
             }
@@ -80,7 +81,7 @@ namespace QuanNet.FormsUser
         public void ShowListHD(string Id)
         {
 
-            dgvList.DataSource = BllOrderKH.Instance.GetListTPViewByIDCT(BllOrderKH.Instance.Get(Id));
+            dgvList.DataSource = BllOrderKH.Instance.GetListTPViewByIDCT(Id);
         }
     }
 }

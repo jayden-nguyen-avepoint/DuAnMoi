@@ -533,7 +533,7 @@
             this.btnreload.Size = new System.Drawing.Size(30, 30);
             this.btnreload.TabIndex = 24;
             this.btnreload.UseVisualStyleBackColor = false;
-            this.btnreload.Click += new System.EventHandler(this.btnreload_Click);
+            this.btnreload.Click += new System.EventHandler(this.FormMayTinh_Load);
             // 
             // label5
             // 

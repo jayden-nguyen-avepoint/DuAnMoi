@@ -3,12 +3,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Linq;
 
-namespace QuanNet
+namespace QuanNet.LinQ
 {
     public partial class DoAnQLCyber : DbContext
     {
         public DoAnQLCyber()
-            : base("name=DoAnQLCyberGame")
+            : base("name=DoAnQLCyber")
         {
         }
 
@@ -22,65 +22,6 @@ namespace QuanNet
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<HoaDon>()
-                .Property(e => e.IdHoaDon)
-                .IsFixedLength();
-
-            modelBuilder.Entity<HoaDon>()
-                .Property(e => e.IdTK)
-                .IsFixedLength();
-
-            modelBuilder.Entity<HoaDon>()
-                .Property(e => e.IdChiTiet)
-                .IsFixedLength();
-
-            modelBuilder.Entity<HoaDonChiTiet>()
-                .Property(e => e.IdChiTiet)
-                .IsFixedLength();
-
-            modelBuilder.Entity<HoaDonChiTiet>()
-                .Property(e => e.IdMay)
-                .IsFixedLength();
-
-            modelBuilder.Entity<ListTPham>()
-                .Property(e => e.IdOrderList)
-                .IsFixedLength();
-
-            modelBuilder.Entity<ListTPham>()
-                .Property(e => e.IdTP)
-                .IsFixedLength();
-
-            modelBuilder.Entity<ListTPham>()
-                .Property(e => e.IdChiTiet)
-                .IsFixedLength();
-
-            modelBuilder.Entity<LoaiTPham>()
-                .Property(e => e.IdLoaiTP)
-                .IsFixedLength();
-
-            modelBuilder.Entity<May>()
-                .Property(e => e.IdMay)
-                .IsFixedLength();
-
-            modelBuilder.Entity<May>()
-                .Property(e => e.IdTK)
-                .IsFixedLength();
-
-            modelBuilder.Entity<TaiKhoan>()
-                .Property(e => e.IdTK)
-                .IsFixedLength();
-
-            modelBuilder.Entity<TaiKhoan>()
-                .Property(e => e.LienHe)
-                .IsFixedLength();
-
-            modelBuilder.Entity<TPham>()
-                .Property(e => e.IdTP)
-                .IsFixedLength();
-
-            modelBuilder.Entity<TPham>()
-                .Property(e => e.IdLoaiTP)
-                .IsFixedLength();
         }
     }
 }

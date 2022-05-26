@@ -1,5 +1,6 @@
 ﻿using FontAwesome.Sharp;
 using QuanNet.BLL;
+using QuanNet.LinQ;
 using QuanNet.Properties;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,7 @@ namespace QuanNet
     public partial class FormLogin : Form
     {
         //----
+        public string time { get; set; }
         private string PasswordAdmin = "123";
         private string IDAdmin = "admin";
         private IconButton currentBtn;
@@ -180,6 +182,7 @@ namespace QuanNet
                             BllMayTinh.Instance.addTKinMay(may, tk, "");
                             FormsUser.FormUsers f = new FormsUser.FormUsers(may, tk);
                             f.Show();
+                            //d(DateTime.Now);
                         }
                         else
                         {
@@ -190,7 +193,8 @@ namespace QuanNet
                 {
                     MessageBox.Show("Tài khoản hoặc mật khẩu không đúng", "Thong bao", MessageBoxButtons.OK);
                 }
-            }    
+
+            }
             txtTKKH.Text = "";
             txtMKKH.Text = "";
             cbbMay.SelectedIndex = -1;       
