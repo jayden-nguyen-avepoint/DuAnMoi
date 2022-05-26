@@ -17,12 +17,16 @@ namespace QuanNet.FormsUser
     {
         public string ID_May { get; set; }
         public string ID_KhachHang { get; set; }
-        public FormOrderKH(string M,string K)
+        public string ID_CT { get; set; }
+        public FormOrderKH(string M,string K, string O)
         {
             ID_May = M;
             ID_KhachHang = K;
+            ID_CT = O;
+            MessageBox.Show(ID_CT);
             InitializeComponent();
-            ShowListHD(M);
+
+            ShowListHD(ID_CT);
         }
         public FormOrderKH()
         {
@@ -45,9 +49,8 @@ namespace QuanNet.FormsUser
             txtSL.Text = "";
             txtGia.Text = "";
         }
-        public string MaOrdertutang()
+        public string MaListDoAn()
         {
-            string ma = "";
             List<int> l = new List<int>();
             foreach (ListTPham tk in BllOrderKH.Instance.GetListTPByIDCT(""))
             {
@@ -60,23 +63,38 @@ namespace QuanNet.FormsUser
             return l.Count + 1 < 10 ? "Order00" + (l.Count + 1) : l.Count + 1 < 100 ? "Order0" + (l.Count + 1) : "Order" + (l.Count + 1);
 
         }
+        //public string MaOrderCT()
+        //{
+        //    List<int> Ma = new List<int>();
+        //     foreach (HoaDonChiTiet tk in BllHoaDon.Instance.GetsomethingInView(ID_KhachHang,ID_May))
+        //    {
+        //        Ma.Add(Convert.ToInt32(tk.IdChiTiet.Remove(0, 7)));
+        //        ID_CT=tk.IdChiTiet.Substring(0,7);
+        //    }
+        //    for (int i = 0; i < Ma.Count; i++)
+        //    {
+        //        if (!Ma.Contains(i + 1)) return i + 1 < 10 ? ID_CT + ++i : i + 1 < 100 ? ID_CT + ++i : ID_CT + ++i;
+        //    }
+        //    return Ma.Count + 1 < 10 ? ID_CT + (Ma.Count + 1) : Ma.Count + 1 < 100 ? ID_CT + (Ma.Count + 1) : ID_CT + (Ma.Count + 1);
+
+        //}
         private void btnThem_Click(object sender, EventArgs e)
         {
-
+            //string IdCT = BllHoaDon.Instance.CreateIDCT(ID_KhachHang, ID_May);
             ListTPham orderkh = new ListTPham()
             {
-                IdOrderList = MaOrdertutang(),
+                IdOrderList = MaListDoAn(),
                 IdTP = BllOrderKH.Instance.GetIDTP(txtMon.Text),
                 SoluongTP = Convert.ToInt32(txtSL.Text),
                 ThanhTien = Convert.ToInt32(txtSL.Text) * Convert.ToInt32(txtGia.Text),
-                IdChiTiet = BllOrderKH.Instance.Get(ID_May)
+                IdChiTiet = ID_CT
             };
             BllOrderKH.Instance.addOrder1(orderkh);
             MessageBox.Show("Thành công !");
             txtMon.Text = "";
             txtSL.Text = "";
             txtGia.Text = "";
-            ShowListHD(BllOrderKH.Instance.Get(ID_May));
+            ShowListHD(ID_CT);
         }
         public void ShowListHD(string Id)
         {

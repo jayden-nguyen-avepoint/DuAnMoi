@@ -25,7 +25,7 @@ namespace QuanNet.FormsUser
         public string ID_May { get; set; }
         public string IDKhachHang { get; set; }
         public string time { get; set; }
-
+        public string ID_CT { get; set; }
         public FormUsers(string M, string K)
         {
             InitializeComponent();
@@ -38,9 +38,9 @@ namespace QuanNet.FormsUser
             txtSodu.Enabled=false;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             timer1.Start();
-            this.FormBorderStyle = FormBorderStyle.None;
-        
-    }
+            this.FormBorderStyle = FormBorderStyle.None;           
+
+        }
         //=============UI CODE=============
         private Color SelectThemeColor()
         {
@@ -139,7 +139,7 @@ namespace QuanNet.FormsUser
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormsUser.FormOrderKH(ID_May, IDKhachHang), sender);
+            OpenChildForm(new FormsUser.FormOrderKH(ID_May, IDKhachHang,ID_CT), sender);
 
         }
 
@@ -159,6 +159,15 @@ namespace QuanNet.FormsUser
         private void FormUsers_Load(object sender, EventArgs e)
         {
             time= DateTime.Now.ToString();
+            ID_CT = BllHoaDon.Instance.CreateIDCT(IDKhachHang, ID_May);
+            MessageBox.Show(ID_CT);
+            BllHoaDon.Instance.AddHDCT(new HoaDonChiTiet
+            {
+                IdChiTiet = ID_CT,
+                IdMay = ID_May,
+                TongTien = null,
+            });
+
         }
     }
 }

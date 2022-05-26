@@ -38,18 +38,6 @@ namespace QuanNet.BLL
         {
             return db.TPhams.Where(p => p.TenTP == tenmon).First().IdTP;
         }
-        public string Get(string idmay)
-        {
-                string id="";
-                foreach (HoaDonChiTiet i in db.HoaDonChiTiets.ToList())
-                {
-                    if ( i.IdMay==idmay)
-                    {
-                        id=i.IdChiTiet;
-                    }
-                }
-                return id;
-        }
         public List<ListTPham> GetTPByIDTP(string IDTP)
         {
             List<ListTPham> data = new List<ListTPham>();
