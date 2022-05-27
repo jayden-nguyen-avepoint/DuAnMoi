@@ -31,14 +31,18 @@ namespace QuanNet.FormsUser
             InitializeComponent();
             ID_May = M;
             IDKhachHang = K;
-            random = new Random();
-            GUI(ID_May,IDKhachHang);
-            BllMayTinh.Instance.addTKinMay(ID_May, IDKhachHang,"");
+            
             txtMay.Enabled = false;
             txtSodu.Enabled=false;
-            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            
             timer1.Start();
-            this.FormBorderStyle = FormBorderStyle.None;           
+            
+            GUI(ID_May,IDKhachHang);
+            BllMayTinh.Instance.addTKinMay(ID_May, IDKhachHang,"");
+            
+            random = new Random();
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            this.FormBorderStyle = FormBorderStyle.None;
 
         }
         //=============UI CODE=============
@@ -111,6 +115,17 @@ namespace QuanNet.FormsUser
                 }
             }
         }
+        public int TinhTienOrder()
+        {
+            
+            int TienOrder = 0;
+            foreach(ListTPham i in BllOrderKH.Instance.GetListTPByIDCT(ID_CT))
+            {
+                TienOrder += i.ThanhTien;
+            }
+            return TienOrder;
+        }    
+
         public int TinhTgChoi(DateTime time)
         {
             DateTime aDateTime = DateTime.Now;
@@ -168,6 +183,11 @@ namespace QuanNet.FormsUser
                 TongTien = null,
             });
 
+        }
+
+        private void txtTG__TextChanged(object sender, EventArgs e)
+        {
+            txtTienOrder.Text= TinhTienOrder().ToString();
         }
     }
 }
