@@ -146,7 +146,7 @@ namespace QuanNet.BLL
         public void updatetongtien(string idct)
         {
             HoaDonChiTiet hdct = db.HoaDonChiTiets.Single(p => p.IdChiTiet == idct);
-            
+
             hdct.TongTien = tien(idct);
             db.SaveChanges();
         }
