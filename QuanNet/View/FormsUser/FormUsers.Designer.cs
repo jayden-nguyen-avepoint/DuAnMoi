@@ -48,7 +48,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtTienOrder = new QuanNet.CustomsDetail.CustomTextbox();
+            this.txtOrder = new QuanNet.CustomsDetail.CustomTextbox();
             this.txtGia = new QuanNet.CustomsDetail.CustomTextbox();
             this.txtTG = new QuanNet.CustomsDetail.CustomTextbox();
             this.txtMay = new QuanNet.CustomsDetail.CustomTextbox();
@@ -200,7 +200,7 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.txtTienOrder);
+            this.panel2.Controls.Add(this.txtOrder);
             this.panel2.Controls.Add(this.txtGia);
             this.panel2.Controls.Add(this.txtTG);
             this.panel2.Controls.Add(this.txtMay);
@@ -318,26 +318,26 @@
             this.label6.TabIndex = 54;
             this.label6.Text = "Số máy";
             // 
-            // txtTienOrder
+            // txtOrder
             // 
-            this.txtTienOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.txtTienOrder.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtTienOrder.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtTienOrder.BorderRadius = 15;
-            this.txtTienOrder.BorderSize = 2;
-            this.txtTienOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTienOrder.ForeColor = System.Drawing.Color.DimGray;
-            this.txtTienOrder.Location = new System.Drawing.Point(75, 224);
-            this.txtTienOrder.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTienOrder.Multiline = false;
-            this.txtTienOrder.Name = "txtTienOrder";
-            this.txtTienOrder.Padding = new System.Windows.Forms.Padding(7);
-            this.txtTienOrder.PasswordChar = false;
-            this.txtTienOrder.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtTienOrder.PlaceholderText = "";
-            this.txtTienOrder.Size = new System.Drawing.Size(136, 35);
-            this.txtTienOrder.TabIndex = 3;
-            this.txtTienOrder.UnderlinedStyle = false;
+            this.txtOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.txtOrder.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtOrder.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtOrder.BorderRadius = 15;
+            this.txtOrder.BorderSize = 2;
+            this.txtOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOrder.ForeColor = System.Drawing.Color.DimGray;
+            this.txtOrder.Location = new System.Drawing.Point(75, 224);
+            this.txtOrder.Margin = new System.Windows.Forms.Padding(4);
+            this.txtOrder.Multiline = false;
+            this.txtOrder.Name = "txtOrder";
+            this.txtOrder.Padding = new System.Windows.Forms.Padding(7);
+            this.txtOrder.PasswordChar = false;
+            this.txtOrder.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtOrder.PlaceholderText = "";
+            this.txtOrder.Size = new System.Drawing.Size(136, 35);
+            this.txtOrder.TabIndex = 3;
+            this.txtOrder.UnderlinedStyle = false;
             // 
             // txtGia
             // 
@@ -444,7 +444,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnOrder;
         private System.Windows.Forms.Panel panel2;
-        private CustomsDetail.CustomTextbox txtTienOrder;
+        private CustomsDetail.CustomTextbox txtOrder;
         private CustomsDetail.CustomTextbox txtGia;
         private CustomsDetail.CustomTextbox txtTG;
         private CustomsDetail.CustomTextbox txtMay;

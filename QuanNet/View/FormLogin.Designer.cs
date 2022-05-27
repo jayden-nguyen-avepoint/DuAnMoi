@@ -32,30 +32,30 @@
             this.btnLoginKhach = new FontAwesome.Sharp.IconButton();
             this.btnLoginQL = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panelQL = new System.Windows.Forms.Panel();
             this.iconQuanLy = new FontAwesome.Sharp.IconPictureBox();
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.txtTKQL = new QuanNet.CustomsDetail.CustomTextbox();
+            this.txtMKQL = new QuanNet.CustomsDetail.CustomTextbox();
+            this.cusBtn1 = new QuanNet.CustomsDetail.CusBtn();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.iconForm = new FontAwesome.Sharp.IconPictureBox();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.panelKHmain = new System.Windows.Forms.Panel();
-            this.iconKH = new FontAwesome.Sharp.IconPictureBox();
-            this.panelKH = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtTKQL = new QuanNet.CustomsDetail.CustomTextbox();
-            this.txtMKQL = new QuanNet.CustomsDetail.CustomTextbox();
-            this.cusBtn1 = new QuanNet.CustomsDetail.CusBtn();
             this.txtMKKH = new QuanNet.CustomsDetail.CustomTextbox();
             this.BtnKH = new QuanNet.CustomsDetail.CusBtn();
             this.txtTKKH = new QuanNet.CustomsDetail.CustomTextbox();
+            this.iconKH = new FontAwesome.Sharp.IconPictureBox();
+            this.panelKH = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.cbbMay = new QuanNet.CustomsDetail.CusCbb();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.panelQL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconQuanLy)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconForm)).BeginInit();
             this.panelDesktop.SuspendLayout();
@@ -126,6 +126,14 @@
             this.panelLogo.Size = new System.Drawing.Size(258, 210);
             this.panelLogo.TabIndex = 0;
             // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.Location = new System.Drawing.Point(3, 0);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(212, 185);
+            this.pictureBoxLogo.TabIndex = 0;
+            this.pictureBoxLogo.TabStop = false;
+            // 
             // panelQL
             // 
             this.panelQL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -135,7 +143,7 @@
             this.panelQL.Controls.Add(this.txtTKQL);
             this.panelQL.Controls.Add(this.txtMKQL);
             this.panelQL.Controls.Add(this.cusBtn1);
-            this.panelQL.Location = new System.Drawing.Point(165, 2);
+            this.panelQL.Location = new System.Drawing.Point(165, 3);
             this.panelQL.Name = "panelQL";
             this.panelQL.Size = new System.Drawing.Size(289, 456);
             this.panelQL.TabIndex = 6;
@@ -155,13 +163,72 @@
             this.iconQuanLy.TabIndex = 3;
             this.iconQuanLy.TabStop = false;
             // 
-            // pictureBoxLogo
+            // txtTKQL
             // 
-            this.pictureBoxLogo.Location = new System.Drawing.Point(3, 0);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(212, 185);
-            this.pictureBoxLogo.TabIndex = 0;
-            this.pictureBoxLogo.TabStop = false;
+            this.txtTKQL.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtTKQL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txtTKQL.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtTKQL.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtTKQL.BorderRadius = 0;
+            this.txtTKQL.BorderSize = 2;
+            this.txtTKQL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTKQL.ForeColor = System.Drawing.Color.White;
+            this.txtTKQL.Location = new System.Drawing.Point(20, 209);
+            this.txtTKQL.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTKQL.Multiline = false;
+            this.txtTKQL.Name = "txtTKQL";
+            this.txtTKQL.Padding = new System.Windows.Forms.Padding(7);
+            this.txtTKQL.PasswordChar = false;
+            this.txtTKQL.PlaceholderColor = System.Drawing.Color.DimGray;
+            this.txtTKQL.PlaceholderText = "ID...";
+            this.txtTKQL.Size = new System.Drawing.Size(250, 35);
+            this.txtTKQL.TabIndex = 0;
+            this.txtTKQL.UnderlinedStyle = true;
+            this.txtTKQL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cusBtn1_KeyPress);
+            // 
+            // txtMKQL
+            // 
+            this.txtMKQL.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtMKQL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txtMKQL.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtMKQL.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtMKQL.BorderRadius = 0;
+            this.txtMKQL.BorderSize = 2;
+            this.txtMKQL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMKQL.ForeColor = System.Drawing.Color.White;
+            this.txtMKQL.Location = new System.Drawing.Point(20, 268);
+            this.txtMKQL.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMKQL.Multiline = false;
+            this.txtMKQL.Name = "txtMKQL";
+            this.txtMKQL.Padding = new System.Windows.Forms.Padding(7);
+            this.txtMKQL.PasswordChar = true;
+            this.txtMKQL.PlaceholderColor = System.Drawing.Color.DimGray;
+            this.txtMKQL.PlaceholderText = "Mật khẩu...";
+            this.txtMKQL.Size = new System.Drawing.Size(250, 35);
+            this.txtMKQL.TabIndex = 1;
+            this.txtMKQL.UnderlinedStyle = true;
+            this.txtMKQL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cusBtn1_KeyPress);
+            // 
+            // cusBtn1
+            // 
+            this.cusBtn1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cusBtn1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.cusBtn1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.cusBtn1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.cusBtn1.BorderRadius = 20;
+            this.cusBtn1.BorderSize = 0;
+            this.cusBtn1.FlatAppearance.BorderSize = 0;
+            this.cusBtn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cusBtn1.ForeColor = System.Drawing.Color.White;
+            this.cusBtn1.Location = new System.Drawing.Point(57, 371);
+            this.cusBtn1.Name = "cusBtn1";
+            this.cusBtn1.Size = new System.Drawing.Size(171, 62);
+            this.cusBtn1.TabIndex = 2;
+            this.cusBtn1.Text = "Đăng nhập";
+            this.cusBtn1.TextColor = System.Drawing.Color.White;
+            this.cusBtn1.UseVisualStyleBackColor = false;
+            this.cusBtn1.Click += new System.EventHandler(this.cusBtn1_Click);
+            this.cusBtn1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cusBtn1_KeyPress);
             // 
             // panelTitleBar
             // 
@@ -234,108 +301,6 @@
             this.panelKHmain.Size = new System.Drawing.Size(289, 456);
             this.panelKHmain.TabIndex = 2;
             // 
-            // iconKH
-            // 
-            this.iconKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.iconKH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
-            this.iconKH.IconChar = FontAwesome.Sharp.IconChar.Tv;
-            this.iconKH.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
-            this.iconKH.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconKH.IconSize = 146;
-            this.iconKH.ImageLocation = "";
-            this.iconKH.Location = new System.Drawing.Point(84, 20);
-            this.iconKH.Name = "iconKH";
-            this.iconKH.Size = new System.Drawing.Size(151, 146);
-            this.iconKH.TabIndex = 5;
-            this.iconKH.TabStop = false;
-            // 
-            // panelKH
-            // 
-            this.panelKH.Controls.Add(this.label1);
-            this.panelKH.Controls.Add(this.cbbMay);
-            this.panelKH.Location = new System.Drawing.Point(19, 291);
-            this.panelKH.Name = "panelKH";
-            this.panelKH.Size = new System.Drawing.Size(250, 57);
-            this.panelKH.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Snow;
-            this.label1.Location = new System.Drawing.Point(6, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Mở:";
-            // 
-            // txtTKQL
-            // 
-            this.txtTKQL.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTKQL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.txtTKQL.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtTKQL.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtTKQL.BorderRadius = 0;
-            this.txtTKQL.BorderSize = 2;
-            this.txtTKQL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTKQL.ForeColor = System.Drawing.Color.White;
-            this.txtTKQL.Location = new System.Drawing.Point(20, 209);
-            this.txtTKQL.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTKQL.Multiline = false;
-            this.txtTKQL.Name = "txtTKQL";
-            this.txtTKQL.Padding = new System.Windows.Forms.Padding(7);
-            this.txtTKQL.PasswordChar = false;
-            this.txtTKQL.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.txtTKQL.PlaceholderText = "ID...";
-            this.txtTKQL.Size = new System.Drawing.Size(250, 35);
-            this.txtTKQL.TabIndex = 0;
-            this.txtTKQL.UnderlinedStyle = true;
-            this.txtTKQL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cusBtn1_KeyPress);
-            // 
-            // txtMKQL
-            // 
-            this.txtMKQL.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtMKQL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.txtMKQL.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtMKQL.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtMKQL.BorderRadius = 0;
-            this.txtMKQL.BorderSize = 2;
-            this.txtMKQL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMKQL.ForeColor = System.Drawing.Color.White;
-            this.txtMKQL.Location = new System.Drawing.Point(20, 268);
-            this.txtMKQL.Margin = new System.Windows.Forms.Padding(4);
-            this.txtMKQL.Multiline = false;
-            this.txtMKQL.Name = "txtMKQL";
-            this.txtMKQL.Padding = new System.Windows.Forms.Padding(7);
-            this.txtMKQL.PasswordChar = true;
-            this.txtMKQL.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.txtMKQL.PlaceholderText = "Mật khẩu...";
-            this.txtMKQL.Size = new System.Drawing.Size(250, 35);
-            this.txtMKQL.TabIndex = 1;
-            this.txtMKQL.UnderlinedStyle = true;
-            this.txtMKQL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cusBtn1_KeyPress);
-            // 
-            // cusBtn1
-            // 
-            this.cusBtn1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cusBtn1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.cusBtn1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.cusBtn1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cusBtn1.BorderRadius = 20;
-            this.cusBtn1.BorderSize = 0;
-            this.cusBtn1.FlatAppearance.BorderSize = 0;
-            this.cusBtn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cusBtn1.ForeColor = System.Drawing.Color.White;
-            this.cusBtn1.Location = new System.Drawing.Point(57, 371);
-            this.cusBtn1.Name = "cusBtn1";
-            this.cusBtn1.Size = new System.Drawing.Size(171, 62);
-            this.cusBtn1.TabIndex = 2;
-            this.cusBtn1.Text = "Đăng nhập";
-            this.cusBtn1.TextColor = System.Drawing.Color.White;
-            this.cusBtn1.UseVisualStyleBackColor = false;
-            this.cusBtn1.Click += new System.EventHandler(this.cusBtn1_Click);
-            this.cusBtn1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cusBtn1_KeyPress);
-            // 
             // txtMKKH
             // 
             this.txtMKKH.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -400,6 +365,41 @@
             this.txtTKKH.TabIndex = 4;
             this.txtTKKH.UnderlinedStyle = true;
             // 
+            // iconKH
+            // 
+            this.iconKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.iconKH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            this.iconKH.IconChar = FontAwesome.Sharp.IconChar.Tv;
+            this.iconKH.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            this.iconKH.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconKH.IconSize = 146;
+            this.iconKH.ImageLocation = "";
+            this.iconKH.Location = new System.Drawing.Point(84, 20);
+            this.iconKH.Name = "iconKH";
+            this.iconKH.Size = new System.Drawing.Size(151, 146);
+            this.iconKH.TabIndex = 5;
+            this.iconKH.TabStop = false;
+            // 
+            // panelKH
+            // 
+            this.panelKH.Controls.Add(this.label1);
+            this.panelKH.Controls.Add(this.cbbMay);
+            this.panelKH.Location = new System.Drawing.Point(19, 291);
+            this.panelKH.Name = "panelKH";
+            this.panelKH.Size = new System.Drawing.Size(250, 57);
+            this.panelKH.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Snow;
+            this.label1.Location = new System.Drawing.Point(6, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Mở:";
+            // 
             // cbbMay
             // 
             this.cbbMay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
@@ -434,9 +434,9 @@
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cusBtn1_KeyPress);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.panelQL.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconQuanLy)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconForm)).EndInit();

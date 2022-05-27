@@ -18,6 +18,7 @@ namespace QuanNet
     {
         //----
         public string time { get; set; }
+      
         private string PasswordAdmin = "123";
         private string IDAdmin = "admin";
         private IconButton currentBtn;
@@ -176,13 +177,15 @@ namespace QuanNet
             {
                 if (txtTKKH.Text.ToString()== i.TenDN &&  txtMKKH.Text.ToString()==i.MatKhau )
                 {
+                   
                         if (cbbMay.SelectedIndex!=-1)
                         {
+                        
                             string may = cbbMay.SelectedItem.ToString();
                             BllMayTinh.Instance.addTKinMay(may, tk, "");
                             FormsUser.FormUsers f = new FormsUser.FormUsers(may, tk);
                             f.Show();
-                            //d(DateTime.Now);
+                            
                         }
                         else
                         {
@@ -195,6 +198,7 @@ namespace QuanNet
                 }
 
             }
+            
             txtTKKH.Text = "";
             txtMKKH.Text = "";
             cbbMay.SelectedIndex = -1;       
