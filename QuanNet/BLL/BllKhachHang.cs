@@ -70,9 +70,14 @@ namespace QuanNet.BLL
             string ID = "";
             List<TaiKhoan> data = new List<TaiKhoan>();
             data = db.TaiKhoans.Where(p => p.TenDN == TenDN.ToString()).Select(p => p).ToList();
-            foreach(TaiKhoan t in data)
+            
+            foreach (TaiKhoan t in GetListTKByIDTK(""))
             {
-                ID = t.IdTK;
+                if (TenDN == t.TenDN)
+                {
+                    ID = t.IdTK;
+                }
+                
             }
             return ID;
         }
@@ -118,5 +123,6 @@ namespace QuanNet.BLL
             db.TaiKhoans.Remove(s);
             db.SaveChanges();
         }
+        
     }
 }

@@ -110,6 +110,9 @@ namespace QuanNet.FormsUser
                     txtSodu.Text = tk.Sodu.ToString();
                 }
             }
+          
+
+
         }
         public int TinhTgChoi(DateTime time)
         {
@@ -139,7 +142,7 @@ namespace QuanNet.FormsUser
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormsUser.FormOrderKH(ID_May, IDKhachHang,ID_CT), sender);
+            OpenChildForm(new FormsUser.FormOrderKH(ID_May, IDKhachHang,ID_CT), sender);           
 
         }
 
@@ -149,6 +152,10 @@ namespace QuanNet.FormsUser
             MessageBox.Show(TinhTgChoi(Convert.ToDateTime(time)).ToString());
             BllMayTinh.Instance.addTKinMay(ID_May,null,null);
             this.Dispose();
+            BllHoaDon.Instance.updatetongtien(ID_CT);
+            
+
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -158,16 +165,23 @@ namespace QuanNet.FormsUser
         }
         private void FormUsers_Load(object sender, EventArgs e)
         {
-            time= DateTime.Now.ToString();
+            
+            time = DateTime.Now.ToString();
             ID_CT = BllHoaDon.Instance.CreateIDCT(IDKhachHang, ID_May);
             MessageBox.Show(ID_CT);
             BllHoaDon.Instance.AddHDCT(new HoaDonChiTiet
             {
                 IdChiTiet = ID_CT,
                 IdMay = ID_May,
-                TongTien = null,
+                TongTien = null
             });
+            txtOrder.Text = ID_CT;
+
+            //txtTongTien.Text = Convert.ToString(BllHoaDon.Instance.tien(ID_CT));
+           
 
         }
+
+
     }
 }

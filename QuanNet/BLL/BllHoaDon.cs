@@ -68,12 +68,33 @@ namespace QuanNet.BLL
             return data;
 
         }
+        public void AddHD(HoaDon s)
+        {
+            db.HoaDons.Add(s);
+            db.SaveChanges();
+        }
         public void DeleteHD(string IDHD)
+        {
+            HoaDon s = db.HoaDons.Find(IDHD);
+            db.HoaDons.Remove(s);
+            db.SaveChanges();
+        }
+        public string MaHoaDon()
+        {
+            List<int> l = new List<int>();
+            foreach (HoaDon hd in BllHoaDon.Instance.GetListHDByID(""))
             {
-                HoaDon s = db.HoaDons.Find(IDHD);
-                db.HoaDons.Remove(s);
-                db.SaveChanges();
+                l.Add(Convert.ToInt32(hd.IdHoaDon.Remove(0, 4)));
+
             }
+            for (int i = 0; i < l.Count; i++)
+            {
+                if (!l.Contains(i + 1)) return i + 1 < 10 ? "Bill00" + ++i : i + 1 < 100 ? "Bill0" + ++i : "Bill" + ++i;
+            }
+            return l.Count + 1 < 10 ? "Bill00" + (l.Count + 1) : l.Count + 1 < 100 ? "Bill0" + (l.Count + 1) : "Bill" +
+                + (l.Count + 1);
+
+        }
         //=======================Hóa đơn chi tiết============================================
         public HoaDonChiTiet GetHoadonCTByID(string Id_HDCT)
         {
@@ -97,18 +118,6 @@ namespace QuanNet.BLL
                 data = db.HoaDonChiTiets.Where(p => p.IdChiTiet == IDHDCT.ToString()).Select(p => p).ToList();
             }
             return data;
-        }
-        public string GetIDCT(string idmay)
-        {
-            string id = "";
-            foreach (HoaDonChiTiet i in db.HoaDonChiTiets.ToList())
-            {
-                if (i.IdMay == idmay)
-                {
-                    id = i.IdChiTiet;
-                }
-            }
-            return id;
         }
         public string CreateIDCT(string IdKh, string ID_may)
         {
@@ -134,5 +143,40 @@ namespace QuanNet.BLL
             data = db.HoaDonChiTiets.Where(p => p.IdChiTiet.Contains(keyWord)).Select(p => p).ToList();
             return data;
         }
+        public void updatetongtien(string idct)
+        {
+            HoaDonChiTiet hdct = db.HoaDonChiTiets.Single(p => p.IdChiTiet == idct);
+            
+            hdct.TongTien = tien(idct);
+            db.SaveChanges();
+        }
+        public int tien(string idct)
+        {
+            int tong = 0;
+            foreach (ListTPham i in BllOrderKH.Instance.GetListTPByIDCT(""))
+            {
+                if (i.IdChiTiet == idct)
+                {
+                    tong += i.ThanhTien;
+                }
+            }
+            return tong;
+        }
+        public string IDMAY(string idct)
+        {
+                string idm = "";
+                foreach(HoaDonChiTiet i in GetListHDCTByID(""))
+                {
+                    if (i.IdChiTiet == idct)
+                    {
+                        idm = i.IdMay;
+                        Console.WriteLine(idm);
+                    }
+                }
+            return idm;
+        }
+        
+       
+
     }
 }
