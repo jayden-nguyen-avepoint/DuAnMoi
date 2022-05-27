@@ -117,11 +117,12 @@ namespace QuanNet.BLL
             {
                 if (idm==i.IdMay)
                 {
-                    idtk = i.IdTK;
-                    Console.WriteLine(i.IdTK);
+                    idtk = i.IdTK;                 
 
                 }
             }
+            //Console.WriteLine("Duc");
+            Console.WriteLine(idtk+"111");
             return idtk;
         }
     }

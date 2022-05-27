@@ -41,11 +41,13 @@ namespace QuanNet
                 {
                     IdHoaDon = BllHoaDon.Instance.MaHoaDon(),
                     NgayXuatHD = DateTime.Now,
-                    IdTK = BllHoaDon.Instance.IDMAY(BllMayTinh.Instance.GetIDTK(ID_CT)),
+                    IdTK = BllMayTinh.Instance.GetIDTK(BllHoaDon.Instance.IDMAY(ID_CT)),
                     //IdTK = "KH001",
+                    
                     IdChiTiet = ID_CT
 
-                })  ;
+                }) ;
+            
         }
     }
 }

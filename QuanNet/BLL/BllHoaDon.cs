@@ -170,9 +170,11 @@ namespace QuanNet.BLL
                     if (i.IdChiTiet == idct)
                     {
                         idm = i.IdMay;
-                        Console.WriteLine(idm);
+                        break;
                     }
                 }
+            //Console.WriteLine("Duc");
+            Console.WriteLine(idm + "123");
             return idm;
         }
         
