@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnThanhToan = new QuanNet.CustomsDetail.CusBtn();
             this.btnOrder = new System.Windows.Forms.Button();
             this.btnApp = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
@@ -40,19 +41,18 @@
             this.panelDesktopPanel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
+            this.txtSodu = new QuanNet.CustomsDetail.CustomTextbox();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtTongTien = new QuanNet.CustomsDetail.CustomTextbox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.txtSodu = new QuanNet.CustomsDetail.CustomTextbox();
-            this.txtTongTien = new QuanNet.CustomsDetail.CustomTextbox();
-            this.txtOrder = new QuanNet.CustomsDetail.CustomTextbox();
+            this.txtTienOrder = new QuanNet.CustomsDetail.CustomTextbox();
             this.txtGia = new QuanNet.CustomsDetail.CustomTextbox();
             this.txtTG = new QuanNet.CustomsDetail.CustomTextbox();
             this.txtMay = new QuanNet.CustomsDetail.CustomTextbox();
-            this.btnThanhToan = new QuanNet.CustomsDetail.CusBtn();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelLogo.SuspendLayout();
@@ -82,6 +82,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(220, 325);
             this.panel1.TabIndex = 3;
+            // 
+            // btnThanhToan
+            // 
+            this.btnThanhToan.BackColor = System.Drawing.Color.MediumOrchid;
+            this.btnThanhToan.BackgroundColor = System.Drawing.Color.MediumOrchid;
+            this.btnThanhToan.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnThanhToan.BorderRadius = 20;
+            this.btnThanhToan.BorderSize = 0;
+            this.btnThanhToan.FlatAppearance.BorderSize = 0;
+            this.btnThanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThanhToan.ForeColor = System.Drawing.Color.White;
+            this.btnThanhToan.Location = new System.Drawing.Point(27, 266);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(138, 47);
+            this.btnThanhToan.TabIndex = 0;
+            this.btnThanhToan.Text = "Đăng xuất";
+            this.btnThanhToan.TextColor = System.Drawing.Color.White;
+            this.btnThanhToan.UseVisualStyleBackColor = false;
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // btnOrder
             // 
@@ -181,7 +200,7 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.txtOrder);
+            this.panel2.Controls.Add(this.txtTienOrder);
             this.panel2.Controls.Add(this.txtGia);
             this.panel2.Controls.Add(this.txtTG);
             this.panel2.Controls.Add(this.txtMay);
@@ -202,6 +221,27 @@
             this.label7.TabIndex = 61;
             this.label7.Text = "Số dư";
             // 
+            // txtSodu
+            // 
+            this.txtSodu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.txtSodu.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtSodu.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtSodu.BorderRadius = 15;
+            this.txtSodu.BorderSize = 2;
+            this.txtSodu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSodu.ForeColor = System.Drawing.Color.DimGray;
+            this.txtSodu.Location = new System.Drawing.Point(75, 329);
+            this.txtSodu.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSodu.Multiline = false;
+            this.txtSodu.Name = "txtSodu";
+            this.txtSodu.Padding = new System.Windows.Forms.Padding(7);
+            this.txtSodu.PasswordChar = false;
+            this.txtSodu.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtSodu.PlaceholderText = "";
+            this.txtSodu.Size = new System.Drawing.Size(136, 35);
+            this.txtSodu.TabIndex = 60;
+            this.txtSodu.UnderlinedStyle = false;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -212,6 +252,27 @@
             this.label5.Size = new System.Drawing.Size(66, 18);
             this.label5.TabIndex = 59;
             this.label5.Text = "Bill order\r\n";
+            // 
+            // txtTongTien
+            // 
+            this.txtTongTien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.txtTongTien.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtTongTien.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtTongTien.BorderRadius = 15;
+            this.txtTongTien.BorderSize = 2;
+            this.txtTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTongTien.ForeColor = System.Drawing.Color.DimGray;
+            this.txtTongTien.Location = new System.Drawing.Point(75, 277);
+            this.txtTongTien.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTongTien.Multiline = false;
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.Padding = new System.Windows.Forms.Padding(7);
+            this.txtTongTien.PasswordChar = false;
+            this.txtTongTien.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtTongTien.PlaceholderText = "";
+            this.txtTongTien.Size = new System.Drawing.Size(136, 35);
+            this.txtTongTien.TabIndex = 58;
+            this.txtTongTien.UnderlinedStyle = false;
             // 
             // label4
             // 
@@ -257,72 +318,26 @@
             this.label6.TabIndex = 54;
             this.label6.Text = "Số máy";
             // 
-            // timer1
+            // txtTienOrder
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // txtSodu
-            // 
-            this.txtSodu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.txtSodu.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtSodu.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtSodu.BorderRadius = 15;
-            this.txtSodu.BorderSize = 2;
-            this.txtSodu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSodu.ForeColor = System.Drawing.Color.DimGray;
-            this.txtSodu.Location = new System.Drawing.Point(75, 329);
-            this.txtSodu.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSodu.Multiline = false;
-            this.txtSodu.Name = "txtSodu";
-            this.txtSodu.Padding = new System.Windows.Forms.Padding(7);
-            this.txtSodu.PasswordChar = false;
-            this.txtSodu.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtSodu.PlaceholderText = "";
-            this.txtSodu.Size = new System.Drawing.Size(136, 35);
-            this.txtSodu.TabIndex = 60;
-            this.txtSodu.UnderlinedStyle = false;
-            // 
-            // txtTongTien
-            // 
-            this.txtTongTien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.txtTongTien.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtTongTien.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtTongTien.BorderRadius = 15;
-            this.txtTongTien.BorderSize = 2;
-            this.txtTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTongTien.ForeColor = System.Drawing.Color.DimGray;
-            this.txtTongTien.Location = new System.Drawing.Point(75, 277);
-            this.txtTongTien.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTongTien.Multiline = false;
-            this.txtTongTien.Name = "txtTongTien";
-            this.txtTongTien.Padding = new System.Windows.Forms.Padding(7);
-            this.txtTongTien.PasswordChar = false;
-            this.txtTongTien.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtTongTien.PlaceholderText = "";
-            this.txtTongTien.Size = new System.Drawing.Size(136, 35);
-            this.txtTongTien.TabIndex = 58;
-            this.txtTongTien.UnderlinedStyle = false;
-            // 
-            // txtOrder
-            // 
-            this.txtOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.txtOrder.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtOrder.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtOrder.BorderRadius = 15;
-            this.txtOrder.BorderSize = 2;
-            this.txtOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOrder.ForeColor = System.Drawing.Color.DimGray;
-            this.txtOrder.Location = new System.Drawing.Point(75, 224);
-            this.txtOrder.Margin = new System.Windows.Forms.Padding(4);
-            this.txtOrder.Multiline = false;
-            this.txtOrder.Name = "txtOrder";
-            this.txtOrder.Padding = new System.Windows.Forms.Padding(7);
-            this.txtOrder.PasswordChar = false;
-            this.txtOrder.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtOrder.PlaceholderText = "";
-            this.txtOrder.Size = new System.Drawing.Size(136, 35);
-            this.txtOrder.TabIndex = 3;
-            this.txtOrder.UnderlinedStyle = false;
+            this.txtTienOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.txtTienOrder.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtTienOrder.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtTienOrder.BorderRadius = 15;
+            this.txtTienOrder.BorderSize = 2;
+            this.txtTienOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTienOrder.ForeColor = System.Drawing.Color.DimGray;
+            this.txtTienOrder.Location = new System.Drawing.Point(75, 224);
+            this.txtTienOrder.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTienOrder.Multiline = false;
+            this.txtTienOrder.Name = "txtTienOrder";
+            this.txtTienOrder.Padding = new System.Windows.Forms.Padding(7);
+            this.txtTienOrder.PasswordChar = false;
+            this.txtTienOrder.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtTienOrder.PlaceholderText = "";
+            this.txtTienOrder.Size = new System.Drawing.Size(136, 35);
+            this.txtTienOrder.TabIndex = 3;
+            this.txtTienOrder.UnderlinedStyle = false;
             // 
             // txtGia
             // 
@@ -365,6 +380,7 @@
             this.txtTG.Size = new System.Drawing.Size(136, 35);
             this.txtTG.TabIndex = 1;
             this.txtTG.UnderlinedStyle = false;
+            this.txtTG._TextChanged += new System.EventHandler(this.txtTG__TextChanged);
             // 
             // txtMay
             // 
@@ -387,24 +403,9 @@
             this.txtMay.TabIndex = 0;
             this.txtMay.UnderlinedStyle = false;
             // 
-            // btnThanhToan
+            // timer1
             // 
-            this.btnThanhToan.BackColor = System.Drawing.Color.MediumOrchid;
-            this.btnThanhToan.BackgroundColor = System.Drawing.Color.MediumOrchid;
-            this.btnThanhToan.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnThanhToan.BorderRadius = 20;
-            this.btnThanhToan.BorderSize = 0;
-            this.btnThanhToan.FlatAppearance.BorderSize = 0;
-            this.btnThanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThanhToan.ForeColor = System.Drawing.Color.White;
-            this.btnThanhToan.Location = new System.Drawing.Point(27, 266);
-            this.btnThanhToan.Name = "btnThanhToan";
-            this.btnThanhToan.Size = new System.Drawing.Size(138, 47);
-            this.btnThanhToan.TabIndex = 0;
-            this.btnThanhToan.Text = "Đăng xuất";
-            this.btnThanhToan.TextColor = System.Drawing.Color.White;
-            this.btnThanhToan.UseVisualStyleBackColor = false;
-            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FormUsers
             // 
@@ -443,7 +444,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnOrder;
         private System.Windows.Forms.Panel panel2;
-        private CustomsDetail.CustomTextbox txtOrder;
+        private CustomsDetail.CustomTextbox txtTienOrder;
         private CustomsDetail.CustomTextbox txtGia;
         private CustomsDetail.CustomTextbox txtTG;
         private CustomsDetail.CustomTextbox txtMay;
