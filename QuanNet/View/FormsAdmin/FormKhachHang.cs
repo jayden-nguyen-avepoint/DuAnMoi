@@ -67,6 +67,7 @@ namespace QuanNet
                 txtTenKH.Text = (BllKhachHang.Instance.GetTKByIDTK(ID)).TenKH.ToString();
                 txtTK.Text = (BllKhachHang.Instance.GetTKByIDTK(ID)).TenDN.ToString();
                 txtTK.Enabled = false;
+                txtTK.ForeColor= Color.White;
                 txtMK.Text = (BllKhachHang.Instance.GetTKByIDTK(ID)).MatKhau.ToString();
                 txtSoDu.Text = (BllKhachHang.Instance.GetTKByIDTK(ID)).Sodu.ToString();
                 txtSoDu.Enabled = false;
@@ -157,6 +158,7 @@ namespace QuanNet
             SetNull();
             txtIDTK.Enabled = false;
             txtTK.Enabled = false;
+            txtTK.ForeColor = System.Drawing.Color.White;
             dgvKH.ClearSelection();
         }
 

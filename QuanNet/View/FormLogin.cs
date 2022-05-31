@@ -183,7 +183,7 @@ namespace QuanNet
                         
                             string may = cbbMay.SelectedItem.ToString();
                             BllMayTinh.Instance.addTKinMay(may, tk, "");
-                            FormsUser.FormUsers f = new FormsUser.FormUsers(may, tk);
+                            FormsUser.FormUsers f = new FormsUser.FormUsers(may, tk,DateTime.Now);
                             f.Show();
                             
                         }
