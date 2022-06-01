@@ -54,6 +54,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.cusCbb1 = new QuanNet.CustomsDetail.CusCbb();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKH)).BeginInit();
             this.SuspendLayout();
@@ -69,6 +70,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.panel2.Controls.Add(this.cusCbb1);
             this.panel2.Controls.Add(this.iconButton1);
             this.panel2.Controls.Add(this.btnEdit);
             this.panel2.Controls.Add(this.label7);
@@ -91,24 +93,24 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(39, 24);
+            this.panel2.Location = new System.Drawing.Point(12, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1083, 586);
+            this.panel2.Size = new System.Drawing.Size(1130, 598);
             this.panel2.TabIndex = 2;
             // 
             // iconButton1
             // 
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Eraser;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.DotCircle;
             this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(465, 252);
+            this.iconButton1.Location = new System.Drawing.Point(998, 145);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(120, 50);
+            this.iconButton1.Size = new System.Drawing.Size(101, 50);
             this.iconButton1.TabIndex = 29;
-            this.iconButton1.Text = "Reload";
+            this.iconButton1.Text = "Load";
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton1.UseVisualStyleBackColor = true;
             this.iconButton1.Click += new System.EventHandler(this.FormKhachHang_Load);
@@ -121,7 +123,7 @@
             this.btnEdit.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
             this.btnEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEdit.Location = new System.Drawing.Point(214, 252);
+            this.btnEdit.Location = new System.Drawing.Point(998, 67);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(101, 50);
             this.btnEdit.TabIndex = 28;
@@ -204,15 +206,15 @@
             this.txtSearch.BorderSize = 4;
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.ForeColor = System.Drawing.Color.White;
-            this.txtSearch.Location = new System.Drawing.Point(897, 252);
+            this.txtSearch.Location = new System.Drawing.Point(923, 221);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSearch.Multiline = false;
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Padding = new System.Windows.Forms.Padding(7);
             this.txtSearch.PasswordChar = false;
             this.txtSearch.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtSearch.PlaceholderText = "...";
-            this.txtSearch.Size = new System.Drawing.Size(183, 35);
+            this.txtSearch.PlaceholderText = "";
+            this.txtSearch.Size = new System.Drawing.Size(176, 35);
             this.txtSearch.TabIndex = 22;
             this.txtSearch.UnderlinedStyle = true;
             this.txtSearch._TextChanged += new System.EventHandler(this.txtSearch__TextChanged);
@@ -226,7 +228,7 @@
             this.txtNap.BorderSize = 2;
             this.txtNap.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNap.ForeColor = System.Drawing.Color.White;
-            this.txtNap.Location = new System.Drawing.Point(900, 191);
+            this.txtNap.Location = new System.Drawing.Point(92, 252);
             this.txtNap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNap.Multiline = false;
             this.txtNap.Name = "txtNap";
@@ -244,7 +246,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.label6.Location = new System.Drawing.Point(459, 9);
+            this.label6.Location = new System.Drawing.Point(207, 15);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(237, 32);
             this.label6.TabIndex = 14;
@@ -300,13 +302,12 @@
             this.btnSearch.IconChar = FontAwesome.Sharp.IconChar.Search;
             this.btnSearch.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.btnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSearch.IconSize = 20;
+            this.btnSearch.IconSize = 30;
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(790, 245);
+            this.btnSearch.Location = new System.Drawing.Point(876, 221);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(101, 42);
+            this.btnSearch.Size = new System.Drawing.Size(41, 35);
             this.btnSearch.TabIndex = 15;
-            this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -375,7 +376,7 @@
             this.dgvKH.ColumnHeadersHeight = 30;
             this.dgvKH.EnableHeadersVisualStyles = false;
             this.dgvKH.GridColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dgvKH.Location = new System.Drawing.Point(3, 319);
+            this.dgvKH.Location = new System.Drawing.Point(6, 325);
             this.dgvKH.Name = "dgvKH";
             this.dgvKH.RowHeadersVisible = false;
             this.dgvKH.RowHeadersWidth = 50;
@@ -389,7 +390,7 @@
             this.dgvKH.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvKH.RowTemplate.Height = 24;
             this.dgvKH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvKH.Size = new System.Drawing.Size(1080, 264);
+            this.dgvKH.Size = new System.Drawing.Size(1121, 264);
             this.dgvKH.TabIndex = 16;
             this.dgvKH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKH_CellClick);
             // 
@@ -402,9 +403,9 @@
             this.btnNap.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnNap.IconSize = 35;
             this.btnNap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNap.Location = new System.Drawing.Point(790, 184);
+            this.btnNap.Location = new System.Drawing.Point(6, 249);
             this.btnNap.Name = "btnNap";
-            this.btnNap.Size = new System.Drawing.Size(101, 42);
+            this.btnNap.Size = new System.Drawing.Size(80, 42);
             this.btnNap.TabIndex = 13;
             this.btnNap.Text = "Nạp";
             this.btnNap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -419,7 +420,7 @@
             this.btnDel.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
             this.btnDel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDel.Location = new System.Drawing.Point(341, 252);
+            this.btnDel.Location = new System.Drawing.Point(876, 145);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(101, 50);
             this.btnDel.TabIndex = 12;
@@ -437,7 +438,7 @@
             this.btnThem.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
             this.btnThem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(92, 252);
+            this.btnThem.Location = new System.Drawing.Point(876, 67);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(101, 50);
             this.btnThem.TabIndex = 10;
@@ -490,6 +491,25 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "ID:";
             // 
+            // cusCbb1
+            // 
+            this.cusCbb1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.cusCbb1.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cusCbb1.BorderSize = 1;
+            this.cusCbb1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cusCbb1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cusCbb1.ForeColor = System.Drawing.Color.DimGray;
+            this.cusCbb1.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cusCbb1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cusCbb1.ListTextColor = System.Drawing.Color.DimGray;
+            this.cusCbb1.Location = new System.Drawing.Point(970, 289);
+            this.cusCbb1.MinimumSize = new System.Drawing.Size(50, 30);
+            this.cusCbb1.Name = "cusCbb1";
+            this.cusCbb1.Padding = new System.Windows.Forms.Padding(1);
+            this.cusCbb1.Size = new System.Drawing.Size(129, 30);
+            this.cusCbb1.TabIndex = 30;
+            this.cusCbb1.Texts = "";
+            // 
             // FormKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -534,5 +554,6 @@
         private FontAwesome.Sharp.IconButton btnEdit;
         private System.Windows.Forms.Label label7;
         private FontAwesome.Sharp.IconButton iconButton1;
+        private CustomsDetail.CusCbb cusCbb1;
     }
 }

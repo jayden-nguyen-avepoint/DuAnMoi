@@ -76,8 +76,7 @@ namespace QuanNet.BLL
                 if (TenDN == t.TenDN)
                 {
                     ID = t.IdTK;
-                }
-                
+                }                
             }
             return ID;
         }

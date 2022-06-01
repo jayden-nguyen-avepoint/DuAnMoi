@@ -192,22 +192,5 @@ namespace QuanNet.BLL
             }
             return tong;
         }
-        public string IDMAY(string idct)
-        {
-                string idm = "";
-                foreach(HoaDonChiTiet i in GetListHDCTByID(""))
-                {
-                    if (i.IdChiTiet == idct)
-                    {
-                        idm = i.IdMay;
-                        break;
-                    }
-                }
-            Console.WriteLine(idm + "123");
-            return idm;
-        }
-        
-       
-
     }
 }
