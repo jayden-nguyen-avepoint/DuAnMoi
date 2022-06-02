@@ -56,11 +56,6 @@ namespace QuanNet
         private void btnXN_Click(object sender, EventArgs e)
         {
             ID_CT=  dgvOrder.SelectedRows[0].Cells["IdChiTiet"].Value.ToString();
-
-            MessageBox.Show(ID_CT);
-            MessageBox.Show(ID_CT.Count().ToString());
-
-            MessageBox.Show(ID_CT.Substring(0, 5));
             HoaDon s=new HoaDon()
                 { 
                     IdHoaDon = MaHoaDon(),
