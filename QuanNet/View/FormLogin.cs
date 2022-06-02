@@ -124,21 +124,70 @@ namespace QuanNet
             ShowDB(false);
 
         }
-
-        private void cusBtn1_Click(object sender, EventArgs e)
+        public void MoMayAdmin()
         {
-            if (txtTKQL.Text == IDAdmin && txtMKQL.Text == PasswordAdmin)
+            try
             {
-                Form1 f = new Form1();
-                f.Show();
+                if (txtTKQL.Text == IDAdmin && txtMKQL.Text == PasswordAdmin)
+                {
+                    Form1 f = new Form1();
+                    f.Show();
 
+                }
+                else
+                {
+                    MessageBox.Show("Tài khoản hoặc mật khẩu không đúng", "Thông báo", MessageBoxButtons.OK);
+                }
             }
-            else
+            catch
             {
-                MessageBox.Show("Tài khoản hoặc mật khẩu không đúng", "Thong bao", MessageBoxButtons.OK);
+                MessageBox.Show("Tài khoản hoặc mật khẩu không đúng", "Thông báo", MessageBoxButtons.OK);
             }
             txtMKQL.Text = "";
             txtTKQL.Text = "";
+
+        }
+        public void MoMayKhachHang()
+        {
+            string tk = BllKhachHang.Instance.GetIDTKByUSERNAME(txtTKKH.Text.ToString());
+            foreach (TaiKhoan i in BllKhachHang.Instance.GetListTKByIDTK(BllKhachHang.Instance.GetIDTKByUSERNAME(txtTKKH.Text.ToString())))
+            {
+                if (txtTKKH.Text.ToString() == i.TenDN && txtMKKH.Text.ToString() == i.MatKhau)
+                {
+                    if (cbbMay.SelectedIndex != -1)
+                    {
+                        if (BllMayTinh.Instance.GetMayByIDMay(cbbMay.SelectedItem.ToString()).TrangThai == false)
+                        {
+                            string may = cbbMay.SelectedItem.ToString();
+                            BllMayTinh.Instance.addTKinMay(may, tk, "");
+                            FormsUser.FormUsers f = new FormsUser.FormUsers(may, tk, DateTime.Now);
+                            f.Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Máy bận! Xin vui lòng chọn máy khác. ", "Thông báo", MessageBoxButtons.OK);
+
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Vui lòng chọn máy ", "Thông báo", MessageBoxButtons.OK);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Tài khoản hoặc mật khẩu không đúng", "Thông báo", MessageBoxButtons.OK);
+                }
+
+            }
+
+            txtTKKH.Text = "";
+            txtMKKH.Text = "";
+            cbbMay.SelectedIndex = -1;
+        }
+        private void cusBtn1_Click(object sender, EventArgs e)
+        {
+            MoMayAdmin();
         }
 
         private void cusBtn1_KeyPress(object sender, KeyPressEventArgs e)
@@ -146,62 +195,23 @@ namespace QuanNet
             
             if (e.KeyChar == (char)Keys.Enter)
             {
-                try
-                {
-                    if (txtTKQL.Text == IDAdmin && txtMKQL.Text == PasswordAdmin)
-                    {
-                        Form1 f = new Form1();
-                        f.Show();
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("Tài khoản hoặc mật khẩu không đúng", "Thong bao", MessageBoxButtons.OK);
-                    }
-                }
-                catch
-                {
-                    MessageBox.Show("Tài khoản hoặc mật khẩu không đúng", "Thong bao", MessageBoxButtons.OK);
-                }
-                txtMKQL.Text = "";
-                txtTKQL.Text = "";
-                e.Handled = true;
-                
+                MoMayAdmin();
+                e.Handled = true;              
             }
         }
 
         private void cusBtnKH_Click(object sender, EventArgs e)
-        {   
-            string tk = BllKhachHang.Instance.GetIDTKByUSERNAME(txtTKKH.Text.ToString());
-            foreach(TaiKhoan i in BllKhachHang.Instance.GetListTKByIDTK(BllKhachHang.Instance.GetIDTKByUSERNAME(txtTKKH.Text.ToString())))
-            {
-                if (txtTKKH.Text.ToString()== i.TenDN &&  txtMKKH.Text.ToString()==i.MatKhau )
-                {
-                   
-                        if (cbbMay.SelectedIndex!=-1)
-                        {
-                        
-                            string may = cbbMay.SelectedItem.ToString();
-                            BllMayTinh.Instance.addTKinMay(may, tk, "");
-                            FormsUser.FormUsers f = new FormsUser.FormUsers(may, tk);
-                            f.Show();
-                            
-                        }
-                        else
-                        {
-                            MessageBox.Show("Vui lòng chọn máy ", "Thong bao", MessageBoxButtons.OK);
-                        }
-                }    
-                else
-                {
-                    MessageBox.Show("Tài khoản hoặc mật khẩu không đúng", "Thong bao", MessageBoxButtons.OK);
-                }
+        {
+            MoMayKhachHang();
+        }
 
+        private void BtnKH_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                MoMayKhachHang();
+                e.Handled = true;
             }
-            
-            txtTKKH.Text = "";
-            txtMKKH.Text = "";
-            cbbMay.SelectedIndex = -1;       
         }
     }
 }

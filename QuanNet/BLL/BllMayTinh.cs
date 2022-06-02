@@ -95,9 +95,7 @@ namespace QuanNet.BLL
         public void addTKinMay(string IdMay, string IdKhach,string HoatDong)
         {   
             May up = db.Mays.Find(IdMay);
-            //Console.WriteLine(IdMay);
             up.IdTK=IdKhach;
-            //Console.WriteLine(IdKhach);
             if (up.IdTK != null)
             {
                 up.TrangThai = true;
@@ -110,7 +108,7 @@ namespace QuanNet.BLL
             else up.HoatDong = null;
             db.SaveChanges();
         }
-        public string GetIDTK(string idm)
+        public string GetIDTKbyMay(string idm)
         {
             string idtk = "";
             foreach (May i in GetListMayByID(""))
@@ -118,11 +116,8 @@ namespace QuanNet.BLL
                 if (idm==i.IdMay)
                 {
                     idtk = i.IdTK;                 
-
                 }
             }
-            //Console.WriteLine("Duc");
-            Console.WriteLine(idtk+"111");
             return idtk;
         }
     }

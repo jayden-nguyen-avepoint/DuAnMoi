@@ -22,6 +22,7 @@ namespace QuanNet
             txtIDTK.Text = MaKHtutang();
             txtIDTK.Enabled = false;
             txtTK.Enabled = false;
+            cbbSort.Items.AddRange(new object[] { "", "ID Khách hàng", "Tên khách hàng" });
         }
         public void NewTK()
         {
@@ -67,6 +68,7 @@ namespace QuanNet
                 txtTenKH.Text = (BllKhachHang.Instance.GetTKByIDTK(ID)).TenKH.ToString();
                 txtTK.Text = (BllKhachHang.Instance.GetTKByIDTK(ID)).TenDN.ToString();
                 txtTK.Enabled = false;
+                txtTK.ForeColor= Color.White;
                 txtMK.Text = (BllKhachHang.Instance.GetTKByIDTK(ID)).MatKhau.ToString();
                 txtSoDu.Text = (BllKhachHang.Instance.GetTKByIDTK(ID)).Sodu.ToString();
                 txtSoDu.Enabled = false;
@@ -131,17 +133,19 @@ namespace QuanNet
         {
             if (dgvKH.SelectedRows.Count == 1)
             {
-                
-                int moneyAdd = Convert.ToInt32(txtNap.Text);
-                if (moneyAdd > 0)
-                { 
-                    int Sodu = Convert.ToInt32(txtSoDu.Text);
-                    Sodu += moneyAdd;
-                    txtSoDu.Text = Sodu.ToString();
-                    txtNap.Text = "";
+                if (txtNap.Text != "")
+                {
+                    int moneyAdd = Convert.ToInt32(txtNap.Text);
+                    if (moneyAdd > 0)
+                    {
+                        int Sodu = Convert.ToInt32(txtSoDu.Text);
+                        Sodu += moneyAdd;
+                        txtSoDu.Text = Sodu.ToString();
+                        txtNap.Text = "";
+                    }
+                    else MessageBox.Show("Số lượng nạp không đúng", "Thông báo", MessageBoxButtons.OK);
                 }
-                else MessageBox.Show("Số lượng nạp không đúng", "Thông báo", MessageBoxButtons.OK);
-
+                else MessageBox.Show("Nhập số lượng tiền cần nạp cho tài khoản", "Thông báo", MessageBoxButtons.OK);
                 NewTK();
             }
 
@@ -157,6 +161,7 @@ namespace QuanNet
             SetNull();
             txtIDTK.Enabled = false;
             txtTK.Enabled = false;
+            txtTK.ForeColor = System.Drawing.Color.White;
             dgvKH.ClearSelection();
         }
 

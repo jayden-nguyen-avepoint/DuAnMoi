@@ -58,6 +58,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconQuanLy)).BeginInit();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconForm)).BeginInit();
+            this.panelShadow.SuspendLayout();
             this.panelDesktop.SuspendLayout();
             this.panelKHmain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconKH)).BeginInit();
@@ -143,7 +144,7 @@
             this.panelQL.Controls.Add(this.txtTKQL);
             this.panelQL.Controls.Add(this.txtMKQL);
             this.panelQL.Controls.Add(this.cusBtn1);
-            this.panelQL.Location = new System.Drawing.Point(165, 3);
+            this.panelQL.Location = new System.Drawing.Point(73, 0);
             this.panelQL.Name = "panelQL";
             this.panelQL.Size = new System.Drawing.Size(289, 456);
             this.panelQL.TabIndex = 6;
@@ -269,6 +270,7 @@
             // panelShadow
             // 
             this.panelShadow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.panelShadow.Controls.Add(this.panelQL);
             this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelShadow.Location = new System.Drawing.Point(258, 75);
             this.panelShadow.Name = "panelShadow";
@@ -278,7 +280,6 @@
             // panelDesktop
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.panelDesktop.Controls.Add(this.panelQL);
             this.panelDesktop.Controls.Add(this.panelKHmain);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(258, 84);
@@ -342,6 +343,7 @@
             this.BtnKH.TextColor = System.Drawing.Color.White;
             this.BtnKH.UseVisualStyleBackColor = false;
             this.BtnKH.Click += new System.EventHandler(this.cusBtnKH_Click);
+            this.BtnKH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BtnKH_KeyPress);
             // 
             // txtTKKH
             // 
@@ -440,6 +442,7 @@
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconForm)).EndInit();
+            this.panelShadow.ResumeLayout(false);
             this.panelDesktop.ResumeLayout(false);
             this.panelKHmain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconKH)).EndInit();

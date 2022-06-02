@@ -64,22 +64,18 @@ namespace QuanNet.BLL
             }
             return data;
         }
+        public dynamic GetListCT()
+        {
+            return db.HoaDonChiTiets.Select(p => new { p.IdChiTiet, p.IdMay, p.TongTien,p.May.IdTK }).ToList();
+        }
         public List<OrderKHView> GetListTPViewByIDCT(string IDCT)
         {
             List<OrderKHView> data = new List<OrderKHView>();
             foreach (ListTPham i in GetListTPByIDCT(IDCT))
             {
-                string tenmon = "";
-                foreach (TPham j in db.TPhams.ToList())
-                {
-                    if (i.IdTP == j.IdTP)
-                    {
-                        tenmon = j.TenTP;
-                    }
-                }
                 data.Add(new OrderKHView
                 {
-                    Mon = tenmon,
+                    Mon = i.TPham.TenTP,
                     SL = i.SoluongTP,
                     Tong = i.ThanhTien,
                 });
@@ -100,6 +96,16 @@ namespace QuanNet.BLL
                 });
             }
             return list;
+        }
+        public int TinhTienOrder(string idct)
+        {
+
+            int TienOrder = 0;
+            foreach (ListTPham i in GetListTPByIDCT(idct))
+            {
+                TienOrder += i.ThanhTien;
+            }
+            return TienOrder;
         }
     }
 }
