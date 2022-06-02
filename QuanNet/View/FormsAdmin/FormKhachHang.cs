@@ -9,20 +9,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanNet.BLL;
 using QuanNet.DTO;
+using QuanNet.LinQ;
 using QuanNet.Properties;
 
 namespace QuanNet
 {
     public partial class FormKhachHang : Form
     {   
-        
         public FormKhachHang()
         {
-            InitializeComponent();
-            
+            InitializeComponent(); 
             txtIDTK.Text = MaKHtutang();
             txtIDTK.Enabled = false;
             txtTK.Enabled = false;
+            cbbSort.Items.AddRange(new object[] { "", "ID Khách hàng", "Tên khách hàng" });
         }
         public void NewTK()
         {
@@ -37,9 +37,9 @@ namespace QuanNet
             };
             if (dgvKH.SelectedRows.Count == 1)
             {
-                BllQLy.Instance.Edit(tk);
+                BllKhachHang.Instance.Edit(tk);
             }
-            else BllQLy.Instance.Add(tk);
+            else BllKhachHang.Instance.Add(tk);
         }
         public void SetNull()
         {
@@ -60,24 +60,25 @@ namespace QuanNet
         }
         public void GUI(string ID)
         {
-            if (BllQLy.Instance.CheckAddUpdate(ID))
+            if (BllKhachHang.Instance.CheckAddUpdate(ID))
             {
                 txtIDTK.Enabled = false;
-                txtIDTK.Text = (BllQLy.Instance.GetTKByIDTK(ID)).IdTK.ToString();
-                txtLienHe.Text = (BllQLy.Instance.GetTKByIDTK(ID)).LienHe;
-                txtTenKH.Text = (BllQLy.Instance.GetTKByIDTK(ID)).TenKH.ToString();
-                txtTK.Text = (BllQLy.Instance.GetTKByIDTK(ID)).TenDN.ToString();
+                txtIDTK.Text = (BllKhachHang.Instance.GetTKByIDTK(ID)).IdTK.ToString();
+                txtLienHe.Text = (BllKhachHang.Instance.GetTKByIDTK(ID)).LienHe;
+                txtTenKH.Text = (BllKhachHang.Instance.GetTKByIDTK(ID)).TenKH.ToString();
+                txtTK.Text = (BllKhachHang.Instance.GetTKByIDTK(ID)).TenDN.ToString();
                 txtTK.Enabled = false;
-                txtMK.Text = (BllQLy.Instance.GetTKByIDTK(ID)).MatKhau.ToString();
-                txtSoDu.Text = (BllQLy.Instance.GetTKByIDTK(ID)).Sodu.ToString();
+                txtTK.ForeColor= Color.White;
+                txtMK.Text = (BllKhachHang.Instance.GetTKByIDTK(ID)).MatKhau.ToString();
+                txtSoDu.Text = (BllKhachHang.Instance.GetTKByIDTK(ID)).Sodu.ToString();
                 txtSoDu.Enabled = false;
             }
             
         }
-        public void ShowList(string i)
+        public void ShowList(string i, string key="")
         {   
             txtIDTK.Text=MaKHtutang();
-            dgvKH.DataSource = BllQLy.Instance.GetTKViewByIDKH(i);
+            dgvKH.DataSource = BllKhachHang.Instance.GetTKViewByIDKH(i,key);
         }
         private void btnThem_Click(object sender, EventArgs e)
         {   
@@ -90,7 +91,7 @@ namespace QuanNet
                 MatKhau = txtMK.Text,
                 Sodu = Convert.ToInt32(txtSoDu.Text),
             };
-            BllQLy.Instance.Add(tk);
+            BllKhachHang.Instance.Add(tk);
             SetNull();
             ShowList("");
             txtIDTK.Enabled = false;
@@ -108,7 +109,7 @@ namespace QuanNet
                     MatKhau = txtMK.Text,
                     Sodu = Convert.ToInt32(txtSoDu.Text),
                 };
-                BllQLy.Instance.Edit(tk);
+                BllKhachHang.Instance.Edit(tk);
                 SetNull();
                 ShowList("");
                 dgvKH.ClearSelection();
@@ -121,35 +122,37 @@ namespace QuanNet
                 foreach (DataGridViewRow i in dgvKH.SelectedRows)
                 {
                     string IDKH = i.Cells["ID_TaiKhoan"].Value.ToString();
-                    BllQLy.Instance.DeleteKH(IDKH);
+                    BllKhachHang.Instance.DeleteKH(IDKH);
                 }
             }
                 SetNull();
                 ShowList("");
                 dgvKH.ClearSelection();
         }
-
         private void btnNap_Click(object sender, EventArgs e)
         {
             if (dgvKH.SelectedRows.Count == 1)
-            {   
-                int moneyAdd = Convert.ToInt32(txtNap.Text);
-                if (moneyAdd > 0)
+            {
+                if (txtNap.Text != "")
                 {
-                    int Sodu = Convert.ToInt32(txtSoDu.Text);
-                    Sodu += moneyAdd;
-                    txtSoDu.Text = Sodu.ToString();
-                    txtNap.Text = "";
+                    int moneyAdd = Convert.ToInt32(txtNap.Text);
+                    if (moneyAdd > 0)
+                    {
+                        int Sodu = Convert.ToInt32(txtSoDu.Text);
+                        Sodu += moneyAdd;
+                        txtSoDu.Text = Sodu.ToString();
+                        txtNap.Text = "";
+                    }
+                    else MessageBox.Show("Số lượng nạp không đúng", "Thông báo", MessageBoxButtons.OK);
                 }
-                else MessageBox.Show("Số lượng nạp không đúng", "Thông báo", MessageBoxButtons.OK);
+                else MessageBox.Show("Nhập số lượng tiền cần nạp cho tài khoản", "Thông báo", MessageBoxButtons.OK);
                 NewTK();
             }
 
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string keyWord = txtSearch.Text.ToLower();
-            dgvKH.DataSource = BllQLy.Instance.SearchKH(keyWord);
+            ShowList("", txtSearch.Text);
 
         }
         private void FormKhachHang_Load(object sender, EventArgs e)
@@ -158,6 +161,7 @@ namespace QuanNet
             SetNull();
             txtIDTK.Enabled = false;
             txtTK.Enabled = false;
+            txtTK.ForeColor = System.Drawing.Color.White;
             dgvKH.ClearSelection();
         }
 
@@ -183,7 +187,7 @@ namespace QuanNet
         {
             string ma = "";
             List<int> l = new List<int>();
-                foreach (TaiKhoan tk in BllQLy.Instance.GetTKByIDTKS(""))
+                foreach (TaiKhoan tk in BllKhachHang.Instance.GetListTKByIDTK(""))
                 {
                     l.Add(Convert.ToInt32(tk.IdTK.Remove(0, 2)));
                 }
@@ -194,5 +198,10 @@ namespace QuanNet
                 return l.Count + 1 < 10 ? "KH00" + (l.Count + 1) : l.Count + 1 < 100 ? "KH0" + (l.Count + 1) : "KH" + (l.Count + 1);
             
          }
+
+        private void txtSearch__TextChanged(object sender, EventArgs e)
+        {
+            ShowList("", txtSearch.Text);
+        }
     }
 }

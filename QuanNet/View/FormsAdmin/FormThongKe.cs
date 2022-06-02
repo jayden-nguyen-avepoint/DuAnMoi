@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Windows.Forms.DataVisualization.Charting;
+using QuanNet.BLL;
 namespace QuanNet
 {
     public partial class FormThongKe : Form
@@ -15,6 +16,8 @@ namespace QuanNet
         public FormThongKe()
         {
             InitializeComponent();
+            bieuDo1.Palette = ChartColorPalette.SemiTransparent;
+
         }
     }
 }

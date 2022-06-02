@@ -35,9 +35,9 @@
             this.txtHĐ = new QuanNet.CustomsDetail.CustomTextbox();
             this.label19 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cusBtn11 = new QuanNet.CustomsDetail.CusBtn();
+            this.CoderTool = new QuanNet.CustomsDetail.CusBtn();
             this.RainbowHat = new QuanNet.CustomsDetail.CusBtn();
-            this.cusBtn9 = new QuanNet.CustomsDetail.CusBtn();
+            this.Dota2 = new QuanNet.CustomsDetail.CusBtn();
             this.BlockADS = new QuanNet.CustomsDetail.CusBtn();
             this.Valorant = new QuanNet.CustomsDetail.CusBtn();
             this.Zalo = new QuanNet.CustomsDetail.CusBtn();
@@ -69,18 +69,18 @@
             this.panel1.Controls.Add(this.txtHĐ);
             this.panel1.Controls.Add(this.label19);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 489);
+            this.panel1.Location = new System.Drawing.Point(0, 780);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(932, 126);
+            this.panel1.Size = new System.Drawing.Size(1382, 126);
             this.panel1.TabIndex = 0;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(46, 107);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(52, 107);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(202, 12);
+            this.label5.Size = new System.Drawing.Size(267, 15);
             this.label5.TabIndex = 51;
             this.label5.Text = "BLOCKADS is running, don\'t hack this computer";
             // 
@@ -115,7 +115,7 @@
             this.txtHĐ.BorderSize = 2;
             this.txtHĐ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHĐ.ForeColor = System.Drawing.Color.White;
-            this.txtHĐ.Location = new System.Drawing.Point(756, 81);
+            this.txtHĐ.Location = new System.Drawing.Point(1206, 80);
             this.txtHĐ.Margin = new System.Windows.Forms.Padding(4);
             this.txtHĐ.Multiline = false;
             this.txtHĐ.Name = "txtHĐ";
@@ -125,7 +125,6 @@
             this.txtHĐ.PlaceholderText = "";
             this.txtHĐ.Size = new System.Drawing.Size(170, 35);
             this.txtHĐ.TabIndex = 37;
-            this.txtHĐ.Text = "";
             this.txtHĐ.UnderlinedStyle = false;
             // 
             // label19
@@ -133,7 +132,7 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label19.Location = new System.Drawing.Point(651, 87);
+            this.label19.Location = new System.Drawing.Point(1101, 86);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(108, 25);
             this.label19.TabIndex = 36;
@@ -143,9 +142,9 @@
             // 
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.cusBtn11);
+            this.panel2.Controls.Add(this.CoderTool);
             this.panel2.Controls.Add(this.RainbowHat);
-            this.panel2.Controls.Add(this.cusBtn9);
+            this.panel2.Controls.Add(this.Dota2);
             this.panel2.Controls.Add(this.BlockADS);
             this.panel2.Controls.Add(this.Valorant);
             this.panel2.Controls.Add(this.Zalo);
@@ -168,31 +167,31 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(932, 489);
+            this.panel2.Size = new System.Drawing.Size(1382, 780);
             this.panel2.TabIndex = 1;
             // 
-            // cusBtn11
+            // CoderTool
             // 
-            this.cusBtn11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
-            this.cusBtn11.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
-            this.cusBtn11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cusBtn11.BackgroundImage")));
-            this.cusBtn11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cusBtn11.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cusBtn11.BorderRadius = 20;
-            this.cusBtn11.BorderSize = 0;
-            this.cusBtn11.FlatAppearance.BorderSize = 0;
-            this.cusBtn11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cusBtn11.ForeColor = System.Drawing.Color.White;
-            this.cusBtn11.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.cusBtn11.Location = new System.Drawing.Point(738, 183);
-            this.cusBtn11.Name = "cusBtn11";
-            this.cusBtn11.Size = new System.Drawing.Size(100, 100);
-            this.cusBtn11.TabIndex = 49;
-            this.cusBtn11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.cusBtn11.TextColor = System.Drawing.Color.White;
-            this.cusBtn11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cusBtn11.UseVisualStyleBackColor = false;
-            this.cusBtn11.Click += new System.EventHandler(this.icon_Click);
+            this.CoderTool.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
+            this.CoderTool.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
+            this.CoderTool.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CoderTool.BackgroundImage")));
+            this.CoderTool.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.CoderTool.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.CoderTool.BorderRadius = 20;
+            this.CoderTool.BorderSize = 0;
+            this.CoderTool.FlatAppearance.BorderSize = 0;
+            this.CoderTool.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CoderTool.ForeColor = System.Drawing.Color.White;
+            this.CoderTool.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.CoderTool.Location = new System.Drawing.Point(393, 202);
+            this.CoderTool.Name = "CoderTool";
+            this.CoderTool.Size = new System.Drawing.Size(100, 100);
+            this.CoderTool.TabIndex = 49;
+            this.CoderTool.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.CoderTool.TextColor = System.Drawing.Color.White;
+            this.CoderTool.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.CoderTool.UseVisualStyleBackColor = false;
+            this.CoderTool.Click += new System.EventHandler(this.icon_Click);
             // 
             // RainbowHat
             // 
@@ -207,7 +206,7 @@
             this.RainbowHat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RainbowHat.ForeColor = System.Drawing.Color.White;
             this.RainbowHat.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.RainbowHat.Location = new System.Drawing.Point(564, 183);
+            this.RainbowHat.Location = new System.Drawing.Point(219, 202);
             this.RainbowHat.Name = "RainbowHat";
             this.RainbowHat.Size = new System.Drawing.Size(100, 100);
             this.RainbowHat.TabIndex = 48;
@@ -217,28 +216,28 @@
             this.RainbowHat.UseVisualStyleBackColor = false;
             this.RainbowHat.Click += new System.EventHandler(this.icon_Click);
             // 
-            // cusBtn9
+            // Dota2
             // 
-            this.cusBtn9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
-            this.cusBtn9.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
-            this.cusBtn9.BackgroundImage = global::QuanNet.Properties.Resources.customLogo_200x200;
-            this.cusBtn9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cusBtn9.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.cusBtn9.BorderRadius = 20;
-            this.cusBtn9.BorderSize = 0;
-            this.cusBtn9.FlatAppearance.BorderSize = 0;
-            this.cusBtn9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cusBtn9.ForeColor = System.Drawing.Color.White;
-            this.cusBtn9.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.cusBtn9.Location = new System.Drawing.Point(46, 338);
-            this.cusBtn9.Name = "cusBtn9";
-            this.cusBtn9.Size = new System.Drawing.Size(100, 100);
-            this.cusBtn9.TabIndex = 47;
-            this.cusBtn9.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.cusBtn9.TextColor = System.Drawing.Color.White;
-            this.cusBtn9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cusBtn9.UseVisualStyleBackColor = false;
-            this.cusBtn9.Click += new System.EventHandler(this.icon_Click);
+            this.Dota2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
+            this.Dota2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
+            this.Dota2.BackgroundImage = global::QuanNet.Properties.Resources.customLogo_200x200;
+            this.Dota2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Dota2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.Dota2.BorderRadius = 20;
+            this.Dota2.BorderSize = 0;
+            this.Dota2.FlatAppearance.BorderSize = 0;
+            this.Dota2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Dota2.ForeColor = System.Drawing.Color.White;
+            this.Dota2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Dota2.Location = new System.Drawing.Point(46, 207);
+            this.Dota2.Name = "Dota2";
+            this.Dota2.Size = new System.Drawing.Size(100, 100);
+            this.Dota2.TabIndex = 47;
+            this.Dota2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Dota2.TextColor = System.Drawing.Color.White;
+            this.Dota2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Dota2.UseVisualStyleBackColor = false;
+            this.Dota2.Click += new System.EventHandler(this.icon_Click);
             // 
             // BlockADS
             // 
@@ -253,7 +252,7 @@
             this.BlockADS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BlockADS.ForeColor = System.Drawing.Color.White;
             this.BlockADS.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BlockADS.Location = new System.Drawing.Point(393, 183);
+            this.BlockADS.Location = new System.Drawing.Point(1231, 37);
             this.BlockADS.Name = "BlockADS";
             this.BlockADS.Size = new System.Drawing.Size(100, 100);
             this.BlockADS.TabIndex = 46;
@@ -276,7 +275,7 @@
             this.Valorant.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Valorant.ForeColor = System.Drawing.Color.White;
             this.Valorant.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Valorant.Location = new System.Drawing.Point(219, 183);
+            this.Valorant.Location = new System.Drawing.Point(1063, 37);
             this.Valorant.Name = "Valorant";
             this.Valorant.Size = new System.Drawing.Size(100, 100);
             this.Valorant.TabIndex = 45;
@@ -299,7 +298,7 @@
             this.Zalo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Zalo.ForeColor = System.Drawing.Color.White;
             this.Zalo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Zalo.Location = new System.Drawing.Point(46, 183);
+            this.Zalo.Location = new System.Drawing.Point(904, 37);
             this.Zalo.Name = "Zalo";
             this.Zalo.Size = new System.Drawing.Size(100, 100);
             this.Zalo.TabIndex = 44;
@@ -438,7 +437,7 @@
             // 
             this.CODER.AutoSize = true;
             this.CODER.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.CODER.Location = new System.Drawing.Point(773, 286);
+            this.CODER.Location = new System.Drawing.Point(423, 305);
             this.CODER.Name = "CODER";
             this.CODER.Size = new System.Drawing.Size(44, 16);
             this.CODER.TabIndex = 29;
@@ -448,7 +447,7 @@
             // 
             this.DG.AutoSize = true;
             this.DG.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.DG.Location = new System.Drawing.Point(603, 286);
+            this.DG.Location = new System.Drawing.Point(253, 305);
             this.DG.Name = "DG";
             this.DG.Size = new System.Drawing.Size(27, 16);
             this.DG.TabIndex = 27;
@@ -458,7 +457,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label18.Location = new System.Drawing.Point(60, 441);
+            this.label18.Location = new System.Drawing.Point(60, 310);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(63, 16);
             this.label18.TabIndex = 25;
@@ -468,7 +467,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(409, 286);
+            this.label10.Location = new System.Drawing.Point(1253, 149);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(78, 16);
             this.label10.TabIndex = 17;
@@ -478,7 +477,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label11.Location = new System.Drawing.Point(236, 286);
+            this.label11.Location = new System.Drawing.Point(1089, 149);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(57, 16);
             this.label11.TabIndex = 15;
@@ -488,7 +487,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label12.Location = new System.Drawing.Point(79, 286);
+            this.label12.Location = new System.Drawing.Point(932, 149);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(34, 16);
             this.label12.TabIndex = 13;
@@ -541,7 +540,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.ClientSize = new System.Drawing.Size(932, 615);
+            this.ClientSize = new System.Drawing.Size(1382, 906);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.Coral;
@@ -573,7 +572,7 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label7;
         private CustomsDetail.CusBtn Chrome;
-        private CustomsDetail.CusBtn cusBtn9;
+        private CustomsDetail.CusBtn Dota2;
         private CustomsDetail.CusBtn BlockADS;
         private CustomsDetail.CusBtn Valorant;
         private CustomsDetail.CusBtn Zalo;
@@ -581,7 +580,7 @@
         private CustomsDetail.CusBtn TienLen;
         private CustomsDetail.CusBtn LOL;
         private CustomsDetail.CusBtn AOV;
-        private CustomsDetail.CusBtn cusBtn11;
+        private CustomsDetail.CusBtn CoderTool;
         private CustomsDetail.CusBtn RainbowHat;
         private System.Windows.Forms.Label label5;
         private CustomsDetail.CusBtn cusBtn1;
