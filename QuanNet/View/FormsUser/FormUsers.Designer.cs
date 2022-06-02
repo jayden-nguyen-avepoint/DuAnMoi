@@ -40,6 +40,7 @@
             this.labelTitle = new System.Windows.Forms.Label();
             this.panelDesktopPanel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtSodu = new QuanNet.CustomsDetail.CustomTextbox();
             this.label5 = new System.Windows.Forms.Label();
@@ -53,7 +54,6 @@
             this.txtTG = new QuanNet.CustomsDetail.CustomTextbox();
             this.txtMay = new QuanNet.CustomsDetail.CustomTextbox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label9 = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelLogo.SuspendLayout();
@@ -214,6 +214,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(275, 953);
             this.panel2.TabIndex = 3;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe Script", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.PaleVioletRed;
+            this.label9.Location = new System.Drawing.Point(15, 22);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(246, 42);
+            this.label9.TabIndex = 62;
+            this.label9.Text = "Bảng hoạt động";
             // 
             // label7
             // 
@@ -413,27 +424,18 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe Script", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.PaleVioletRed;
-            this.label9.Location = new System.Drawing.Point(15, 22);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(246, 42);
-            this.label9.TabIndex = 62;
-            this.label9.Text = "Bảng hoạt động";
-            // 
             // FormUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.ClientSize = new System.Drawing.Size(1902, 1033);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelDesktopPanel);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
+            this.MaximumSize = new System.Drawing.Size(1920, 1080);
             this.Name = "FormUsers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quan Ly ";

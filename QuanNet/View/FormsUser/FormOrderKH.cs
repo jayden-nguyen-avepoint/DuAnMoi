@@ -80,7 +80,6 @@ namespace QuanNet.FormsUser
             else
             {
                 BllOrderKH.Instance.addOrder1(orderkh);
-                MessageBox.Show("Thành công !","Thông báo",MessageBoxButtons.OK);
             }
             txtMon.Text = "";
             txtSL.Text = "";

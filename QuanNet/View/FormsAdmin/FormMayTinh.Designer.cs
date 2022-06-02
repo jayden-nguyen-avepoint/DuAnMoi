@@ -50,6 +50,8 @@
             this.M20 = new FontAwesome.Sharp.IconButton();
             this.M02 = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txttgchoi = new QuanNet.CustomsDetail.CustomTextbox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtHD = new QuanNet.CustomsDetail.CustomTextbox();
             this.btnEnd = new QuanNet.CustomsDetail.CusBtn();
@@ -61,8 +63,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txttgchoi = new QuanNet.CustomsDetail.CustomTextbox();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -103,7 +103,7 @@
             this.M01.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.M01.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.M01.IconChar = FontAwesome.Sharp.IconChar.Desktop;
-            this.M01.IconColor = System.Drawing.Color.Gold;
+            this.M01.IconColor = System.Drawing.Color.Chartreuse;
             this.M01.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.M01.IconSize = 100;
             this.M01.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -516,6 +516,39 @@
             this.panel2.Size = new System.Drawing.Size(524, 622);
             this.panel2.TabIndex = 24;
             // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.label6.Location = new System.Drawing.Point(143, 33);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(280, 32);
+            this.label6.TabIndex = 26;
+            this.label6.Text = "CYBER HOC THEM";
+            // 
+            // txttgchoi
+            // 
+            this.txttgchoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.txttgchoi.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txttgchoi.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txttgchoi.BorderRadius = 0;
+            this.txttgchoi.BorderSize = 2;
+            this.txttgchoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttgchoi.ForeColor = System.Drawing.Color.White;
+            this.txttgchoi.Location = new System.Drawing.Point(192, 385);
+            this.txttgchoi.Margin = new System.Windows.Forms.Padding(4);
+            this.txttgchoi.Multiline = false;
+            this.txttgchoi.Name = "txttgchoi";
+            this.txttgchoi.Padding = new System.Windows.Forms.Padding(7);
+            this.txttgchoi.PasswordChar = false;
+            this.txttgchoi.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txttgchoi.PlaceholderText = "";
+            this.txttgchoi.Size = new System.Drawing.Size(250, 35);
+            this.txttgchoi.TabIndex = 25;
+            this.txttgchoi.UnderlinedStyle = true;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -553,15 +586,15 @@
             this.btnEnd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.btnEnd.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.btnEnd.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.btnEnd.BorderRadius = 20;
+            this.btnEnd.BorderRadius = 30;
             this.btnEnd.BorderSize = 3;
             this.btnEnd.FlatAppearance.BorderSize = 0;
             this.btnEnd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnd.ForeColor = System.Drawing.Color.GhostWhite;
-            this.btnEnd.Location = new System.Drawing.Point(313, 534);
+            this.btnEnd.Location = new System.Drawing.Point(221, 452);
             this.btnEnd.Name = "btnEnd";
-            this.btnEnd.Size = new System.Drawing.Size(129, 46);
+            this.btnEnd.Size = new System.Drawing.Size(180, 67);
             this.btnEnd.TabIndex = 10;
             this.btnEnd.Text = "Kết thúc";
             this.btnEnd.TextColor = System.Drawing.Color.GhostWhite;
@@ -695,39 +728,6 @@
             this.label1.Size = new System.Drawing.Size(70, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Số máy:";
-            // 
-            // txttgchoi
-            // 
-            this.txttgchoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.txttgchoi.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txttgchoi.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txttgchoi.BorderRadius = 0;
-            this.txttgchoi.BorderSize = 2;
-            this.txttgchoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttgchoi.ForeColor = System.Drawing.Color.White;
-            this.txttgchoi.Location = new System.Drawing.Point(192, 385);
-            this.txttgchoi.Margin = new System.Windows.Forms.Padding(4);
-            this.txttgchoi.Multiline = false;
-            this.txttgchoi.Name = "txttgchoi";
-            this.txttgchoi.Padding = new System.Windows.Forms.Padding(7);
-            this.txttgchoi.PasswordChar = false;
-            this.txttgchoi.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txttgchoi.PlaceholderText = "";
-            this.txttgchoi.Size = new System.Drawing.Size(250, 35);
-            this.txttgchoi.TabIndex = 25;
-            this.txttgchoi.UnderlinedStyle = true;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.label6.Location = new System.Drawing.Point(143, 33);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(280, 32);
-            this.label6.TabIndex = 26;
-            this.label6.Text = "CYBER HOC THEM";
             // 
             // FormMayTinh
             // 

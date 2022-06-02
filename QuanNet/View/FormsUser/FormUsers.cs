@@ -46,7 +46,8 @@ namespace QuanNet.FormsUser
             
             random = new Random();
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-            //this.FormBorderStyle = FormBorderStyle.None;
+            //this.FormBorderStyle = FormBorderStyle.None; 
+            
         }
         public FormUsers(DateTime t)
         {
@@ -193,6 +194,10 @@ namespace QuanNet.FormsUser
             txtOrder.Text= BllOrderKH.Instance.TinhTienOrder(ID_CT).ToString();
             int TienChoiTatca =TinhTgChoi(Convert.ToDateTime(time)) + Convert.ToInt32(txtOrder.Text);
             txtTongTien.Text = TienChoiTatca.ToString();
+            if(TienChoiTatca > Convert.ToInt32(txtSodu.Text))
+            {
+                ending();
+            }
         }
 
         private void txtTongTien__TextChanged(object sender, EventArgs e)
@@ -200,12 +205,8 @@ namespace QuanNet.FormsUser
             
             if (Convert.ToInt32(txtTongTien.Text) > Convert.ToInt32(txtSodu.Text) - 5000)
             {
-                MessageBox.Show("Tai Khoan dang het can nap them", "Thông báo", MessageBoxButtons.OK);
+                MessageBox.Show("Tài khoản gần hết, cần nạp thêm để tiếp tục dịch vụ", "Thông báo", MessageBoxButtons.OK);
             }
-        }
-        public void check()
-        {
-            
         }
     }
 }
