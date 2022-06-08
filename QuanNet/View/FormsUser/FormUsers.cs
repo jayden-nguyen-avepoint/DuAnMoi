@@ -49,9 +49,8 @@ namespace QuanNet.FormsUser
             //this.FormBorderStyle = FormBorderStyle.None; 
             
         }
-        public FormUsers(DateTime t)
+        public FormUsers()
         {
-            tg = t;
         }
 
         //=============UI CODE=============
@@ -121,11 +120,13 @@ namespace QuanNet.FormsUser
             }
         }
 
-        public int TinhTgChoi(DateTime time)
+        public int TinhTgChoi(DateTime t)
         {
-            TimeSpan interval = time.Subtract(tg);
+            TimeSpan f = Convert.ToDateTime(DateTime.Now.ToLongTimeString()) - Convert.ToDateTime(time);
+            Console.WriteLine(f.ToString());
+            TimeSpan interval = t.Subtract(Convert.ToDateTime(time));
             int tienGio = BllMayTinh.Instance.GetMayByIDMay(ID_May).TienGio;
-            int TongTienChoi = tienGio * interval.Hours + tienGio * interval.Minutes / 60 + tienGio * interval.Seconds / 3600;
+            int TongTienChoi = tienGio * f.Hours + tienGio * f.Minutes / 60 + tienGio * f.Seconds / 3600;
             if (TongTienChoi <= 2000)
             {
                 TongTienChoi = 2000;
@@ -161,7 +162,7 @@ namespace QuanNet.FormsUser
                 TenDN= BllKhachHang.Instance.GetTKByIDTK(IDKhachHang).TenDN,
                 MatKhau= BllKhachHang.Instance.GetTKByIDTK(IDKhachHang).MatKhau,
                 TenKH= BllKhachHang.Instance.GetTKByIDTK(IDKhachHang).TenKH,
-                Sodu= BllKhachHang.Instance.GetTKByIDTK(IDKhachHang).Sodu-TinhTgChoi(Convert.ToDateTime(time))- Convert.ToInt32(txtOrder.Text)
+                Sodu= BllKhachHang.Instance.GetTKByIDTK(IDKhachHang).Sodu-TinhTgChoi(Convert.ToDateTime(tg))- Convert.ToInt32(txtOrder.Text)
             };
             BllKhachHang.Instance.Edit(s);
             BllMayTinh.Instance.addTKinMay(ID_May, null, null);
@@ -175,11 +176,13 @@ namespace QuanNet.FormsUser
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            txtTG.Text= (Convert.ToDateTime(DateTime.Now.ToLongTimeString())-Convert.ToDateTime(time)).ToString();  
+            txtTG.Text= (Convert.ToDateTime(DateTime.Now.ToLongTimeString())-Convert.ToDateTime(time)).ToString();
+            TimeSpan f = Convert.ToDateTime(DateTime.Now.ToLongTimeString()) - Convert.ToDateTime(time);
+            Console.WriteLine(f.ToString());
         }
         private void FormUsers_Load(object sender, EventArgs e)
         {
-            
+
             time = DateTime.Now.ToString();
             ID_CT = BllHoaDon.Instance.CreateIDCT(IDKhachHang, ID_May);
             BllHoaDon.Instance.AddHDCT(new HoaDonChiTiet
@@ -192,7 +195,7 @@ namespace QuanNet.FormsUser
         private void txtTG__TextChanged(object sender, EventArgs e)
         {
             txtOrder.Text= BllOrderKH.Instance.TinhTienOrder(ID_CT).ToString();
-            int TienChoiTatca =TinhTgChoi(Convert.ToDateTime(time)) + Convert.ToInt32(txtOrder.Text);
+            int TienChoiTatca =TinhTgChoi(DateTime.Now) + Convert.ToInt32(txtOrder.Text);
             txtTongTien.Text = TienChoiTatca.ToString();
             if(TienChoiTatca > Convert.ToInt32(txtSodu.Text))
             {
