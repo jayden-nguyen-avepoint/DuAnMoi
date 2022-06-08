@@ -58,6 +58,7 @@ namespace QuanNet.BLL
             {
                 if (i.IdHoaDon.Contains(keyWord) || i.IdTK.Contains(keyWord) || i.NgayXuatHD.ToString().Contains(keyWord))
                 {
+
                     data.Add(new HoaDonView
                     {
                         ID_HoaDon = i.IdHoaDon,
@@ -69,10 +70,10 @@ namespace QuanNet.BLL
             }
             return data;
         }
-        public dynamic ShowAll()
-        {
-            return db.HoaDons.Select(p => new { ID_HoaDon = p.IdHoaDon, p.IdTK, p.NgayXuatHD, p.TaiKhoan.TenKH, p.HoaDonChiTiet.TongTien }).ToList();
-        }
+        //public dynamic ShowAll()
+        //{
+        //    return db.HoaDons.Select(p => new { ID_HoaDon = p.IdHoaDon, p.IdTK, p.NgayXuatHD, p.TaiKhoan.TenKH, p.HoaDonChiTiet.TongTien }).ToList();
+        //}
         public dynamic SearchByDay(DateTime s, DateTime e)
         {
             return  db.HoaDons.Where(p => p.NgayXuatHD >= s && p.NgayXuatHD <= e).Select(p => new { ID_HoaDon=p.IdHoaDon,p.IdTK,p.NgayXuatHD,p.TaiKhoan.TenKH, p.HoaDonChiTiet.TongTien }).ToList();

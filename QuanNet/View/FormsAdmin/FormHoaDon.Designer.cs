@@ -45,7 +45,6 @@
             this.dateStart = new System.Windows.Forms.DateTimePicker();
             this.dateEnd = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.sort = new QuanNet.CustomsDetail.CusCbb();
             this.panel1.SuspendLayout();
@@ -168,7 +167,7 @@
             this.txtSearch.BorderSize = 2;
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.ForeColor = System.Drawing.Color.White;
-            this.txtSearch.Location = new System.Drawing.Point(957, 528);
+            this.txtSearch.Location = new System.Drawing.Point(13, 207);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
@@ -245,7 +244,7 @@
             this.dateStart.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateStart.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.dateStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateStart.Location = new System.Drawing.Point(313, 218);
+            this.dateStart.Location = new System.Drawing.Point(219, 218);
             this.dateStart.Name = "dateStart";
             this.dateStart.Size = new System.Drawing.Size(119, 22);
             this.dateStart.TabIndex = 20;
@@ -255,7 +254,7 @@
             // 
             this.dateEnd.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateEnd.Location = new System.Drawing.Point(514, 220);
+            this.dateEnd.Location = new System.Drawing.Point(420, 220);
             this.dateEnd.Name = "dateEnd";
             this.dateEnd.Size = new System.Drawing.Size(124, 22);
             this.dateEnd.TabIndex = 21;
@@ -266,23 +265,11 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(453, 220);
+            this.label4.Location = new System.Drawing.Point(359, 220);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 20);
             this.label4.TabIndex = 22;
             this.label4.Text = "Đến:";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(850, 536);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 20);
-            this.label5.TabIndex = 23;
-            this.label5.Text = "Tìm kiếm:";
             // 
             // label6
             // 
@@ -290,7 +277,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(11, 217);
+            this.label6.Location = new System.Drawing.Point(865, 543);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 20);
             this.label6.TabIndex = 24;
@@ -308,7 +295,7 @@
             this.sort.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.sort.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.sort.ListTextColor = System.Drawing.Color.DimGray;
-            this.sort.Location = new System.Drawing.Point(95, 212);
+            this.sort.Location = new System.Drawing.Point(958, 536);
             this.sort.MinimumSize = new System.Drawing.Size(50, 30);
             this.sort.Name = "sort";
             this.sort.Padding = new System.Windows.Forms.Padding(1);
@@ -325,7 +312,6 @@
             this.ClientSize = new System.Drawing.Size(1157, 650);
             this.Controls.Add(this.sort);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dateEnd);
             this.Controls.Add(this.dateStart);
@@ -365,7 +351,6 @@
         private System.Windows.Forms.DateTimePicker dateStart;
         private System.Windows.Forms.DateTimePicker dateEnd;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private CustomsDetail.CusCbb sort;
     }

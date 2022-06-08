@@ -49,8 +49,8 @@ namespace QuanNet
         }
         private void btnEnd_Click(object sender, EventArgs e)
         {
-            FormUsers f=new FormUsers(DateTime.Now);
-            MessageBox.Show(f.ToString());
+            //FormUsers f=new FormUsers(DateTime.Now);
+            //MessageBox.Show(f.ToString());
         }
 
         private void FormMayTinh_Load(object sender, EventArgs e)
