@@ -33,6 +33,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvOrder = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnBack = new FontAwesome.Sharp.IconButton();
             this.btnHuy = new QuanNet.CustomsDetail.CusBtn();
             this.btnXN = new QuanNet.CustomsDetail.CusBtn();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,8 +47,8 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.Controls.Add(this.dgvOrder);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1154, 622);
@@ -89,24 +90,42 @@
             this.dgvOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvOrder.Size = new System.Drawing.Size(1129, 448);
             this.dgvOrder.TabIndex = 17;
+            this.dgvOrder.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrder_CellClick);
             // 
             // panel2
             // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.btnBack);
             this.panel2.Controls.Add(this.btnHuy);
             this.panel2.Controls.Add(this.btnXN);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.cbbHDCT);
             this.panel2.Controls.Add(this.txtSearch);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 476);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1154, 146);
             this.panel2.TabIndex = 1;
             // 
+            // btnBack
+            // 
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.IconChar = FontAwesome.Sharp.IconChar.ArrowCircleLeft;
+            this.btnBack.IconColor = System.Drawing.Color.Lime;
+            this.btnBack.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBack.IconSize = 40;
+            this.btnBack.Location = new System.Drawing.Point(-1, 3);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(56, 34);
+            this.btnBack.TabIndex = 6;
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // btnHuy
             // 
+            this.btnHuy.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnHuy.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.btnHuy.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
             this.btnHuy.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -115,16 +134,18 @@
             this.btnHuy.FlatAppearance.BorderSize = 0;
             this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHuy.ForeColor = System.Drawing.Color.White;
-            this.btnHuy.Location = new System.Drawing.Point(201, 15);
+            this.btnHuy.Location = new System.Drawing.Point(11, 90);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(150, 40);
             this.btnHuy.TabIndex = 5;
             this.btnHuy.Text = "Hủy Order";
             this.btnHuy.TextColor = System.Drawing.Color.White;
             this.btnHuy.UseVisualStyleBackColor = false;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnXN
             // 
+            this.btnXN.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnXN.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.btnXN.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
             this.btnXN.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -133,7 +154,7 @@
             this.btnXN.FlatAppearance.BorderSize = 0;
             this.btnXN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXN.ForeColor = System.Drawing.Color.White;
-            this.btnXN.Location = new System.Drawing.Point(22, 15);
+            this.btnXN.Location = new System.Drawing.Point(11, 44);
             this.btnXN.Name = "btnXN";
             this.btnXN.Size = new System.Drawing.Size(150, 40);
             this.btnXN.TabIndex = 4;
@@ -144,9 +165,10 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(880, 55);
+            this.label2.Location = new System.Drawing.Point(880, 107);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 23);
             this.label2.TabIndex = 3;
@@ -154,9 +176,10 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(877, 15);
+            this.label1.Location = new System.Drawing.Point(877, 67);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 23);
             this.label1.TabIndex = 2;
@@ -164,6 +187,7 @@
             // 
             // cbbHDCT
             // 
+            this.cbbHDCT.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbbHDCT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.cbbHDCT.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.cbbHDCT.BorderSize = 1;
@@ -173,7 +197,7 @@
             this.cbbHDCT.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.cbbHDCT.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbbHDCT.ListTextColor = System.Drawing.Color.DimGray;
-            this.cbbHDCT.Location = new System.Drawing.Point(959, 51);
+            this.cbbHDCT.Location = new System.Drawing.Point(959, 103);
             this.cbbHDCT.MinimumSize = new System.Drawing.Size(150, 30);
             this.cbbHDCT.Name = "cbbHDCT";
             this.cbbHDCT.Padding = new System.Windows.Forms.Padding(1);
@@ -184,6 +208,7 @@
             // 
             // txtSearch
             // 
+            this.txtSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.txtSearch.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.txtSearch.BorderFocusColor = System.Drawing.Color.HotPink;
@@ -191,7 +216,7 @@
             this.txtSearch.BorderSize = 2;
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.ForeColor = System.Drawing.Color.White;
-            this.txtSearch.Location = new System.Drawing.Point(955, 9);
+            this.txtSearch.Location = new System.Drawing.Point(955, 61);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Multiline = false;
             this.txtSearch.Name = "txtSearch";
@@ -231,5 +256,6 @@
         private System.Windows.Forms.Label label1;
         private CustomsDetail.CusCbb cbbHDCT;
         private System.Windows.Forms.DataGridView dgvOrder;
+        private FontAwesome.Sharp.IconButton btnBack;
     }
 }

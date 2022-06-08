@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace QuanNet.BLL
 {
@@ -55,23 +56,56 @@ namespace QuanNet.BLL
             List<HoaDonView> data = new List<HoaDonView>();
             foreach (HoaDon i in GetListHDByID(IDHD))
             {
-                if (i.IdHoaDon.Contains(keyWord) || i.IdTK.Contains(keyWord))
+                if (i.IdHoaDon.Contains(keyWord) || i.IdTK.Contains(keyWord) || i.NgayXuatHD.ToString().Contains(keyWord))
                 {
+
                     data.Add(new HoaDonView
                     {
                         ID_HoaDon = i.IdHoaDon,
                         NgayXuatHD = i.NgayXuatHD,
-                        Tai_Khoan = i.IdTK,
+                        Tai_Khoan = i.TaiKhoan.TenKH,
+                        Tong_Tien =i.HoaDonChiTiet.TongTien.ToString()
                     });
                 }
             }
             return data;
+        }
+        //public dynamic ShowAll()
+        //{
+        //    return db.HoaDons.Select(p => new { ID_HoaDon = p.IdHoaDon, p.IdTK, p.NgayXuatHD, p.TaiKhoan.TenKH, p.HoaDonChiTiet.TongTien }).ToList();
+        //}
+        public dynamic SearchByDay(DateTime s, DateTime e)
+        {
+            return  db.HoaDons.Where(p => p.NgayXuatHD >= s && p.NgayXuatHD <= e).Select(p => new { ID_HoaDon=p.IdHoaDon,p.IdTK,p.NgayXuatHD,p.TaiKhoan.TenKH, p.HoaDonChiTiet.TongTien }).ToList();
+        }
+        public dynamic Sort(int i)
+        {
+            if (i == 0)
+            {
+                return (db.HoaDons.Select(p => new { ID_HoaDon=p.IdHoaDon, p.NgayXuatHD, p.TaiKhoan.TenKH, p.HoaDonChiTiet.TongTien }).OrderBy(p => p.TenKH)).ToList();
+            }
+            else if (i == 1)
+            {
+                return (db.HoaDons.Select(p => new { ID_HoaDon=p.IdHoaDon, p.IdTK, p.NgayXuatHD, p.TaiKhoan.TenKH, p.HoaDonChiTiet.TongTien }).OrderBy(p => p.NgayXuatHD)).ToList();
+            }
+            else
+            {
+                return (db.HoaDons.Select(p => new { p.IdHoaDon, p.IdTK, p.NgayXuatHD, p.TaiKhoan.TenKH ,p.HoaDonChiTiet.TongTien}).OrderBy(p => p.TongTien)).ToList();
+            }
 
         }
         public void AddHD(HoaDon s)
         {
-            db.HoaDons.Add(s);
-            db.SaveChanges();
+            try
+            {
+                db.HoaDons.Add(s);
+                db.SaveChanges();
+
+            }
+            catch
+            {
+                MessageBox.Show("Order đã xác nhận");
+            }
         }
         public void DeleteHD(string IDHD)
         {
@@ -79,23 +113,13 @@ namespace QuanNet.BLL
             db.HoaDons.Remove(s);
             db.SaveChanges();
         }
-        public string MaHoaDon()
-        {
-            List<int> l = new List<int>();
-            foreach (HoaDon hd in BllHoaDon.Instance.GetListHDByID(""))
-            {
-                l.Add(Convert.ToInt32(hd.IdHoaDon.Remove(0, 4)));
-
-            }
-            for (int i = 0; i < l.Count; i++)
-            {
-                if (!l.Contains(i + 1)) return i + 1 < 10 ? "Bill00" + ++i : i + 1 < 100 ? "Bill0" + ++i : "Bill" + ++i;
-            }
-            return l.Count + 1 < 10 ? "Bill00" + (l.Count + 1) : l.Count + 1 < 100 ? "Bill0" + (l.Count + 1) : "Bill" +
-                + (l.Count + 1);
-
-        }
         //=======================Hóa đơn chi tiết============================================
+        public void DeleteHDCT(string ID)
+        {
+            HoaDonChiTiet s = db.HoaDonChiTiets.Find(ID);
+            db.HoaDonChiTiets.Remove(s);
+            db.SaveChanges();
+        }
         public HoaDonChiTiet GetHoadonCTByID(string Id_HDCT)
         {
             return db.HoaDonChiTiets.Find(Id_HDCT);
@@ -146,9 +170,16 @@ namespace QuanNet.BLL
         public void updatetongtien(string idct)
         {
             HoaDonChiTiet hdct = db.HoaDonChiTiets.Single(p => p.IdChiTiet == idct);
-
-            hdct.TongTien = tien(idct);
-            db.SaveChanges();
+            if (tien(idct) != 0)
+            {
+                hdct.TongTien = tien(idct);
+                db.SaveChanges();
+            }
+            else
+            {
+                db.HoaDonChiTiets.Remove(GetHoadonCTByID(idct));
+                db.SaveChanges();
+            }
         }
         public int tien(string idct)
         {
@@ -162,23 +193,5 @@ namespace QuanNet.BLL
             }
             return tong;
         }
-        public string IDMAY(string idct)
-        {
-                string idm = "";
-                foreach(HoaDonChiTiet i in GetListHDCTByID(""))
-                {
-                    if (i.IdChiTiet == idct)
-                    {
-                        idm = i.IdMay;
-                        break;
-                    }
-                }
-            //Console.WriteLine("Duc");
-            Console.WriteLine(idm + "123");
-            return idm;
-        }
-        
-       
-
     }
 }

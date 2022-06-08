@@ -22,25 +22,37 @@ namespace QuanNet.FormsUser
         private int tempIndex;
         private Form activeForm;
 
+        public delegate string MyTime(string time);
+        public MyTime t { get; set; }
         public string ID_May { get; set; }
         public string IDKhachHang { get; set; }
         public string time { get; set; }
         public string ID_CT { get; set; }
-        public FormUsers(string M, string K)
+        public DateTime tg { get; set; }
+        public FormUsers(string M, string K, DateTime tgOpen)
         {
             InitializeComponent();
             ID_May = M;
             IDKhachHang = K;
-            random = new Random();
-            GUI(ID_May,IDKhachHang);
-            BllMayTinh.Instance.addTKinMay(ID_May, IDKhachHang,"");
+            tg=tgOpen;
+            
             txtMay.Enabled = false;
             txtSodu.Enabled=false;
-            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            
             timer1.Start();
-            this.FormBorderStyle = FormBorderStyle.None;           
-
+            
+            GUI(ID_May,IDKhachHang);
+            BllMayTinh.Instance.addTKinMay(ID_May, IDKhachHang,null);
+            
+            random = new Random();
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            //this.FormBorderStyle = FormBorderStyle.None; 
+            
         }
+        public FormUsers()
+        {
+        }
+
         //=============UI CODE=============
         private Color SelectThemeColor()
         {
@@ -104,22 +116,17 @@ namespace QuanNet.FormsUser
             foreach(May i in BllMayTinh.Instance.GetListMayByID(ID_May))
             {
                 txtGia.Text = i.TienGio.ToString();
-                
-                foreach (TaiKhoan tk in BllKhachHang.Instance.GetListTKByIDTK(i.IdTK))
-                {
-                    txtSodu.Text = tk.Sodu.ToString();
-                }
+                txtSodu.Text=i.TaiKhoan.Sodu.ToString();
             }
-          
-
-
         }
-        public int TinhTgChoi(DateTime time)
+
+        public int TinhTgChoi(DateTime t)
         {
-            DateTime aDateTime = DateTime.Now;
-            TimeSpan interval = aDateTime.Subtract(time);
+            TimeSpan f = Convert.ToDateTime(DateTime.Now.ToLongTimeString()) - Convert.ToDateTime(time);
+            Console.WriteLine(f.ToString());
+            TimeSpan interval = t.Subtract(Convert.ToDateTime(time));
             int tienGio = BllMayTinh.Instance.GetMayByIDMay(ID_May).TienGio;
-            int TongTienChoi = tienGio * interval.Hours + tienGio * interval.Minutes / 60 + tienGio * interval.Seconds / 3600;
+            int TongTienChoi = tienGio * f.Hours + tienGio * f.Minutes / 60 + tienGio * f.Seconds / 3600;
             if (TongTienChoi <= 2000)
             {
                 TongTienChoi = 2000;
@@ -137,51 +144,72 @@ namespace QuanNet.FormsUser
         }
         private void btnApp_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormsUser.FormApp(ID_May, IDKhachHang), sender);
+            OpenChildForm(new FormApp(ID_May, IDKhachHang), sender);
         }
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormsUser.FormOrderKH(ID_May, IDKhachHang,ID_CT), sender);           
+            OpenChildForm(new FormOrderKH(ID_May, IDKhachHang,ID_CT), sender);           
 
         }
-
-        private void btnThanhToan_Click(object sender, EventArgs e)
+        public void ending()
         {
             timer1.Stop();
-            MessageBox.Show(TinhTgChoi(Convert.ToDateTime(time)).ToString());
-            BllMayTinh.Instance.addTKinMay(ID_May,null,null);
-            this.Dispose();
+            TaiKhoan s= new TaiKhoan()
+            {
+                IdTK=IDKhachHang,
+                LienHe=BllKhachHang.Instance.GetTKByIDTK(IDKhachHang).LienHe,
+                TenDN= BllKhachHang.Instance.GetTKByIDTK(IDKhachHang).TenDN,
+                MatKhau= BllKhachHang.Instance.GetTKByIDTK(IDKhachHang).MatKhau,
+                TenKH= BllKhachHang.Instance.GetTKByIDTK(IDKhachHang).TenKH,
+                Sodu= BllKhachHang.Instance.GetTKByIDTK(IDKhachHang).Sodu-TinhTgChoi(Convert.ToDateTime(tg))- Convert.ToInt32(txtOrder.Text)
+            };
+            BllKhachHang.Instance.Edit(s);
+            BllMayTinh.Instance.addTKinMay(ID_May, null, null);
             BllHoaDon.Instance.updatetongtien(ID_CT);
-            
-
-
+            this.Dispose();
+        }
+        private void btnThanhToan_Click(object sender, EventArgs e)
+        {
+            ending();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             txtTG.Text= (Convert.ToDateTime(DateTime.Now.ToLongTimeString())-Convert.ToDateTime(time)).ToString();
-
+            TimeSpan f = Convert.ToDateTime(DateTime.Now.ToLongTimeString()) - Convert.ToDateTime(time);
+            Console.WriteLine(f.ToString());
         }
         private void FormUsers_Load(object sender, EventArgs e)
         {
-            
+
             time = DateTime.Now.ToString();
             ID_CT = BllHoaDon.Instance.CreateIDCT(IDKhachHang, ID_May);
-            MessageBox.Show(ID_CT);
             BllHoaDon.Instance.AddHDCT(new HoaDonChiTiet
             {
                 IdChiTiet = ID_CT,
                 IdMay = ID_May,
                 TongTien = null
             });
-            txtOrder.Text = ID_CT;
-
-            //txtTongTien.Text = Convert.ToString(BllHoaDon.Instance.tien(ID_CT));
-           
-
+        }
+        private void txtTG__TextChanged(object sender, EventArgs e)
+        {
+            txtOrder.Text= BllOrderKH.Instance.TinhTienOrder(ID_CT).ToString();
+            int TienChoiTatca =TinhTgChoi(DateTime.Now) + Convert.ToInt32(txtOrder.Text);
+            txtTongTien.Text = TienChoiTatca.ToString();
+            if(TienChoiTatca > Convert.ToInt32(txtSodu.Text))
+            {
+                ending();
+            }
         }
 
-
+        private void txtTongTien__TextChanged(object sender, EventArgs e)
+        {
+            
+            if (Convert.ToInt32(txtTongTien.Text) > Convert.ToInt32(txtSodu.Text) - 5000)
+            {
+                MessageBox.Show("Tài khoản gần hết, cần nạp thêm để tiếp tục dịch vụ", "Thông báo", MessageBoxButtons.OK);
+            }
+        }
     }
 }

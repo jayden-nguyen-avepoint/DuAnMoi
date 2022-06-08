@@ -76,8 +76,7 @@ namespace QuanNet.BLL
                 if (TenDN == t.TenDN)
                 {
                     ID = t.IdTK;
-                }
-                
+                }                
             }
             return ID;
         }
@@ -116,6 +115,23 @@ namespace QuanNet.BLL
                 db.SaveChanges();
             }else
             MessageBox.Show("Ko trùng ID, vui lòng nhập lại hoặc thêm mới", "Thông báo !", MessageBoxButton.OK);
+        }
+        public dynamic Sort(int index)
+        {
+            if (index == 0)
+            {
+                return db.TaiKhoans.Select(p => new { p.IdTK, p.TenKH, p.Sodu, p.LienHe }).ToList();
+            }
+
+             else  if (index == 1)
+            {
+                return (db.TaiKhoans.Select(p => new { p.IdTK,p.TenKH,p.Sodu,p.LienHe }).OrderBy(p => p.IdTK)).ToList();
+            }
+            else 
+            {
+                return (db.TaiKhoans.Select(p => new { p.IdTK, p.TenKH, p.Sodu, p.LienHe }).OrderBy(p => p.TenKH)).ToList();
+            }
+
         }
         public void DeleteKH(string IDTK)
         {

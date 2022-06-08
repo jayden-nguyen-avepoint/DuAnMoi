@@ -265,7 +265,7 @@
             this.Controls.Add(this.panelShadow);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
-            this.MaximumSize = new System.Drawing.Size(1410, 800);
+            this.MaximumSize = new System.Drawing.Size(1920, 1080);
             this.MinimumSize = new System.Drawing.Size(1410, 800);
             this.Name = "Form1";
             this.Text = "Form1";

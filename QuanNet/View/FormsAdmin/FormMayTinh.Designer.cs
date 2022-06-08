@@ -50,7 +50,8 @@
             this.M20 = new FontAwesome.Sharp.IconButton();
             this.M02 = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnreload = new FontAwesome.Sharp.IconButton();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txttgchoi = new QuanNet.CustomsDetail.CustomTextbox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtHD = new QuanNet.CustomsDetail.CustomTextbox();
             this.btnEnd = new QuanNet.CustomsDetail.CusBtn();
@@ -58,7 +59,6 @@
             this.txtCauHinh = new QuanNet.CustomsDetail.CustomTextbox();
             this.txtIDTK = new QuanNet.CustomsDetail.CustomTextbox();
             this.txtMay = new QuanNet.CustomsDetail.CustomTextbox();
-            this.btnStart = new QuanNet.CustomsDetail.CusBtn();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -103,7 +103,7 @@
             this.M01.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.M01.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.M01.IconChar = FontAwesome.Sharp.IconChar.Desktop;
-            this.M01.IconColor = System.Drawing.Color.Gold;
+            this.M01.IconColor = System.Drawing.Color.Chartreuse;
             this.M01.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.M01.IconSize = 100;
             this.M01.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -498,7 +498,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.panel2.Controls.Add(this.btnreload);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.txttgchoi);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.txtHD);
             this.panel2.Controls.Add(this.btnEnd);
@@ -506,34 +507,47 @@
             this.panel2.Controls.Add(this.txtCauHinh);
             this.panel2.Controls.Add(this.txtIDTK);
             this.panel2.Controls.Add(this.txtMay);
-            this.panel2.Controls.Add(this.btnStart);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(618, 12);
+            this.panel2.Location = new System.Drawing.Point(618, 1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(524, 598);
+            this.panel2.Size = new System.Drawing.Size(524, 622);
             this.panel2.TabIndex = 24;
             // 
-            // btnreload
+            // label6
             // 
-            this.btnreload.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnreload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.btnreload.FlatAppearance.BorderSize = 0;
-            this.btnreload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnreload.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnreload.IconChar = FontAwesome.Sharp.IconChar.Spinner;
-            this.btnreload.IconColor = System.Drawing.Color.Chartreuse;
-            this.btnreload.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnreload.IconSize = 30;
-            this.btnreload.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnreload.Location = new System.Drawing.Point(3, 565);
-            this.btnreload.Name = "btnreload";
-            this.btnreload.Size = new System.Drawing.Size(30, 30);
-            this.btnreload.TabIndex = 24;
-            this.btnreload.UseVisualStyleBackColor = false;
-            this.btnreload.Click += new System.EventHandler(this.FormMayTinh_Load);
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.label6.Location = new System.Drawing.Point(143, 33);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(280, 32);
+            this.label6.TabIndex = 26;
+            this.label6.Text = "CYBER HOC THEM";
+            // 
+            // txttgchoi
+            // 
+            this.txttgchoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.txttgchoi.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txttgchoi.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txttgchoi.BorderRadius = 0;
+            this.txttgchoi.BorderSize = 2;
+            this.txttgchoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttgchoi.ForeColor = System.Drawing.Color.White;
+            this.txttgchoi.Location = new System.Drawing.Point(192, 385);
+            this.txttgchoi.Margin = new System.Windows.Forms.Padding(4);
+            this.txttgchoi.Multiline = false;
+            this.txttgchoi.Name = "txttgchoi";
+            this.txttgchoi.Padding = new System.Windows.Forms.Padding(7);
+            this.txttgchoi.PasswordChar = false;
+            this.txttgchoi.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txttgchoi.PlaceholderText = "";
+            this.txttgchoi.Size = new System.Drawing.Size(250, 35);
+            this.txttgchoi.TabIndex = 25;
+            this.txttgchoi.UnderlinedStyle = true;
             // 
             // label5
             // 
@@ -572,15 +586,15 @@
             this.btnEnd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.btnEnd.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.btnEnd.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.btnEnd.BorderRadius = 20;
+            this.btnEnd.BorderRadius = 30;
             this.btnEnd.BorderSize = 3;
             this.btnEnd.FlatAppearance.BorderSize = 0;
             this.btnEnd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnd.ForeColor = System.Drawing.Color.GhostWhite;
-            this.btnEnd.Location = new System.Drawing.Point(285, 528);
+            this.btnEnd.Location = new System.Drawing.Point(221, 452);
             this.btnEnd.Name = "btnEnd";
-            this.btnEnd.Size = new System.Drawing.Size(129, 46);
+            this.btnEnd.Size = new System.Drawing.Size(180, 67);
             this.btnEnd.TabIndex = 10;
             this.btnEnd.Text = "Kết thúc";
             this.btnEnd.TextColor = System.Drawing.Color.GhostWhite;
@@ -670,26 +684,6 @@
             this.txtMay.Size = new System.Drawing.Size(250, 35);
             this.txtMay.TabIndex = 6;
             this.txtMay.UnderlinedStyle = true;
-            // 
-            // btnStart
-            // 
-            this.btnStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.btnStart.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.btnStart.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.btnStart.BorderRadius = 20;
-            this.btnStart.BorderSize = 3;
-            this.btnStart.FlatAppearance.BorderSize = 0;
-            this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStart.ForeColor = System.Drawing.Color.GhostWhite;
-            this.btnStart.Location = new System.Drawing.Point(104, 528);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(129, 46);
-            this.btnStart.TabIndex = 4;
-            this.btnStart.Text = "Bắt đầu";
-            this.btnStart.TextColor = System.Drawing.Color.GhostWhite;
-            this.btnStart.UseVisualStyleBackColor = false;
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // label4
             // 
@@ -781,7 +775,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private CustomsDetail.CustomTextbox txtMay;
-        private CustomsDetail.CusBtn btnStart;
         private CustomsDetail.CusBtn btnEnd;
         private CustomsDetail.CustomTextbox txtTien;
         private CustomsDetail.CustomTextbox txtCauHinh;
@@ -789,6 +782,7 @@
         private FontAwesome.Sharp.IconButton M20;
         private System.Windows.Forms.Label label5;
         private CustomsDetail.CustomTextbox txtHD;
-        private FontAwesome.Sharp.IconButton btnreload;
+        private CustomsDetail.CustomTextbox txttgchoi;
+        private System.Windows.Forms.Label label6;
     }
 }

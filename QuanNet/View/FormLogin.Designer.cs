@@ -143,7 +143,7 @@
             this.panelQL.Controls.Add(this.txtTKQL);
             this.panelQL.Controls.Add(this.txtMKQL);
             this.panelQL.Controls.Add(this.cusBtn1);
-            this.panelQL.Location = new System.Drawing.Point(165, 3);
+            this.panelQL.Location = new System.Drawing.Point(165, 0);
             this.panelQL.Name = "panelQL";
             this.panelQL.Size = new System.Drawing.Size(289, 456);
             this.panelQL.TabIndex = 6;
@@ -342,6 +342,7 @@
             this.BtnKH.TextColor = System.Drawing.Color.White;
             this.BtnKH.UseVisualStyleBackColor = false;
             this.BtnKH.Click += new System.EventHandler(this.cusBtnKH_Click);
+            this.BtnKH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BtnKH_KeyPress);
             // 
             // txtTKKH
             // 

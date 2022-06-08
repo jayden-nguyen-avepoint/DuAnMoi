@@ -63,24 +63,8 @@ namespace QuanNet.FormsUser
             return l.Count + 1 < 10 ? "Order00" + (l.Count + 1) : l.Count + 1 < 100 ? "Order0" + (l.Count + 1) : "Order" + (l.Count + 1);
 
         }
-        //public string MaOrderCT()
-        //{
-        //    List<int> Ma = new List<int>();
-        //     foreach (HoaDonChiTiet tk in BllHoaDon.Instance.GetsomethingInView(ID_KhachHang,ID_May))
-        //    {
-        //        Ma.Add(Convert.ToInt32(tk.IdChiTiet.Remove(0, 7)));
-        //        ID_CT=tk.IdChiTiet.Substring(0,7);
-        //    }
-        //    for (int i = 0; i < Ma.Count; i++)
-        //    {
-        //        if (!Ma.Contains(i + 1)) return i + 1 < 10 ? ID_CT + ++i : i + 1 < 100 ? ID_CT + ++i : ID_CT + ++i;
-        //    }
-        //    return Ma.Count + 1 < 10 ? ID_CT + (Ma.Count + 1) : Ma.Count + 1 < 100 ? ID_CT + (Ma.Count + 1) : ID_CT + (Ma.Count + 1);
-
-        //}
         private void btnThem_Click(object sender, EventArgs e)
         {
-            //string IdCT = BllHoaDon.Instance.CreateIDCT(ID_KhachHang, ID_May);
             ListTPham orderkh = new ListTPham()
             {
                 IdOrderList = MaListDoAn(),
@@ -89,8 +73,14 @@ namespace QuanNet.FormsUser
                 ThanhTien = Convert.ToInt32(txtSL.Text) * Convert.ToInt32(txtGia.Text),
                 IdChiTiet = ID_CT
             };
-            BllOrderKH.Instance.addOrder1(orderkh);
-            MessageBox.Show("Thành công !");
+            if (BllOrderKH.Instance.TinhTienOrder(ID_CT)+orderkh.ThanhTien > BllKhachHang.Instance.GetTKByIDTK(ID_KhachHang).Sodu) 
+            {
+                MessageBox.Show("Hết tiền rồi", "Thông báo", MessageBoxButtons.OK);
+            }
+            else
+            {
+                BllOrderKH.Instance.addOrder1(orderkh);
+            }
             txtMon.Text = "";
             txtSL.Text = "";
             txtGia.Text = "";
