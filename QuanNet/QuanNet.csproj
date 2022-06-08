@@ -69,6 +69,7 @@
     <Compile Include="BLL\BllMon.cs" />
     <Compile Include="BLL\BllOrderKH.cs" />
     <Compile Include="DTO\MayTinhView.cs" />
+    <Compile Include="DTO\OrderAdView.cs" />
     <Compile Include="DTO\OrderKHView.cs" />
     <Compile Include="DTO\CbbIDKH.cs" />
     <Compile Include="DTO\HoaDonView.cs" />

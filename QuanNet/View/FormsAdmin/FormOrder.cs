@@ -19,13 +19,13 @@ namespace QuanNet
         public FormOrder()
         {           
             InitializeComponent();
-            cbbHDCT.Items.Add("None");
-            cbbHDCT.Items.AddRange(BllOrderKH.Instance.GetCBB().ToArray());
-            ShowAll();
+            //cbbHDCT.Items.Add("None");
+            //cbbHDCT.Items.AddRange(BllOrderKH.Instance.GetCBB().ToArray());
+            ShowOrder();
         }
-        public void ShowAll()
+        public void ShowOrder()
         {
-            dgvOrder.DataSource = BllOrderKH.Instance.GetListCT();
+            dgvOrder.DataSource = BllHoaDon.Instance.GetOrderAd("");
         }
         public void Show(string CT)
         {
@@ -34,8 +34,7 @@ namespace QuanNet
 
         private void cbbHDCT_OnSelectedIndexChanged(object sender, EventArgs e)
         {
-            ID_CT = cbbHDCT.SelectedItem.ToString();
-            Show(ID_CT);
+            
         }
         public string MaHoaDon()
         {
@@ -56,16 +55,27 @@ namespace QuanNet
         private void btnXN_Click(object sender, EventArgs e)
         {
             ID_CT=  dgvOrder.SelectedRows[0].Cells["IdChiTiet"].Value.ToString();
-            HoaDon s=new HoaDon()
-                { 
-                    IdHoaDon = MaHoaDon(),
-                    NgayXuatHD = DateTime.Now,
-                    IdTK = ID_CT.Substring(0,5),
-                    IdChiTiet = ID_CT
-                    
-            };
-            BllHoaDon.Instance.AddHD(s);
+            //foreach(HoaDonChiTiet i in BllHoaDon.Instance.GetListHDCTByID(ID_CT))
+            //{
+                
+                    if(!BllHoaDon.Instance.checkVal(ID_CT))
+                    {
+                        MessageBox.Show("error");
+                    } 
+                        else
+                    {
+                        HoaDon s = new HoaDon()
+                        {
+                            IdHoaDon = MaHoaDon(),
+                            NgayXuatHD = DateTime.Now,
+                            IdTK = ID_CT.Substring(0, 5),
+                            IdChiTiet = ID_CT
+                        };
+                        BllHoaDon.Instance.AddHD(s);
 
+                    }
+            ShowOrder();
+                
         }
 
         private void dgvOrder_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -76,12 +86,12 @@ namespace QuanNet
                 Show(id);
                 dgvOrder.Enabled = false;
                 dgvOrder.ClearSelection();
-            }else ShowAll();
+            }else ShowOrder();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            ShowAll();
+            ShowOrder();
             dgvOrder.ClearSelection();
             dgvOrder.Enabled = true;
         }
@@ -92,7 +102,7 @@ namespace QuanNet
             {
                 string IDKH = i.Cells["IDChiTiet"].Value.ToString();
                 BllHoaDon.Instance.DeleteHDCT(IDKH);
-                ShowAll();
+                ShowOrder();
             }
         }
     }

@@ -22,31 +22,28 @@ namespace QuanNet.FormsUser
         private int tempIndex;
         private Form activeForm;
 
-        public delegate string MyTime(string time);
-        public MyTime t { get; set; }
+        public delegate void MyMoney(int money);
+        public MyMoney t { get; set; }
         public string ID_May { get; set; }
         public string IDKhachHang { get; set; }
         public string time { get; set; }
         public string ID_CT { get; set; }
-        public DateTime tg { get; set; }
-        public FormUsers(string M, string K, DateTime tgOpen)
+        public FormUsers(string M, string K)
         {
             InitializeComponent();
             ID_May = M;
             IDKhachHang = K;
-            tg=tgOpen;
             
             txtMay.Enabled = false;
             txtSodu.Enabled=false;
             
             timer1.Start();
-            
-            GUI(ID_May,IDKhachHang);
+
+            GUIUser(ID_May);
             BllMayTinh.Instance.addTKinMay(ID_May, IDKhachHang,null);
             
             random = new Random();
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-            //this.FormBorderStyle = FormBorderStyle.None; 
             
         }
         public FormUsers()
@@ -110,20 +107,19 @@ namespace QuanNet.FormsUser
             labelTitle.Text = childForm.Text;
         }
         //================================
-        public void GUI(string ID_May,string IdKhach)
+        public void GUIUser(string ID_May)
         {
             txtMay.Text = ID_May.ToString();
-            foreach(May i in BllMayTinh.Instance.GetListMayByID(ID_May))
+            foreach (May i in BllMayTinh.Instance.GetListMayByID(ID_May))
             {
                 txtGia.Text = i.TienGio.ToString();
-                txtSodu.Text=i.TaiKhoan.Sodu.ToString();
+                txtSodu.Text = i.TaiKhoan.Sodu.ToString();
             }
         }
 
         public int TinhTgChoi(DateTime t)
         {
             TimeSpan f = Convert.ToDateTime(DateTime.Now.ToLongTimeString()) - Convert.ToDateTime(time);
-            Console.WriteLine(f.ToString());
             TimeSpan interval = t.Subtract(Convert.ToDateTime(time));
             int tienGio = BllMayTinh.Instance.GetMayByIDMay(ID_May).TienGio;
             int TongTienChoi = tienGio * f.Hours + tienGio * f.Minutes / 60 + tienGio * f.Seconds / 3600;
@@ -155,6 +151,7 @@ namespace QuanNet.FormsUser
         public void ending()
         {
             timer1.Stop();
+
             TaiKhoan s= new TaiKhoan()
             {
                 IdTK=IDKhachHang,
@@ -162,12 +159,12 @@ namespace QuanNet.FormsUser
                 TenDN= BllKhachHang.Instance.GetTKByIDTK(IDKhachHang).TenDN,
                 MatKhau= BllKhachHang.Instance.GetTKByIDTK(IDKhachHang).MatKhau,
                 TenKH= BllKhachHang.Instance.GetTKByIDTK(IDKhachHang).TenKH,
-                Sodu= BllKhachHang.Instance.GetTKByIDTK(IDKhachHang).Sodu-TinhTgChoi(Convert.ToDateTime(tg))- Convert.ToInt32(txtOrder.Text)
+                Sodu = BllKhachHang.Instance.GetTKByIDTK(IDKhachHang).Sodu - TinhTgChoi(Convert.ToDateTime(time)) - Convert.ToInt32(txtOrder.Text)
             };
             BllKhachHang.Instance.Edit(s);
             BllMayTinh.Instance.addTKinMay(ID_May, null, null);
             BllHoaDon.Instance.updatetongtien(ID_CT);
-            this.Dispose();
+            Dispose();
         }
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
@@ -177,8 +174,7 @@ namespace QuanNet.FormsUser
         private void timer1_Tick(object sender, EventArgs e)
         {
             txtTG.Text= (Convert.ToDateTime(DateTime.Now.ToLongTimeString())-Convert.ToDateTime(time)).ToString();
-            TimeSpan f = Convert.ToDateTime(DateTime.Now.ToLongTimeString()) - Convert.ToDateTime(time);
-            Console.WriteLine(f.ToString());
+            
         }
         private void FormUsers_Load(object sender, EventArgs e)
         {
@@ -194,22 +190,24 @@ namespace QuanNet.FormsUser
         }
         private void txtTG__TextChanged(object sender, EventArgs e)
         {
-            txtOrder.Text= BllOrderKH.Instance.TinhTienOrder(ID_CT).ToString();
-            int TienChoiTatca =TinhTgChoi(DateTime.Now) + Convert.ToInt32(txtOrder.Text);
+            txtOrder.Text = BllOrderKH.Instance.TinhTienOrder(ID_CT).ToString();
+            int TienChoiTatca = TinhTgChoi(DateTime.Now) + Convert.ToInt32(txtOrder.Text);
             txtTongTien.Text = TienChoiTatca.ToString();
-            if(TienChoiTatca > Convert.ToInt32(txtSodu.Text))
-            {
-                ending();
-            }
+            txtSodu.Text = BllMayTinh.Instance.GetMayByIDMay(ID_May).TaiKhoan.Sodu.ToString();
         }
 
         private void txtTongTien__TextChanged(object sender, EventArgs e)
         {
             
-            if (Convert.ToInt32(txtTongTien.Text) > Convert.ToInt32(txtSodu.Text) - 5000)
+            if (Convert.ToInt32(txtTongTien.Text) > Convert.ToInt32(txtSodu.Text) - BllMayTinh.Instance.GetMayByIDMay(ID_May).TienGio)
             {
-                MessageBox.Show("Tài khoản gần hết, cần nạp thêm để tiếp tục dịch vụ", "Thông báo", MessageBoxButtons.OK);
+                MessageBox.Show("Tài khoản sắp hết, cần nạp thêm để tiếp tục dịch vụ", "Thông báo", MessageBoxButtons.OK);
             }
+                if (Convert.ToInt32(txtTongTien.Text) == Convert.ToInt32(txtSodu.Text))
+                {
+                    MessageBox.Show("Tài khoản đã hết, cần nạp thêm để tiếp tục dịch vụ", "Thông báo", MessageBoxButtons.OK);
+                    ending();
+                }
         }
     }
 }
