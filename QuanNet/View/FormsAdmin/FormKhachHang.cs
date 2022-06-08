@@ -147,6 +147,7 @@ namespace QuanNet
                 }
                 else MessageBox.Show("Nhập số lượng tiền cần nạp cho tài khoản", "Thông báo", MessageBoxButtons.OK);
                 NewTK();
+                ShowList("");
             }
 
         }
@@ -161,7 +162,7 @@ namespace QuanNet
             SetNull();
             txtIDTK.Enabled = false;
             txtTK.Enabled = false;
-            txtTK.ForeColor = System.Drawing.Color.White;
+            txtTK.ForeColor = Color.White;
             dgvKH.ClearSelection();
         }
 
@@ -185,7 +186,6 @@ namespace QuanNet
         }
         public string MaKHtutang()
         {
-            string ma = "";
             List<int> l = new List<int>();
                 foreach (TaiKhoan tk in BllKhachHang.Instance.GetListTKByIDTK(""))
                 {
@@ -195,8 +195,7 @@ namespace QuanNet
                 {
                     if (!l.Contains(i + 1)) return i + 1 < 10 ? "KH00" + ++i : i + 1 < 100 ? "KH0" + ++i : "KH" + ++i;
                 }
-                return l.Count + 1 < 10 ? "KH00" + (l.Count + 1) : l.Count + 1 < 100 ? "KH0" + (l.Count + 1) : "KH" + (l.Count + 1);
-            
+                return l.Count + 1 < 10 ? "KH00" + (l.Count + 1) : l.Count + 1 < 100 ? "KH0" + (l.Count + 1) : "KH" + (l.Count + 1);            
          }
 
         private void txtSearch__TextChanged(object sender, EventArgs e)

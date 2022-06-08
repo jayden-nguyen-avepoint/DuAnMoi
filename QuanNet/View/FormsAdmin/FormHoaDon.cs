@@ -27,11 +27,8 @@ namespace QuanNet
             int Tongtienhd=0;
             foreach (DataGridViewRow i in dgvHoaDon.Rows)
             {
-                dem += 1;
-            }
-            foreach (HoaDonChiTiet i in BllHoaDon.Instance.GetListHDCTByID(""))
-            {
-                Tongtienhd += Convert.ToInt32(i.TongTien);
+                dem += 1; 
+                Tongtienhd += Convert.ToInt32(i.Cells["Tong_Tien"].Value);
             }
             lbTong.Text = dem.ToString();
             lbTongTien.Text = Tongtienhd.ToString();
@@ -39,20 +36,6 @@ namespace QuanNet
         public void ShowListHD(string i,string Key="")
         {
             dgvHoaDon.DataSource = BllHoaDon.Instance.GetHDViewByIDHD(i,Key);
-        }
-        private void btnInHD_Click(object sender, EventArgs e)
-        {
-            if (dgvHoaDon.SelectedRows.Count == 1)
-            {
-                foreach (DataGridViewRow i in dgvHoaDon.SelectedRows)
-                {
-                    BllHoaDon.Instance.DeleteHD(i.Cells["IdHoaDon"].Value.ToString());
-                }
-            }
-            ShowListHD("");
-            dgvHoaDon.ClearSelection();
-            
-
         }
 
         private void txtSearch__TextChanged(object sender, EventArgs e)
@@ -66,7 +49,7 @@ namespace QuanNet
             DateTime end = dateEnd.Value;
             if (start == end)
             {
-                ShowListHD("",start.ToString());
+                BllHoaDon.Instance.SearchByDay(start, end);
             }
             else dgvHoaDon.DataSource = BllHoaDon.Instance.SearchByDay(start, end);
         }
