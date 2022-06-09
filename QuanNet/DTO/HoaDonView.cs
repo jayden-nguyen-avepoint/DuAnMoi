@@ -10,7 +10,7 @@ namespace QuanNet.DTO
     {
         public string ID_HoaDon { get; set; }
         public DateTime NgayXuatHD { get; set; }
-        public string Tai_Khoan { get; set; }
+        public string May { get; set; }
         public string Tong_Tien { get; set; }
         
     }
