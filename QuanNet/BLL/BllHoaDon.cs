@@ -61,8 +61,8 @@ namespace QuanNet.BLL
                     data.Add(new HoaDonView
                     {
                         ID_HoaDon = i.IdHoaDon,
-                        NgayXuatHD = i.NgayXuatHD,
                         May = i.HoaDonChiTiet.IdMay,
+                        NgayXuatHD = i.HoaDonChiTiet.NgayThang,
                         Tong_Tien =i.HoaDonChiTiet.TongTien.ToString()
                     });
                 }
@@ -71,21 +71,21 @@ namespace QuanNet.BLL
         }
         public dynamic SearchByDay(DateTime s, DateTime e)
         {
-            return  db.HoaDons.Where(p => p.NgayXuatHD >= s && p.NgayXuatHD <= e).Select(p => new { ID_HoaDon=p.IdHoaDon,p.IdTK,p.NgayXuatHD,p.TaiKhoan.TenKH, p.HoaDonChiTiet.TongTien }).ToList();
+            return  db.HoaDons.Where(p => p.HoaDonChiTiet.NgayThang >= s && p.HoaDonChiTiet.NgayThang <= e).Select(p => new { ID_HoaDon=p.IdHoaDon,p.IdTK, p.HoaDonChiTiet.NgayThang, p.TaiKhoan.TenKH, p.HoaDonChiTiet.TongTien }).ToList();
         }
         public dynamic Sort(int i)
         {
             if (i == 0)
             {
-                return (db.HoaDons.Select(p => new { ID_HoaDon=p.IdHoaDon, p.NgayXuatHD, p.TaiKhoan.TenKH, p.HoaDonChiTiet.TongTien }).OrderBy(p => p.TenKH)).ToList();
+                return (db.HoaDons.Select(p => new { ID_HoaDon=p.IdHoaDon, p.HoaDonChiTiet.NgayThang, p.TaiKhoan.TenKH, p.HoaDonChiTiet.TongTien }).OrderBy(p => p.TenKH)).ToList();
             }
             else if (i == 1)
             {
-                return (db.HoaDons.Select(p => new { ID_HoaDon=p.IdHoaDon, p.IdTK, p.NgayXuatHD, p.TaiKhoan.TenKH, p.HoaDonChiTiet.TongTien }).OrderBy(p => p.NgayXuatHD)).ToList();
+                return (db.HoaDons.Select(p => new { ID_HoaDon=p.IdHoaDon, p.IdTK, p.HoaDonChiTiet.NgayThang, p.TaiKhoan.TenKH, p.HoaDonChiTiet.TongTien }).OrderBy(p => p.NgayThang)).ToList();
             }
             else
             {
-                return (db.HoaDons.Select(p => new { p.IdHoaDon, p.IdTK, p.NgayXuatHD, p.TaiKhoan.TenKH ,p.HoaDonChiTiet.TongTien}).OrderBy(p => p.TongTien)).ToList();
+                return (db.HoaDons.Select(p => new { p.IdHoaDon, p.IdTK, p.HoaDonChiTiet.NgayThang, p.TaiKhoan.TenKH ,p.HoaDonChiTiet.TongTien}).OrderBy(p => p.TongTien)).ToList();
             }
 
         }

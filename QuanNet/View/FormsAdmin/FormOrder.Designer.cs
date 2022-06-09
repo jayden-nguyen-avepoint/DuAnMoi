@@ -204,7 +204,7 @@
             this.cbbHDCT.Size = new System.Drawing.Size(182, 30);
             this.cbbHDCT.TabIndex = 1;
             this.cbbHDCT.Texts = "";
-            this.cbbHDCT.OnSelectedIndexChanged += new System.EventHandler(this.cbbHDCT_OnSelectedIndexChanged);
+
             // 
             // txtSearch
             // 

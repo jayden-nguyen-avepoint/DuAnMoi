@@ -19,6 +19,9 @@ namespace QuanNet.LinQ
         [Key]
         [StringLength(20)]
         public string IdChiTiet { get; set; }
+        
+        [Column(TypeName = "date")]
+        public DateTime NgayThang { get; set; }
 
         [Required]
         [StringLength(20)]
