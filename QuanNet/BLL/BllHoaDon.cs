@@ -56,14 +56,13 @@ namespace QuanNet.BLL
             List<HoaDonView> data = new List<HoaDonView>();
             foreach (HoaDon i in GetListHDByID(IDHD))
             {
-                if (i.IdHoaDon.Contains(keyWord) || i.IdTK.Contains(keyWord) || i.NgayXuatHD.ToString().Contains(keyWord))
+                if (i.IdHoaDon.Contains(keyWord) || i.IdTK.Contains(keyWord) )
                 {
-
                     data.Add(new HoaDonView
                     {
                         ID_HoaDon = i.IdHoaDon,
                         NgayXuatHD = i.NgayXuatHD,
-                        Tai_Khoan =i.TaiKhoan.TenKH,
+                        May = i.HoaDonChiTiet.IdMay,
                         Tong_Tien =i.HoaDonChiTiet.TongTien.ToString()
                     });
                 }
