@@ -18,6 +18,7 @@ namespace QuanNet.FormsUser
         public string ID_May { get; set; }
         public string ID_KhachHang { get; set; }
         public string ID_CT { get; set; }
+        public int Tien { get; set; }
         public FormOrderKH(string M,string K, string O)
         {
             ID_May = M;
@@ -42,12 +43,15 @@ namespace QuanNet.FormsUser
             string ID = ((Button)sender).Name;
             GUI(ID);
         }
-
-        private void btnHuy_Click(object sender, EventArgs e)
+        public void SetNull()
         {
             txtMon.Text = "";
             txtSL.Text = "";
             txtGia.Text = "";
+        }
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            SetNull();
         }
         public string MaListDoAn()
         {
@@ -63,6 +67,12 @@ namespace QuanNet.FormsUser
             return l.Count + 1 < 10 ? "Order00" + (l.Count + 1) : l.Count + 1 < 100 ? "Order0" + (l.Count + 1) : "Order" + (l.Count + 1);
 
         }
+        public int TienTg(int a)
+        {
+            Tien = 0;
+            Tien = a;
+            return Tien;
+        }
         private void btnThem_Click(object sender, EventArgs e)
         {
             ListTPham orderkh = new ListTPham()
@@ -73,17 +83,17 @@ namespace QuanNet.FormsUser
                 ThanhTien = Convert.ToInt32(txtSL.Text) * Convert.ToInt32(txtGia.Text),
                 IdChiTiet = ID_CT
             };
-            if (BllOrderKH.Instance.TinhTienOrder(ID_CT)+orderkh.ThanhTien > BllKhachHang.Instance.GetTKByIDTK(ID_KhachHang).Sodu) 
+            int tien = Convert.ToInt32(txtSL.Text) * Convert.ToInt32(txtGia.Text);
+            if (BllOrderKH.Instance.TinhTienOrder(ID_CT)+tien+Tien >= BllKhachHang.Instance.GetTKByIDTK(ID_KhachHang).Sodu) 
             {
                 MessageBox.Show("Hết tiền rồi", "Thông báo", MessageBoxButtons.OK);
+                SetNull();
             }
             else
             {
                 BllOrderKH.Instance.addOrder1(orderkh);
+                SetNull();
             }
-            txtMon.Text = "";
-            txtSL.Text = "";
-            txtGia.Text = "";
             ShowListHD(ID_CT);
         }
         public void ShowListHD(string Id)

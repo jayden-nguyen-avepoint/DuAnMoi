@@ -28,11 +28,16 @@ namespace QuanNet
         }
         public void GUI(string IDMay)
         {
-            if (BllMayTinh.Instance.GetMayByIDMay(IDMay).IdTK==null)
+            if (BllMayTinh.Instance.GetMayByIDMay(IDMay).IdTK == null)
             {
                 txtIDTK.Text = "Trống";
             }
-            else txtIDTK.Text = (BllMayTinh.Instance.GetMayByIDMay(IDMay)).IdTK.ToString();
+            else
+            {
+                txtIDTK.Text = (BllMayTinh.Instance.GetMayByIDMay(IDMay)).IdTK.ToString();
+                FormUsers f = new FormUsers(txtMay.Text, txtIDTK.Text);
+                f.t = (s)=>txtTien.Text=s.ToString();
+            }
             txtMay.Text =BllMayTinh.Instance.GetMayByIDMay(IDMay).IdMay ;
             txtCauHinh.Text = BllMayTinh.Instance.GetMayByIDMay(IDMay).CauHinh;
             txtTien.Text = BllMayTinh.Instance.GetMayByIDMay(IDMay).TienGio.ToString();
@@ -41,17 +46,18 @@ namespace QuanNet
             txtCauHinh.Enabled=false;
             txtTien.Enabled=false;
         }
+        // Hiển thị thông tin máy tính lên màn hình
+        private void sh(int s)
+        {
+            txtTien.Text=s.ToString();
+        }
         private void Button_Click(object sender, EventArgs e)
         {
             string maMay = ((Button)sender).Name;
             txtMay.Text = maMay;
             GUI(maMay);
         }
-        private void btnEnd_Click(object sender, EventArgs e)
-        {
-            FormUsers f=new FormUsers(DateTime.Now);
-            MessageBox.Show(f.ToString());
-        }
+        // Chọn máy 
 
         private void FormMayTinh_Load(object sender, EventArgs e)
         {

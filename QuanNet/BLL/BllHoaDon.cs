@@ -56,22 +56,18 @@ namespace QuanNet.BLL
             List<HoaDonView> data = new List<HoaDonView>();
             foreach (HoaDon i in GetListHDByID(IDHD))
             {
-                if (i.IdHoaDon.Contains(keyWord) || i.IdTK.Contains(keyWord) || i.NgayXuatHD.ToString().Contains(keyWord))
+                if (i.IdHoaDon.Contains(keyWord) || i.IdTK.Contains(keyWord) )
                 {
                     data.Add(new HoaDonView
                     {
                         ID_HoaDon = i.IdHoaDon,
                         NgayXuatHD = i.NgayXuatHD,
-                        Tai_Khoan = i.TaiKhoan.TenKH,
+                        May = i.HoaDonChiTiet.IdMay,
                         Tong_Tien =i.HoaDonChiTiet.TongTien.ToString()
                     });
                 }
             }
             return data;
-        }
-        public dynamic ShowAll()
-        {
-            return db.HoaDons.Select(p => new { ID_HoaDon = p.IdHoaDon, p.IdTK, p.NgayXuatHD, p.TaiKhoan.TenKH, p.HoaDonChiTiet.TongTien }).ToList();
         }
         public dynamic SearchByDay(DateTime s, DateTime e)
         {
@@ -95,22 +91,36 @@ namespace QuanNet.BLL
         }
         public void AddHD(HoaDon s)
         {
-            try
-            {
                 db.HoaDons.Add(s);
-                db.SaveChanges();
-
-            }
-            catch
-            {
-                MessageBox.Show("Order đã xác nhận");
-            }
+                db.SaveChanges();            
         }
         public void DeleteHD(string IDHD)
         {
             HoaDon s = db.HoaDons.Find(IDHD);
             db.HoaDons.Remove(s);
             db.SaveChanges();
+        }
+        public bool checkVal(string id)
+        {
+            bool k = true;
+            int dem = 0;
+            foreach (HoaDon s in db.HoaDons)
+            {
+                if (s.IdChiTiet == id)
+                {
+                    dem++;
+                }   
+            }
+            if (dem == 0)
+            {
+                k = true;
+                //true là ko có tồn tại
+            }else
+            {
+                k = false;
+                //false là đã tồn tại
+            }
+            return k;
         }
         //=======================Hóa đơn chi tiết============================================
         public void DeleteHDCT(string ID)
@@ -142,11 +152,32 @@ namespace QuanNet.BLL
             }
             return data;
         }
+        public List<OrderAdView> GetOrderAd(string Id)
+        {
+            List<OrderAdView> dt = new List<OrderAdView>();
+            bool TT;
+            foreach (HoaDonChiTiet i in GetListHDCTByID(Id))
+            {
+                if (checkVal(i.IdChiTiet))
+                {
+                    TT=false;
+                }else TT=true;
+                dt.Add(new OrderAdView
+                {
+                    IdChiTiet = i.IdChiTiet,
+                    TongTien = i.TongTien,
+                    IdMay = i.IdMay,
+                    Trang_thai = TT
+
+                }) ;
+            }
+            return dt;
+        }
         public string CreateIDCT(string IdKh, string ID_may)
         {
             string idct= IdKh.Substring(0, 5) + ID_may.Substring(1, 2);
             List<int> Ma = new List<int>();
-            foreach (HoaDonChiTiet tk in GetsomethingInView(IdKh, ID_may))
+            foreach (HoaDonChiTiet tk in GetMaKHvaMaMay(IdKh, ID_may))
             {
                 Ma.Add(Convert.ToInt32(tk.IdChiTiet.Remove(0, 7)));
                 idct = tk.IdChiTiet.Substring(0, 7);
@@ -158,7 +189,7 @@ namespace QuanNet.BLL
             return Ma.Count + 1 < 10 ? idct+"00" + (Ma.Count + 1) : Ma.Count + 1 < 100 ? idct+ "0" + (Ma.Count + 1) : idct + (Ma.Count + 1);
 
         }
-        public List<HoaDonChiTiet> GetsomethingInView(string idKH, string idMay)
+        public List<HoaDonChiTiet> GetMaKHvaMaMay(string idKH, string idMay)
         {
             //KH001+M01 = KH00101
             string keyWord= idKH.Substring(0, 5)+ idMay.Substring(1,2);
@@ -168,7 +199,7 @@ namespace QuanNet.BLL
         }
         public void updatetongtien(string idct)
         {
-            HoaDonChiTiet hdct = db.HoaDonChiTiets.Single(p => p.IdChiTiet == idct);
+            HoaDonChiTiet hdct = GetHoadonCTByID(idct);
             if (tien(idct) != 0)
             {
                 hdct.TongTien = tien(idct);
@@ -194,3 +225,4 @@ namespace QuanNet.BLL
         }
     }
 }
+// Test merge code 
