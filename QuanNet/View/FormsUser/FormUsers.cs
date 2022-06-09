@@ -49,8 +49,7 @@ namespace QuanNet.FormsUser
         public FormUsers()
         {
         }
-
-        //=============UI CODE=============
+//=============CODE Giao diện người dùng===================================================================================================
         private Color SelectThemeColor()
         {
             int index = random.Next(theme.ColorList.Count);
@@ -106,7 +105,8 @@ namespace QuanNet.FormsUser
             childForm.Show();
             labelTitle.Text = childForm.Text;
         }
-        //================================
+//================================================================================================================================
+        //Code chức năng
         public void GUIUser(string ID_May)
         {
             txtMay.Text = ID_May.ToString();
@@ -116,6 +116,7 @@ namespace QuanNet.FormsUser
                 txtSodu.Text = i.TaiKhoan.Sodu.ToString();
             }
         }
+        //GUI() hiển thị thông tin lên màn hình chính
 
         public int TinhTgChoi(DateTime t)
         {
@@ -138,16 +139,18 @@ namespace QuanNet.FormsUser
             }
             return TongTienChoi;
         }
+        // Hàm TinhTGchoi(), khi kết thúc, gọi hàm để tính tổng tg chơi và tiền
         private void btnApp_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormApp(ID_May, IDKhachHang), sender);
         }
+        //Mở form app
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormOrderKH(ID_May, IDKhachHang,ID_CT), sender);           
-
         }
+        /*Mở form Order*/
         public void ending()
         {
             timer1.Stop();
@@ -166,6 +169,7 @@ namespace QuanNet.FormsUser
             BllHoaDon.Instance.updatetongtien(ID_CT);
             Dispose();
         }
+        //Hàm ending(), khi kết thúc tự cập nhật HDCT, Máy, Tắt màn hình user
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
             ending();
@@ -185,6 +189,7 @@ namespace QuanNet.FormsUser
             {
                 IdChiTiet = ID_CT,
                 IdMay = ID_May,
+                NgayThang= DateTime.Now,
                 TongTien = null
             });
         }
