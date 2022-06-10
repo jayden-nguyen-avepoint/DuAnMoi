@@ -34,7 +34,6 @@
             this.dgvOrder = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnBack = new FontAwesome.Sharp.IconButton();
-            this.btnHuy = new QuanNet.CustomsDetail.CusBtn();
             this.btnXN = new QuanNet.CustomsDetail.CusBtn();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -97,7 +96,6 @@
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.btnBack);
-            this.panel2.Controls.Add(this.btnHuy);
             this.panel2.Controls.Add(this.btnXN);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
@@ -123,26 +121,6 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // btnHuy
-            // 
-            this.btnHuy.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnHuy.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnHuy.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnHuy.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnHuy.BorderRadius = 20;
-            this.btnHuy.BorderSize = 0;
-            this.btnHuy.FlatAppearance.BorderSize = 0;
-            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHuy.ForeColor = System.Drawing.Color.White;
-            this.btnHuy.Location = new System.Drawing.Point(11, 90);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(150, 40);
-            this.btnHuy.TabIndex = 5;
-            this.btnHuy.Text = "Hủy Order";
-            this.btnHuy.TextColor = System.Drawing.Color.White;
-            this.btnHuy.UseVisualStyleBackColor = false;
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
-            // 
             // btnXN
             // 
             this.btnXN.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -154,7 +132,7 @@
             this.btnXN.FlatAppearance.BorderSize = 0;
             this.btnXN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXN.ForeColor = System.Drawing.Color.White;
-            this.btnXN.Location = new System.Drawing.Point(11, 44);
+            this.btnXN.Location = new System.Drawing.Point(11, 43);
             this.btnXN.Name = "btnXN";
             this.btnXN.Size = new System.Drawing.Size(150, 40);
             this.btnXN.TabIndex = 4;
@@ -204,7 +182,6 @@
             this.cbbHDCT.Size = new System.Drawing.Size(182, 30);
             this.cbbHDCT.TabIndex = 1;
             this.cbbHDCT.Texts = "";
-
             // 
             // txtSearch
             // 
@@ -250,7 +227,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private CustomsDetail.CustomTextbox txtSearch;
-        private CustomsDetail.CusBtn btnHuy;
         private CustomsDetail.CusBtn btnXN;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

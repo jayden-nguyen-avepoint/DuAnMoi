@@ -202,5 +202,10 @@ namespace QuanNet
         {
             ShowList("", txtSearch.Text);
         }
+
+        private void cbbSort_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            dgvKH.DataSource= BllKhachHang.Instance.Sort(cbbSort.SelectedIndex);
+        }
     }
 }

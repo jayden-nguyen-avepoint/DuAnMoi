@@ -86,14 +86,5 @@ namespace QuanNet
             dgvOrder.Enabled = true;
         }
         // Trở về menu chính
-        private void btnHuy_Click(object sender, EventArgs e)
-        {
-            foreach (DataGridViewRow i in dgvOrder.SelectedRows)
-            {
-                string IDKH = i.Cells["IDChiTiet"].Value.ToString();
-                BllHoaDon.Instance.DeleteHDCT(IDKH);
-                ShowOrder();
-            }
-        }
     }
 }
