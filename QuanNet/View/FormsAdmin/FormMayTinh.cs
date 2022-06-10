@@ -35,8 +35,6 @@ namespace QuanNet
             else
             {
                 txtIDTK.Text = (BllMayTinh.Instance.GetMayByIDMay(IDMay)).IdTK.ToString();
-                FormUsers f = new FormUsers(txtMay.Text, txtIDTK.Text);
-                f.t = (s)=>txtTien.Text=s.ToString();
             }
             txtMay.Text =BllMayTinh.Instance.GetMayByIDMay(IDMay).IdMay ;
             txtCauHinh.Text = BllMayTinh.Instance.GetMayByIDMay(IDMay).CauHinh;
@@ -47,10 +45,6 @@ namespace QuanNet
             txtTien.Enabled=false;
         }
         // Hiển thị thông tin máy tính lên màn hình
-        private void sh(int s)
-        {
-            txtTien.Text=s.ToString();
-        }
         private void Button_Click(object sender, EventArgs e)
         {
             string maMay = ((Button)sender).Name;
