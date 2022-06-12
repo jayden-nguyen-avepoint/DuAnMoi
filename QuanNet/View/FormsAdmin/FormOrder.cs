@@ -19,24 +19,18 @@ namespace QuanNet
         public FormOrder()
         {           
             InitializeComponent();
-            cbbHDCT.Items.Add("None");
-            cbbHDCT.Items.AddRange(BllOrderKH.Instance.GetCBB().ToArray());
-            ShowAll();
+            ShowOrder();
         }
-        public void ShowAll()
+        public void ShowOrder()
         {
-            dgvOrder.DataSource = BllOrderKH.Instance.GetListCT();
+            dgvOrder.DataSource = BllHoaDon.Instance.GetOrderAd("");
         }
+        // Hàm Show(CT) dùng để show các listOrder theo keywork search
         public void Show(string CT)
         {
             dgvOrder.DataSource= BllOrderKH.Instance.GetListTPViewByIDCT(CT);
         }
-
-        private void cbbHDCT_OnSelectedIndexChanged(object sender, EventArgs e)
-        {
-            ID_CT = cbbHDCT.SelectedItem.ToString();
-            Show(ID_CT);
-        }
+        // Hàm ShowOrder() các món đã liệt kê 
         public string MaHoaDon()
         {
             List<int> l = new List<int>();
@@ -51,23 +45,29 @@ namespace QuanNet
             }
             return l.Count + 1 < 10 ? "Bill00" + (l.Count + 1) : l.Count + 1 < 100 ? "Bill0" + (l.Count + 1) : "Bill" +
                 +(l.Count + 1);
-
         }
+        // MaHoaDon() để tạo mã hóa đơn tự động
         private void btnXN_Click(object sender, EventArgs e)
         {
             ID_CT=  dgvOrder.SelectedRows[0].Cells["IdChiTiet"].Value.ToString();
-            HoaDon s=new HoaDon()
-                { 
-                    IdHoaDon = MaHoaDon(),
-                    NgayXuatHD = DateTime.Now,
-                    IdTK = ID_CT.Substring(0,5),
-                    IdChiTiet = ID_CT
-                    
-            };
-            BllHoaDon.Instance.AddHD(s);
-
+                    if(!BllHoaDon.Instance.checkVal(ID_CT))
+                    {
+                        MessageBox.Show("Đã order");
+                        //Nếu đã order thì hiện thông báo
+                    } 
+                        else
+                    {
+                        HoaDon s = new HoaDon()
+                        {
+                            IdHoaDon = MaHoaDon(),
+                            IdTK = ID_CT.Substring(0, 5),
+                            IdChiTiet = ID_CT
+                        };
+                        BllHoaDon.Instance.AddHD(s);
+                    }
+                    ShowOrder();
         }
-
+        // Ấn xác nhận đơn đặt order của khách hàng
         private void dgvOrder_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvOrder.SelectedRows.Count==1)
@@ -76,24 +76,15 @@ namespace QuanNet
                 Show(id);
                 dgvOrder.Enabled = false;
                 dgvOrder.ClearSelection();
-            }else ShowAll();
+            }else ShowOrder();
         }
-
+        // Xem chi tiết mỗi order khách hàng gồm những gì( khi ấn dou-click)
         private void btnBack_Click(object sender, EventArgs e)
         {
-            ShowAll();
+            ShowOrder();
             dgvOrder.ClearSelection();
             dgvOrder.Enabled = true;
         }
-
-        private void btnHuy_Click(object sender, EventArgs e)
-        {
-            foreach (DataGridViewRow i in dgvOrder.SelectedRows)
-            {
-                string IDKH = i.Cells["IDChiTiet"].Value.ToString();
-                BllHoaDon.Instance.DeleteHDCT(IDKH);
-                ShowAll();
-            }
-        }
+        // Trở về menu chính
     }
 }

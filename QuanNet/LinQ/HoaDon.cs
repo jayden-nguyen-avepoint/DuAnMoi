@@ -12,10 +12,6 @@ namespace QuanNet.LinQ
         [Key]
         [StringLength(20)]
         public string IdHoaDon { get; set; }
-
-        [Column(TypeName = "date")]
-        public DateTime NgayXuatHD { get; set; }
-
         [Required]
         [StringLength(20)]
         public string IdTK { get; set; }

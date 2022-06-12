@@ -51,10 +51,8 @@
             this.M02 = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.txttgchoi = new QuanNet.CustomsDetail.CustomTextbox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtHD = new QuanNet.CustomsDetail.CustomTextbox();
-            this.btnEnd = new QuanNet.CustomsDetail.CusBtn();
             this.txtTien = new QuanNet.CustomsDetail.CustomTextbox();
             this.txtCauHinh = new QuanNet.CustomsDetail.CustomTextbox();
             this.txtIDTK = new QuanNet.CustomsDetail.CustomTextbox();
@@ -499,10 +497,8 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.txttgchoi);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.txtHD);
-            this.panel2.Controls.Add(this.btnEnd);
             this.panel2.Controls.Add(this.txtTien);
             this.panel2.Controls.Add(this.txtCauHinh);
             this.panel2.Controls.Add(this.txtIDTK);
@@ -528,33 +524,12 @@
             this.label6.TabIndex = 26;
             this.label6.Text = "CYBER HOC THEM";
             // 
-            // txttgchoi
-            // 
-            this.txttgchoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.txttgchoi.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txttgchoi.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txttgchoi.BorderRadius = 0;
-            this.txttgchoi.BorderSize = 2;
-            this.txttgchoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttgchoi.ForeColor = System.Drawing.Color.White;
-            this.txttgchoi.Location = new System.Drawing.Point(192, 385);
-            this.txttgchoi.Margin = new System.Windows.Forms.Padding(4);
-            this.txttgchoi.Multiline = false;
-            this.txttgchoi.Name = "txttgchoi";
-            this.txttgchoi.Padding = new System.Windows.Forms.Padding(7);
-            this.txttgchoi.PasswordChar = false;
-            this.txttgchoi.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txttgchoi.PlaceholderText = "";
-            this.txttgchoi.Size = new System.Drawing.Size(250, 35);
-            this.txttgchoi.TabIndex = 25;
-            this.txttgchoi.UnderlinedStyle = true;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(76, 332);
+            this.label5.Location = new System.Drawing.Point(81, 412);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(91, 20);
             this.label5.TabIndex = 12;
@@ -569,7 +544,7 @@
             this.txtHD.BorderSize = 2;
             this.txtHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHD.ForeColor = System.Drawing.Color.White;
-            this.txtHD.Location = new System.Drawing.Point(192, 317);
+            this.txtHD.Location = new System.Drawing.Point(197, 397);
             this.txtHD.Margin = new System.Windows.Forms.Padding(4);
             this.txtHD.Multiline = false;
             this.txtHD.Name = "txtHD";
@@ -581,26 +556,6 @@
             this.txtHD.TabIndex = 11;
             this.txtHD.UnderlinedStyle = true;
             // 
-            // btnEnd
-            // 
-            this.btnEnd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.btnEnd.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.btnEnd.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.btnEnd.BorderRadius = 30;
-            this.btnEnd.BorderSize = 3;
-            this.btnEnd.FlatAppearance.BorderSize = 0;
-            this.btnEnd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnd.ForeColor = System.Drawing.Color.GhostWhite;
-            this.btnEnd.Location = new System.Drawing.Point(221, 452);
-            this.btnEnd.Name = "btnEnd";
-            this.btnEnd.Size = new System.Drawing.Size(180, 67);
-            this.btnEnd.TabIndex = 10;
-            this.btnEnd.Text = "Kết thúc";
-            this.btnEnd.TextColor = System.Drawing.Color.GhostWhite;
-            this.btnEnd.UseVisualStyleBackColor = false;
-            this.btnEnd.Click += new System.EventHandler(this.btnEnd_Click);
-            // 
             // txtTien
             // 
             this.txtTien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
@@ -610,7 +565,7 @@
             this.txtTien.BorderSize = 2;
             this.txtTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTien.ForeColor = System.Drawing.Color.White;
-            this.txtTien.Location = new System.Drawing.Point(192, 265);
+            this.txtTien.Location = new System.Drawing.Point(197, 345);
             this.txtTien.Margin = new System.Windows.Forms.Padding(4);
             this.txtTien.Multiline = false;
             this.txtTien.Name = "txtTien";
@@ -631,7 +586,7 @@
             this.txtCauHinh.BorderSize = 2;
             this.txtCauHinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCauHinh.ForeColor = System.Drawing.Color.White;
-            this.txtCauHinh.Location = new System.Drawing.Point(192, 208);
+            this.txtCauHinh.Location = new System.Drawing.Point(197, 288);
             this.txtCauHinh.Margin = new System.Windows.Forms.Padding(4);
             this.txtCauHinh.Multiline = false;
             this.txtCauHinh.Name = "txtCauHinh";
@@ -652,7 +607,7 @@
             this.txtIDTK.BorderSize = 2;
             this.txtIDTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDTK.ForeColor = System.Drawing.Color.White;
-            this.txtIDTK.Location = new System.Drawing.Point(192, 151);
+            this.txtIDTK.Location = new System.Drawing.Point(197, 231);
             this.txtIDTK.Margin = new System.Windows.Forms.Padding(4);
             this.txtIDTK.Multiline = false;
             this.txtIDTK.Name = "txtIDTK";
@@ -673,7 +628,7 @@
             this.txtMay.BorderSize = 2;
             this.txtMay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMay.ForeColor = System.Drawing.Color.White;
-            this.txtMay.Location = new System.Drawing.Point(192, 98);
+            this.txtMay.Location = new System.Drawing.Point(197, 178);
             this.txtMay.Margin = new System.Windows.Forms.Padding(4);
             this.txtMay.Multiline = false;
             this.txtMay.Name = "txtMay";
@@ -690,7 +645,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(90, 280);
+            this.label4.Location = new System.Drawing.Point(95, 360);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 20);
             this.label4.TabIndex = 3;
@@ -701,7 +656,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(90, 223);
+            this.label3.Location = new System.Drawing.Point(95, 303);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 20);
             this.label3.TabIndex = 2;
@@ -712,7 +667,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(46, 166);
+            this.label2.Location = new System.Drawing.Point(51, 246);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(124, 20);
             this.label2.TabIndex = 1;
@@ -723,7 +678,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(90, 106);
+            this.label1.Location = new System.Drawing.Point(95, 186);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 20);
             this.label1.TabIndex = 0;
@@ -775,14 +730,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private CustomsDetail.CustomTextbox txtMay;
-        private CustomsDetail.CusBtn btnEnd;
         private CustomsDetail.CustomTextbox txtTien;
         private CustomsDetail.CustomTextbox txtCauHinh;
         private CustomsDetail.CustomTextbox txtIDTK;
         private FontAwesome.Sharp.IconButton M20;
         private System.Windows.Forms.Label label5;
         private CustomsDetail.CustomTextbox txtHD;
-        private CustomsDetail.CustomTextbox txttgchoi;
         private System.Windows.Forms.Label label6;
     }
 }
