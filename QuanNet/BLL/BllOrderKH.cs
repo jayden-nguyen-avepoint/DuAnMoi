@@ -79,20 +79,6 @@ namespace QuanNet.BLL
             return data;
 
         }
-        public List<CbbIDKH> GetCBB()
-        {
-
-            List<CbbIDKH> list = new List<CbbIDKH>();
-            foreach (HoaDonChiTiet i in db.HoaDonChiTiets)
-            {
-                list.Add(new CbbIDKH
-                {
-                    Value = i.IdChiTiet,
-                    Text = i.IdChiTiet
-                });
-            }
-            return list;
-        }
         public int TinhTienOrder(string idct)
         {
 
@@ -102,6 +88,19 @@ namespace QuanNet.BLL
                 TienOrder += i.ThanhTien;
             }
             return TienOrder;
+        }
+        public string MaListDoAn()
+        {
+            List<int> l = new List<int>();
+            foreach (ListTPham tk in GetListTPByIDCT(""))
+            {
+                l.Add(Convert.ToInt32(tk.IdOrderList.Remove(0, 5)));
+            }
+            for (int i = 0; i < l.Count; i++)
+            {
+                if (!l.Contains(i + 1)) return i + 1 < 10 ? "Order00" + ++i : i + 1 < 100 ? "Order0" + ++i : "Order" + ++i;
+            }
+            return l.Count + 1 < 10 ? "Order00" + (l.Count + 1) : l.Count + 1 < 100 ? "Order0" + (l.Count + 1) : "Order" + (l.Count + 1);
         }
     }
 }

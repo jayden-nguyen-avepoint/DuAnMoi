@@ -71,6 +71,10 @@ namespace QuanNet.BLL
         }
         public dynamic SearchByDay(DateTime s, DateTime e)
         {
+            if (s == e)
+            {
+                return db.HoaDons.Where(p => p.HoaDonChiTiet.NgayThang == s).Select(p => new { ID_HoaDon = p.IdHoaDon, p.IdTK, p.HoaDonChiTiet.NgayThang, p.TaiKhoan.TenKH, p.HoaDonChiTiet.TongTien }).ToList();
+            }
             return  db.HoaDons.Where(p => p.HoaDonChiTiet.NgayThang >= s && p.HoaDonChiTiet.NgayThang <= e).Select(p => new { ID_HoaDon=p.IdHoaDon,p.IdTK, p.HoaDonChiTiet.NgayThang, p.TaiKhoan.TenKH, p.HoaDonChiTiet.TongTien }).ToList();
         }
         public dynamic Sort(int i)
@@ -121,6 +125,21 @@ namespace QuanNet.BLL
                 //false là đã tồn tại
             }
             return k;
+        }
+        public string MaHoaDon()
+        {
+            List<int> l = new List<int>();
+            foreach (HoaDon hd in GetListHDByID(""))
+            {
+                l.Add(Convert.ToInt32(hd.IdHoaDon.Remove(0, 4)));
+
+            }
+            for (int i = 0; i < l.Count; i++)
+            {
+                if (!l.Contains(i + 1)) return i + 1 < 10 ? "Bill00" + ++i : i + 1 < 100 ? "Bill0" + ++i : "Bill" + ++i;
+            }
+            return l.Count + 1 < 10 ? "Bill00" + (l.Count + 1) : l.Count + 1 < 100 ? "Bill0" + (l.Count + 1) : "Bill" +
+                +(l.Count + 1);
         }
         //=======================Hóa đơn chi tiết============================================
         public void DeleteHDCT(string ID)

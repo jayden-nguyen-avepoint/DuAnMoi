@@ -20,6 +20,7 @@ namespace QuanNet
         {           
             InitializeComponent();
             ShowOrder();
+            //foreach( HoaDonChiTiet i in )
         }
         public void ShowOrder()
         {
@@ -31,22 +32,6 @@ namespace QuanNet
             dgvOrder.DataSource= BllOrderKH.Instance.GetListTPViewByIDCT(CT);
         }
         // Hàm ShowOrder() các món đã liệt kê 
-        public string MaHoaDon()
-        {
-            List<int> l = new List<int>();
-            foreach (HoaDon hd in BllHoaDon.Instance.GetListHDByID(""))
-            {
-                l.Add(Convert.ToInt32(hd.IdHoaDon.Remove(0, 4)));
-
-            }
-            for (int i = 0; i < l.Count; i++)
-            {
-                if (!l.Contains(i + 1)) return i + 1 < 10 ? "Bill00" + ++i : i + 1 < 100 ? "Bill0" + ++i : "Bill" + ++i;
-            }
-            return l.Count + 1 < 10 ? "Bill00" + (l.Count + 1) : l.Count + 1 < 100 ? "Bill0" + (l.Count + 1) : "Bill" +
-                +(l.Count + 1);
-        }
-        // MaHoaDon() để tạo mã hóa đơn tự động
         private void btnXN_Click(object sender, EventArgs e)
         {
             ID_CT=  dgvOrder.SelectedRows[0].Cells["IdChiTiet"].Value.ToString();
@@ -59,7 +44,7 @@ namespace QuanNet
                     {
                         HoaDon s = new HoaDon()
                         {
-                            IdHoaDon = MaHoaDon(),
+                            IdHoaDon = BllHoaDon.Instance.MaHoaDon(),
                             IdTK = ID_CT.Substring(0, 5),
                             IdChiTiet = ID_CT
                         };

@@ -47,11 +47,12 @@ namespace QuanNet
         {
             DateTime start=dateStart.Value;
             DateTime end = dateEnd.Value;
-            if (start == end)
-            {
-                BllHoaDon.Instance.SearchByDay(start, end);
-            }
-            else dgvHoaDon.DataSource = BllHoaDon.Instance.SearchByDay(start, end);
+            dgvHoaDon.DataSource = BllHoaDon.Instance.SearchByDay(start, end);
+            //if (start == end)
+            //{
+            //    dgvHoaDon.DataSource = BllHoaDon.Instance.SearchByDay(start, end);
+            //}
+            //else dgvHoaDon.DataSource = BllHoaDon.Instance.SearchByDay(start, end);
         }
 
         private void sort_OnSelectedIndexChanged(object sender, EventArgs e)

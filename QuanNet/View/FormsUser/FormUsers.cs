@@ -21,9 +21,6 @@ namespace QuanNet.FormsUser
         private Random random;
         private int tempIndex;
         private Form activeForm;
-
-        public delegate void MyMoney(int money);
-        public MyMoney t { get; set; }
         public string ID_May { get; set; }
         public string IDKhachHang { get; set; }
         public string time { get; set; }
@@ -121,7 +118,6 @@ namespace QuanNet.FormsUser
         public int TinhTgChoi(DateTime t)
         {
             TimeSpan f = Convert.ToDateTime(DateTime.Now.ToLongTimeString()) - Convert.ToDateTime(time);
-            TimeSpan interval = t.Subtract(Convert.ToDateTime(time));
             int tienGio = BllMayTinh.Instance.GetMayByIDMay(ID_May).TienGio;
             int TongTienChoi = tienGio * f.Hours + tienGio * f.Minutes / 60 + tienGio * f.Seconds / 3600;
             if (TongTienChoi <= 2000)
