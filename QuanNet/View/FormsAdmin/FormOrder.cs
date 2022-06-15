@@ -20,11 +20,11 @@ namespace QuanNet
         {           
             InitializeComponent();
             ShowOrder();
-            //foreach( HoaDonChiTiet i in )
+
         }
         public void ShowOrder()
         {
-            dgvOrder.DataSource = BllHoaDon.Instance.GetOrderAd("");
+            dgvOrder.DataSource = BllHoaDon.Instance.GetOrderAd("",dtpHDCT.Value.Date);
         }
         // Hàm Show(CT) dùng để show các listOrder theo keywork search
         public void Show(string CT)
@@ -34,23 +34,28 @@ namespace QuanNet
         // Hàm ShowOrder() các món đã liệt kê 
         private void btnXN_Click(object sender, EventArgs e)
         {
-            ID_CT=  dgvOrder.SelectedRows[0].Cells["IdChiTiet"].Value.ToString();
-                    if(!BllHoaDon.Instance.checkVal(ID_CT))
+            if (dgvOrder.SelectedRows.Count > 0)
+            {
+
+                ID_CT = dgvOrder.SelectedRows[0].Cells["IdChiTiet"].Value.ToString();
+                if (!BllHoaDon.Instance.checkVal(ID_CT))
+                {
+                    MessageBox.Show("Đã order");
+                    //Nếu đã order thì hiện thông báo
+                }
+                else
+                {
+                    HoaDon s = new HoaDon()
                     {
-                        MessageBox.Show("Đã order");
-                        //Nếu đã order thì hiện thông báo
-                    } 
-                        else
-                    {
-                        HoaDon s = new HoaDon()
-                        {
-                            IdHoaDon = BllHoaDon.Instance.MaHoaDon(),
-                            IdTK = ID_CT.Substring(0, 5),
-                            IdChiTiet = ID_CT
-                        };
-                        BllHoaDon.Instance.AddHD(s);
-                    }
-                    ShowOrder();
+                        IdHoaDon = BllHoaDon.Instance.MaHoaDon(),
+                        IdTK = ID_CT.Substring(0, 5),
+                        IdChiTiet = ID_CT
+                    };
+                    BllHoaDon.Instance.AddHD(s);
+                }
+                ShowOrder();
+            }
+            else MessageBox.Show("Vui lòng chọn order cần thanh toán từ menu chính", "Thông báo", MessageBoxButtons.OK);
         }
         // Ấn xác nhận đơn đặt order của khách hàng
         private void dgvOrder_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -69,6 +74,11 @@ namespace QuanNet
             ShowOrder();
             dgvOrder.ClearSelection();
             dgvOrder.Enabled = true;
+        }
+
+        private void dtpHDCT_ValueChanged(object sender, EventArgs e)
+        {
+            ShowOrder();
         }
         // Trở về menu chính
     }

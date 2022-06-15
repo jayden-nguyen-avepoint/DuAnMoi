@@ -45,14 +45,10 @@ namespace QuanNet
 
         private void dateStart_ValueChanged(object sender, EventArgs e)
         {
-            DateTime start=dateStart.Value;
-            DateTime end = dateEnd.Value;
+            DateTime start=dateStart.Value.Date;
+            DateTime end = dateEnd.Value.Date;
             dgvHoaDon.DataSource = BllHoaDon.Instance.SearchByDay(start, end);
-            //if (start == end)
-            //{
-            //    dgvHoaDon.DataSource = BllHoaDon.Instance.SearchByDay(start, end);
-            //}
-            //else dgvHoaDon.DataSource = BllHoaDon.Instance.SearchByDay(start, end);
+
         }
 
         private void sort_OnSelectedIndexChanged(object sender, EventArgs e)

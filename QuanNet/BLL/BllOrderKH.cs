@@ -69,6 +69,7 @@ namespace QuanNet.BLL
             List<OrderKHView> data = new List<OrderKHView>();
             foreach (ListTPham i in GetListTPByIDCT(IDCT))
             {
+                
                 data.Add(new OrderKHView
                 {
                     Mon = i.TPham.TenTP,
