@@ -71,10 +71,6 @@ namespace QuanNet.BLL
         }
         public dynamic SearchByDay(DateTime s, DateTime e)
         {
-            if (s == e)
-            {
-                return db.HoaDons.Where(p => p.HoaDonChiTiet.NgayThang == s).Select(p => new { ID_HoaDon = p.IdHoaDon, p.IdTK, p.HoaDonChiTiet.NgayThang, p.TaiKhoan.TenKH, p.HoaDonChiTiet.TongTien }).ToList();
-            }
             return  db.HoaDons.Where(p => p.HoaDonChiTiet.NgayThang >= s && p.HoaDonChiTiet.NgayThang <= e).Select(p => new { ID_HoaDon=p.IdHoaDon,p.IdTK, p.HoaDonChiTiet.NgayThang, p.TaiKhoan.TenKH, p.HoaDonChiTiet.TongTien }).ToList();
         }
         public dynamic Sort(int i)
@@ -171,7 +167,7 @@ namespace QuanNet.BLL
             }
             return data;
         }
-        public List<OrderAdView> GetOrderAd(string Id)
+        public List<OrderAdView> GetOrderAd(string Id, DateTime s)
         {
             List<OrderAdView> dt = new List<OrderAdView>();
             bool TT;
@@ -181,14 +177,17 @@ namespace QuanNet.BLL
                 {
                     TT=false;
                 }else TT=true;
-                dt.Add(new OrderAdView
+                if(i.NgayThang.Date == s)
                 {
-                    IdChiTiet = i.IdChiTiet,
-                    TongTien = i.TongTien,
-                    IdMay = i.IdMay,
-                    Trang_thai = TT
+                    dt.Add(new OrderAdView
+                    {
+                        IdChiTiet = i.IdChiTiet,
+                        TongTien = i.TongTien,
+                        IdMay = i.IdMay,
+                        Trang_thai = TT
 
-                }) ;
+                    }) ;
+                }
             }
             return dt;
         }
@@ -241,6 +240,10 @@ namespace QuanNet.BLL
                 }
             }
             return tong;
+        }
+        public dynamic GetHDCTDay(DateTime s)
+        {
+            return db.HoaDonChiTiets.Where(p=>p.NgayThang == s).Select(p => p).ToList();
         }
     }
 }
