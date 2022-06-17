@@ -28,17 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvOrder = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dtpHDCT = new System.Windows.Forms.DateTimePicker();
             this.btnBack = new FontAwesome.Sharp.IconButton();
-            this.btnHuy = new QuanNet.CustomsDetail.CusBtn();
             this.btnXN = new QuanNet.CustomsDetail.CusBtn();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbbHDCT = new QuanNet.CustomsDetail.CusCbb();
             this.txtSearch = new QuanNet.CustomsDetail.CustomTextbox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).BeginInit();
@@ -63,14 +62,14 @@
             this.dgvOrder.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvOrder.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvOrder.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MediumSlateBlue;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.MediumSlateBlue;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MediumSlateBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvOrder.ColumnHeadersHeight = 30;
             this.dgvOrder.EnableHeadersVisualStyles = false;
             this.dgvOrder.GridColor = System.Drawing.SystemColors.ControlLightLight;
@@ -78,14 +77,14 @@
             this.dgvOrder.Name = "dgvOrder";
             this.dgvOrder.RowHeadersVisible = false;
             this.dgvOrder.RowHeadersWidth = 60;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(46)))), ((int)(((byte)(105)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(7);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumSlateBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvOrder.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(46)))), ((int)(((byte)(105)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.5F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(7);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.MediumSlateBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvOrder.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvOrder.RowTemplate.Height = 24;
             this.dgvOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvOrder.Size = new System.Drawing.Size(1129, 448);
@@ -96,17 +95,25 @@
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.dtpHDCT);
             this.panel2.Controls.Add(this.btnBack);
-            this.panel2.Controls.Add(this.btnHuy);
             this.panel2.Controls.Add(this.btnXN);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.cbbHDCT);
             this.panel2.Controls.Add(this.txtSearch);
             this.panel2.Location = new System.Drawing.Point(0, 476);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1154, 146);
             this.panel2.TabIndex = 1;
+            // 
+            // dtpHDCT
+            // 
+            this.dtpHDCT.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpHDCT.Location = new System.Drawing.Point(956, 108);
+            this.dtpHDCT.Name = "dtpHDCT";
+            this.dtpHDCT.Size = new System.Drawing.Size(184, 22);
+            this.dtpHDCT.TabIndex = 7;
+            this.dtpHDCT.ValueChanged += new System.EventHandler(this.dtpHDCT_ValueChanged);
             // 
             // btnBack
             // 
@@ -123,26 +130,6 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // btnHuy
-            // 
-            this.btnHuy.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnHuy.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnHuy.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnHuy.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnHuy.BorderRadius = 20;
-            this.btnHuy.BorderSize = 0;
-            this.btnHuy.FlatAppearance.BorderSize = 0;
-            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHuy.ForeColor = System.Drawing.Color.White;
-            this.btnHuy.Location = new System.Drawing.Point(11, 90);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(150, 40);
-            this.btnHuy.TabIndex = 5;
-            this.btnHuy.Text = "Hủy Order";
-            this.btnHuy.TextColor = System.Drawing.Color.White;
-            this.btnHuy.UseVisualStyleBackColor = false;
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
-            // 
             // btnXN
             // 
             this.btnXN.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -154,7 +141,7 @@
             this.btnXN.FlatAppearance.BorderSize = 0;
             this.btnXN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXN.ForeColor = System.Drawing.Color.White;
-            this.btnXN.Location = new System.Drawing.Point(11, 44);
+            this.btnXN.Location = new System.Drawing.Point(11, 43);
             this.btnXN.Name = "btnXN";
             this.btnXN.Size = new System.Drawing.Size(150, 40);
             this.btnXN.TabIndex = 4;
@@ -172,7 +159,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 23);
             this.label2.TabIndex = 3;
-            this.label2.Text = "ID chi tiết";
+            this.label2.Text = "Ngày:";
             // 
             // label1
             // 
@@ -184,27 +171,6 @@
             this.label1.Size = new System.Drawing.Size(70, 23);
             this.label1.TabIndex = 2;
             this.label1.Text = "Tìm kiếm";
-            // 
-            // cbbHDCT
-            // 
-            this.cbbHDCT.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbbHDCT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.cbbHDCT.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cbbHDCT.BorderSize = 1;
-            this.cbbHDCT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cbbHDCT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cbbHDCT.ForeColor = System.Drawing.Color.White;
-            this.cbbHDCT.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.cbbHDCT.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.cbbHDCT.ListTextColor = System.Drawing.Color.DimGray;
-            this.cbbHDCT.Location = new System.Drawing.Point(959, 103);
-            this.cbbHDCT.MinimumSize = new System.Drawing.Size(150, 30);
-            this.cbbHDCT.Name = "cbbHDCT";
-            this.cbbHDCT.Padding = new System.Windows.Forms.Padding(1);
-            this.cbbHDCT.Size = new System.Drawing.Size(182, 30);
-            this.cbbHDCT.TabIndex = 1;
-            this.cbbHDCT.Texts = "";
-
             // 
             // txtSearch
             // 
@@ -250,12 +216,11 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private CustomsDetail.CustomTextbox txtSearch;
-        private CustomsDetail.CusBtn btnHuy;
         private CustomsDetail.CusBtn btnXN;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private CustomsDetail.CusCbb cbbHDCT;
         private System.Windows.Forms.DataGridView dgvOrder;
         private FontAwesome.Sharp.IconButton btnBack;
+        private System.Windows.Forms.DateTimePicker dtpHDCT;
     }
 }

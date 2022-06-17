@@ -150,13 +150,14 @@ namespace QuanNet
         public void MoMayKhachHang()
         {
             string tk = BllKhachHang.Instance.GetIDTKByUSERNAME(txtTKKH.Text.ToString());
-            foreach (TaiKhoan i in BllKhachHang.Instance.GetListTKByIDTK(BllKhachHang.Instance.GetIDTKByUSERNAME(txtTKKH.Text.ToString())))
+            foreach (TaiKhoan i in BllKhachHang.Instance.GetListTKByIDTK(tk))
             {
                 if (txtTKKH.Text.ToString() == i.TenDN && txtMKKH.Text.ToString() == i.MatKhau)
                 {
                     if (cbbMay.SelectedIndex != -1)
                     {
-                        if (BllMayTinh.Instance.GetMayByIDMay(cbbMay.SelectedItem.ToString()).TrangThai == false)
+                        bool tt = BllMayTinh.Instance.GetMayByIDMay(cbbMay.SelectedItem.ToString()).TrangThai;
+                        if (tt == false)
                         {
                             string may = cbbMay.SelectedItem.ToString();
                             BllMayTinh.Instance.addTKinMay(may, tk, "");

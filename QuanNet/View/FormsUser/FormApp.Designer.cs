@@ -37,7 +37,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.CoderTool = new QuanNet.CustomsDetail.CusBtn();
             this.RainbowHat = new QuanNet.CustomsDetail.CusBtn();
-            this.Dota2 = new QuanNet.CustomsDetail.CusBtn();
             this.BlockADS = new QuanNet.CustomsDetail.CusBtn();
             this.Valorant = new QuanNet.CustomsDetail.CusBtn();
             this.Zalo = new QuanNet.CustomsDetail.CusBtn();
@@ -49,7 +48,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.CODER = new System.Windows.Forms.Label();
             this.DG = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -144,7 +142,6 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.CoderTool);
             this.panel2.Controls.Add(this.RainbowHat);
-            this.panel2.Controls.Add(this.Dota2);
             this.panel2.Controls.Add(this.BlockADS);
             this.panel2.Controls.Add(this.Valorant);
             this.panel2.Controls.Add(this.Zalo);
@@ -156,7 +153,6 @@
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.CODER);
             this.panel2.Controls.Add(this.DG);
-            this.panel2.Controls.Add(this.label18);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label12);
@@ -183,7 +179,7 @@
             this.CoderTool.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CoderTool.ForeColor = System.Drawing.Color.White;
             this.CoderTool.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.CoderTool.Location = new System.Drawing.Point(393, 202);
+            this.CoderTool.Location = new System.Drawing.Point(219, 197);
             this.CoderTool.Name = "CoderTool";
             this.CoderTool.Size = new System.Drawing.Size(100, 100);
             this.CoderTool.TabIndex = 49;
@@ -206,7 +202,7 @@
             this.RainbowHat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RainbowHat.ForeColor = System.Drawing.Color.White;
             this.RainbowHat.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.RainbowHat.Location = new System.Drawing.Point(219, 202);
+            this.RainbowHat.Location = new System.Drawing.Point(45, 197);
             this.RainbowHat.Name = "RainbowHat";
             this.RainbowHat.Size = new System.Drawing.Size(100, 100);
             this.RainbowHat.TabIndex = 48;
@@ -215,29 +211,6 @@
             this.RainbowHat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.RainbowHat.UseVisualStyleBackColor = false;
             this.RainbowHat.Click += new System.EventHandler(this.icon_Click);
-            // 
-            // Dota2
-            // 
-            this.Dota2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
-            this.Dota2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
-            this.Dota2.BackgroundImage = global::QuanNet.Properties.Resources.customLogo_200x200;
-            this.Dota2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Dota2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.Dota2.BorderRadius = 20;
-            this.Dota2.BorderSize = 0;
-            this.Dota2.FlatAppearance.BorderSize = 0;
-            this.Dota2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Dota2.ForeColor = System.Drawing.Color.White;
-            this.Dota2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Dota2.Location = new System.Drawing.Point(46, 207);
-            this.Dota2.Name = "Dota2";
-            this.Dota2.Size = new System.Drawing.Size(100, 100);
-            this.Dota2.TabIndex = 47;
-            this.Dota2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Dota2.TextColor = System.Drawing.Color.White;
-            this.Dota2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Dota2.UseVisualStyleBackColor = false;
-            this.Dota2.Click += new System.EventHandler(this.icon_Click);
             // 
             // BlockADS
             // 
@@ -437,7 +410,7 @@
             // 
             this.CODER.AutoSize = true;
             this.CODER.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.CODER.Location = new System.Drawing.Point(423, 305);
+            this.CODER.Location = new System.Drawing.Point(249, 300);
             this.CODER.Name = "CODER";
             this.CODER.Size = new System.Drawing.Size(44, 16);
             this.CODER.TabIndex = 29;
@@ -447,21 +420,11 @@
             // 
             this.DG.AutoSize = true;
             this.DG.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.DG.Location = new System.Drawing.Point(253, 305);
+            this.DG.Location = new System.Drawing.Point(79, 300);
             this.DG.Name = "DG";
             this.DG.Size = new System.Drawing.Size(27, 16);
             this.DG.TabIndex = 27;
             this.DG.Text = "DG";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label18.Location = new System.Drawing.Point(60, 310);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(63, 16);
-            this.label18.TabIndex = 25;
-            this.label18.Text = "Liên Minh";
             // 
             // label10
             // 
@@ -560,7 +523,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label CODER;
         private System.Windows.Forms.Label DG;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
@@ -572,7 +534,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label7;
         private CustomsDetail.CusBtn Chrome;
-        private CustomsDetail.CusBtn Dota2;
         private CustomsDetail.CusBtn BlockADS;
         private CustomsDetail.CusBtn Valorant;
         private CustomsDetail.CusBtn Zalo;

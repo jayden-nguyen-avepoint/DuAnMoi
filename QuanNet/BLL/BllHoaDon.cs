@@ -122,6 +122,21 @@ namespace QuanNet.BLL
             }
             return k;
         }
+        public string MaHoaDon()
+        {
+            List<int> l = new List<int>();
+            foreach (HoaDon hd in GetListHDByID(""))
+            {
+                l.Add(Convert.ToInt32(hd.IdHoaDon.Remove(0, 4)));
+
+            }
+            for (int i = 0; i < l.Count; i++)
+            {
+                if (!l.Contains(i + 1)) return i + 1 < 10 ? "Bill00" + ++i : i + 1 < 100 ? "Bill0" + ++i : "Bill" + ++i;
+            }
+            return l.Count + 1 < 10 ? "Bill00" + (l.Count + 1) : l.Count + 1 < 100 ? "Bill0" + (l.Count + 1) : "Bill" +
+                +(l.Count + 1);
+        }
         //=======================Hóa đơn chi tiết============================================
         public void DeleteHDCT(string ID)
         {
@@ -152,7 +167,7 @@ namespace QuanNet.BLL
             }
             return data;
         }
-        public List<OrderAdView> GetOrderAd(string Id)
+        public List<OrderAdView> GetOrderAd(string Id, DateTime s)
         {
             List<OrderAdView> dt = new List<OrderAdView>();
             bool TT;
@@ -162,14 +177,17 @@ namespace QuanNet.BLL
                 {
                     TT=false;
                 }else TT=true;
-                dt.Add(new OrderAdView
+                if(i.NgayThang.Date == s)
                 {
-                    IdChiTiet = i.IdChiTiet,
-                    TongTien = i.TongTien,
-                    IdMay = i.IdMay,
-                    Trang_thai = TT
+                    dt.Add(new OrderAdView
+                    {
+                        IdChiTiet = i.IdChiTiet,
+                        TongTien = i.TongTien,
+                        IdMay = i.IdMay,
+                        Trang_thai = TT
 
-                }) ;
+                    }) ;
+                }
             }
             return dt;
         }
@@ -222,6 +240,10 @@ namespace QuanNet.BLL
                 }
             }
             return tong;
+        }
+        public dynamic GetHDCTDay(DateTime s)
+        {
+            return db.HoaDonChiTiets.Where(p=>p.NgayThang == s).Select(p => p).ToList();
         }
     }
 }

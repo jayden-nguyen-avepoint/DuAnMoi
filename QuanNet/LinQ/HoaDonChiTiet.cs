@@ -15,6 +15,7 @@ namespace QuanNet.LinQ
             HoaDons = new HashSet<HoaDon>();
             ListTPhams = new HashSet<ListTPham>();
         }
+        //lay id hdct
 
         [Key]
         [StringLength(20)]
