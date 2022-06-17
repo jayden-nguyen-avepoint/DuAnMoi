@@ -22,8 +22,8 @@ namespace QuanNet.FormsUser
         private int tempIndex;
         private Form activeForm;
 
-        public delegate void MyMoney(int money);
-        public MyMoney t { get; set; }
+        //public delegate void MyMoney(int money);
+        //public MyMoney t { get; set; }
         public string ID_May { get; set; }
         public string IDKhachHang { get; set; }
         public string time { get; set; }

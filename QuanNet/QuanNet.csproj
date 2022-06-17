@@ -68,6 +68,8 @@
     <Compile Include="BLL\BllKhachHang.cs" />
     <Compile Include="BLL\BllMon.cs" />
     <Compile Include="BLL\BllOrderKH.cs" />
+    <Compile Include="BLL\BllThongKe.cs" />
+    <Compile Include="DTO\DashboardView.cs" />
     <Compile Include="DTO\MayTinhView.cs" />
     <Compile Include="DTO\OrderAdView.cs" />
     <Compile Include="DTO\OrderKHView.cs" />
@@ -310,6 +312,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\280142235_736713977454064_1553403823599132356_n-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

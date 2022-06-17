@@ -67,12 +67,6 @@ namespace QuanNet.FormsUser
             return l.Count + 1 < 10 ? "Order00" + (l.Count + 1) : l.Count + 1 < 100 ? "Order0" + (l.Count + 1) : "Order" + (l.Count + 1);
 
         }
-        public int TienTg(int a)
-        {
-            Tien = 0;
-            Tien = a;
-            return Tien;
-        }
         private void btnThem_Click(object sender, EventArgs e)
         {
             ListTPham orderkh = new ListTPham()
@@ -84,7 +78,7 @@ namespace QuanNet.FormsUser
                 IdChiTiet = ID_CT
             };
             int tien = Convert.ToInt32(txtSL.Text) * Convert.ToInt32(txtGia.Text);
-            if (BllOrderKH.Instance.TinhTienOrder(ID_CT)+tien+Tien >= BllKhachHang.Instance.GetTKByIDTK(ID_KhachHang).Sodu) 
+            if (BllOrderKH.Instance.TinhTienOrder(ID_CT)+tien >= BllKhachHang.Instance.GetTKByIDTK(ID_KhachHang).Sodu) 
             {
                 MessageBox.Show("Hết tiền rồi", "Thông báo", MessageBoxButtons.OK);
                 SetNull();
@@ -101,5 +95,7 @@ namespace QuanNet.FormsUser
 
             dgvList.DataSource = BllOrderKH.Instance.GetListTPViewByIDCT(Id);
         }
+
+      
     }
 }
