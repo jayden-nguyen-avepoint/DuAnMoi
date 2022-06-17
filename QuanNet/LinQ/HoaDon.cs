@@ -19,6 +19,7 @@ namespace QuanNet.LinQ
         [Required]
         [StringLength(20)]
         public string IdChiTiet { get; set; }
+        [ForeignKey("IdChiTiet")]
 
         public virtual HoaDonChiTiet HoaDonChiTiet { get; set; }
 

@@ -61,7 +61,7 @@ namespace QuanNet.BLL
             }
             else
             {
-                data = db.TaiKhoans.Where(p => p.IdTK == IDTK.ToString()).Select(p => p).ToList();
+                data = db.TaiKhoans.Where(p => p.IdTK == IDTK).Select(p => p).ToList();
             }
             return data;
         }

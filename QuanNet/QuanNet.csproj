@@ -68,6 +68,8 @@
     <Compile Include="BLL\BllKhachHang.cs" />
     <Compile Include="BLL\BllMon.cs" />
     <Compile Include="BLL\BllOrderKH.cs" />
+    <Compile Include="BLL\BllThongKe.cs" />
+    <Compile Include="DTO\DashboardView.cs" />
     <Compile Include="DTO\MayTinhView.cs" />
     <Compile Include="DTO\OrderAdView.cs" />
     <Compile Include="DTO\OrderKHView.cs" />
@@ -82,11 +84,6 @@
     <Compile Include="LinQ\DoAnQLCyber.cs" />
     <Compile Include="LinQ\TaiKhoan.cs" />
     <Compile Include="LinQ\TPham.cs" />
-    <Compile Include="QuanLyCyberDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLyCyberDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="View\CustomsDetail\CusBtn.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -220,17 +217,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="QuanLyCyberDataSet.xsc">
-      <DependentUpon>QuanLyCyberDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QuanLyCyberDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QuanLyCyberDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QuanLyCyberDataSet.xss">
-      <DependentUpon>QuanLyCyberDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Resources\Hoc_Them-removebg-preview %281%291.png" />
   </ItemGroup>
   <ItemGroup>
@@ -310,6 +296,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\280142235_736713977454064_1553403823599132356_n-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
