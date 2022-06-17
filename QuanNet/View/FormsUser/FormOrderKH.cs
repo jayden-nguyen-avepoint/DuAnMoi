@@ -46,13 +46,14 @@ namespace QuanNet.FormsUser
         public void SetNull()
         {
             txtMon.Text = "";
-            txtSL.Text = "";
+            numCount.Value=0;
             txtGia.Text = "";
         }
         private void btnHuy_Click(object sender, EventArgs e)
         {
             SetNull();
         }
+
         public string MaListDoAn()
         {
             List<int> l = new List<int>();
@@ -67,33 +68,43 @@ namespace QuanNet.FormsUser
             return l.Count + 1 < 10 ? "Order00" + (l.Count + 1) : l.Count + 1 < 100 ? "Order0" + (l.Count + 1) : "Order" + (l.Count + 1);
 
         }
+
         private void btnThem_Click(object sender, EventArgs e)
         {
             ListTPham orderkh = new ListTPham()
             {
-                IdOrderList = MaListDoAn(),
+                IdOrderList = BllOrderKH.Instance.MaListDoAn(),
                 IdTP = BllOrderKH.Instance.GetIDTP(txtMon.Text),
-                SoluongTP = Convert.ToInt32(txtSL.Text),
-                ThanhTien = Convert.ToInt32(txtSL.Text) * Convert.ToInt32(txtGia.Text),
+                SoluongTP = (int)numCount.Value,
+                ThanhTien = Convert.ToInt32(numCount.Value) * Convert.ToInt32(txtGia.Text),
                 IdChiTiet = ID_CT
             };
-            int tien = Convert.ToInt32(txtSL.Text) * Convert.ToInt32(txtGia.Text);
+
+
+            int tien = (int)numCount.Value * Convert.ToInt32(txtGia.Text);
+
             if (BllOrderKH.Instance.TinhTienOrder(ID_CT)+tien >= BllKhachHang.Instance.GetTKByIDTK(ID_KhachHang).Sodu) 
             {
                 MessageBox.Show("Hết tiền rồi", "Thông báo", MessageBoxButtons.OK);
                 SetNull();
             }
+            else if((int)numCount.Value==0)
+            {
+                MessageBox.Show("Vui lòng chọn số lượng", "Thông báo", MessageBoxButtons.OK);
+            }
             else
             {
                 BllOrderKH.Instance.addOrder1(orderkh);
                 SetNull();
-            }
+            } 
+                
             ShowListHD(ID_CT);
         }
         public void ShowListHD(string Id)
         {
 
             dgvList.DataSource = BllOrderKH.Instance.GetListTPViewByIDCT(Id);
+            
         }
 
       
