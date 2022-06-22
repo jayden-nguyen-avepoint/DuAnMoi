@@ -167,7 +167,7 @@ namespace QuanNet.BLL
             }
             return data;
         }
-        public List<OrderAdView> GetOrderAd(string Id, DateTime s)
+        public List<OrderAdView> GetOrderAd(string Id, DateTime s, string keyWord)
         {
             List<OrderAdView> dt = new List<OrderAdView>();
             bool TT;
@@ -179,14 +179,17 @@ namespace QuanNet.BLL
                 }else TT=true;
                 if(i.NgayThang.Date == s)
                 {
-                    dt.Add(new OrderAdView
+                    if (i.IdMay.Contains(keyWord) || i.IdChiTiet.Contains(keyWord))
                     {
-                        IdChiTiet = i.IdChiTiet,
-                        TongTien = i.TongTien,
-                        IdMay = i.IdMay,
-                        Trang_thai = TT
+                        dt.Add(new OrderAdView
+                        {
+                            IdChiTiet = i.IdChiTiet,
+                            TongTien = i.TongTien,
+                            IdMay = i.IdMay,
+                            Trang_thai = TT
 
-                    }) ;
+                        }) ;
+                    }
                 }
             }
             return dt;

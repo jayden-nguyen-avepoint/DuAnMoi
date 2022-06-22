@@ -21,6 +21,7 @@ namespace QuanNet.FormsUser
         private Random random;
         private int tempIndex;
         private Form activeForm;
+
         public string ID_May { get; set; }
         public string IDKhachHang { get; set; }
         public string time { get; set; }

@@ -71,6 +71,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+
             this.numCount = new System.Windows.Forms.NumericUpDown();
             this.txtGia = new QuanNet.CustomsDetail.CustomTextbox();
             this.txtMon = new QuanNet.CustomsDetail.CustomTextbox();
@@ -84,6 +85,7 @@
             this.TP03 = new QuanNet.CustomsDetail.CusBtn();
             this.TP02 = new QuanNet.CustomsDetail.CusBtn();
             this.TP01 = new QuanNet.CustomsDetail.CusBtn();
+
             this.panel1.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -584,6 +586,7 @@
             this.dgvList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvList.Size = new System.Drawing.Size(282, 422);
             this.dgvList.TabIndex = 32;
+
             // 
             // label12
             // 
@@ -816,6 +819,7 @@
             this.TP04.UseVisualStyleBackColor = false;
             this.TP04.Click += new System.EventHandler(this.Chon_Click);
             // 
+
             // TP05
             // 
             this.TP05.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -901,6 +905,7 @@
             this.TP01.UseVisualStyleBackColor = true;
             this.TP01.Click += new System.EventHandler(this.Chon_Click);
             // 
+
             // FormOrderKH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);

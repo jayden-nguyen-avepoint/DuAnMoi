@@ -35,6 +35,19 @@ namespace QuanNet.BLL
             return db.TaiKhoans.Find(IDTK);
             //return ve 1 record duy nhat
         }
+        public List<TaiKhoan> GetListTKByIDTK(string IDTK)
+        {
+            List<TaiKhoan> data = new List<TaiKhoan>();
+            if (IDTK == "")
+            {
+                data = db.TaiKhoans.ToList();
+            }
+            else
+            {
+                data = db.TaiKhoans.Where(p => p.IdTK == IDTK).Select(p => p).ToList();
+            }
+            return data;
+        }
         public List<TaiKhoanView> GetTKViewByIDKH(string IDKH,string keyWord)
         {
             List<TaiKhoanView> data = new List<TaiKhoanView>();
@@ -51,19 +64,6 @@ namespace QuanNet.BLL
             }
             return data;
 
-        }
-        public List<TaiKhoan> GetListTKByIDTK(string IDTK)
-        {
-            List<TaiKhoan> data = new List<TaiKhoan>();
-            if (IDTK == "")
-            {
-                data = db.TaiKhoans.ToList();
-            }
-            else
-            {
-                data = db.TaiKhoans.Where(p => p.IdTK == IDTK).Select(p => p).ToList();
-            }
-            return data;
         }
         public string GetIDTKByUSERNAME(string TenDN)
         {
@@ -100,6 +100,7 @@ namespace QuanNet.BLL
                 }
                 else MessageBox.Show("Trùng ID, vui lòng nhập lại hoặc sửa chữa", "Thông báo !", MessageBoxButton.OK);
             }
+                else MessageBox.Show("Vui lòng nhập lại hoặc sửa chữa", "Thông báo !", MessageBoxButton.OK);
         }  
         public void Edit(TaiKhoan s)
         {
@@ -116,21 +117,22 @@ namespace QuanNet.BLL
             }else
             MessageBox.Show("Ko trùng ID, vui lòng nhập lại hoặc thêm mới", "Thông báo !", MessageBoxButton.OK);
         }
-        public dynamic Sort(int index)
+        public List<TaiKhoanView> Sort(int index)
         {
             if (index == 0)
             {
-                return db.TaiKhoans.Select(p => new { p.IdTK, p.TenKH, p.Sodu, p.LienHe }).ToList();
+                return db.TaiKhoans.Select(p => new TaiKhoanView { ID_TaiKhoan= p.IdTK, TenKhachHang= p.TenKH, SoDu= p.Sodu, LienHe= p.LienHe }).ToList();
             }
 
              else  if (index == 1)
             {
-                return (db.TaiKhoans.Select(p => new { p.IdTK,p.TenKH,p.Sodu,p.LienHe }).OrderBy(p => p.IdTK)).ToList();
+                return (db.TaiKhoans.Select(p => new TaiKhoanView { ID_TaiKhoan= p.IdTK, TenKhachHang=p.TenKH, SoDu= p.Sodu, LienHe=p.LienHe }).OrderBy(p => p.ID_TaiKhoan)).ToList();
             }
-            else 
+            else  if(index == 2)
             {
-                return (db.TaiKhoans.Select(p => new { p.IdTK, p.TenKH, p.Sodu, p.LienHe }).OrderBy(p => p.TenKH)).ToList();
+                return (db.TaiKhoans.Select(p => new TaiKhoanView { ID_TaiKhoan= p.IdTK, TenKhachHang= p.TenKH, SoDu= p.Sodu, LienHe=p.LienHe }).OrderBy(p => p.TenKhachHang)).ToList();
             }
+            else return (db.TaiKhoans.Select(p => new TaiKhoanView { ID_TaiKhoan = p.IdTK, TenKhachHang = p.TenKH, SoDu = p.Sodu, LienHe = p.LienHe }).OrderBy(p => p.SoDu)).ToList();
 
         }
         public void DeleteKH(string IDTK)

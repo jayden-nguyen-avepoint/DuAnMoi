@@ -22,7 +22,7 @@ namespace QuanNet
             txtIDTK.Text = MaKHtutang();
             txtIDTK.Enabled = false;
             txtTK.Enabled = false;
-            cbbSort.Items.AddRange(new object[] { "", "ID Khách hàng", "Tên khách hàng" });
+            cbbSort.Items.AddRange(new object[] { "", "ID Khách hàng", "Tên khách hàng", "Số dư" });
         }
         public void NewTK()
         {
@@ -81,7 +81,8 @@ namespace QuanNet
             dgvKH.DataSource = BllKhachHang.Instance.GetTKViewByIDKH(i,key);
         }
         private void btnThem_Click(object sender, EventArgs e)
-        {   
+        {
+
             TaiKhoan tk = new TaiKhoan()
             {
                 IdTK = txtIDTK.Text,
@@ -98,26 +99,11 @@ namespace QuanNet
         }
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (dgvKH.SelectedRows.Count == 1)
-            {
-                TaiKhoan tk = new TaiKhoan()
-                {
-                    IdTK = txtIDTK.Text,
-                    LienHe = txtLienHe.Text,
-                    TenKH = txtTenKH.Text,
-                    TenDN = txtTK.Text,
-                    MatKhau = txtMK.Text,
-                    Sodu = Convert.ToInt32(txtSoDu.Text),
-                };
-                BllKhachHang.Instance.Edit(tk);
-                SetNull();
-                ShowList("");
-                dgvKH.ClearSelection();
-            }
+
         }
         private void btnDel_Click(object sender, EventArgs e)
         {
-            if (dgvKH.SelectedRows.Count == 1)
+            if (dgvKH.SelectedRows.Count> 0)
             {
                 foreach (DataGridViewRow i in dgvKH.SelectedRows)
                 {
@@ -206,6 +192,12 @@ namespace QuanNet
         private void cbbSort_OnSelectedIndexChanged(object sender, EventArgs e)
         {
             dgvKH.DataSource= BllKhachHang.Instance.Sort(cbbSort.SelectedIndex);
+        }
+
+        private void txtSoDu_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }
