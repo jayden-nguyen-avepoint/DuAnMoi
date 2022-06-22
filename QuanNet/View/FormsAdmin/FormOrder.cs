@@ -20,7 +20,6 @@ namespace QuanNet
         {           
             InitializeComponent();
             ShowOrder();
-
         }
         public void ShowOrder()
         {
@@ -79,6 +78,11 @@ namespace QuanNet
         private void dtpHDCT_ValueChanged(object sender, EventArgs e)
         {
             ShowOrder();
+        }
+
+        private void cbbSort_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
         // Trở về menu chính
     }

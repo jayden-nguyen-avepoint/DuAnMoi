@@ -22,7 +22,7 @@ namespace QuanNet
             txtIDTK.Text = MaKHtutang();
             txtIDTK.Enabled = false;
             txtTK.Enabled = false;
-            cbbSort.Items.AddRange(new object[] { "", "ID Khách hàng", "Tên khách hàng" });
+            cbbSort.Items.AddRange(new object[] { "", "ID Khách hàng", "Tên khách hàng", "Số dư" });
         }
         public void NewTK()
         {
