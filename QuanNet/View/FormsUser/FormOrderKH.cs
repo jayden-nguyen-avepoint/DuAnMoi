@@ -24,7 +24,6 @@ namespace QuanNet.FormsUser
             ID_May = M;
             ID_KhachHang = K;
             ID_CT = O;
-            MessageBox.Show(ID_CT);
             InitializeComponent();
 
             ShowListHD(ID_CT);

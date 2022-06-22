@@ -98,22 +98,7 @@ namespace QuanNet
         }
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (dgvKH.SelectedRows.Count == 1)
-            {
-                TaiKhoan tk = new TaiKhoan()
-                {
-                    IdTK = txtIDTK.Text,
-                    LienHe = txtLienHe.Text,
-                    TenKH = txtTenKH.Text,
-                    TenDN = txtTK.Text,
-                    MatKhau = txtMK.Text,
-                    Sodu = Convert.ToInt32(txtSoDu.Text),
-                };
-                BllKhachHang.Instance.Edit(tk);
-                SetNull();
-                ShowList("");
-                dgvKH.ClearSelection();
-            }
+
         }
         private void btnDel_Click(object sender, EventArgs e)
         {
