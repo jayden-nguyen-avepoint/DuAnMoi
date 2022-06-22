@@ -19,11 +19,11 @@ namespace QuanNet
         public FormOrder()
         {           
             InitializeComponent();
-            ShowOrder();
+            ShowOrder("");
         }
-        public void ShowOrder()
+        public void ShowOrder(string key)
         {
-            dgvOrder.DataSource = BllHoaDon.Instance.GetOrderAd("",dtpHDCT.Value.Date);
+            dgvOrder.DataSource = BllHoaDon.Instance.GetOrderAd("",dtpHDCT.Value.Date,key);
         }
         // Hàm Show(CT) dùng để show các listOrder theo keywork search
         public void Show(string CT)
@@ -52,7 +52,7 @@ namespace QuanNet
                     };
                     BllHoaDon.Instance.AddHD(s);
                 }
-                ShowOrder();
+                ShowOrder("");
             }
             else MessageBox.Show("Vui lòng chọn order cần thanh toán từ menu chính", "Thông báo", MessageBoxButtons.OK);
         }
@@ -65,25 +65,27 @@ namespace QuanNet
                 Show(id);
                 dgvOrder.Enabled = false;
                 dgvOrder.ClearSelection();
-            }else ShowOrder();
+            }else ShowOrder("");
         }
         // Xem chi tiết mỗi order khách hàng gồm những gì( khi ấn dou-click)
         private void btnBack_Click(object sender, EventArgs e)
         {
-            ShowOrder();
+            ShowOrder("");
             dgvOrder.ClearSelection();
             dgvOrder.Enabled = true;
         }
 
         private void dtpHDCT_ValueChanged(object sender, EventArgs e)
         {
-            ShowOrder();
+            ShowOrder("");
         }
 
-        private void cbbSort_OnSelectedIndexChanged(object sender, EventArgs e)
+        private void txtSearch__TextChanged(object sender, EventArgs e)
         {
+            ShowOrder(txtSearch.Text);
 
         }
+
         // Trở về menu chính
     }
 }
