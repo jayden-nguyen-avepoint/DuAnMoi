@@ -19,7 +19,6 @@ namespace QuanNet
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormLogin());
             //Application.Run(new FormThongKe());
-
             //Application.Run(new FormApp());
             //Application.Run(new FormOrder());
             //Application.Run(new Form1());

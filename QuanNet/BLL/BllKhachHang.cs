@@ -100,6 +100,7 @@ namespace QuanNet.BLL
                 }
                 else MessageBox.Show("Trùng ID, vui lòng nhập lại hoặc sửa chữa", "Thông báo !", MessageBoxButton.OK);
             }
+                else MessageBox.Show("Vui lòng nhập lại hoặc sửa chữa", "Thông báo !", MessageBoxButton.OK);
         }  
         public void Edit(TaiKhoan s)
         {

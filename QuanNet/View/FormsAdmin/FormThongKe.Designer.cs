@@ -81,7 +81,6 @@
             this.panel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.panel1.Size = new System.Drawing.Size(1112, 83);
             this.panel1.TabIndex = 0;
-  
             // 
             // btnLast30Day
             // 
@@ -168,7 +167,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(82, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 32);
+            this.label1.Size = new System.Drawing.Size(160, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "THỐNG KÊ";
             // 
@@ -194,7 +193,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1018, 204);
             this.panel7.TabIndex = 11;
-
             // 
             // dgrvThongKe
             // 
@@ -206,7 +204,6 @@
             this.dgrvThongKe.RowTemplate.Height = 24;
             this.dgrvThongKe.Size = new System.Drawing.Size(982, 152);
             this.dgrvThongKe.TabIndex = 10;
- 
             // 
             // label8
             // 
@@ -229,7 +226,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(418, 75);
             this.panel5.TabIndex = 10;
-
             // 
             // pictureBox2
             // 
@@ -240,7 +236,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
-
             // 
             // label6
             // 
@@ -255,7 +250,6 @@
             this.label6.TabIndex = 9;
             this.label6.Text = "1516";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
- 
             // 
             // label7
             // 
@@ -267,7 +261,6 @@
             this.label7.Size = new System.Drawing.Size(137, 29);
             this.label7.TabIndex = 8;
             this.label7.Text = "Doanh Thu";
-
             // 
             // panel6
             // 
@@ -279,7 +272,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(418, 75);
             this.panel6.TabIndex = 7;
-
             // 
             // pictureBox3
             // 
@@ -290,7 +282,6 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 10;
             this.pictureBox3.TabStop = false;
- 
             // 
             // label3
             // 
@@ -305,7 +296,6 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "1516";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-
             // 
             // label2
             // 
@@ -357,7 +347,7 @@
             series1.Legend = "Legend1";
             series1.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series1.Name = "Series1";
+            series1.Name = "Tổng tiền";
             this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(1073, 318);
             this.chart1.TabIndex = 2;
@@ -368,7 +358,6 @@
             title1.Name = "Title1";
             title1.Text = "Tổng Doanh Thu";
             this.chart1.Titles.Add(title1);
-
             // 
             // FormThongKe
             // 
