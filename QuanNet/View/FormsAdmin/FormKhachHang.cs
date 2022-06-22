@@ -81,7 +81,8 @@ namespace QuanNet
             dgvKH.DataSource = BllKhachHang.Instance.GetTKViewByIDKH(i,key);
         }
         private void btnThem_Click(object sender, EventArgs e)
-        {   
+        {
+
             TaiKhoan tk = new TaiKhoan()
             {
                 IdTK = txtIDTK.Text,
@@ -102,7 +103,7 @@ namespace QuanNet
         }
         private void btnDel_Click(object sender, EventArgs e)
         {
-            if (dgvKH.SelectedRows.Count == 1)
+            if (dgvKH.SelectedRows.Count> 0)
             {
                 foreach (DataGridViewRow i in dgvKH.SelectedRows)
                 {
@@ -191,6 +192,12 @@ namespace QuanNet
         private void cbbSort_OnSelectedIndexChanged(object sender, EventArgs e)
         {
             dgvKH.DataSource= BllKhachHang.Instance.Sort(cbbSort.SelectedIndex);
+        }
+
+        private void txtSoDu_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }
