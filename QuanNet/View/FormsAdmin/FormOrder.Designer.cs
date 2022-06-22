@@ -109,7 +109,7 @@
             // dtpHDCT
             // 
             this.dtpHDCT.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpHDCT.Location = new System.Drawing.Point(956, 108);
+            this.dtpHDCT.Location = new System.Drawing.Point(956, 16);
             this.dtpHDCT.Name = "dtpHDCT";
             this.dtpHDCT.Size = new System.Drawing.Size(184, 22);
             this.dtpHDCT.TabIndex = 7;
@@ -155,7 +155,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(880, 107);
+            this.label2.Location = new System.Drawing.Point(878, 17);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 23);
             this.label2.TabIndex = 3;
