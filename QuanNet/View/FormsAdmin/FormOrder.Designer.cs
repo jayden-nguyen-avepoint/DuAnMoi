@@ -35,9 +35,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.dtpHDCT = new System.Windows.Forms.DateTimePicker();
             this.btnBack = new FontAwesome.Sharp.IconButton();
-            this.btnXN = new QuanNet.CustomsDetail.CusBtn();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnXN = new QuanNet.CustomsDetail.CusBtn();
             this.txtSearch = new QuanNet.CustomsDetail.CustomTextbox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).BeginInit();
@@ -130,26 +130,6 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // btnXN
-            // 
-            this.btnXN.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnXN.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnXN.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnXN.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnXN.BorderRadius = 20;
-            this.btnXN.BorderSize = 0;
-            this.btnXN.FlatAppearance.BorderSize = 0;
-            this.btnXN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXN.ForeColor = System.Drawing.Color.White;
-            this.btnXN.Location = new System.Drawing.Point(11, 43);
-            this.btnXN.Name = "btnXN";
-            this.btnXN.Size = new System.Drawing.Size(150, 40);
-            this.btnXN.TabIndex = 4;
-            this.btnXN.Text = "Xác nhận";
-            this.btnXN.TextColor = System.Drawing.Color.White;
-            this.btnXN.UseVisualStyleBackColor = false;
-            this.btnXN.Click += new System.EventHandler(this.btnXN_Click);
-            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -171,6 +151,26 @@
             this.label1.Size = new System.Drawing.Size(70, 23);
             this.label1.TabIndex = 2;
             this.label1.Text = "Tìm kiếm";
+            // 
+            // btnXN
+            // 
+            this.btnXN.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnXN.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnXN.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnXN.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnXN.BorderRadius = 20;
+            this.btnXN.BorderSize = 0;
+            this.btnXN.FlatAppearance.BorderSize = 0;
+            this.btnXN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXN.ForeColor = System.Drawing.Color.White;
+            this.btnXN.Location = new System.Drawing.Point(11, 43);
+            this.btnXN.Name = "btnXN";
+            this.btnXN.Size = new System.Drawing.Size(150, 40);
+            this.btnXN.TabIndex = 4;
+            this.btnXN.Text = "Xác nhận";
+            this.btnXN.TextColor = System.Drawing.Color.White;
+            this.btnXN.UseVisualStyleBackColor = false;
+            this.btnXN.Click += new System.EventHandler(this.btnXN_Click);
             // 
             // txtSearch
             // 
