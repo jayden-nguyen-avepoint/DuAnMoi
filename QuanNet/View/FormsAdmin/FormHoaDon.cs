@@ -19,7 +19,7 @@ namespace QuanNet
             InitializeComponent();
             ShowListHD("");
             TongHoaDon();
-            sort.Items.AddRange(new object[] {"Tên khách hàng","Ngày xuất","Tổng tiền" });
+            sort.Items.AddRange(new object[] {"All","Tên khách hàng","Ngày xuất","Tổng tiền" });
         }
         public void TongHoaDon()
         {   
@@ -35,12 +35,13 @@ namespace QuanNet
         }
         public void ShowListHD(string i,string Key="")
         {
-            dgvHoaDon.DataSource = BllHoaDon.Instance.GetHDViewByIDHD(i,Key);
+            dgvHoaDon.DataSource = BllHoaDon.Instance.GetView(i,Key);
         }
 
         private void txtSearch__TextChanged(object sender, EventArgs e)
         {
             ShowListHD("", txtSearch.Text);
+            TongHoaDon();
         }
 
         private void dateStart_ValueChanged(object sender, EventArgs e)
@@ -53,7 +54,7 @@ namespace QuanNet
 
         private void sort_OnSelectedIndexChanged(object sender, EventArgs e)
         {
-            BllHoaDon.Instance.Sort(sort.SelectedIndex);
+            dgvHoaDon.DataSource = BllHoaDon.Instance.Sort(sort.SelectedIndex);
         }
     }
 }

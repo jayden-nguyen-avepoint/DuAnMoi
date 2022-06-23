@@ -89,7 +89,7 @@
             this.txtMK.Multiline = false;
             this.txtMK.Name = "txtMK";
             this.txtMK.Padding = new System.Windows.Forms.Padding(7);
-            this.txtMK.PasswordChar = false;
+            this.txtMK.PasswordChar = true;
             this.txtMK.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtMK.PlaceholderText = "";
             this.txtMK.Size = new System.Drawing.Size(268, 39);

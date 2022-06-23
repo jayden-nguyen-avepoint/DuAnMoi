@@ -48,22 +48,9 @@ namespace QuanNet.BLL
             }
             return data;
         }
-        public List<TaiKhoanView> GetTKViewByIDKH(string IDKH,string keyWord)
+        public List<TaiKhoanView> GetView(string id, string keyWord)
         {
-            List<TaiKhoanView> data = new List<TaiKhoanView>();
-            foreach (TaiKhoan i in GetListTKByIDTK(IDKH))
-            {
-                if (i.IdTK.Contains(keyWord) || i.LienHe.Contains(keyWord)|| i.TenKH.Contains(keyWord))
-                    data.Add(new TaiKhoanView
-                {
-                    ID_TaiKhoan = i.IdTK,
-                    TenKhachHang = i.TenKH,
-                    SoDu = i.Sodu,
-                    LienHe = i.LienHe,
-                });
-            }
-            return data;
-
+            return db.TaiKhoans.Where(p => p.IdTK.Contains(id) && (p.IdTK.Contains(keyWord)||p.TenKH.Contains(keyWord)|| p.LienHe.Contains(keyWord))).Select(p => new TaiKhoanView { ID_TaiKhoan = p.IdTK,TenKhachHang = p.TenKH,SoDu = p.Sodu,LienHe = p.LienHe}).ToList();
         }
         public string GetIDTKByUSERNAME(string TenDN)
         {
@@ -91,27 +78,33 @@ namespace QuanNet.BLL
         }
         public void AddorUpdate(TaiKhoan s)
         {
-            if (s != null)
+            try
             {
-                if (!CheckAddUpdate(s.IdTK))
+                if (s != null)
                 {
-                    db.TaiKhoans.Add(s);
-                    db.SaveChanges();
+                    if (!CheckAddUpdate(s.IdTK))
+                    {
+                        db.TaiKhoans.Add(s);
+                        db.SaveChanges();
+                    }
+                    else if (CheckAddUpdate(s.IdTK))
+                    {
+                        TaiKhoan upd = db.TaiKhoans.Find(s.IdTK);
+                        upd.TenDN = s.TenDN;
+                        upd.IdTK = s.IdTK;
+                        upd.MatKhau = s.MatKhau;
+                        upd.LienHe = s.LienHe;
+                        upd.Sodu = s.Sodu;
+                        upd.TenKH = s.TenKH;
+                        db.SaveChanges();
+                    }
+                    else MessageBox.Show("Vui lòng nhập lại hoặc sửa chữa", "Thông báo !", MessageBoxButton.OK);
                 }
-                else if(CheckAddUpdate(s.IdTK))
-                {
-                    TaiKhoan upd = db.TaiKhoans.Find(s.IdTK);
-                    upd.TenDN = s.TenDN;
-                    upd.IdTK = s.IdTK;
-                    upd.MatKhau = s.MatKhau;
-                    upd.LienHe = s.LienHe;
-                    upd.Sodu = s.Sodu;
-                    upd.TenKH = s.TenKH;
-                    db.SaveChanges();
-                }else
-                MessageBox.Show("Vui lòng nhập lại hoặc sửa chữa", "Thông báo !", MessageBoxButton.OK);
-            }
                 else MessageBox.Show("Vui lòng nhập lại hoặc sửa chữa", "Thông báo !", MessageBoxButton.OK);
+            }catch
+            {
+                 MessageBox.Show("Vui lòng nhập lại hoặc sửa chữa", "Thông báo !", MessageBoxButton.OK);
+            }
         }  
         public List<TaiKhoanView> Sort(int index)
         {

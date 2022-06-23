@@ -23,7 +23,7 @@ namespace QuanNet
         }
         public void ShowOrder(string key)
         {
-            dgvOrder.DataSource = BllHoaDon.Instance.GetOrderAd("",dtpHDCT.Value.Date,key);
+            dgvOrder.DataSource = BllHoaDon.Instance.GetOrderAdmin("",dtpHDCT.Value.Date,key);
         }
         // Hàm Show(CT) dùng để show các listOrder theo keywork search
         public void ShowList (string CT)
@@ -63,8 +63,6 @@ namespace QuanNet
             {
                 string id = dgvOrder.SelectedRows[0].Cells["IdChiTiet"].Value.ToString();
                 ShowList(id);
-                //dgvOrder.Enabled = false;
-                //dgvOrder.ClearSelection();
             }
             else ShowOrder("");
         }
