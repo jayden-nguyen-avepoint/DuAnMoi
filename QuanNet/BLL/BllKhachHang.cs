@@ -89,7 +89,7 @@ namespace QuanNet.BLL
             return false;
             //true-update.....false-add
         }
-        public void Add(TaiKhoan s)
+        public void AddorUpdate(TaiKhoan s)
         {
             if (s != null)
             {
@@ -98,25 +98,21 @@ namespace QuanNet.BLL
                     db.TaiKhoans.Add(s);
                     db.SaveChanges();
                 }
-                else MessageBox.Show("Trùng ID, vui lòng nhập lại hoặc sửa chữa", "Thông báo !", MessageBoxButton.OK);
+                else if(CheckAddUpdate(s.IdTK))
+                {
+                    TaiKhoan upd = db.TaiKhoans.Find(s.IdTK);
+                    upd.TenDN = s.TenDN;
+                    upd.IdTK = s.IdTK;
+                    upd.MatKhau = s.MatKhau;
+                    upd.LienHe = s.LienHe;
+                    upd.Sodu = s.Sodu;
+                    upd.TenKH = s.TenKH;
+                    db.SaveChanges();
+                }else
+                MessageBox.Show("Vui lòng nhập lại hoặc sửa chữa", "Thông báo !", MessageBoxButton.OK);
             }
                 else MessageBox.Show("Vui lòng nhập lại hoặc sửa chữa", "Thông báo !", MessageBoxButton.OK);
         }  
-        public void Edit(TaiKhoan s)
-        {
-            if (CheckAddUpdate(s.IdTK))
-            {
-                TaiKhoan upd = db.TaiKhoans.Find(s.IdTK);
-                upd.TenDN = s.TenDN;
-                upd.IdTK = s.IdTK;
-                upd.MatKhau = s.MatKhau;
-                upd.LienHe = s.LienHe;
-                upd.Sodu = s.Sodu;
-                upd.TenKH = s.TenKH;
-                db.SaveChanges();
-            }else
-            MessageBox.Show("Ko trùng ID, vui lòng nhập lại hoặc thêm mới", "Thông báo !", MessageBoxButton.OK);
-        }
         public List<TaiKhoanView> Sort(int index)
         {
             if (index == 0)

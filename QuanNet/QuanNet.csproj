@@ -97,11 +97,17 @@
       <DependentUpon>CustomTextbox.cs</DependentUpon>
     </Compile>
     <Compile Include="View\CustomsDetail\theme.cs" />
-    <Compile Include="View\FormsAdmin\Form1.cs">
+    <Compile Include="View\FormsAdmin\AddEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormsAdmin\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="View\FormsAdmin\AddEditForm.Designer.cs">
+      <DependentUpon>AddEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormsAdmin\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormsAdmin\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormsUser\FormApp.cs">
       <SubType>Form</SubType>
@@ -162,8 +168,11 @@
     <EmbeddedResource Include="View\CustomsDetail\CustomTextbox.resx">
       <DependentUpon>CustomTextbox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormsAdmin\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormsAdmin\AddEditForm.resx">
+      <DependentUpon>AddEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormsAdmin\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormsUser\FormApp.resx">
       <DependentUpon>FormApp.cs</DependentUpon>

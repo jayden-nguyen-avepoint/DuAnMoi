@@ -161,7 +161,7 @@ namespace QuanNet.FormsUser
                 TenKH= BllKhachHang.Instance.GetTKByIDTK(IDKhachHang).TenKH,
                 Sodu = BllKhachHang.Instance.GetTKByIDTK(IDKhachHang).Sodu - TinhTgChoi(Convert.ToDateTime(time)) - Convert.ToInt32(txtOrder.Text)
             };
-            BllKhachHang.Instance.Edit(s);
+            BllKhachHang.Instance.AddorUpdate(s);
             BllMayTinh.Instance.addTKinMay(ID_May, null, null);
             BllHoaDon.Instance.updatetongtien(ID_CT);
             Dispose();
