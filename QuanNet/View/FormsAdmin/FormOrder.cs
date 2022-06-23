@@ -26,7 +26,7 @@ namespace QuanNet
             dgvOrder.DataSource = BllHoaDon.Instance.GetOrderAd("",dtpHDCT.Value.Date,key);
         }
         // Hàm Show(CT) dùng để show các listOrder theo keywork search
-        public void Show(string CT)
+        public void ShowList (string CT)
         {
             dgvOrder.DataSource= BllOrderKH.Instance.GetListTPViewByIDCT(CT);
         }
@@ -59,13 +59,14 @@ namespace QuanNet
         // Ấn xác nhận đơn đặt order của khách hàng
         private void dgvOrder_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvOrder.SelectedRows.Count==1)
+            if (dgvOrder.SelectedRows.Count == 1)
             {
                 string id = dgvOrder.SelectedRows[0].Cells["IdChiTiet"].Value.ToString();
-                Show(id);
-                dgvOrder.Enabled = false;
-                dgvOrder.ClearSelection();
-            }else ShowOrder("");
+                ShowList(id);
+                //dgvOrder.Enabled = false;
+                //dgvOrder.ClearSelection();
+            }
+            else ShowOrder("");
         }
         // Xem chi tiết mỗi order khách hàng gồm những gì( khi ấn dou-click)
         private void btnBack_Click(object sender, EventArgs e)

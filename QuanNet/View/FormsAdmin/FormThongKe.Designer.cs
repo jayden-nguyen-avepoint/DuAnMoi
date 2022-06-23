@@ -367,7 +367,6 @@
             this.ClientSize = new System.Drawing.Size(1112, 720);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.MinimumSize = new System.Drawing.Size(450, 650);
             this.Name = "FormThongKe";
             this.Text = "FormThongKe";
             this.Load += new System.EventHandler(this.FormThongKe_Load);
