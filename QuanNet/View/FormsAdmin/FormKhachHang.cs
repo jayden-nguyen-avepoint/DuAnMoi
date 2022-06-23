@@ -26,9 +26,9 @@ namespace QuanNet
             dgvKH.ClearSelection();
         }
         
-        public void ShowList(string i, string key="")
+        public void ShowList(string id, string key="")
         {   
-            dgvKH.DataSource = BllKhachHang.Instance.GetTKViewByIDKH(i,key);
+            dgvKH.DataSource = BllKhachHang.Instance.GetView(id,key);
         }
         private void btnThem_Click(object sender, EventArgs e)
         {

@@ -38,6 +38,7 @@ namespace QuanNet.View.FormsAdmin
         }
         public void GUI(string id)
         {
+            txtMK.PasswordChar = false;
             lbNMK.Visible = false;
             txtNMK.Visible = false;
             lbEr.Visible = false;
@@ -53,16 +54,22 @@ namespace QuanNet.View.FormsAdmin
         }
         public void TaiKhoanMoi()
         {
-            TaiKhoan s = new TaiKhoan()
+            try
             {
-                IdTK = txtIDTK.Text,
-                LienHe = txtLienHe.Text,
-                TenDN = txtTK.Text,
-                MatKhau = txtMK.Text,
-                TenKH = txtTenKH.Text,
-                Sodu = Convert.ToInt32(txtSoDu.Text)
-            };
-            BllKhachHang.Instance.AddorUpdate(s);
+                TaiKhoan s = new TaiKhoan()
+                {
+                    IdTK = txtIDTK.Text,
+                    LienHe = txtLienHe.Text,
+                    TenDN = txtTK.Text,
+                    MatKhau = txtMK.Text,
+                    TenKH = txtTenKH.Text,
+                    Sodu = Convert.ToInt32(txtSoDu.Text)
+                };
+                BllKhachHang.Instance.AddorUpdate(s);
+            }catch
+            {
+                System.Windows.MessageBox.Show("Chưa nhập đủ dữ liệu khách hàng","Thông báo", MessageBoxButton.OK);
+            }
         }
         private void btnOK_Click(object sender, EventArgs e)
         {
@@ -86,13 +93,18 @@ namespace QuanNet.View.FormsAdmin
 
         private void btnNap_Click(object sender, EventArgs e)
         {
-            if (txtNap.Text != null && Convert.ToInt32(txtNap.Text)>0)
+            if (txtNap.Text != null )
             {
-                int nap = Convert.ToInt32(txtSoDu.Text) + Convert.ToInt32(txtNap.Text);
-                txtSoDu.Text = nap.ToString();
-                TaiKhoanMoi();
-                d("", "");
-                txtNap.Text = null;
+                int moneyAdd = Convert.ToInt32(txtNap.Text);
+                if (moneyAdd > 0)
+                {
+                    int nap = Convert.ToInt32(txtSoDu.Text) + moneyAdd;
+                    txtSoDu.Text = nap.ToString();
+                    TaiKhoanMoi();
+                    d("", "");
+                    txtNap.Text = null;
+                }
+                else System.Windows.MessageBox.Show("Số lượng nạp không đúng", "Thông báo",MessageBoxButton.OK);
             }
             else
             {
@@ -135,8 +147,9 @@ namespace QuanNet.View.FormsAdmin
                 txtNMK.BorderColor = Color.Red;
                 lbEr.Visible=true;
             }
-            else
+            else if(txtNMK.Text == txtMK.Text)
             {
+                txtNMK.BorderFocusColor = Color.HotPink;
                 lbEr.Visible=false;
             }
         }
