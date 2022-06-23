@@ -268,7 +268,7 @@
             this.MaximumSize = new System.Drawing.Size(1920, 1080);
             this.MinimumSize = new System.Drawing.Size(1410, 800);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Quản lý ";
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
