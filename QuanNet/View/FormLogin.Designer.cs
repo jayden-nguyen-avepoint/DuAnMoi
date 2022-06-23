@@ -143,7 +143,7 @@
             this.panelQL.Controls.Add(this.txtTKQL);
             this.panelQL.Controls.Add(this.txtMKQL);
             this.panelQL.Controls.Add(this.cusBtn1);
-            this.panelQL.Location = new System.Drawing.Point(165, 0);
+            this.panelQL.Location = new System.Drawing.Point(168, 2);
             this.panelQL.Name = "panelQL";
             this.panelQL.Size = new System.Drawing.Size(289, 456);
             this.panelQL.TabIndex = 6;
@@ -320,7 +320,7 @@
             this.txtMKKH.PlaceholderColor = System.Drawing.Color.DimGray;
             this.txtMKKH.PlaceholderText = "Mật khẩu...";
             this.txtMKKH.Size = new System.Drawing.Size(250, 35);
-            this.txtMKKH.TabIndex = 6;
+            this.txtMKKH.TabIndex = 5;
             this.txtMKKH.UnderlinedStyle = true;
             // 
             // BtnKH
@@ -417,7 +417,7 @@
             this.cbbMay.Name = "cbbMay";
             this.cbbMay.Padding = new System.Windows.Forms.Padding(1);
             this.cbbMay.Size = new System.Drawing.Size(200, 30);
-            this.cbbMay.TabIndex = 0;
+            this.cbbMay.TabIndex = 6;
             this.cbbMay.Texts = "";
             // 
             // FormLogin
@@ -431,7 +431,7 @@
             this.Controls.Add(this.panelMenu);
             this.MaximumSize = new System.Drawing.Size(1410, 800);
             this.Name = "FormLogin";
-            this.Text = "Form1";
+            this.Text = "Đăng nhập";
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cusBtn1_KeyPress);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
