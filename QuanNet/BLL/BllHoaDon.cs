@@ -60,44 +60,32 @@ namespace QuanNet.BLL
                 Tong_Tien = p.HoaDonChiTiet.TongTien.ToString()
             }).ToList();
         }
-        //public List<HoaDonView> GetHDViewByIDHD(string IDHD,string keyWord)
-        //{
-        //    List<HoaDonView> data = new List<HoaDonView>();
-        //    foreach (HoaDon i in GetListHDByID(IDHD))
-        //    {
-        //        if (i.IdHoaDon.Contains(keyWord) || i.IdTK.Contains(keyWord) ||i.HoaDonChiTiet.IdMay.Contains(keyWord))
-        //        {
-        //            data.Add(new HoaDonView
-        //            {
-        //                ID_HoaDon = i.IdHoaDon,
-        //                May = i.HoaDonChiTiet.IdMay,
-        //                NgayXuatHD = i.HoaDonChiTiet.NgayThang,
-        //                Tong_Tien =i.HoaDonChiTiet.TongTien.ToString()
-        //            });
-        //        }
-        //    }
-        //    return data;
-        //}
-        public dynamic SearchByDay(DateTime s, DateTime e)
+        public List<HoaDonView> SearchByDay(DateTime s, DateTime e)
         {
-            return  db.HoaDons.Where(p => p.HoaDonChiTiet.NgayThang >= s && p.HoaDonChiTiet.NgayThang <= e).Select(p => new { ID_HoaDon=p.IdHoaDon,p.IdTK, p.HoaDonChiTiet.NgayThang, p.TaiKhoan.TenKH, p.HoaDonChiTiet.TongTien }).ToList();
+            return  db.HoaDons.Where(p => p.HoaDonChiTiet.NgayThang >= s && p.HoaDonChiTiet.NgayThang <= e).Select(p =>new HoaDonView {
+                ID_HoaDon = p.IdHoaDon,
+                May = p.HoaDonChiTiet.IdMay,
+                NgayXuatHD = p.HoaDonChiTiet.NgayThang,
+                Tong_Tien = p.HoaDonChiTiet.TongTien.ToString() 
+                    }).ToList();
         }
-        public dynamic Sort(int i)
+        public List<HoaDonView> Sort(int i)
         {
             if (i == 1)
             {
-                return (db.HoaDons.Select(p => new { ID_HoaDon=p.IdHoaDon, p.HoaDonChiTiet.NgayThang, p.TaiKhoan.TenKH, p.HoaDonChiTiet.TongTien }).OrderBy(p => p.TenKH)).ToList();
+                return (db.HoaDons.Select(p => new HoaDonView { ID_HoaDon = p.IdHoaDon, May = p.HoaDonChiTiet.IdMay, NgayXuatHD = p.HoaDonChiTiet.NgayThang, Tong_Tien = p.HoaDonChiTiet.TongTien.ToString() }).OrderBy(p => p.ID_HoaDon)).ToList();
             }
             else if (i == 2)
             {
-                return (db.HoaDons.Select(p => new { ID_HoaDon=p.IdHoaDon, p.IdTK, p.HoaDonChiTiet.NgayThang, p.TaiKhoan.TenKH, p.HoaDonChiTiet.TongTien }).OrderBy(p => p.NgayThang)).ToList();
+                return (db.HoaDons.Select(p => new HoaDonView { ID_HoaDon = p.IdHoaDon, May = p.HoaDonChiTiet.IdMay, NgayXuatHD = p.HoaDonChiTiet.NgayThang, Tong_Tien = p.HoaDonChiTiet.TongTien.ToString() }).OrderBy(p => p.NgayXuatHD)).ToList();
             }
             else if(i == 3)
             {
-                return (db.HoaDons.Select(p => new { p.IdHoaDon, p.IdTK, p.HoaDonChiTiet.NgayThang, p.TaiKhoan.TenKH ,p.HoaDonChiTiet.TongTien}).OrderBy(p => p.TongTien)).ToList();
-            }else
+                return (db.HoaDons.Select(p => new HoaDonView { ID_HoaDon = p.IdHoaDon, May = p.HoaDonChiTiet.IdMay, NgayXuatHD = p.HoaDonChiTiet.NgayThang, Tong_Tien = p.HoaDonChiTiet.TongTien.ToString() }).OrderBy(p => p.Tong_Tien)).ToList();
+            }
+            else
             {
-                return (db.HoaDons.Select(p => new { p.IdHoaDon, p.IdTK, p.HoaDonChiTiet.NgayThang, p.TaiKhoan.TenKH, p.HoaDonChiTiet.TongTien })).ToList();
+                return (db.HoaDons.Select(p => new HoaDonView { ID_HoaDon = p.IdHoaDon, May = p.HoaDonChiTiet.IdMay, NgayXuatHD = p.HoaDonChiTiet.NgayThang, Tong_Tien = p.HoaDonChiTiet.TongTien.ToString() })).ToList();
             }
 
         }
@@ -197,6 +185,7 @@ namespace QuanNet.BLL
                         {
                             IdChiTiet = i.IdChiTiet,
                             TongTien = i.TongTien,
+                            NgayOrder=i.NgayThang,
                             IdMay = i.IdMay,
                             Trang_thai = TT
                         }) ;

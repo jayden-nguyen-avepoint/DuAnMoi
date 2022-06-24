@@ -10,6 +10,7 @@ namespace QuanNet.DTO
     {
         public string IdChiTiet { get; set; }
         public string IdMay { get; set; }
+        public DateTime NgayOrder { get; set; }
         public int? TongTien { get; set; }
         public bool Trang_thai { get; set; }
 

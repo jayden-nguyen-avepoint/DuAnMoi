@@ -18,6 +18,7 @@ namespace QuanNet.View.FormsAdmin
         public delegate void MyDel(string id, string name);
         public  MyDel d { get; set; }
         public string IDKH { get; set; }
+        public string MK { get; set; }
         public AddEditForm(string ID)
         {
             InitializeComponent();
@@ -29,6 +30,7 @@ namespace QuanNet.View.FormsAdmin
             if (ID != "")
             {
                 GUI(ID);
+                MK = BllKhachHang.Instance.GetTKByIDTK(ID).MatKhau;
             }
             else
             {
