@@ -143,7 +143,7 @@
             this.panelQL.Controls.Add(this.txtTKQL);
             this.panelQL.Controls.Add(this.txtMKQL);
             this.panelQL.Controls.Add(this.cusBtn1);
-            this.panelQL.Location = new System.Drawing.Point(168, 2);
+            this.panelQL.Location = new System.Drawing.Point(168, 0);
             this.panelQL.Name = "panelQL";
             this.panelQL.Size = new System.Drawing.Size(289, 456);
             this.panelQL.TabIndex = 6;
@@ -180,7 +180,7 @@
             this.txtTKQL.Padding = new System.Windows.Forms.Padding(7);
             this.txtTKQL.PasswordChar = false;
             this.txtTKQL.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.txtTKQL.PlaceholderText = "ID...";
+            this.txtTKQL.PlaceholderText = "Tài khoản...";
             this.txtTKQL.Size = new System.Drawing.Size(250, 35);
             this.txtTKQL.TabIndex = 0;
             this.txtTKQL.UnderlinedStyle = true;

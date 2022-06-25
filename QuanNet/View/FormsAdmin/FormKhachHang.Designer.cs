@@ -96,7 +96,7 @@
             this.cbbSort.BorderSize = 1;
             this.cbbSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
             this.cbbSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cbbSort.ForeColor = System.Drawing.Color.DimGray;
+            this.cbbSort.ForeColor = System.Drawing.Color.White;
             this.cbbSort.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.cbbSort.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbbSort.ListTextColor = System.Drawing.Color.DimGray;

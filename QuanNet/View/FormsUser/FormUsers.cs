@@ -186,7 +186,7 @@ namespace QuanNet.FormsUser
             {
                 IdChiTiet = ID_CT,
                 IdMay = ID_May,
-                NgayThang= DateTime.Now,
+                NgayThang = DateTime.Now,
                 TongTien = null
             });
         }
