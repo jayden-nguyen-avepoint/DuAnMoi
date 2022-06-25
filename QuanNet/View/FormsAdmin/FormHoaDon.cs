@@ -20,6 +20,7 @@ namespace QuanNet
             ShowListHD("");
             TongHoaDon();
             sort.Items.AddRange(new object[] {"All","Tên khách hàng","Ngày xuất","Tổng tiền" });
+            sort.SelectedIndex = 0;
         }
         public void TongHoaDon()
         {   
@@ -28,6 +29,7 @@ namespace QuanNet
             {
                 dem += 1; 
             }
+            label3.Text =dem.ToString();
         }
         public void ShowListHD(string i,string Key="")
         {

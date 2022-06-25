@@ -37,22 +37,23 @@ namespace QuanNet
             {
 
                 ID_CT = dgvOrder.SelectedRows[0].Cells["IdChiTiet"].Value.ToString();
-                if (!BllHoaDon.Instance.checkVal(ID_CT))
-                {
-                    MessageBox.Show("Đã order");
-                    //Nếu đã order thì hiện thông báo
-                }
-                else
-                {
-                    HoaDon s = new HoaDon()
+                    if (!BllHoaDon.Instance.checkVal(ID_CT))
                     {
-                        IdHoaDon = BllHoaDon.Instance.MaHoaDon(),
-                        IdTK = ID_CT.Substring(0, 5),
-                        IdChiTiet = ID_CT
-                    };
-                    BllHoaDon.Instance.AddHD(s);
-                }
-                ShowOrder("");
+                        MessageBox.Show("Đã order");
+                        //Nếu đã order thì hiện thông báo
+                    }
+                    else
+                    {
+                        HoaDon s = new HoaDon()
+                        {
+                            IdHoaDon = BllHoaDon.Instance.MaHoaDon(),
+                            IdTK = ID_CT.Substring(0, 5),
+                            IdChiTiet = ID_CT
+                        };
+                        BllHoaDon.Instance.AddHD(s);
+                    }
+                    ShowOrder("");
+                
             }
             else MessageBox.Show("Vui lòng chọn order cần thanh toán từ menu chính", "Thông báo", MessageBoxButtons.OK);
         }
