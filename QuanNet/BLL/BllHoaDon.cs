@@ -91,14 +91,28 @@ namespace QuanNet.BLL
         }
         public void AddHD(HoaDon s)
         {
+            try
+            {
                 db.HoaDons.Add(s);
-                db.SaveChanges();            
+                db.SaveChanges();
+            }
+            catch
+            {
+                MessageBox.Show("Không thể xuất hóa đơn này", "Thông báo", MessageBoxButton.OK);
+            }
         }
         public void DeleteHD(string IDHD)
         {
-            HoaDon s = db.HoaDons.Find(IDHD);
-            db.HoaDons.Remove(s);
-            db.SaveChanges();
+            try
+            {
+                HoaDon s = db.HoaDons.Find(IDHD);
+                db.HoaDons.Remove(s);
+                db.SaveChanges();
+            }
+            catch
+            {
+                MessageBox.Show("Không thể xóa hóa đơn này", "Thông báo", MessageBoxButton.OK);
+            }
         }
         public bool checkVal(string id)
         {

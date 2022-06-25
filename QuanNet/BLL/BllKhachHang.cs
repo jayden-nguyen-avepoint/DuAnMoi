@@ -103,7 +103,7 @@ namespace QuanNet.BLL
                 else MessageBox.Show("Vui lòng nhập lại hoặc sửa chữa", "Thông báo !", MessageBoxButton.OK);
             }catch
             {
-                 MessageBox.Show("Vui lòng nhập lại hoặc sửa chữa", "Thông báo !", MessageBoxButton.OK);
+                 MessageBox.Show("Không thể thêm khách hàng này, vui lòng nhập lại", "Thông báo !", MessageBoxButton.OK);
             }
         }  
         public List<TaiKhoanView> Sort(int index)
@@ -126,9 +126,16 @@ namespace QuanNet.BLL
         }
         public void DeleteKH(string IDTK)
         {
-            TaiKhoan s = db.TaiKhoans.Find(IDTK);
-            db.TaiKhoans.Remove(s);
-            db.SaveChanges();
+                    try
+                    {
+                        TaiKhoan s = db.TaiKhoans.Find(IDTK);
+                        db.TaiKhoans.Remove(s);
+                        db.SaveChanges();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Không thể xóa khách hàng này", "Thông báo !", MessageBoxButton.OK);
+                    }      
         }
         
     }

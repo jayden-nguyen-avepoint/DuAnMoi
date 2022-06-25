@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvHoaDon = new System.Windows.Forms.DataGridView();
-            this.dateStart = new System.Windows.Forms.DateTimePicker();
-            this.dateEnd = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.ID_HoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.May = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayXuatHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tong_Tien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateStart = new System.Windows.Forms.DateTimePicker();
+            this.dateEnd = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.sort = new QuanNet.CustomsDetail.CusCbb();
             this.txtSearch = new QuanNet.CustomsDetail.CustomTextbox();
             this.label2 = new System.Windows.Forms.Label();
@@ -78,14 +78,14 @@
             this.dgvHoaDon.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvHoaDon.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvHoaDon.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHoaDon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHoaDon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvHoaDon.ColumnHeadersHeight = 30;
             this.dgvHoaDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_HoaDon,
@@ -98,18 +98,46 @@
             this.dgvHoaDon.Name = "dgvHoaDon";
             this.dgvHoaDon.RowHeadersVisible = false;
             this.dgvHoaDon.RowHeadersWidth = 60;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(46)))), ((int)(((byte)(105)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.5F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(7);
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.MediumSlateBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvHoaDon.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(46)))), ((int)(((byte)(105)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(7);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumSlateBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvHoaDon.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvHoaDon.RowTemplate.Height = 24;
             this.dgvHoaDon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHoaDon.Size = new System.Drawing.Size(1130, 438);
             this.dgvHoaDon.TabIndex = 17;
+            // 
+            // ID_HoaDon
+            // 
+            this.ID_HoaDon.DataPropertyName = "ID_HoaDon";
+            this.ID_HoaDon.HeaderText = "Mã hóa đơn";
+            this.ID_HoaDon.MinimumWidth = 6;
+            this.ID_HoaDon.Name = "ID_HoaDon";
+            // 
+            // May
+            // 
+            this.May.DataPropertyName = "May";
+            this.May.HeaderText = "Mã máy";
+            this.May.MinimumWidth = 6;
+            this.May.Name = "May";
+            // 
+            // NgayXuatHD
+            // 
+            this.NgayXuatHD.DataPropertyName = "NgayXuatHD";
+            this.NgayXuatHD.HeaderText = "Ngày";
+            this.NgayXuatHD.MinimumWidth = 6;
+            this.NgayXuatHD.Name = "NgayXuatHD";
+            // 
+            // Tong_Tien
+            // 
+            this.Tong_Tien.DataPropertyName = "Tong_Tien";
+            this.Tong_Tien.HeaderText = "Tổng tiền";
+            this.Tong_Tien.MinimumWidth = 6;
+            this.Tong_Tien.Name = "Tong_Tien";
             // 
             // dateStart
             // 
@@ -156,34 +184,6 @@
             this.label6.TabIndex = 24;
             this.label6.Text = "Sắp xếp:";
             // 
-            // ID_HoaDon
-            // 
-            this.ID_HoaDon.DataPropertyName = "ID_HoaDon";
-            this.ID_HoaDon.HeaderText = "Mã hóa đơn";
-            this.ID_HoaDon.MinimumWidth = 6;
-            this.ID_HoaDon.Name = "ID_HoaDon";
-            // 
-            // May
-            // 
-            this.May.DataPropertyName = "May";
-            this.May.HeaderText = "Mã máy";
-            this.May.MinimumWidth = 6;
-            this.May.Name = "May";
-            // 
-            // NgayXuatHD
-            // 
-            this.NgayXuatHD.DataPropertyName = "NgayXuatHD";
-            this.NgayXuatHD.HeaderText = "Ngày";
-            this.NgayXuatHD.MinimumWidth = 6;
-            this.NgayXuatHD.Name = "NgayXuatHD";
-            // 
-            // Tong_Tien
-            // 
-            this.Tong_Tien.DataPropertyName = "Tong_Tien";
-            this.Tong_Tien.HeaderText = "Tổng tiền";
-            this.Tong_Tien.MinimumWidth = 6;
-            this.Tong_Tien.Name = "Tong_Tien";
-            // 
             // sort
             // 
             this.sort.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -192,9 +192,9 @@
             this.sort.BorderSize = 1;
             this.sort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
             this.sort.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.sort.ForeColor = System.Drawing.Color.DimGray;
+            this.sort.ForeColor = System.Drawing.Color.White;
             this.sort.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.sort.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.sort.ListBackColor = System.Drawing.Color.White;
             this.sort.ListTextColor = System.Drawing.Color.DimGray;
             this.sort.Location = new System.Drawing.Point(958, 132);
             this.sort.MinimumSize = new System.Drawing.Size(50, 30);

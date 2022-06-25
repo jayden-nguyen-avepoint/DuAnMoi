@@ -22,6 +22,7 @@ namespace QuanNet
             //Application.Run(new FormApp());
             //Application.Run(new FormOrder());
             //Application.Run(new Form1());
+            //Application.Run(new FormHoaDon());
 
         }
     }
