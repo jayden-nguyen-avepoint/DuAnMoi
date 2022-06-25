@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace QuanNet.BLL
 {
@@ -61,52 +62,28 @@ namespace QuanNet.BLL
             }
             return data;
         }
-        public List<MayTinhView> GetMtView(string ID,string soGio, string Tien)
-        {
-            List<MayTinhView> data = new List<MayTinhView>();
-            foreach (May i in GetListMayByID(ID))
-            {
-                if (i.IdMay == ID)
-                {
-                    int sodu = 0;
-                    
-                    foreach (TaiKhoan j in db.TaiKhoans.ToList())
-                    {
-                        if (i.IdTK == j.IdTK)
-                        {
-                            sodu = j.Sodu;
-                        }
-
-                    }
-                    data.Add(new MayTinhView
-                    {
-                        SoMay = ID,
-                        TienGio=i.TienGio.ToString(),
-                        MaKhach = i.IdTK,
-                        SoDu=sodu.ToString(),
-                        HoatDong=i.HoatDong,
-                        SoGioChoi= soGio,
-                        Tong=Tien
-                    });
-                }
-            }
-            return data;
-        }    
         public void addTKinMay(string IdMay, string IdKhach,string HoatDong)
-        {   
-            May up = db.Mays.Find(IdMay);
-            up.IdTK=IdKhach;
-            if (up.IdTK != null)
+        {
+            try
             {
-                up.TrangThai = true;
+                May up = db.Mays.Find(IdMay);
+                up.IdTK = IdKhach;
+                if (up.IdTK != null)
+                {
+                    up.TrangThai = true;
+                }
+                else up.TrangThai = false;
+                if (HoatDong != null)
+                {
+                    up.HoatDong = HoatDong.ToString();
+                }
+                else up.HoatDong = null;
+                db.SaveChanges();
             }
-            else up.TrangThai = false;
-            if (HoatDong != null)
+            catch
             {
-                up.HoatDong = HoatDong.ToString();
+                MessageBox.Show("Lỗi hệ thống", "Thông báo", MessageBoxButton.OK);
             }
-            else up.HoatDong = null;
-            db.SaveChanges();
         }
         public string GetIDTKbyMay(string idm)
         {

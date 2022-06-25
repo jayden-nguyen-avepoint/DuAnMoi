@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
@@ -41,6 +41,10 @@
             this.btnThem = new FontAwesome.Sharp.IconButton();
             this.label6 = new System.Windows.Forms.Label();
             this.dgvKH = new System.Windows.Forms.DataGridView();
+            this.ID_TaiKhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoDu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LienHe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKH)).BeginInit();
             this.SuspendLayout();
@@ -92,7 +96,7 @@
             this.cbbSort.BorderSize = 1;
             this.cbbSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
             this.cbbSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cbbSort.ForeColor = System.Drawing.Color.DimGray;
+            this.cbbSort.ForeColor = System.Drawing.Color.White;
             this.cbbSort.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.cbbSort.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbbSort.ListTextColor = System.Drawing.Color.DimGray;
@@ -113,12 +117,13 @@
             this.btnEdit.IconChar = FontAwesome.Sharp.IconChar.Wrench;
             this.btnEdit.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
             this.btnEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEdit.IconSize = 45;
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEdit.Location = new System.Drawing.Point(255, 517);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(101, 50);
             this.btnEdit.TabIndex = 36;
-            this.btnEdit.Text = "Sửa";
+            this.btnEdit.Text = "Chi tiết";
             this.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
@@ -223,33 +228,66 @@
             this.dgvKH.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvKH.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvKH.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.MediumPurple;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.MediumPurple;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvKH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MediumPurple;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MediumPurple;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvKH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvKH.ColumnHeadersHeight = 30;
+            this.dgvKH.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID_TaiKhoan,
+            this.TenKhachHang,
+            this.SoDu,
+            this.LienHe});
             this.dgvKH.EnableHeadersVisualStyles = false;
             this.dgvKH.GridColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvKH.Location = new System.Drawing.Point(9, 50);
             this.dgvKH.Name = "dgvKH";
             this.dgvKH.RowHeadersVisible = false;
             this.dgvKH.RowHeadersWidth = 50;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(46)))), ((int)(((byte)(105)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9.5F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(4);
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MediumSlateBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvKH.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(46)))), ((int)(((byte)(105)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(4);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MediumSlateBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvKH.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvKH.RowTemplate.Height = 24;
             this.dgvKH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvKH.Size = new System.Drawing.Size(1107, 431);
             this.dgvKH.TabIndex = 16;
+            // 
+            // ID_TaiKhoan
+            // 
+            this.ID_TaiKhoan.DataPropertyName = "ID_TaiKhoan";
+            this.ID_TaiKhoan.HeaderText = "Mã khách hàng";
+            this.ID_TaiKhoan.MinimumWidth = 6;
+            this.ID_TaiKhoan.Name = "ID_TaiKhoan";
+            // 
+            // TenKhachHang
+            // 
+            this.TenKhachHang.DataPropertyName = "TenKhachHang";
+            this.TenKhachHang.HeaderText = "Tên khách hàng";
+            this.TenKhachHang.MinimumWidth = 6;
+            this.TenKhachHang.Name = "TenKhachHang";
+            // 
+            // SoDu
+            // 
+            this.SoDu.DataPropertyName = "SoDu";
+            this.SoDu.HeaderText = "Số dư ";
+            this.SoDu.MinimumWidth = 6;
+            this.SoDu.Name = "SoDu";
+            // 
+            // LienHe
+            // 
+            this.LienHe.DataPropertyName = "LienHe";
+            this.LienHe.HeaderText = "Liên hệ ";
+            this.LienHe.MinimumWidth = 6;
+            this.LienHe.Name = "LienHe";
             // 
             // FormKhachHang
             // 
@@ -281,5 +319,9 @@
         private FontAwesome.Sharp.IconButton btnSearch;
         private FontAwesome.Sharp.IconButton btnDel;
         private FontAwesome.Sharp.IconButton btnThem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_TaiKhoan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenKhachHang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoDu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LienHe;
     }
 }

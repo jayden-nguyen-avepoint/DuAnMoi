@@ -78,8 +78,6 @@ namespace QuanNet.FormsUser
                 ThanhTien = Convert.ToInt32(numCount.Value) * Convert.ToInt32(txtGia.Text),
                 IdChiTiet = ID_CT
             };
-
-
             int tien = (int)numCount.Value * Convert.ToInt32(txtGia.Text);
 
             if (BllOrderKH.Instance.TinhTienOrder(ID_CT)+tien >= BllKhachHang.Instance.GetTKByIDTK(ID_KhachHang).Sodu) 
@@ -94,6 +92,7 @@ namespace QuanNet.FormsUser
             else
             {
                 BllOrderKH.Instance.addOrder1(orderkh);
+                BllHoaDon.Instance.updatetongtien(ID_CT);
                 SetNull();
             } 
                 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using QuanNet.DTO;
 using QuanNet.LinQ;
 
@@ -31,8 +32,15 @@ namespace QuanNet.BLL
 
         public void addOrder1(ListTPham list)
         {
-            db.ListTPhams.Add(list);
-            db.SaveChanges();
+            try
+            {
+                db.ListTPhams.Add(list);
+                db.SaveChanges();
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi hệ thống", "Thông báo", MessageBoxButton.OK);
+            }
         }
         public string GetIDTP(string tenmon)
         {
@@ -64,21 +72,14 @@ namespace QuanNet.BLL
             }
             return data;
         }
-        public List<OrderKHView> GetListTPViewByIDCT(string IDCT)
+        public List<OrderKHView> GetListTPViewByIDCT(string id)
         {
-            List<OrderKHView> data = new List<OrderKHView>();
-            foreach (ListTPham i in GetListTPByIDCT(IDCT))
+            return db.ListTPhams.Where(p => p.IdChiTiet==id).Select(p => new OrderKHView
             {
-                
-                data.Add(new OrderKHView
-                {
-                    Mon = i.TPham.TenTP,
-                    SL = i.SoluongTP,
-                    Tong = i.ThanhTien,
-                });
-            }
-            return data;
-
+                Mon = p.TPham.TenTP,
+                SL = p.SoluongTP,
+                Tong = p.ThanhTien,
+            }).ToList();
         }
         public int TinhTienOrder(string idct)
         {

@@ -30,13 +30,6 @@
         {
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtMK = new QuanNet.CustomsDetail.CustomTextbox();
-            this.txtTK = new QuanNet.CustomsDetail.CustomTextbox();
-            this.txtNap = new QuanNet.CustomsDetail.CustomTextbox();
-            this.txtTenKH = new QuanNet.CustomsDetail.CustomTextbox();
-            this.txtLienHe = new QuanNet.CustomsDetail.CustomTextbox();
-            this.txtSoDu = new QuanNet.CustomsDetail.CustomTextbox();
-            this.txtIDTK = new QuanNet.CustomsDetail.CustomTextbox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,9 +38,17 @@
             this.btnOK = new FontAwesome.Sharp.IconButton();
             this.btnNap = new FontAwesome.Sharp.IconButton();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtNMK = new QuanNet.CustomsDetail.CustomTextbox();
             this.lbNMK = new System.Windows.Forms.Label();
             this.lbEr = new System.Windows.Forms.Label();
+            this.btnSee = new FontAwesome.Sharp.IconButton();
+            this.txtNMK = new QuanNet.CustomsDetail.CustomTextbox();
+            this.txtMK = new QuanNet.CustomsDetail.CustomTextbox();
+            this.txtTK = new QuanNet.CustomsDetail.CustomTextbox();
+            this.txtNap = new QuanNet.CustomsDetail.CustomTextbox();
+            this.txtTenKH = new QuanNet.CustomsDetail.CustomTextbox();
+            this.txtLienHe = new QuanNet.CustomsDetail.CustomTextbox();
+            this.txtSoDu = new QuanNet.CustomsDetail.CustomTextbox();
+            this.txtIDTK = new QuanNet.CustomsDetail.CustomTextbox();
             this.SuspendLayout();
             // 
             // label7
@@ -74,6 +75,188 @@
             this.label5.TabIndex = 40;
             this.label5.Text = "Tài khoản";
             // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(69, 256);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 20);
+            this.label4.TabIndex = 36;
+            this.label4.Text = "Số dư:";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(69, 185);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 20);
+            this.label3.TabIndex = 35;
+            this.label3.Text = "Liên hệ:";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(76, 121);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 20);
+            this.label2.TabIndex = 32;
+            this.label2.Text = "Tên:";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(76, 64);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(31, 20);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "ID:";
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.btnHuy.IconChar = FontAwesome.Sharp.IconChar.DollarSign;
+            this.btnHuy.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.btnHuy.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnHuy.IconSize = 35;
+            this.btnHuy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHuy.Location = new System.Drawing.Point(161, 547);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(80, 42);
+            this.btnHuy.TabIndex = 43;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
+            // btnOK
+            // 
+            this.btnOK.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.btnOK.IconChar = FontAwesome.Sharp.IconChar.DollarSign;
+            this.btnOK.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.btnOK.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnOK.IconSize = 35;
+            this.btnOK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOK.Location = new System.Drawing.Point(30, 547);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(80, 42);
+            this.btnOK.TabIndex = 42;
+            this.btnOK.Text = "OK";
+            this.btnOK.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            // 
+            // btnNap
+            // 
+            this.btnNap.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnNap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNap.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.btnNap.IconChar = FontAwesome.Sharp.IconChar.DollarSign;
+            this.btnNap.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.btnNap.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnNap.IconSize = 35;
+            this.btnNap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNap.Location = new System.Drawing.Point(304, 547);
+            this.btnNap.Name = "btnNap";
+            this.btnNap.Size = new System.Drawing.Size(80, 42);
+            this.btnNap.TabIndex = 38;
+            this.btnNap.Text = "Nạp";
+            this.btnNap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnNap.UseVisualStyleBackColor = true;
+            this.btnNap.Click += new System.EventHandler(this.btnNap_Click);
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.label6.Location = new System.Drawing.Point(186, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(176, 32);
+            this.label6.TabIndex = 44;
+            this.label6.Text = "Khách hàng";
+            // 
+            // lbNMK
+            // 
+            this.lbNMK.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbNMK.AutoSize = true;
+            this.lbNMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNMK.ForeColor = System.Drawing.Color.White;
+            this.lbNMK.Location = new System.Drawing.Point(12, 469);
+            this.lbNMK.Name = "lbNMK";
+            this.lbNMK.Size = new System.Drawing.Size(143, 20);
+            this.lbNMK.TabIndex = 46;
+            this.lbNMK.Text = "Nhập lại mật khẩu";
+            // 
+            // lbEr
+            // 
+            this.lbEr.AutoSize = true;
+            this.lbEr.ForeColor = System.Drawing.Color.Red;
+            this.lbEr.Location = new System.Drawing.Point(158, 502);
+            this.lbEr.Name = "lbEr";
+            this.lbEr.Size = new System.Drawing.Size(140, 16);
+            this.lbEr.TabIndex = 47;
+            this.lbEr.Text = "Mật khẩu không khớp !";
+            // 
+            // btnSee
+            // 
+            this.btnSee.FlatAppearance.BorderSize = 0;
+            this.btnSee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSee.ForeColor = System.Drawing.Color.Coral;
+            this.btnSee.IconChar = FontAwesome.Sharp.IconChar.Eye;
+            this.btnSee.IconColor = System.Drawing.Color.Linen;
+            this.btnSee.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSee.IconSize = 25;
+            this.btnSee.Location = new System.Drawing.Point(435, 396);
+            this.btnSee.Name = "btnSee";
+            this.btnSee.Size = new System.Drawing.Size(28, 24);
+            this.btnSee.TabIndex = 48;
+            this.btnSee.UseVisualStyleBackColor = true;
+            this.btnSee.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnSee_MouseDown);
+            this.btnSee.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnSee_MouseUp);
+            // 
+            // txtNMK
+            // 
+            this.txtNMK.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtNMK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txtNMK.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.txtNMK.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtNMK.BorderRadius = 0;
+            this.txtNMK.BorderSize = 2;
+            this.txtNMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNMK.ForeColor = System.Drawing.Color.White;
+            this.txtNMK.Location = new System.Drawing.Point(161, 450);
+            this.txtNMK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNMK.Multiline = false;
+            this.txtNMK.Name = "txtNMK";
+            this.txtNMK.Padding = new System.Windows.Forms.Padding(7);
+            this.txtNMK.PasswordChar = true;
+            this.txtNMK.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtNMK.PlaceholderText = "";
+            this.txtNMK.Size = new System.Drawing.Size(268, 39);
+            this.txtNMK.TabIndex = 45;
+            this.txtNMK.UnderlinedStyle = true;
+            this.txtNMK._TextChanged += new System.EventHandler(this.txtNMK__TextChanged);
+            // 
             // txtMK
             // 
             this.txtMK.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -89,7 +272,7 @@
             this.txtMK.Multiline = false;
             this.txtMK.Name = "txtMK";
             this.txtMK.Padding = new System.Windows.Forms.Padding(7);
-            this.txtMK.PasswordChar = false;
+            this.txtMK.PasswordChar = true;
             this.txtMK.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtMK.PlaceholderText = "";
             this.txtMK.Size = new System.Drawing.Size(268, 39);
@@ -234,177 +417,13 @@
             this.txtIDTK.UnderlinedStyle = true;
             this.txtIDTK._TextChanged += new System.EventHandler(this.txtIDTK__TextChanged);
             // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(69, 256);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 20);
-            this.label4.TabIndex = 36;
-            this.label4.Text = "Số dư:";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(69, 185);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 20);
-            this.label3.TabIndex = 35;
-            this.label3.Text = "Liên hệ:";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(76, 121);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 20);
-            this.label2.TabIndex = 32;
-            this.label2.Text = "Tên:";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(76, 64);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 20);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "ID:";
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.btnHuy.IconChar = FontAwesome.Sharp.IconChar.DollarSign;
-            this.btnHuy.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.btnHuy.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnHuy.IconSize = 35;
-            this.btnHuy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHuy.Location = new System.Drawing.Point(161, 547);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(80, 42);
-            this.btnHuy.TabIndex = 43;
-            this.btnHuy.Text = "Hủy";
-            this.btnHuy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHuy.UseVisualStyleBackColor = true;
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
-            // 
-            // btnOK
-            // 
-            this.btnOK.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.btnOK.IconChar = FontAwesome.Sharp.IconChar.DollarSign;
-            this.btnOK.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.btnOK.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnOK.IconSize = 35;
-            this.btnOK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOK.Location = new System.Drawing.Point(30, 547);
-            this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(80, 42);
-            this.btnOK.TabIndex = 42;
-            this.btnOK.Text = "OK";
-            this.btnOK.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnOK.UseVisualStyleBackColor = true;
-            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            // 
-            // btnNap
-            // 
-            this.btnNap.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnNap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNap.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.btnNap.IconChar = FontAwesome.Sharp.IconChar.DollarSign;
-            this.btnNap.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.btnNap.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnNap.IconSize = 35;
-            this.btnNap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNap.Location = new System.Drawing.Point(304, 547);
-            this.btnNap.Name = "btnNap";
-            this.btnNap.Size = new System.Drawing.Size(80, 42);
-            this.btnNap.TabIndex = 38;
-            this.btnNap.Text = "Nạp";
-            this.btnNap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNap.UseVisualStyleBackColor = true;
-            this.btnNap.Click += new System.EventHandler(this.btnNap_Click);
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.label6.Location = new System.Drawing.Point(186, 9);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(176, 32);
-            this.label6.TabIndex = 44;
-            this.label6.Text = "Khách hàng";
-            // 
-            // txtNMK
-            // 
-            this.txtNMK.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNMK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.txtNMK.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.txtNMK.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtNMK.BorderRadius = 0;
-            this.txtNMK.BorderSize = 2;
-            this.txtNMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNMK.ForeColor = System.Drawing.Color.White;
-            this.txtNMK.Location = new System.Drawing.Point(161, 450);
-            this.txtNMK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtNMK.Multiline = false;
-            this.txtNMK.Name = "txtNMK";
-            this.txtNMK.Padding = new System.Windows.Forms.Padding(7);
-            this.txtNMK.PasswordChar = true;
-            this.txtNMK.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtNMK.PlaceholderText = "";
-            this.txtNMK.Size = new System.Drawing.Size(268, 39);
-            this.txtNMK.TabIndex = 45;
-            this.txtNMK.UnderlinedStyle = true;
-            this.txtNMK._TextChanged += new System.EventHandler(this.txtNMK__TextChanged);
-            // 
-            // lbNMK
-            // 
-            this.lbNMK.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbNMK.AutoSize = true;
-            this.lbNMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNMK.ForeColor = System.Drawing.Color.White;
-            this.lbNMK.Location = new System.Drawing.Point(12, 469);
-            this.lbNMK.Name = "lbNMK";
-            this.lbNMK.Size = new System.Drawing.Size(143, 20);
-            this.lbNMK.TabIndex = 46;
-            this.lbNMK.Text = "Nhập lại mật khẩu";
-            // 
-            // lbEr
-            // 
-            this.lbEr.AutoSize = true;
-            this.lbEr.ForeColor = System.Drawing.Color.Red;
-            this.lbEr.Location = new System.Drawing.Point(158, 502);
-            this.lbEr.Name = "lbEr";
-            this.lbEr.Size = new System.Drawing.Size(140, 16);
-            this.lbEr.TabIndex = 47;
-            this.lbEr.Text = "Mật khẩu không khớp !";
-            // 
             // AddEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(544, 614);
+            this.Controls.Add(this.btnSee);
             this.Controls.Add(this.lbEr);
             this.Controls.Add(this.lbNMK);
             this.Controls.Add(this.txtNMK);
@@ -427,6 +446,7 @@
             this.Controls.Add(this.label1);
             this.Name = "AddEditForm";
             this.Text = "AddEditForm";
+            this.Load += new System.EventHandler(this.AddEditForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -454,5 +474,6 @@
         private CustomsDetail.CustomTextbox txtNMK;
         private System.Windows.Forms.Label lbNMK;
         private System.Windows.Forms.Label lbEr;
+        private FontAwesome.Sharp.IconButton btnSee;
     }
 }

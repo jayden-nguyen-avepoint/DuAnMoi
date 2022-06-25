@@ -23,7 +23,7 @@ namespace QuanNet
         }
         public void ShowOrder(string key)
         {
-            dgvOrder.DataSource = BllHoaDon.Instance.GetOrderAd("",dtpHDCT.Value.Date,key);
+            dgvOrder.DataSource = BllHoaDon.Instance.GetOrderAdmin("",dtpHDCT.Value.Date,key);
         }
         // Hàm Show(CT) dùng để show các listOrder theo keywork search
         public void ShowList (string CT)
@@ -37,22 +37,23 @@ namespace QuanNet
             {
 
                 ID_CT = dgvOrder.SelectedRows[0].Cells["IdChiTiet"].Value.ToString();
-                if (!BllHoaDon.Instance.checkVal(ID_CT))
-                {
-                    MessageBox.Show("Đã order");
-                    //Nếu đã order thì hiện thông báo
-                }
-                else
-                {
-                    HoaDon s = new HoaDon()
+                    if (!BllHoaDon.Instance.checkVal(ID_CT))
                     {
-                        IdHoaDon = BllHoaDon.Instance.MaHoaDon(),
-                        IdTK = ID_CT.Substring(0, 5),
-                        IdChiTiet = ID_CT
-                    };
-                    BllHoaDon.Instance.AddHD(s);
-                }
-                ShowOrder("");
+                        MessageBox.Show("Đã order");
+                        //Nếu đã order thì hiện thông báo
+                    }
+                    else
+                    {
+                        HoaDon s = new HoaDon()
+                        {
+                            IdHoaDon = BllHoaDon.Instance.MaHoaDon(),
+                            IdTK = ID_CT.Substring(0, 5),
+                            IdChiTiet = ID_CT
+                        };
+                        BllHoaDon.Instance.AddHD(s);
+                    }
+                    ShowOrder("");
+                
             }
             else MessageBox.Show("Vui lòng chọn order cần thanh toán từ menu chính", "Thông báo", MessageBoxButtons.OK);
         }
@@ -63,8 +64,6 @@ namespace QuanNet
             {
                 string id = dgvOrder.SelectedRows[0].Cells["IdChiTiet"].Value.ToString();
                 ShowList(id);
-                //dgvOrder.Enabled = false;
-                //dgvOrder.ClearSelection();
             }
             else ShowOrder("");
         }

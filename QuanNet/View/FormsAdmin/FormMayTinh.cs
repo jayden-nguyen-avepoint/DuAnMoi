@@ -31,10 +31,13 @@ namespace QuanNet
             if (BllMayTinh.Instance.GetMayByIDMay(IDMay).IdTK == null)
             {
                 txtIDTK.Text = "Trống";
+                txtTenKh.Text = "Trống";
+                txtHD.Text = "Không có";
             }
             else
             {
                 txtIDTK.Text = (BllMayTinh.Instance.GetMayByIDMay(IDMay)).IdTK.ToString();
+                txtTenKh.Text = BllMayTinh.Instance.GetMayByIDMay(IDMay).TaiKhoan.TenKH.ToString();
             }
             txtMay.Text =BllMayTinh.Instance.GetMayByIDMay(IDMay).IdMay ;
             txtCauHinh.Text = BllMayTinh.Instance.GetMayByIDMay(IDMay).CauHinh;
@@ -66,8 +69,6 @@ namespace QuanNet
                 }
             }
             //Load may tinh đang sử dụng sẽ hiện đỏ, còn trống- xanh
-            //FormUsers f = new FormUsers();
-            //f.t = (s)=> txttgchoi.Text=s;
             //Truyền con trỏ hàm với Lambda Expressions
         }
     }

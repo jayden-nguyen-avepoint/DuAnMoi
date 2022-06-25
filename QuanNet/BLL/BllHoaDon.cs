@@ -36,7 +36,7 @@ namespace QuanNet.BLL
         public HoaDon GetHDByID(string IDHD)
         {
             return db.HoaDons.Find(IDHD);
-            //return ve 1 record duy nhat
+            //return ve 1 record duy nhat co id=IDHD
         }
         public List<HoaDon> GetListHDByID(string IDHD)
         {
@@ -51,54 +51,68 @@ namespace QuanNet.BLL
             }
             return data;
         }
-        public List<HoaDonView> GetHDViewByIDHD(string IDHD,string keyWord)
+        public List<HoaDonView> GetView(string id, string keyWord)
         {
-            List<HoaDonView> data = new List<HoaDonView>();
-            foreach (HoaDon i in GetListHDByID(IDHD))
-            {
-                if (i.IdHoaDon.Contains(keyWord) || i.IdTK.Contains(keyWord) )
-                {
-                    data.Add(new HoaDonView
-                    {
-                        ID_HoaDon = i.IdHoaDon,
-                        May = i.HoaDonChiTiet.IdMay,
-                        NgayXuatHD = i.HoaDonChiTiet.NgayThang,
-                        Tong_Tien =i.HoaDonChiTiet.TongTien.ToString()
-                    });
-                }
-            }
-            return data;
+            return db.HoaDons.Where(p => p.IdHoaDon.Contains(id) && (p.IdHoaDon.Contains(keyWord) || p.IdTK.Contains(keyWord) || p.HoaDonChiTiet.IdMay.Contains(keyWord))).Select(p => new HoaDonView {
+                ID_HoaDon = p.IdHoaDon,
+                May = p.HoaDonChiTiet.IdMay,
+                NgayXuatHD = p.HoaDonChiTiet.NgayThang,
+                Tong_Tien = p.HoaDonChiTiet.TongTien.ToString()
+            }).ToList();
         }
-        public dynamic SearchByDay(DateTime s, DateTime e)
+        public List<HoaDonView> SearchByDay(DateTime s, DateTime e)
         {
-            return  db.HoaDons.Where(p => p.HoaDonChiTiet.NgayThang >= s && p.HoaDonChiTiet.NgayThang <= e).Select(p => new { ID_HoaDon=p.IdHoaDon,p.IdTK, p.HoaDonChiTiet.NgayThang, p.TaiKhoan.TenKH, p.HoaDonChiTiet.TongTien }).ToList();
+            return  db.HoaDons.Where(p => p.HoaDonChiTiet.NgayThang >= s && p.HoaDonChiTiet.NgayThang <= e).Select(p =>new HoaDonView {
+                ID_HoaDon = p.IdHoaDon,
+                May = p.HoaDonChiTiet.IdMay,
+                NgayXuatHD = p.HoaDonChiTiet.NgayThang,
+                Tong_Tien = p.HoaDonChiTiet.TongTien.ToString() 
+                    }).ToList();
         }
-        public dynamic Sort(int i)
+        public List<HoaDonView> Sort(int i)
         {
-            if (i == 0)
+            if (i == 1)
             {
-                return (db.HoaDons.Select(p => new { ID_HoaDon=p.IdHoaDon, p.HoaDonChiTiet.NgayThang, p.TaiKhoan.TenKH, p.HoaDonChiTiet.TongTien }).OrderBy(p => p.TenKH)).ToList();
+                return (db.HoaDons.Select(p => new HoaDonView { ID_HoaDon = p.IdHoaDon, May = p.HoaDonChiTiet.IdMay, NgayXuatHD = p.HoaDonChiTiet.NgayThang, Tong_Tien = p.HoaDonChiTiet.TongTien.ToString() }).OrderBy(p => p.ID_HoaDon)).ToList();
             }
-            else if (i == 1)
+            else if (i == 2)
             {
-                return (db.HoaDons.Select(p => new { ID_HoaDon=p.IdHoaDon, p.IdTK, p.HoaDonChiTiet.NgayThang, p.TaiKhoan.TenKH, p.HoaDonChiTiet.TongTien }).OrderBy(p => p.NgayThang)).ToList();
+                return (db.HoaDons.Select(p => new HoaDonView { ID_HoaDon = p.IdHoaDon, May = p.HoaDonChiTiet.IdMay, NgayXuatHD = p.HoaDonChiTiet.NgayThang, Tong_Tien = p.HoaDonChiTiet.TongTien.ToString() }).OrderBy(p => p.NgayXuatHD)).ToList();
+            }
+            else if(i == 3)
+            {
+                return (db.HoaDons.Select(p => new HoaDonView { ID_HoaDon = p.IdHoaDon, May = p.HoaDonChiTiet.IdMay, NgayXuatHD = p.HoaDonChiTiet.NgayThang, Tong_Tien = p.HoaDonChiTiet.TongTien.ToString() }).OrderBy(p => p.Tong_Tien)).ToList();
             }
             else
             {
-                return (db.HoaDons.Select(p => new { p.IdHoaDon, p.IdTK, p.HoaDonChiTiet.NgayThang, p.TaiKhoan.TenKH ,p.HoaDonChiTiet.TongTien}).OrderBy(p => p.TongTien)).ToList();
+                return (db.HoaDons.Select(p => new HoaDonView { ID_HoaDon = p.IdHoaDon, May = p.HoaDonChiTiet.IdMay, NgayXuatHD = p.HoaDonChiTiet.NgayThang, Tong_Tien = p.HoaDonChiTiet.TongTien.ToString() })).ToList();
             }
 
         }
         public void AddHD(HoaDon s)
         {
+            try
+            {
                 db.HoaDons.Add(s);
-                db.SaveChanges();            
+                db.SaveChanges();
+            }
+            catch
+            {
+                MessageBox.Show("Không thể xuất hóa đơn này", "Thông báo", MessageBoxButton.OK);
+            }
         }
         public void DeleteHD(string IDHD)
         {
-            HoaDon s = db.HoaDons.Find(IDHD);
-            db.HoaDons.Remove(s);
-            db.SaveChanges();
+            try
+            {
+                HoaDon s = db.HoaDons.Find(IDHD);
+                db.HoaDons.Remove(s);
+                db.SaveChanges();
+            }
+            catch
+            {
+                MessageBox.Show("Không thể xóa hóa đơn này", "Thông báo", MessageBoxButton.OK);
+            }
         }
         public bool checkVal(string id)
         {
@@ -167,7 +181,7 @@ namespace QuanNet.BLL
             }
             return data;
         }
-        public List<OrderAdView> GetOrderAd(string Id, DateTime s, string keyWord)
+        public List<OrderAdView> GetOrderAdmin(string Id, DateTime s, string keyWord)
         {
             List<OrderAdView> dt = new List<OrderAdView>();
             bool TT;
@@ -185,9 +199,9 @@ namespace QuanNet.BLL
                         {
                             IdChiTiet = i.IdChiTiet,
                             TongTien = i.TongTien,
+                            NgayOrder=i.NgayThang,
                             IdMay = i.IdMay,
                             Trang_thai = TT
-
                         }) ;
                     }
                 }
