@@ -18,6 +18,7 @@ namespace QuanNet.View.FormsAdmin
         public delegate void MyDel(string id, string name);
         public  MyDel d { get; set; }
         public string IDKH { get; set; }
+        public string MK { get; set; }
         public AddEditForm(string ID)
         {
             InitializeComponent();
@@ -29,6 +30,7 @@ namespace QuanNet.View.FormsAdmin
             if (ID != "")
             {
                 GUI(ID);
+                MK = BllKhachHang.Instance.GetTKByIDTK(ID).MatKhau;
             }
             else
             {
@@ -38,9 +40,6 @@ namespace QuanNet.View.FormsAdmin
         }
         public void GUI(string id)
         {
-            txtMK.PasswordChar = false;
-            lbNMK.Visible = false;
-            txtNMK.Visible = false;
             lbEr.Visible = false;
             txtSoDu.Enabled = false;
             TaiKhoan s=BllKhachHang.Instance.GetTKByIDTK(id);
@@ -150,6 +149,7 @@ namespace QuanNet.View.FormsAdmin
             else if(txtNMK.Text == txtMK.Text)
             {
                 txtNMK.BorderFocusColor = Color.HotPink;
+                txtNMK.BorderColor = Color.FromArgb(253, 209, 84);
                 lbEr.Visible=false;
             }
         }
@@ -157,6 +157,23 @@ namespace QuanNet.View.FormsAdmin
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
+        }
+        private void AddEditForm_Load(object sender, EventArgs e)
+        {
+            if(IDKH!="")
+            {
+                txtNMK.Text = txtMK.Text;
+            }    
+        }
+
+        private void btnSee_MouseDown(object sender, MouseEventArgs e)
+        {
+            txtMK.PasswordChar = false;
+        }
+
+        private void btnSee_MouseUp(object sender, MouseEventArgs e)
+        {
+            txtMK.PasswordChar = true;
         }
     }
 }

@@ -24,14 +24,10 @@ namespace QuanNet
         public void TongHoaDon()
         {   
             int dem=0;
-            int Tongtienhd=0;
             foreach (DataGridViewRow i in dgvHoaDon.Rows)
             {
                 dem += 1; 
-                Tongtienhd += Convert.ToInt32(i.Cells["Tong_Tien"].Value);
             }
-            lbTong.Text = dem.ToString();
-            lbTongTien.Text = Tongtienhd.ToString();
         }
         public void ShowListHD(string i,string Key="")
         {
@@ -48,7 +44,15 @@ namespace QuanNet
         {
             DateTime start=dateStart.Value.Date;
             DateTime end = dateEnd.Value.Date;
-            dgvHoaDon.DataSource = BllHoaDon.Instance.SearchByDay(start, end);
+            if (end>= start)
+            {
+
+                dgvHoaDon.DataSource = BllHoaDon.Instance.SearchByDay(start, end);
+            }else
+            {
+                dateEnd.Value = DateTime.Now.Date;
+                dgvHoaDon.DataSource = BllHoaDon.Instance.SearchByDay(start, end);
+            }
 
         }
 

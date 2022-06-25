@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using QuanNet.DTO;
 using QuanNet.LinQ;
 
@@ -31,8 +32,15 @@ namespace QuanNet.BLL
 
         public void addOrder1(ListTPham list)
         {
-            db.ListTPhams.Add(list);
-            db.SaveChanges();
+            try
+            {
+                db.ListTPhams.Add(list);
+                db.SaveChanges();
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi hệ thống", "Thông báo", MessageBoxButton.OK);
+            }
         }
         public string GetIDTP(string tenmon)
         {

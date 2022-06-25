@@ -154,26 +154,30 @@ namespace QuanNet
             {
                 if (txtTKKH.Text.ToString() == i.TenDN && txtMKKH.Text.ToString() == i.MatKhau)
                 {
-                    if (cbbMay.SelectedIndex != -1)
-                    {
-                        bool tt = BllMayTinh.Instance.GetMayByIDMay(cbbMay.SelectedItem.ToString()).TrangThai;
-                        if (tt == false)
+
+                        if (cbbMay.SelectedIndex != -1)
                         {
-                            string may = cbbMay.SelectedItem.ToString();
-                            BllMayTinh.Instance.addTKinMay(may, tk, "");
-                            FormsUser.FormUsers f = new FormsUser.FormUsers(may, tk);
-                            f.Show();
+                            if ((int)i.Sodu >= 2000)
+                            {
+                                bool tt = BllMayTinh.Instance.GetMayByIDMay(cbbMay.SelectedItem.ToString()).TrangThai;
+                                if (tt == false)
+                                {
+                                    string may = cbbMay.SelectedItem.ToString();
+                                    BllMayTinh.Instance.addTKinMay(may, tk, "");
+                                    FormsUser.FormUsers f = new FormsUser.FormUsers(may, tk);
+                                    f.Show();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Máy bận! Xin vui lòng chọn máy khác. ", "Thông báo", MessageBoxButtons.OK);
+
+                                }
+                            }else MessageBox.Show("Số dư không đủ", "Thông báo", MessageBoxButtons.OK);
                         }
                         else
                         {
-                            MessageBox.Show("Máy bận! Xin vui lòng chọn máy khác. ", "Thông báo", MessageBoxButtons.OK);
-
+                            MessageBox.Show("Vui lòng chọn máy ", "Thông báo", MessageBoxButtons.OK);
                         }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Vui lòng chọn máy ", "Thông báo", MessageBoxButtons.OK);
-                    }
                 }
                 else
                 {
