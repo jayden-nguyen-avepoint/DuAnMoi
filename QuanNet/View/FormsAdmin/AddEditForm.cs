@@ -1,5 +1,4 @@
 ﻿using QuanNet.BLL;
-using QuanNet.LinQ;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

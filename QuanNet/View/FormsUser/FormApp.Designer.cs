@@ -35,6 +35,16 @@
             this.txtHĐ = new QuanNet.CustomsDetail.CustomTextbox();
             this.label19 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.F8Web = new QuanNet.CustomsDetail.CusBtn();
+            this.Y8Game = new QuanNet.CustomsDetail.CusBtn();
+            this.Vscode = new QuanNet.CustomsDetail.CusBtn();
+            this.DevC = new QuanNet.CustomsDetail.CusBtn();
+            this.VisualStudio = new QuanNet.CustomsDetail.CusBtn();
             this.NTVV = new QuanNet.CustomsDetail.CusBtn();
             this.RainbowHat = new QuanNet.CustomsDetail.CusBtn();
             this.BlockADS = new QuanNet.CustomsDetail.CusBtn();
@@ -55,16 +65,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.VisualStudio = new QuanNet.CustomsDetail.CusBtn();
-            this.DevC = new QuanNet.CustomsDetail.CusBtn();
-            this.Vscode = new QuanNet.CustomsDetail.CusBtn();
-            this.Y8Game = new QuanNet.CustomsDetail.CusBtn();
-            this.F8Web = new QuanNet.CustomsDetail.CusBtn();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -185,6 +185,171 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1382, 780);
             this.panel2.TabIndex = 1;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label14.Location = new System.Drawing.Point(1078, 300);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(85, 16);
+            this.label14.TabIndex = 59;
+            this.label14.Text = "Visual Studio";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label13.Location = new System.Drawing.Point(936, 300);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(30, 16);
+            this.label13.TabIndex = 58;
+            this.label13.Text = "C++";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label9.Location = new System.Drawing.Point(756, 300);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(61, 16);
+            this.label9.TabIndex = 57;
+            this.label9.Text = "VS Code";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label8.Location = new System.Drawing.Point(591, 300);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(52, 16);
+            this.label8.TabIndex = 56;
+            this.label8.Text = "Y8.com";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(414, 300);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(56, 16);
+            this.label6.TabIndex = 55;
+            this.label6.Text = "F8 code";
+            // 
+            // F8Web
+            // 
+            this.F8Web.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
+            this.F8Web.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
+            this.F8Web.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("F8Web.BackgroundImage")));
+            this.F8Web.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.F8Web.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.F8Web.BorderRadius = 20;
+            this.F8Web.BorderSize = 0;
+            this.F8Web.FlatAppearance.BorderSize = 0;
+            this.F8Web.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.F8Web.ForeColor = System.Drawing.Color.White;
+            this.F8Web.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.F8Web.Location = new System.Drawing.Point(393, 197);
+            this.F8Web.Name = "F8Web";
+            this.F8Web.Size = new System.Drawing.Size(100, 100);
+            this.F8Web.TabIndex = 54;
+            this.F8Web.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.F8Web.TextColor = System.Drawing.Color.White;
+            this.F8Web.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.F8Web.UseVisualStyleBackColor = false;
+            this.F8Web.Click += new System.EventHandler(this.icon_Click);
+            // 
+            // Y8Game
+            // 
+            this.Y8Game.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
+            this.Y8Game.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
+            this.Y8Game.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Y8Game.BackgroundImage")));
+            this.Y8Game.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Y8Game.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.Y8Game.BorderRadius = 20;
+            this.Y8Game.BorderSize = 0;
+            this.Y8Game.FlatAppearance.BorderSize = 0;
+            this.Y8Game.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Y8Game.ForeColor = System.Drawing.Color.White;
+            this.Y8Game.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Y8Game.Location = new System.Drawing.Point(570, 197);
+            this.Y8Game.Name = "Y8Game";
+            this.Y8Game.Size = new System.Drawing.Size(100, 100);
+            this.Y8Game.TabIndex = 53;
+            this.Y8Game.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Y8Game.TextColor = System.Drawing.Color.White;
+            this.Y8Game.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Y8Game.UseVisualStyleBackColor = false;
+            this.Y8Game.Click += new System.EventHandler(this.icon_Click);
+            // 
+            // Vscode
+            // 
+            this.Vscode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
+            this.Vscode.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
+            this.Vscode.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Vscode.BackgroundImage")));
+            this.Vscode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Vscode.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.Vscode.BorderRadius = 20;
+            this.Vscode.BorderSize = 0;
+            this.Vscode.FlatAppearance.BorderSize = 0;
+            this.Vscode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Vscode.ForeColor = System.Drawing.Color.White;
+            this.Vscode.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Vscode.Location = new System.Drawing.Point(738, 197);
+            this.Vscode.Name = "Vscode";
+            this.Vscode.Size = new System.Drawing.Size(100, 100);
+            this.Vscode.TabIndex = 52;
+            this.Vscode.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Vscode.TextColor = System.Drawing.Color.White;
+            this.Vscode.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Vscode.UseVisualStyleBackColor = false;
+            this.Vscode.Click += new System.EventHandler(this.icon_Click);
+            // 
+            // DevC
+            // 
+            this.DevC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
+            this.DevC.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
+            this.DevC.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DevC.BackgroundImage")));
+            this.DevC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DevC.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.DevC.BorderRadius = 20;
+            this.DevC.BorderSize = 0;
+            this.DevC.FlatAppearance.BorderSize = 0;
+            this.DevC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DevC.ForeColor = System.Drawing.Color.White;
+            this.DevC.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.DevC.Location = new System.Drawing.Point(904, 197);
+            this.DevC.Name = "DevC";
+            this.DevC.Size = new System.Drawing.Size(100, 100);
+            this.DevC.TabIndex = 51;
+            this.DevC.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.DevC.TextColor = System.Drawing.Color.White;
+            this.DevC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.DevC.UseVisualStyleBackColor = false;
+            this.DevC.Click += new System.EventHandler(this.icon_Click);
+            // 
+            // VisualStudio
+            // 
+            this.VisualStudio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
+            this.VisualStudio.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
+            this.VisualStudio.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("VisualStudio.BackgroundImage")));
+            this.VisualStudio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.VisualStudio.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.VisualStudio.BorderRadius = 20;
+            this.VisualStudio.BorderSize = 0;
+            this.VisualStudio.FlatAppearance.BorderSize = 0;
+            this.VisualStudio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.VisualStudio.ForeColor = System.Drawing.Color.White;
+            this.VisualStudio.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.VisualStudio.Location = new System.Drawing.Point(1063, 197);
+            this.VisualStudio.Name = "VisualStudio";
+            this.VisualStudio.Size = new System.Drawing.Size(100, 100);
+            this.VisualStudio.TabIndex = 50;
+            this.VisualStudio.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.VisualStudio.TextColor = System.Drawing.Color.White;
+            this.VisualStudio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.VisualStudio.UseVisualStyleBackColor = false;
+            this.VisualStudio.Click += new System.EventHandler(this.icon_Click);
             // 
             // NTVV
             // 
@@ -517,166 +682,6 @@
             this.label1.Text = "Liên Minh";
             this.label1.Click += new System.EventHandler(this.icon_Click);
             this.label1.DoubleClick += new System.EventHandler(this.icon_Click);
-            // 
-            // VisualStudio
-            // 
-            this.VisualStudio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
-            this.VisualStudio.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
-            this.VisualStudio.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("VisualStudio.BackgroundImage")));
-            this.VisualStudio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.VisualStudio.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.VisualStudio.BorderRadius = 20;
-            this.VisualStudio.BorderSize = 0;
-            this.VisualStudio.FlatAppearance.BorderSize = 0;
-            this.VisualStudio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.VisualStudio.ForeColor = System.Drawing.Color.White;
-            this.VisualStudio.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.VisualStudio.Location = new System.Drawing.Point(1063, 197);
-            this.VisualStudio.Name = "VisualStudio";
-            this.VisualStudio.Size = new System.Drawing.Size(100, 100);
-            this.VisualStudio.TabIndex = 50;
-            this.VisualStudio.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.VisualStudio.TextColor = System.Drawing.Color.White;
-            this.VisualStudio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.VisualStudio.UseVisualStyleBackColor = false;
-            // 
-            // DevC
-            // 
-            this.DevC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
-            this.DevC.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
-            this.DevC.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DevC.BackgroundImage")));
-            this.DevC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.DevC.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.DevC.BorderRadius = 20;
-            this.DevC.BorderSize = 0;
-            this.DevC.FlatAppearance.BorderSize = 0;
-            this.DevC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DevC.ForeColor = System.Drawing.Color.White;
-            this.DevC.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.DevC.Location = new System.Drawing.Point(904, 197);
-            this.DevC.Name = "DevC";
-            this.DevC.Size = new System.Drawing.Size(100, 100);
-            this.DevC.TabIndex = 51;
-            this.DevC.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.DevC.TextColor = System.Drawing.Color.White;
-            this.DevC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.DevC.UseVisualStyleBackColor = false;
-            // 
-            // Vscode
-            // 
-            this.Vscode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
-            this.Vscode.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
-            this.Vscode.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Vscode.BackgroundImage")));
-            this.Vscode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Vscode.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.Vscode.BorderRadius = 20;
-            this.Vscode.BorderSize = 0;
-            this.Vscode.FlatAppearance.BorderSize = 0;
-            this.Vscode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Vscode.ForeColor = System.Drawing.Color.White;
-            this.Vscode.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Vscode.Location = new System.Drawing.Point(738, 197);
-            this.Vscode.Name = "Vscode";
-            this.Vscode.Size = new System.Drawing.Size(100, 100);
-            this.Vscode.TabIndex = 52;
-            this.Vscode.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Vscode.TextColor = System.Drawing.Color.White;
-            this.Vscode.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Vscode.UseVisualStyleBackColor = false;
-            // 
-            // Y8Game
-            // 
-            this.Y8Game.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
-            this.Y8Game.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
-            this.Y8Game.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Y8Game.BackgroundImage")));
-            this.Y8Game.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Y8Game.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.Y8Game.BorderRadius = 20;
-            this.Y8Game.BorderSize = 0;
-            this.Y8Game.FlatAppearance.BorderSize = 0;
-            this.Y8Game.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Y8Game.ForeColor = System.Drawing.Color.White;
-            this.Y8Game.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Y8Game.Location = new System.Drawing.Point(570, 197);
-            this.Y8Game.Name = "Y8Game";
-            this.Y8Game.Size = new System.Drawing.Size(100, 100);
-            this.Y8Game.TabIndex = 53;
-            this.Y8Game.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Y8Game.TextColor = System.Drawing.Color.White;
-            this.Y8Game.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Y8Game.UseVisualStyleBackColor = false;
-            // 
-            // F8Web
-            // 
-            this.F8Web.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
-            this.F8Web.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(57)))), ((int)(((byte)(82)))));
-            this.F8Web.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("F8Web.BackgroundImage")));
-            this.F8Web.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.F8Web.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.F8Web.BorderRadius = 20;
-            this.F8Web.BorderSize = 0;
-            this.F8Web.FlatAppearance.BorderSize = 0;
-            this.F8Web.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.F8Web.ForeColor = System.Drawing.Color.White;
-            this.F8Web.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.F8Web.Location = new System.Drawing.Point(393, 197);
-            this.F8Web.Name = "F8Web";
-            this.F8Web.Size = new System.Drawing.Size(100, 100);
-            this.F8Web.TabIndex = 54;
-            this.F8Web.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.F8Web.TextColor = System.Drawing.Color.White;
-            this.F8Web.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.F8Web.UseVisualStyleBackColor = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(414, 300);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 16);
-            this.label6.TabIndex = 55;
-            this.label6.Text = "F8 code";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(591, 300);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(52, 16);
-            this.label8.TabIndex = 56;
-            this.label8.Text = "Y8.com";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(756, 300);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 16);
-            this.label9.TabIndex = 57;
-            this.label9.Text = "VS Code";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label13.Location = new System.Drawing.Point(936, 300);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(30, 16);
-            this.label13.TabIndex = 58;
-            this.label13.Text = "C++";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label14.Location = new System.Drawing.Point(1078, 300);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(85, 16);
-            this.label14.TabIndex = 59;
-            this.label14.Text = "Visual Studio";
             // 
             // FormApp
             // 

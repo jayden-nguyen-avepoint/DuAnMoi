@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using QuanNet.BLL;
 using QuanNet.DTO;
-using QuanNet.LinQ;
 
 namespace QuanNet
 {

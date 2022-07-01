@@ -1,5 +1,4 @@
 ﻿using QuanNet.BLL;
-using QuanNet.LinQ;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -55,12 +54,13 @@ namespace QuanNet
                 dateEnd.Value = DateTime.Now.Date;
                 dgvHoaDon.DataSource = BllHoaDon.Instance.SearchByDay(start, end);
             }
-
+            TongHoaDon();
         }
 
         private void sort_OnSelectedIndexChanged(object sender, EventArgs e)
         {
             dgvHoaDon.DataSource = BllHoaDon.Instance.Sort(sort.SelectedIndex);
+            TongHoaDon();
         }
     }
 }

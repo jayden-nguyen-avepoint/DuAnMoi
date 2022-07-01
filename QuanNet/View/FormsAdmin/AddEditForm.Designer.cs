@@ -129,7 +129,7 @@
             this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.btnHuy.IconChar = FontAwesome.Sharp.IconChar.DollarSign;
+            this.btnHuy.IconChar = FontAwesome.Sharp.IconChar.Ban;
             this.btnHuy.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
             this.btnHuy.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnHuy.IconSize = 35;
@@ -149,7 +149,7 @@
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.btnOK.IconChar = FontAwesome.Sharp.IconChar.DollarSign;
+            this.btnOK.IconChar = FontAwesome.Sharp.IconChar.Check;
             this.btnOK.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
             this.btnOK.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnOK.IconSize = 35;

@@ -69,6 +69,21 @@
     <Compile Include="BLL\BllMon.cs" />
     <Compile Include="BLL\BllOrderKH.cs" />
     <Compile Include="BLL\BllThongKe.cs" />
+    <Compile Include="CyberGame.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CyberGame.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CyberGame.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CyberGame.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CyberGame.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CyberGame.edmx</DependentUpon>
+    </Compile>
     <Compile Include="DTO\DashboardView.cs" />
     <Compile Include="DTO\MayTinhView.cs" />
     <Compile Include="DTO\OrderAdView.cs" />
@@ -76,14 +91,30 @@
     <Compile Include="DTO\CbbIDKH.cs" />
     <Compile Include="DTO\HoaDonView.cs" />
     <Compile Include="DTO\TaiKhoanView.cs" />
-    <Compile Include="LinQ\HoaDon.cs" />
-    <Compile Include="LinQ\HoaDonChiTiet.cs" />
-    <Compile Include="LinQ\ListTPham.cs" />
-    <Compile Include="LinQ\LoaiTPham.cs" />
-    <Compile Include="LinQ\May.cs" />
-    <Compile Include="LinQ\DoAnQLCyber.cs" />
-    <Compile Include="LinQ\TaiKhoan.cs" />
-    <Compile Include="LinQ\TPham.cs" />
+    <Compile Include="HoaDon.cs">
+      <DependentUpon>CyberGame.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDonChiTiet.cs">
+      <DependentUpon>CyberGame.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListTPham.cs">
+      <DependentUpon>CyberGame.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoaiTPham.cs">
+      <DependentUpon>CyberGame.tt</DependentUpon>
+    </Compile>
+    <Compile Include="May.cs">
+      <DependentUpon>CyberGame.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>CyberGame.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaiKhoan.cs">
+      <DependentUpon>CyberGame.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TPham.cs">
+      <DependentUpon>CyberGame.tt</DependentUpon>
+    </Compile>
     <Compile Include="View\CustomsDetail\CusBtn.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -206,6 +237,13 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="CyberGame.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CyberGame.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="CyberGame.edmx.diagram">
+      <DependentUpon>CyberGame.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -314,6 +352,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CyberGame.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CyberGame.edmx</DependentUpon>
+      <LastGenOutput>CyberGame.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="CyberGame.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CyberGame.edmx</DependentUpon>
+      <LastGenOutput>CyberGame.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

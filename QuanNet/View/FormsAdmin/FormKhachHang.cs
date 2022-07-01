@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanNet.BLL;
 using QuanNet.DTO;
-using QuanNet.LinQ;
 using QuanNet.Properties;
 using QuanNet.View.FormsAdmin;
 

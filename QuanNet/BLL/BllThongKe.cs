@@ -1,5 +1,4 @@
 ﻿using QuanNet.DTO;
-using QuanNet.LinQ;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +9,7 @@ namespace QuanNet.BLL
 {
     public class BllThongKe
     {
-        DoAnQLCyber db = new DoAnQLCyber();
+        CyberManagerEntities db = new CyberManagerEntities();
         //public string ID_CT { get; set; }
         private static BllThongKe _Instance;
         public static BllThongKe Instance

@@ -1,0 +1,557 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CyberManager.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="HoaDon">
+          <Key>
+            <PropertyRef Name="IdHoaDon" />
+          </Key>
+          <Property Name="IdHoaDon" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="IdTK" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="IdChiTiet" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HoaDonChiTiet">
+          <Key>
+            <PropertyRef Name="IdChiTiet" />
+          </Key>
+          <Property Name="IdChiTiet" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NgayThang" Type="date" Nullable="false" />
+          <Property Name="IdMay" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="TongTien" Type="int" />
+        </EntityType>
+        <EntityType Name="ListTPham">
+          <Key>
+            <PropertyRef Name="IdOrderList" />
+          </Key>
+          <Property Name="IdOrderList" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="IdTP" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="SoluongTP" Type="int" Nullable="false" />
+          <Property Name="ThanhTien" Type="int" Nullable="false" />
+          <Property Name="IdChiTiet" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LoaiTPham">
+          <Key>
+            <PropertyRef Name="IdLoaiTP" />
+          </Key>
+          <Property Name="IdLoaiTP" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="TenLoaiTP" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="May">
+          <Key>
+            <PropertyRef Name="IdMay" />
+          </Key>
+          <Property Name="IdMay" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="CauHinh" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="TrangThai" Type="bit" Nullable="false" />
+          <Property Name="HoatDong" Type="nvarchar(max)" />
+          <Property Name="IdTK" Type="nvarchar" MaxLength="20" />
+          <Property Name="TienGio" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="TaiKhoan">
+          <Key>
+            <PropertyRef Name="IdTK" />
+          </Key>
+          <Property Name="IdTK" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="TenDN" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="MatKhau" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Sodu" Type="int" Nullable="false" />
+          <Property Name="TenKH" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="LienHe" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="TPham">
+          <Key>
+            <PropertyRef Name="IdTP" />
+          </Key>
+          <Property Name="IdTP" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="TenTP" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Gia" Type="int" Nullable="false" />
+          <Property Name="IdLoaiTP" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_dbo_HoaDon_dbo_HoaDonChiTiet_IdChiTiet">
+          <End Role="HoaDonChiTiet" Type="Self.HoaDonChiTiet" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HoaDonChiTiet">
+              <PropertyRef Name="IdChiTiet" />
+            </Principal>
+            <Dependent Role="HoaDon">
+              <PropertyRef Name="IdChiTiet" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_HoaDon_dbo_TaiKhoan_IdTK">
+          <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaiKhoan">
+              <PropertyRef Name="IdTK" />
+            </Principal>
+            <Dependent Role="HoaDon">
+              <PropertyRef Name="IdTK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_HoaDonChiTiet_dbo_May_IdMay">
+          <End Role="May" Type="Self.May" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="HoaDonChiTiet" Type="Self.HoaDonChiTiet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="May">
+              <PropertyRef Name="IdMay" />
+            </Principal>
+            <Dependent Role="HoaDonChiTiet">
+              <PropertyRef Name="IdMay" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_ListTPham_dbo_HoaDonChiTiet_IdChiTiet">
+          <End Role="HoaDonChiTiet" Type="Self.HoaDonChiTiet" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ListTPham" Type="Self.ListTPham" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HoaDonChiTiet">
+              <PropertyRef Name="IdChiTiet" />
+            </Principal>
+            <Dependent Role="ListTPham">
+              <PropertyRef Name="IdChiTiet" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_ListTPham_dbo_TPham_IdTP">
+          <End Role="TPham" Type="Self.TPham" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ListTPham" Type="Self.ListTPham" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TPham">
+              <PropertyRef Name="IdTP" />
+            </Principal>
+            <Dependent Role="ListTPham">
+              <PropertyRef Name="IdTP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_May_dbo_TaiKhoan_IdTK">
+          <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="0..1" />
+          <End Role="May" Type="Self.May" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaiKhoan">
+              <PropertyRef Name="IdTK" />
+            </Principal>
+            <Dependent Role="May">
+              <PropertyRef Name="IdTK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_TPham_dbo_LoaiTPham_IdLoaiTP">
+          <End Role="LoaiTPham" Type="Self.LoaiTPham" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TPham" Type="Self.TPham" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LoaiTPham">
+              <PropertyRef Name="IdLoaiTP" />
+            </Principal>
+            <Dependent Role="TPham">
+              <PropertyRef Name="IdLoaiTP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CyberManagerStoreContainer">
+          <EntitySet Name="HoaDon" EntityType="Self.HoaDon" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HoaDonChiTiet" EntityType="Self.HoaDonChiTiet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ListTPham" EntityType="Self.ListTPham" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LoaiTPham" EntityType="Self.LoaiTPham" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="May" EntityType="Self.May" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TPham" EntityType="Self.TPham" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_dbo_HoaDon_dbo_HoaDonChiTiet_IdChiTiet" Association="Self.FK_dbo_HoaDon_dbo_HoaDonChiTiet_IdChiTiet">
+            <End Role="HoaDonChiTiet" EntitySet="HoaDonChiTiet" />
+            <End Role="HoaDon" EntitySet="HoaDon" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_HoaDon_dbo_TaiKhoan_IdTK" Association="Self.FK_dbo_HoaDon_dbo_TaiKhoan_IdTK">
+            <End Role="TaiKhoan" EntitySet="TaiKhoan" />
+            <End Role="HoaDon" EntitySet="HoaDon" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_HoaDonChiTiet_dbo_May_IdMay" Association="Self.FK_dbo_HoaDonChiTiet_dbo_May_IdMay">
+            <End Role="May" EntitySet="May" />
+            <End Role="HoaDonChiTiet" EntitySet="HoaDonChiTiet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_ListTPham_dbo_HoaDonChiTiet_IdChiTiet" Association="Self.FK_dbo_ListTPham_dbo_HoaDonChiTiet_IdChiTiet">
+            <End Role="HoaDonChiTiet" EntitySet="HoaDonChiTiet" />
+            <End Role="ListTPham" EntitySet="ListTPham" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_ListTPham_dbo_TPham_IdTP" Association="Self.FK_dbo_ListTPham_dbo_TPham_IdTP">
+            <End Role="TPham" EntitySet="TPham" />
+            <End Role="ListTPham" EntitySet="ListTPham" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_May_dbo_TaiKhoan_IdTK" Association="Self.FK_dbo_May_dbo_TaiKhoan_IdTK">
+            <End Role="TaiKhoan" EntitySet="TaiKhoan" />
+            <End Role="May" EntitySet="May" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_TPham_dbo_LoaiTPham_IdLoaiTP" Association="Self.FK_dbo_TPham_dbo_LoaiTPham_IdLoaiTP">
+            <End Role="LoaiTPham" EntitySet="LoaiTPham" />
+            <End Role="TPham" EntitySet="TPham" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CyberManager" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="HoaDon">
+          <Key>
+            <PropertyRef Name="IdHoaDon" />
+          </Key>
+          <Property Name="IdHoaDon" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IdTK" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IdChiTiet" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="HoaDonChiTiet" Relationship="Self.FK_dbo_HoaDon_dbo_HoaDonChiTiet_IdChiTiet" FromRole="HoaDon" ToRole="HoaDonChiTiet" />
+          <NavigationProperty Name="TaiKhoan" Relationship="Self.FK_dbo_HoaDon_dbo_TaiKhoan_IdTK" FromRole="HoaDon" ToRole="TaiKhoan" />
+        </EntityType>
+        <EntityType Name="HoaDonChiTiet">
+          <Key>
+            <PropertyRef Name="IdChiTiet" />
+          </Key>
+          <Property Name="IdChiTiet" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NgayThang" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="IdMay" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TongTien" Type="Int32" />
+          <NavigationProperty Name="HoaDons" Relationship="Self.FK_dbo_HoaDon_dbo_HoaDonChiTiet_IdChiTiet" FromRole="HoaDonChiTiet" ToRole="HoaDon" />
+          <NavigationProperty Name="May" Relationship="Self.FK_dbo_HoaDonChiTiet_dbo_May_IdMay" FromRole="HoaDonChiTiet" ToRole="May" />
+          <NavigationProperty Name="ListTPhams" Relationship="Self.FK_dbo_ListTPham_dbo_HoaDonChiTiet_IdChiTiet" FromRole="HoaDonChiTiet" ToRole="ListTPham" />
+        </EntityType>
+        <EntityType Name="ListTPham">
+          <Key>
+            <PropertyRef Name="IdOrderList" />
+          </Key>
+          <Property Name="IdOrderList" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IdTP" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SoluongTP" Type="Int32" Nullable="false" />
+          <Property Name="ThanhTien" Type="Int32" Nullable="false" />
+          <Property Name="IdChiTiet" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="HoaDonChiTiet" Relationship="Self.FK_dbo_ListTPham_dbo_HoaDonChiTiet_IdChiTiet" FromRole="ListTPham" ToRole="HoaDonChiTiet" />
+          <NavigationProperty Name="TPham" Relationship="Self.FK_dbo_ListTPham_dbo_TPham_IdTP" FromRole="ListTPham" ToRole="TPham" />
+        </EntityType>
+        <EntityType Name="LoaiTPham">
+          <Key>
+            <PropertyRef Name="IdLoaiTP" />
+          </Key>
+          <Property Name="IdLoaiTP" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenLoaiTP" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="TPhams" Relationship="Self.FK_dbo_TPham_dbo_LoaiTPham_IdLoaiTP" FromRole="LoaiTPham" ToRole="TPham" />
+        </EntityType>
+        <EntityType Name="May">
+          <Key>
+            <PropertyRef Name="IdMay" />
+          </Key>
+          <Property Name="IdMay" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CauHinh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrangThai" Type="Boolean" Nullable="false" />
+          <Property Name="HoatDong" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IdTK" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="TienGio" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="HoaDonChiTiets" Relationship="Self.FK_dbo_HoaDonChiTiet_dbo_May_IdMay" FromRole="May" ToRole="HoaDonChiTiet" />
+          <NavigationProperty Name="TaiKhoan" Relationship="Self.FK_dbo_May_dbo_TaiKhoan_IdTK" FromRole="May" ToRole="TaiKhoan" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TaiKhoan">
+          <Key>
+            <PropertyRef Name="IdTK" />
+          </Key>
+          <Property Name="IdTK" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenDN" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MatKhau" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Sodu" Type="Int32" Nullable="false" />
+          <Property Name="TenKH" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LienHe" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="HoaDons" Relationship="Self.FK_dbo_HoaDon_dbo_TaiKhoan_IdTK" FromRole="TaiKhoan" ToRole="HoaDon" />
+          <NavigationProperty Name="Mays" Relationship="Self.FK_dbo_May_dbo_TaiKhoan_IdTK" FromRole="TaiKhoan" ToRole="May" />
+        </EntityType>
+        <EntityType Name="TPham">
+          <Key>
+            <PropertyRef Name="IdTP" />
+          </Key>
+          <Property Name="IdTP" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenTP" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Gia" Type="Int32" Nullable="false" />
+          <Property Name="IdLoaiTP" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="ListTPhams" Relationship="Self.FK_dbo_ListTPham_dbo_TPham_IdTP" FromRole="TPham" ToRole="ListTPham" />
+          <NavigationProperty Name="LoaiTPham" Relationship="Self.FK_dbo_TPham_dbo_LoaiTPham_IdLoaiTP" FromRole="TPham" ToRole="LoaiTPham" />
+        </EntityType>
+        <Association Name="FK_dbo_HoaDon_dbo_HoaDonChiTiet_IdChiTiet">
+          <End Role="HoaDonChiTiet" Type="Self.HoaDonChiTiet" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HoaDonChiTiet">
+              <PropertyRef Name="IdChiTiet" />
+            </Principal>
+            <Dependent Role="HoaDon">
+              <PropertyRef Name="IdChiTiet" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_HoaDon_dbo_TaiKhoan_IdTK">
+          <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaiKhoan">
+              <PropertyRef Name="IdTK" />
+            </Principal>
+            <Dependent Role="HoaDon">
+              <PropertyRef Name="IdTK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_HoaDonChiTiet_dbo_May_IdMay">
+          <End Role="May" Type="Self.May" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="HoaDonChiTiet" Type="Self.HoaDonChiTiet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="May">
+              <PropertyRef Name="IdMay" />
+            </Principal>
+            <Dependent Role="HoaDonChiTiet">
+              <PropertyRef Name="IdMay" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_ListTPham_dbo_HoaDonChiTiet_IdChiTiet">
+          <End Role="HoaDonChiTiet" Type="Self.HoaDonChiTiet" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ListTPham" Type="Self.ListTPham" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HoaDonChiTiet">
+              <PropertyRef Name="IdChiTiet" />
+            </Principal>
+            <Dependent Role="ListTPham">
+              <PropertyRef Name="IdChiTiet" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_ListTPham_dbo_TPham_IdTP">
+          <End Role="TPham" Type="Self.TPham" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ListTPham" Type="Self.ListTPham" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TPham">
+              <PropertyRef Name="IdTP" />
+            </Principal>
+            <Dependent Role="ListTPham">
+              <PropertyRef Name="IdTP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_TPham_dbo_LoaiTPham_IdLoaiTP">
+          <End Role="LoaiTPham" Type="Self.LoaiTPham" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TPham" Type="Self.TPham" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LoaiTPham">
+              <PropertyRef Name="IdLoaiTP" />
+            </Principal>
+            <Dependent Role="TPham">
+              <PropertyRef Name="IdLoaiTP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_May_dbo_TaiKhoan_IdTK">
+          <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="0..1" />
+          <End Role="May" Type="Self.May" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaiKhoan">
+              <PropertyRef Name="IdTK" />
+            </Principal>
+            <Dependent Role="May">
+              <PropertyRef Name="IdTK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CyberManagerEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="HoaDons" EntityType="Self.HoaDon" />
+          <EntitySet Name="HoaDonChiTiets" EntityType="Self.HoaDonChiTiet" />
+          <EntitySet Name="ListTPhams" EntityType="Self.ListTPham" />
+          <EntitySet Name="LoaiTPhams" EntityType="Self.LoaiTPham" />
+          <EntitySet Name="Mays" EntityType="Self.May" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="TaiKhoans" EntityType="Self.TaiKhoan" />
+          <EntitySet Name="TPhams" EntityType="Self.TPham" />
+          <AssociationSet Name="FK_dbo_HoaDon_dbo_HoaDonChiTiet_IdChiTiet" Association="Self.FK_dbo_HoaDon_dbo_HoaDonChiTiet_IdChiTiet">
+            <End Role="HoaDonChiTiet" EntitySet="HoaDonChiTiets" />
+            <End Role="HoaDon" EntitySet="HoaDons" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_HoaDon_dbo_TaiKhoan_IdTK" Association="Self.FK_dbo_HoaDon_dbo_TaiKhoan_IdTK">
+            <End Role="TaiKhoan" EntitySet="TaiKhoans" />
+            <End Role="HoaDon" EntitySet="HoaDons" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_HoaDonChiTiet_dbo_May_IdMay" Association="Self.FK_dbo_HoaDonChiTiet_dbo_May_IdMay">
+            <End Role="May" EntitySet="Mays" />
+            <End Role="HoaDonChiTiet" EntitySet="HoaDonChiTiets" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_ListTPham_dbo_HoaDonChiTiet_IdChiTiet" Association="Self.FK_dbo_ListTPham_dbo_HoaDonChiTiet_IdChiTiet">
+            <End Role="HoaDonChiTiet" EntitySet="HoaDonChiTiets" />
+            <End Role="ListTPham" EntitySet="ListTPhams" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_ListTPham_dbo_TPham_IdTP" Association="Self.FK_dbo_ListTPham_dbo_TPham_IdTP">
+            <End Role="TPham" EntitySet="TPhams" />
+            <End Role="ListTPham" EntitySet="ListTPhams" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_TPham_dbo_LoaiTPham_IdLoaiTP" Association="Self.FK_dbo_TPham_dbo_LoaiTPham_IdLoaiTP">
+            <End Role="LoaiTPham" EntitySet="LoaiTPhams" />
+            <End Role="TPham" EntitySet="TPhams" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_May_dbo_TaiKhoan_IdTK" Association="Self.FK_dbo_May_dbo_TaiKhoan_IdTK">
+            <End Role="TaiKhoan" EntitySet="TaiKhoans" />
+            <End Role="May" EntitySet="Mays" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CyberManagerStoreContainer" CdmEntityContainer="CyberManagerEntities">
+          <EntitySetMapping Name="HoaDons">
+            <EntityTypeMapping TypeName="CyberManager.HoaDon">
+              <MappingFragment StoreEntitySet="HoaDon">
+                <ScalarProperty Name="IdHoaDon" ColumnName="IdHoaDon" />
+                <ScalarProperty Name="IdTK" ColumnName="IdTK" />
+                <ScalarProperty Name="IdChiTiet" ColumnName="IdChiTiet" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HoaDonChiTiets">
+            <EntityTypeMapping TypeName="CyberManager.HoaDonChiTiet">
+              <MappingFragment StoreEntitySet="HoaDonChiTiet">
+                <ScalarProperty Name="IdChiTiet" ColumnName="IdChiTiet" />
+                <ScalarProperty Name="NgayThang" ColumnName="NgayThang" />
+                <ScalarProperty Name="IdMay" ColumnName="IdMay" />
+                <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListTPhams">
+            <EntityTypeMapping TypeName="CyberManager.ListTPham">
+              <MappingFragment StoreEntitySet="ListTPham">
+                <ScalarProperty Name="IdOrderList" ColumnName="IdOrderList" />
+                <ScalarProperty Name="IdTP" ColumnName="IdTP" />
+                <ScalarProperty Name="SoluongTP" ColumnName="SoluongTP" />
+                <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
+                <ScalarProperty Name="IdChiTiet" ColumnName="IdChiTiet" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LoaiTPhams">
+            <EntityTypeMapping TypeName="CyberManager.LoaiTPham">
+              <MappingFragment StoreEntitySet="LoaiTPham">
+                <ScalarProperty Name="IdLoaiTP" ColumnName="IdLoaiTP" />
+                <ScalarProperty Name="TenLoaiTP" ColumnName="TenLoaiTP" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Mays">
+            <EntityTypeMapping TypeName="CyberManager.May">
+              <MappingFragment StoreEntitySet="May">
+                <ScalarProperty Name="IdMay" ColumnName="IdMay" />
+                <ScalarProperty Name="CauHinh" ColumnName="CauHinh" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+                <ScalarProperty Name="HoatDong" ColumnName="HoatDong" />
+                <ScalarProperty Name="IdTK" ColumnName="IdTK" />
+                <ScalarProperty Name="TienGio" ColumnName="TienGio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="CyberManager.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TaiKhoans">
+            <EntityTypeMapping TypeName="CyberManager.TaiKhoan">
+              <MappingFragment StoreEntitySet="TaiKhoan">
+                <ScalarProperty Name="IdTK" ColumnName="IdTK" />
+                <ScalarProperty Name="TenDN" ColumnName="TenDN" />
+                <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+                <ScalarProperty Name="Sodu" ColumnName="Sodu" />
+                <ScalarProperty Name="TenKH" ColumnName="TenKH" />
+                <ScalarProperty Name="LienHe" ColumnName="LienHe" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TPhams">
+            <EntityTypeMapping TypeName="CyberManager.TPham">
+              <MappingFragment StoreEntitySet="TPham">
+                <ScalarProperty Name="IdTP" ColumnName="IdTP" />
+                <ScalarProperty Name="TenTP" ColumnName="TenTP" />
+                <ScalarProperty Name="Gia" ColumnName="Gia" />
+                <ScalarProperty Name="IdLoaiTP" ColumnName="IdLoaiTP" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

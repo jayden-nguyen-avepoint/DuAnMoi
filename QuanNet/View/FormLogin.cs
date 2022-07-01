@@ -1,6 +1,5 @@
 ﻿using FontAwesome.Sharp;
 using QuanNet.BLL;
-using QuanNet.LinQ;
 using QuanNet.Properties;
 using System;
 using System.Collections.Generic;
@@ -19,7 +18,7 @@ namespace QuanNet
         //----
         public string time { get; set; }
       
-        private string PasswordAdmin = "123";
+        private string PasswordAdmin = "123456";
         private string IDAdmin = "admin";
         private IconButton currentBtn;
         private Panel leftBorderBtn;

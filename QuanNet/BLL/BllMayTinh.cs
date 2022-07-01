@@ -1,5 +1,4 @@
 ﻿using QuanNet.DTO;
-using QuanNet.LinQ;
 using QuanNet.Properties;
 using System;
 using System.Collections.Generic;
@@ -12,7 +11,7 @@ namespace QuanNet.BLL
 {
     public class BllMayTinh
     {
-        DoAnQLCyber db = new DoAnQLCyber();
+        CyberManagerEntities db = new CyberManagerEntities();
         private static BllMayTinh _Instance;
         public static BllMayTinh Instance
         {

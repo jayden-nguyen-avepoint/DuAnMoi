@@ -5,13 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using QuanNet.DTO;
-using QuanNet.LinQ;
 
 namespace QuanNet.BLL
 {
     class BllOrderKH
     {
-        DoAnQLCyber db = new DoAnQLCyber();
+        CyberManagerEntities db = new CyberManagerEntities();
         private static BllOrderKH _Instance;
         public static BllOrderKH Instance
         {

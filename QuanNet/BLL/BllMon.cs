@@ -1,5 +1,4 @@
-﻿using QuanNet.LinQ;
-using QuanNet.Properties;
+﻿using QuanNet.Properties;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +9,7 @@ namespace QuanNet.BLL
 {
     public class BllMon
     {
-        DoAnQLCyber db = new DoAnQLCyber();
+        CyberManagerEntities db = new CyberManagerEntities();
         private static BllMon _Instance;
         public static BllMon Instance
         {
